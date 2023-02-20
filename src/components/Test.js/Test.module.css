@@ -1,0 +1,9 @@
+.testContainer{
+      text-align: center;
+}
+.test{
+      margin-top: 10%;
+      display: inline-block;
+      text-align: center;
+      min-width: 300px;
+}

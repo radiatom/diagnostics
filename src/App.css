@@ -23,7 +23,9 @@
 .btn {
   margin: 2px;
 }
-
+.navbar-toggler{
+  margin-bottom: 5px;
+}
 .App {
   /* text-align: center; */
 }
