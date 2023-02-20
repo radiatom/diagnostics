@@ -1,0 +1,13 @@
+.logo img{
+      width: 40px;
+}
+.color{
+      color: aqua;
+}
+.navbarSpan{
+      font-size: 67%;
+}
+
+.nav-link:hover {
+      background-color: rgb(69, 68, 67);
+    }
