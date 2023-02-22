@@ -11,3 +11,7 @@
 
 // }
 // console.log(serverData)
+// const mas=[]
+// mas.push(0)
+// mas.push(12)
+// console.log(mas)

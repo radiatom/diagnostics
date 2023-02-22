@@ -1,5 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import s from "./Test.module.css"
+
 
 
 const Test = (props) => {
@@ -13,8 +15,12 @@ const Test = (props) => {
                               <div className="card-body">
                                     <h5 className="card-title">{props.testData.problem}</h5>
                                     <p className="card-text">{props.testData.testText}</p>
-                                    <button onClick={() => props.getTestData(props.testData.linkNumberYes)} className="btn btn-warning">Так</button>
-                                    <button onClick={() => props.getTestData(props.testData.linkNumberNo)} className="btn btn-warning">Ні</button>
+                                    <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberYes}`}>
+                                          <button  className="btn btn-warning">Так</button>
+                                    </NavLink>
+                                    <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberNo}`}>
+                                          <button  className="btn btn-warning">Ні</button>
+                                    </NavLink>
                               </div>
                         </div>
                   </div>
