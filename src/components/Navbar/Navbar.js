@@ -12,7 +12,7 @@ const HederBootstrap = (props) => {
                   <div className="container">
                         <div className="navbar-brand">
                               <NavLink className="navbar-brand p-0 " to="/Home"><img src={logo} alt="logo" width="40" /></NavLink>
-                              <span className={`text-danger ${s.navbarSpan}`} >м.Найкраще вул.Найкраща тел. +38 055 55 55 555</span>
+                              <span className={`text-danger ${s.navbarSpan}`} >м.Луцьк вул.Найкраща тел. +38 055 55 55 555</span>
                         </div>
                   </div>
             </nav>
