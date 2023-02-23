@@ -27,9 +27,14 @@
   margin-bottom: 5px;
 }
 .content{
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
-
+.navbar>.container{
+  display: block;
+}
+.futerText{
+  font-size: 75%;
+}
 .App {
   /* text-align: center; */
 }

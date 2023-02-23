@@ -7,7 +7,9 @@
 .navbarSpan{
       font-size: 67%;
 }
-
+.navContact{
+      color: #ffc107;
+}
 .nav-link:hover {
       background-color: rgb(69, 68, 67);
     }
