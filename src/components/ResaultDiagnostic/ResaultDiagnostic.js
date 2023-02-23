@@ -1,13 +1,13 @@
 import React,{useEffect} from 'react';
+import s from "./ResaultDiagnostics.module.css"
 
-const ResaultDiagnostic = (props) => {
+const ResaultDiagnostic = ({el,getResaultDiagnosticData}) => {
       useEffect(() => {
-            props.getResaultDiagnosticData()
+            getResaultDiagnosticData()
           }, []);
       return (
-            <div>
-                  resault test
-                  <p>{props.el}</p>
+            <div className={s.resaultDiagnostic}>
+                  <p>{el}</p>
             </div>
       );
 }

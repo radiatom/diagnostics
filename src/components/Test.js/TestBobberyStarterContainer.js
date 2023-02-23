@@ -4,12 +4,12 @@ import TestBobberyStarter from './TestBobberyStarter';
 import { getTestData, putSolutionTest, getResaultDiagnosticData } from '../../reactRedux/testReducer';
 import { useParams } from 'react-router-dom';
 import ResaultDiagnosticContainer from './../ResaultDiagnostic/ResaultDiagnosticContainer';
+import Recomendation from '../Recomendation/Recomendation';
 
 
 
 
 const TestBobberyStarterContainer = (props) => {
-      
       const { linkNumber } = useParams()
       props.getTestData(linkNumber)
       return (
@@ -17,8 +17,14 @@ const TestBobberyStarterContainer = (props) => {
                   <div>
                         <TestBobberyStarter {...props} />
                   </div>
-                  <div>
-                        <ResaultDiagnosticContainer {...props} />
+                  <div >
+                        {linkNumber === "7" ? <div>
+                              <ResaultDiagnosticContainer {...props} />
+                              <Recomendation />
+                        </div>
+                              : ''}
+
+
                   </div>
             </div>
       );

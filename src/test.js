@@ -91,12 +91,10 @@ const resaultDiagnostics = {
 // });
 // console.log(finishResaultDiagnostic)
 
-const finishResaultDiagnostic = Object.entries(resaultDiagnostics).map(([key, value]) => {
-      return value.solution? value.text:undefined
-}).filter(el=>el!==undefined)
-console.log(finishResaultDiagnostic);
-
-
+// const finishResaultDiagnostic = Object.entries(resaultDiagnostics).map(([key, value]) => {
+//       return value.solution? value.text:undefined
+// }).filter(el=>el!==undefined)
+// console.log(finishResaultDiagnostic);
 
 // const getResaultDiagnosticData = () => (dispatch) => {
 //       console.log(resaultDiagnostic)
@@ -113,4 +111,4 @@ console.log(finishResaultDiagnostic);
 //       console.log(finishResaultDiagnostic)
 // }
 // getResaultDiagnosticData()
-console.log('end')
+// console.log('end')

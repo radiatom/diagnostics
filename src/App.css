@@ -26,6 +26,10 @@
 .navbar-toggler{
   margin-bottom: 5px;
 }
+.content{
+  margin-bottom: 300px;
+}
+
 .App {
   /* text-align: center; */
 }
