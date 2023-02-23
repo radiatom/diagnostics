@@ -15,8 +15,10 @@
   background-color: rgb(132, 134, 134);
 }
 .navbar{
+  
   padding: 0;
 }
+
 .container{
   width: 100%;
 }
@@ -30,7 +32,8 @@
   margin-bottom: 200px;
 }
 .navbar>.container{
-  display: block;
+  justify-content: flex-end;
+  /* display: block; */
 }
 .futerText{
   font-size: 75%;
