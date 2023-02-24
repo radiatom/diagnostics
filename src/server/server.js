@@ -1,3 +1,6 @@
+import img19 from "./../img/19.png"
+import video17 from "./../video/video17.mp4"
+
 const serverData = {
       testCard:{
             1.1: {
@@ -12,8 +15,8 @@ const serverData = {
                   ,
                   linkNumberYes: 6.5,
                   linkNumberNo: 1.2,
-                  solutionYes:1.1,
-                  solutionNo:1.0,
+                  solutionYes:null,
+                  solutionNo:null,
                   img: null,
                   video: null,
             },
@@ -23,7 +26,7 @@ const serverData = {
                   testText: 'Стартер провертає двигун на декілька обертів ,а потім починає крутитись в холосту, перестаючи проверти двигун?',
                   linkNumberYes: 1.2_13_1,
                   linkNumberNo: 1.2_13_0,
-                  solutionYes:1.2,
+                  solutionYes:1.8,
                   solutionNo:null,
                   img: null,
                   video: null,
@@ -34,7 +37,7 @@ const serverData = {
                   testText: 'Чути як стартер працює,але мотор не крутиться?',
                   linkNumberYes: 1.4,
                   linkNumberNo: 1.2,
-                  solutionYes:1.3,
+                  solutionYes:1.8,
                   solutionNo:null,
                   img: null,
                   video: null,
@@ -45,7 +48,7 @@ const serverData = {
                   testText: 'Чути як стартер працює,але мотор не крутиться?',
                   linkNumberYes: 1.4,
                   linkNumberNo: 1.3_66_1,
-                  solutionYes:1.3,
+                  solutionYes:1.8,
                   solutionNo:null,
                   img: null,
                   video: null,
@@ -86,23 +89,23 @@ const serverData = {
             1.7: {
                   linkNumber: 1.7,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Вінець рухається окремо від маховика?',
+                  testText: 'На відео видно, що вінець з зубами крутяться окремо від маховика. У вас вінець рухається окремо від маховика?',
                   linkNumberYes: 2.0,
                   linkNumberNo: 2.0,
                   solutionYes:1.7,
                   solutionNo:null,
                   img: null,
-                  video: null,
+                  video: video17,
             },
             1.9: {
                   linkNumber: 1.9,
                   problem: "Дайте відповідь на питання",
-                  testText: "Потрібно перевірити чи пошкоджені зуби на вінцю маховика. Поставте мітку на маховику, прокручуйте колнчастий вал та дивіться на зуби на вінцю маховика. Прокручуйте колінчастий вал поки зробите повний оберт. Зуби на вінцю маховика пошкодженні?",
+                  testText: "Потрібно перевірити який стан зубів на вінцю маховика. Поставте мітку на маховику, прокручуйте колнчастий вал та дивіться на зуби на вінцю маховика. Прокручуйте колінчастий вал поки зробите повний оберт. Дивіться приклади на фото. Зуби на вінцю маховика цілі?",
                   linkNumberYes: 1.7,
                   linkNumberNo: 1.7,
                   solutionYes:1.6,
                   solutionNo:null,
-                  img: null,
+                  img: img19,
                   video: null,
             },
             2.0: {
@@ -183,15 +186,16 @@ const serverData = {
                   video: null,
             },
             7.0: {
-                  linkNumber: 7.0,
-                  problem: "Ось що ви вияснили:",
-                  testText: '',
-                  linkNumberYes: 7.0,
-                  linkNumberNo: 7.0,
-                  solutionYes:null,
-                  solutionNo:null,
-                  img: null,
-                  video: null,
+                  this:"компонетнт з результатом"
+                  // linkNumber: 7.0,
+                  // problem: "Ось що ви вияснили:",
+                  // testText: '',
+                  // linkNumberYes: 7.0,
+                  // linkNumberNo: 7.0,
+                  // solutionYes:null,
+                  // solutionNo:null,
+                  // img: null,
+                  // video: null,
             },
             7.1: {
                   linkNumber: 7.1,
@@ -250,10 +254,10 @@ const serverData = {
             },
             7.6: {
                   linkNumber: 7.6,
-                  problem: "Зверніться до нашого сервісу ####",
-                  testText: 'Скажіть, що ваша проблема полягає в тому, що...',
-                  linkNumberYes: 1.1,
-                  linkNumberNo: 1.1,
+                  problem: "Пропонуєм Вам вернутись до нашого сервісу.",
+                  testText: '',
+                  linkNumberYes: null,
+                  linkNumberNo: null,
                   solutionYes:null,
                   solutionNo:null,
                   img: null,
@@ -272,28 +276,24 @@ const serverData = {
             },
       },
       resaultDiagnostic:{
-            // 0.9:{
-            //       text:'Test',
-            //       solution: true,
-            // },
             1.0:{
-                  text:'Cтартер працює, двигун ніколи не обертається або інколи не обертається',
+                  text:'',
                   solution: false,
             },
             1.1:{
-                  text:'Cтартер завжди провертає двигун без зупинок.',
+                  text:'',
                   solution: false,
             },
             1.2:{
-                  text:'Стартер провертає двигун на декілька обертів ,а потім починає крутитись в холосту.',
+                  text:'',
                   solution: false,
             },
             1.3:{
-                  text:'Стартер працює,але мотор не крутиться.',
+                  text:'',
                   solution: false,
             },
             1.4:{
-                  text:'Під час роботи стартера чути шум.',
+                  text:'Приділіть особливу увагу, зубам на бендиксі та вінцю маховика, вони не мусять бути пошкодженні. Також перевірте редуктор ,підшипники, та втулки.',
                   solution: false,
             },
             1.5:{

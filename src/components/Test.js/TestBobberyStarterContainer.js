@@ -14,15 +14,26 @@ const TestBobberyStarterContainer = (props) => {
       props.getTestData(linkNumber)
       return (
             <div>
-                  <div>
-                        <TestBobberyStarter {...props} />
-                  </div>
+
                   <div >
-                        {linkNumber === "7" ? <div>
-                              <ResaultDiagnosticContainer {...props} />
-                              <Recomendation />
-                        </div>
-                              : ''}
+                        {linkNumber === "7" ?
+                              <div>
+                                    {props.resault.legth>0?
+                                    <div>
+                                          Ось що вдалось вияснити:
+                                          <ResaultDiagnosticContainer {...props} />
+                                          <Recomendation />
+                                    </div>:
+                                    <div>
+                                          Під час діагностики ніяких проблем не було знайдено, так не буває. Пройдіть діагностику ще раз та уважніше все передивіться.
+                                    </div>
+                                    }
+                              </div>
+                              :
+                              <div>
+                                    <TestBobberyStarter {...props} />
+                              </div>
+                        }
 
 
                   </div>
@@ -32,6 +43,7 @@ const TestBobberyStarterContainer = (props) => {
 const mapStateToProps = (state) => {
       return {
             testData: state.testPage.testData,
+            resault: state.testPage.resault
       }
 }
 

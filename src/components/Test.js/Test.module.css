@@ -1,9 +1,30 @@
-.testContainer{
+.testContainer {
       text-align: center;
 }
-.test{
+
+.test {
       margin-top: 10%;
       display: inline-block;
       text-align: center;
       min-width: 300px;
+}
+
+.img {
+      width: 100%;
+}
+
+.video {
+      width: 30%;
+}
+
+@media(max-width:800px) {
+      .video {
+            width: 40%;
+      }
+}
+
+@media(max-width:450px) {
+      .video {
+            width: 60%;
+      }
 }
