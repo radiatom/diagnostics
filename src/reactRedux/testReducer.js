@@ -62,8 +62,10 @@ export const getResaultDiagnosticData = () => (dispatch) => {
 }
 
 
-export const putSolutionTest = (linkSolution) => {
+export const putSolutionTestTrue = (linkSolution) => {
       serverData.resaultDiagnostic[linkSolution].solution = true
-      console.log(serverData.resaultDiagnostic)
+}
+export const putSolutionTestFalse = (linkSolution) => {
+      serverData.resaultDiagnostic[linkSolution].solution = false
 }
 export default testReducer

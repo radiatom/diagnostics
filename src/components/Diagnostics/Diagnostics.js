@@ -18,7 +18,7 @@ const Diagnostics = (props) => {
                                           <p>Ви виясните: як буксує бендикс, і чи є підозра, що він не справний; чи пошкоджений  вінець; в якому стані  втулки, підшипники, редуктор, якір стартера. </p>
 
                                           <nav>
-                                                <NavLink to="/Diagnostics/Starter/Bobbery/1.1"><button onClick={() => props.getTestData(1.1)} className="btn btn-warning">Почати діагностику</button></NavLink>
+                                                <NavLink to="/Diagnostics/Starter/Bobbery/1"><button onClick={() => props.getTestData(1)} className="btn btn-warning">Почати діагностику</button></NavLink>
                                           </nav>
                                     </div>
                               </div>

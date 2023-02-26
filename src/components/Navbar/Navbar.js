@@ -4,7 +4,6 @@ import logo from "./../../img/vv.png"
 import { NavLink } from 'react-router-dom';
 
 
-
 const HederBootstrap = (props) => {
       return (
             <div>
@@ -13,9 +12,9 @@ const HederBootstrap = (props) => {
                               <div className=" container-xxl navbar-brand p-0 ">
                                     <span><NavLink to="/Home"><img src={logo} alt="logo" width="40" /></NavLink></span>
                                     <span className={` row row-cols-1 row-cols-md-3 row-cols-lg-3 ${s.navContact}`}>
-                                          <div class="col">Автосервіс</div>
-                                          <div class="col">м.Луцьк вул.Найкраща#</div>
-                                          <div class="col">тел. +38 055 55 55 555</div>
+                                          <div className="col">Автосервіс</div>
+                                          <div className="col">м.Луцьк вул.Найкраща#</div>
+                                          <div className="col">тел. +38 055 55 55 555</div>
                                     </span>
                               </div>
                         </div>

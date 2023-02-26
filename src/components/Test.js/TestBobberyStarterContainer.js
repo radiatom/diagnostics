@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TestBobberyStarter from './TestBobberyStarter';
-import { getTestData, putSolutionTest, getResaultDiagnosticData } from '../../reactRedux/testReducer';
+import { getTestData, putSolutionTestTrue, getResaultDiagnosticData, putSolutionTestFalse } from '../../reactRedux/testReducer';
 import { useParams } from 'react-router-dom';
 import ResaultDiagnosticContainer from './../ResaultDiagnostic/ResaultDiagnosticContainer';
 import Recomendation from '../Recomendation/Recomendation';
@@ -18,7 +18,7 @@ const TestBobberyStarterContainer = (props) => {
                   <div >
                         {linkNumber === "7" ?
                               <div>
-                                    {props.resault.legth>0?
+                                    {props.resault.length>0?
                                     <div>
                                           Ось що вдалось вияснити:
                                           <ResaultDiagnosticContainer {...props} />
@@ -47,4 +47,4 @@ const mapStateToProps = (state) => {
       }
 }
 
-export default connect(mapStateToProps, { getTestData, putSolutionTest, getResaultDiagnosticData })(TestBobberyStarterContainer);
+export default connect(mapStateToProps, { getTestData, putSolutionTestTrue, getResaultDiagnosticData,putSolutionTestFalse })(TestBobberyStarterContainer);

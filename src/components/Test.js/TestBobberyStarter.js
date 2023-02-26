@@ -5,7 +5,14 @@ import s from "./Test.module.css"
 
 
 const Test = (props) => {
-
+const onClickYes=()=>{
+      props.putSolutionTestTrue(props.testData.solutionYes)
+      props.putSolutionTestFalse(props.testData.solutionNo)
+}
+const onClickNo=()=>{
+      props.putSolutionTestTrue(props.testData.solutionNo)
+      props.putSolutionTestFalse(props.testData.solutionYes)
+}
       return (
             <div className={s.testContainer}>
                   <div className={s.test}>
@@ -16,19 +23,43 @@ const Test = (props) => {
                               <div className="card-body">
                                     <h5 className="card-title">{props.testData.problem}</h5>
                                     <p className="card-text">{props.testData.testText}</p>
+
                                     {props.testData.img !== null ?
-                                          <div>
-                                                <img className={s.img} src={props.testData.img} alt="img" />
-                                                <p className="card-text">{props.testData.testText}</p>
+                                          <div className="accordion accordion-flush " id="accordionFlushExample">
+                                                <div className="accordion-item ">
+                                                      <h2 className="accordion-header" id="flush-headingOne">
+                                                            <button className="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                  Інструкція
+                                                            </button>
+                                                      </h2>
+                                                      <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                            <div className="accordion-body">
+                                                                  <p className="card-text">{props.testData.instruction}</p>
+                                                                  <img className={s.img} src={props.testData.img} alt="img" />
+                                                            </div>
+                                                      </div>
+                                                </div>
                                           </div>
                                           : ''
                                     }
                                     {props.testData.video !== null ?
-                                          <div>
-                                                <video className={s.video} controls>
-                                                      <source src={props.testData.video} type="video/mp4"/>
-                                                            Your browser does not support the video tag.
-                                                </video>
+                                          <div className="accordion accordion-flush" id="accordionFlushExample">
+                                                <div className="accordion-item">
+                                                      <h2 className="accordion-header" id="flush-headingOne">
+                                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                  Інструкція
+                                                            </button>
+                                                      </h2>
+                                                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                            <div className="accordion-body">
+                                                                  <p className="card-text">{props.testData.instruction}</p>
+                                                                  <video className={s.video} controls>
+                                                                        <source src={props.testData.video} type="video/mp4" />
+                                                                        Your browser does not support the video tag.
+                                                                  </video>
+                                                            </div>
+                                                      </div>
+                                                </div>
                                           </div>
                                           : ''
                                     }
@@ -50,10 +81,10 @@ const Test = (props) => {
                                           :
                                           <div>
                                                 <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberYes}`}>
-                                                      <button onClick={() => props.putSolutionTest(props.testData.solutionYes)} className="btn btn-warning">Так</button>
+                                                      <button onClick={onClickYes} className="btn btn-warning">Так</button>
                                                 </NavLink>
                                                 <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberNo}`}>
-                                                      <button onClick={() => props.putSolutionTest(props.testData.solutionNo)} className="btn btn-warning">Ні</button>
+                                                      <button onClick={onClickNo} className="btn btn-warning">Ні</button>
                                                 </NavLink>
                                           </div>
                                     }

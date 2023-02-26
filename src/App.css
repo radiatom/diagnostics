@@ -39,10 +39,14 @@
 .futerText{
   font-size: 75%;
 }
+
 @media(max-width:800px) {
   .content{
     padding: 0;
-    
+  }
+  .futerText{
+    font-family:serif;
+    font-size: 60%;
   }
 }
 /* .App { */
