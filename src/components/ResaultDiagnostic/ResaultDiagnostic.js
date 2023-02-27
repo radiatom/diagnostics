@@ -1,10 +1,7 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import s from "./ResaultDiagnostics.module.css"
 
 const ResaultDiagnostic = ({el,getResaultDiagnosticData}) => {
-      // useEffect(() => {
-      //       getResaultDiagnosticData()
-      //     }, []);
       return (
             <div className={s.resaultDiagnostic}>
                   <p>{el}</p>

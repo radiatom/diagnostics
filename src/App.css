@@ -39,7 +39,10 @@
 .futerText{
   font-size: 75%;
 }
-
+.text-muted2 {
+  --bs-text-opacity: 1;
+  color: rgb(255, 0, 0);;
+}
 @media(max-width:800px) {
   .content{
     padding: 0;
