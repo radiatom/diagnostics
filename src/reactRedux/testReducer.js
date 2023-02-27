@@ -20,15 +20,18 @@ export const setResaultDiagnosticData = (resault) => {
 
 const standartStateTest = {
       testData: {
-            linkNumber: null,
-            problem: "test text",
-            testText: "test text",
-            linkNumberYes: "test text",
-            linkNumberNo: "test text",
-            img: null,
-            video: null,
+            linkNumber: '',
+            problem: '',
+            testText: '',
+            instruction: '',
+            linkNumberYes: '',
+            linkNumberNo: '',
+            solutionYes: '',
+            solutionNo: '',
+            img: '',
+            video: '',
       },
-      resault:[1,2,3]
+      resault: []
 
 }
 const testReducer = (state = standartStateTest, action) => {
@@ -55,17 +58,19 @@ export const getTestData = (linkNumber) => (dispatch) => {
 
 export const getResaultDiagnosticData = () => (dispatch) => {
       const arr = Object.entries(serverData.resaultDiagnostic).map(([key, value]) => {
-            return value.solution? value.text:undefined
+            return value.solution ? value.text : undefined
       });
-      const finishResaultDiagnostic= arr.filter(el=>el!==undefined)
+      const finishResaultDiagnostic = arr.filter(el => el !== undefined)
       dispatch(setResaultDiagnosticData(finishResaultDiagnostic))
 }
 
 
-export const putSolutionTestTrue = (linkSolution) => {
+export const putSolutionTestTrue = (linkSolution) =>(dispatch) => {
       serverData.resaultDiagnostic[linkSolution].solution = true
+      dispatch(getResaultDiagnosticData())
 }
-export const putSolutionTestFalse = (linkSolution) => {
+export const putSolutionTestFalse = (linkSolution) =>(dispatch) => {
       serverData.resaultDiagnostic[linkSolution].solution = false
+      dispatch(getResaultDiagnosticData())
 }
 export default testReducer

@@ -8,7 +8,7 @@ const ResaultDiagnosticContainer =  (props) => {
       
       return (
             <div>
-                  {props.resault.map(el =><ResaultDiagnostic kay={el} el={el} {...props} />)}
+                  {props.resault.map(el =><ResaultDiagnostic kеy={el} el={el} {...props} />)}
             </div>
       );
 }

@@ -50,7 +50,7 @@ const onClickNo=()=>{
                                                                   Інструкція
                                                             </button>
                                                       </h2>
-                                                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                      <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                             <div className="accordion-body">
                                                                   <p className="card-text">{props.testData.instruction}</p>
                                                                   <video className={s.video} controls>
