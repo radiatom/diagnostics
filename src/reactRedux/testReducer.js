@@ -62,14 +62,22 @@ export const getResaultDiagnosticData = () => (dispatch) => {
       });
       const finishResaultDiagnostic = arr.filter(el => el !== undefined)
       dispatch(setResaultDiagnosticData(finishResaultDiagnostic))
+
+      sessionStorage.setItem('res', JSON.stringify(finishResaultDiagnostic));
+      //Об'єкт sessionStorage доступний в середовищі браузера і використовується для зберігання даних на протязі однієї сесії браузера, тобто поки відкрита відповідна вкладка або вікно браузера. Після закриття сесії або вкладки, дані в sessionStorage видаляються.
+}
+export const setSaveResault = () => (dispatch) => {
+      const res = JSON.parse(sessionStorage.getItem('res'))
+      dispatch(setResaultDiagnosticData(res))
+      //функція яка вертає результат діагностики який був збережений в sessionStorage.
 }
 
 
-export const putSolutionTestTrue = (linkSolution) =>(dispatch) => {
+export const putSolutionTestTrue = (linkSolution) => (dispatch) => {
       serverData.resaultDiagnostic[linkSolution].solution = true
       dispatch(getResaultDiagnosticData())
 }
-export const putSolutionTestFalse = (linkSolution) =>(dispatch) => {
+export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
       serverData.resaultDiagnostic[linkSolution].solution = false
       dispatch(getResaultDiagnosticData())
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ResaultDiagnostic from './ResaultDiagnostic';
-import { getResaultDiagnosticData } from '../../reactRedux/testReducer';
 
 
 const ResaultDiagnosticContainer =  (props) => {
@@ -18,4 +17,4 @@ const mapStateToProps = (state) => {
             resault: state.testPage.resault
       }
 }
-export default connect(mapStateToProps, { getResaultDiagnosticData })(ResaultDiagnosticContainer);
+export default connect(mapStateToProps, {})(ResaultDiagnosticContainer);

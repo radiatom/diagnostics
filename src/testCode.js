@@ -112,3 +112,33 @@ const resaultDiagnostics = {
 // }
 // getResaultDiagnosticData()
 // console.log('end')
+// const getResaultDiagnosticData = () => {
+//       const finishResaultDiagnostic = {
+//             1.0: {
+//                   // це заглушка
+//                   text: '',
+//                   solution: false,
+//             },
+//             1.1: {
+//                   text: '',
+//                   solution: false,
+//             },
+//             1.2: {
+//                   text: 'Якщо пошкоджені магніти - замінити цілий статор, якщо пошкоджена ізоляція катушки - розібрати статор, відновити ізоляцію (є ризик, що стане гірше навіть якщо ізоляцію відновити. Після розборки статора змінює форму і через це починає сильно чиркати якорь.) рекомендовано замінити статор повністю.',
+//                   solution: false,
+//             },
+//             1.3: {
+//                   text: 'Бендикс не працює як муфта, він пропускає в обидві сторони. Його потрібно замінити.',
+//                   solution: false,
+//             }
+//       }
+//       sessionStorage.setItem('res', JSON.stringify(finishResaultDiagnostic));
+//       const res = JSON.parse(sessionStorage.getItem('res'))
+//       console.log(res)
+// }
+// getResaultDiagnosticData()
+// const resault=['dfs']
+// resault[0] === undefined||resault[0] === '' ?
+//       console.log('yes')
+//       :
+//       console.log('no')

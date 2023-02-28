@@ -16,7 +16,9 @@
 .video {
       width: 40%;
 }
-
+.resault{
+      margin: 10px;
+}
 @media(max-width:800px) {
       .video {
             width: 40%;

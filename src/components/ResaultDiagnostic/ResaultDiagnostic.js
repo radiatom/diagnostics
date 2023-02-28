@@ -1,10 +1,10 @@
 import React from 'react';
 import s from "./ResaultDiagnostics.module.css"
 
-const ResaultDiagnostic = ({el,getResaultDiagnosticData}) => {
+const ResaultDiagnostic = (props) => {
       return (
             <div className={s.resaultDiagnostic}>
-                  <p>{el}</p>
+                  <p>{props.el}</p>
             </div>
       );
 }
