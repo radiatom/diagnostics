@@ -9,7 +9,7 @@ import chFoto from "./../../img/acu1.jpg"
 const Blogs = () => {
    return (
       <div>
-         <h1 className='text-center mt-5 heading'>Наші статті</h1>
+         <h1 className='text-center mt-5 '>Наші статті</h1>
          <section className="blog-area pb-5 text-center">
             <div className="container">
                <div className="row justify-content-center">

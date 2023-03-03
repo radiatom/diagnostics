@@ -17,11 +17,12 @@ function App(props) {
         </div>
         <div >
           <Routes>
+            <Route className="home" path="/" element={<Home />} />
+            <Route className="home" path="/Home" element={<Home />} />
+            <Route path="/Services" element={<Services />} />
             <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
-            <Route path="/Сontact" element={<Contact/>} />
-            <Route path="/Services" element={<Services/>} /> 
-            <Route className="home" path="/Home" element={<Home />} />
+            <Route path="/Сontact" element={<Contact />} />
 
 
           </Routes>

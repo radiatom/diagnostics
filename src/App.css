@@ -1,9 +1,9 @@
 .nav-link:hover {
   background-color: rgb(48, 48, 48);
 }
-.home{
-  /* width: 100%; */
-}
+/* .home{
+  width: 100%;
+} */
 .navbar-nav .nav-link.active {
   color: rgb(255, 0, 0);
 }

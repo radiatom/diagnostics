@@ -1,8 +1,6 @@
 .h {
   height: 870px;
 }
-
-
 .carousel-itemm {
   position: relative;
 }
@@ -22,8 +20,8 @@
 }
 
 .carousel-caption h3 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 600;
   color: white;
   /* font-family: 'Prata', serif; */
 }
@@ -42,16 +40,24 @@
   .h {
     height: 100%;
   }
+  .carousel-caption h3 {
+    font-size: 60px;
+    font-weight: 700;
+   color: white;
+  }
 }
 @media (max-width: 767px) {
+  .carousel-caption h3 {
+    font-size: 20px;
+  }
   .btn{
-    font-size: 10px;
+    font-size: 8px;
   }
   .h {
     height: 100%;
   }
   .carousel-caption p {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -61,7 +67,7 @@
     padding-right: 100px;
   }
   .carousel-caption h3 {
-    font-size: 85px;
+    font-size: 60px;
     font-weight: 700;
    color: white;
   }
