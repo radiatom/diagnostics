@@ -28,10 +28,13 @@ const HederBootstrap = (props) => {
                               <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav">
                                           <li className="nav-item">
-                                                <NavLink className="nav-link disabled" to="/Home">Про нас</NavLink>
+                                                <NavLink className="nav-link" to="/Home">Про нас</NavLink>
                                           </li>
                                           <li className="nav-item">
-                                                <NavLink className="nav-link disabled" to="/Services">Наші послуги</NavLink>
+                                                <NavLink className="nav-link" to="/Services">Наші послуги</NavLink>
+                                          </li>
+                                          <li className="nav-item">
+                                                <NavLink className="nav-link disabled" to="/Gallery">Галерея</NavLink>
                                           </li>
                                           <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Diagnostics"><h6>Діагностика <span className="badge bg-secondary">New</span></h6></NavLink>
@@ -40,10 +43,7 @@ const HederBootstrap = (props) => {
                                                 <NavLink className="nav-link disabled" to="/Articles">Корисні статті</NavLink>
                                           </li>
                                           <li className="nav-item">
-                                                <NavLink className="nav-link disabled" to="/Gallery">Галерея</NavLink>
-                                          </li>
-                                          <li className="nav-item">
-                                                <NavLink className="nav-link" to="/Сontacts">Контакти</NavLink>
+                                                <NavLink className="nav-link" to="/Сontact">Контакти</NavLink>
                                           </li>
                                     </ul>
                               </div>

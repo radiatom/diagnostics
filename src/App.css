@@ -1,12 +1,11 @@
 .nav-link:hover {
-  background-color: rgb(122, 5, 5);
+  background-color: rgb(48, 48, 48);
 }
-
+.home{
+  /* width: 100%; */
+}
 .navbar-nav .nav-link.active {
   color: rgb(255, 0, 0);
-}
-.content a{
-  margin: 2px;
 }
 .container-fluid{
   color: aliceblue;
@@ -15,6 +14,7 @@
   background-color: rgb(132, 134, 134);
 }
 .navbar{
+  box-shadow: 0px 7px 3px 0.5px #4b4701;
   
   padding: 0;
 }
@@ -28,11 +28,15 @@
 .navbar-toggler{
   margin-bottom: 5px;
 }
+.content a{
+  margin: 2px;
+}
 .content{
   padding: 10%;
   margin-bottom: 200px;
 }
 .navbar>.container{
+  
   justify-content: flex-end;
   /* display: block; */
 }

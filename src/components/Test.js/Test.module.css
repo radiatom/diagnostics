@@ -3,10 +3,16 @@
 }
 
 .test {
+      border-radius: 6px;
+      box-shadow: 5px 5px 10px 1px #000;
       margin-top: 10%;
+      margin-left: 10%;
+      margin-right: 10%;
       display: inline-block;
       text-align: center;
       min-width: 300px;
+      margin-bottom: 200px;
+
 }
 
 .img {
@@ -16,9 +22,15 @@
 .video {
       width: 40%;
 }
-.resault{
+
+.resault {
       margin: 10px;
 }
+
+.button {
+      box-shadow: 5px 5px 10px 1px #000;
+}
+
 @media(max-width:800px) {
       .video {
             width: 40%;

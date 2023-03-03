@@ -3,7 +3,9 @@ import { Routes, Route, } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar'
 import DiagnosticsContainer from './components/Diagnostics/Diagnostics.container';
 import TestBobberyStarterContainer from './components/Test.js/TestBobberyStarterContainer';
-import Contacts from './components/Сontacts/Сontacts';
+import Contact from './components/Contact/Contact';
+import Home from './components/Home/Home';
+import Services from './components/Services/Services';
 
 
 function App(props) {
@@ -13,11 +15,13 @@ function App(props) {
         <div className="header">
           <Navbar />
         </div>
-        <div className="content">
+        <div >
           <Routes>
             <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
-            <Route path="/Сontacts" element={<Contacts />} />
+            <Route path="/Сontact" element={<Contact/>} />
+            <Route path="/Services" element={<Services/>} /> 
+            <Route className="home" path="/Home" element={<Home />} />
 
 
           </Routes>
