@@ -31,7 +31,7 @@
 
 */
 .heading{
-    font-family: 'Prata', serif;
+    /* font-family: 'Prata', serif; */
     font-weight: 700;
 }
 .heading::after{

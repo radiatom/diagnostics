@@ -23,7 +23,7 @@ const Banner = () => {
       <Carousel.Caption>
           <h3>Діагностика</h3>
           <p>Ми розробили систему, за допомогою якої, Ви можете виявити поломку самостійно.</p>
-          <NavLink className="btn btn-danger rounded-pill m-2" to="/Diagnostics">Вибрати діагностику</NavLink>
+          <NavLink className="btn btn-danger rounded-pill m-2" to="/Diagnostics">Діагностувати</NavLink>
           <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
         </Carousel.Caption>
       </Carousel.Item>
@@ -42,7 +42,7 @@ const Banner = () => {
         <img className="d-block w-100 " src={banner2} alt="Third slide " />
         <Carousel.Caption>
           <h3>Гарантія</h3>
-          <p>Даємо гарантію на роботу та комплектуючі 6місяців.</p>
+          <p>Даємо гарантію на роботу та комплектуючі 6 місяців.</p>
           <NavLink className="btn btn-danger rounded-pill m-2" to="/Services">Наші послуги</NavLink>
           <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
         </Carousel.Caption>

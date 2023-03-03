@@ -2,16 +2,6 @@
   height: 870px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .h {
-    height: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .h {
-    height: 100%;
-  }
-}
 
 .carousel-itemm {
   position: relative;
@@ -35,19 +25,35 @@
   font-size: 20px;
   font-weight: 700;
   color: white;
-  font-family: 'Prata', serif;
+  /* font-family: 'Prata', serif; */
 }
 .carousel-caption p {
-  font-size: 10px;
+  font-size: 20px;
   top: 2rem;
   color: white;
-  font-family: 'Prata', serif;
+  /* font-family: 'Prata', serif; */
 }
 .carousel-caption a button{
-    display: inline-block;
-    font-size: 5px;
+  display: inline-block;
+  font-size: 5px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .h {
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .btn{
+    font-size: 10px;
+  }
+  .h {
+    height: 100%;
+  }
+  .carousel-caption p {
+    font-size: 15px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .carousel-caption {
     bottom: 330px;
@@ -69,3 +75,4 @@
     font-size: 15px;
 }
 }
+
