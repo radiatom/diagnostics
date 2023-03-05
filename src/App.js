@@ -9,6 +9,7 @@ import Services from './components/Services/Services';
 import Starter from './components/Blogs/Starter/Starter';
 import Blogs from './components/Blogs/Blogs';
 import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
+import DiagnosticAltenator from './components/DiagnosticAltenator/DiagnosticAltenator';
 
 
 function App(props) {
@@ -29,6 +30,7 @@ function App(props) {
             <Route path="/Starter" element={<Starter />} />
             <Route path="/Blogs" element={<Blogs />} />
             <Route path="/DiagnosticStarter" element={<DiagnosticStarter />} />
+            <Route path="/DiagnosticAltetnator" element={<DiagnosticAltenator />} />
 
 
 

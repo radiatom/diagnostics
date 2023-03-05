@@ -1,0 +1,20 @@
+.card {
+      width: 32%;
+      box-shadow: 5px 5px 5px 1px #000000;
+    }
+    
+    .button {
+      box-shadow: 5px 5px 10px 1px #000;
+    }
+    
+    @media(max-width:800px) {
+      .header {
+        margin: 16px;
+      }
+      .explanation {
+        margin: 30px;
+      }
+      .card {
+        width: 100%
+      }
+    }
