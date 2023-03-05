@@ -8,6 +8,7 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Starter from './components/Blogs/Starter/Starter';
 import Blogs from './components/Blogs/Blogs';
+import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
 
 
 function App(props) {
@@ -27,6 +28,8 @@ function App(props) {
             <Route path="/Сontact" element={<Contact />} />
             <Route path="/Starter" element={<Starter />} />
             <Route path="/Blogs" element={<Blogs />} />
+            <Route path="/DiagnosticStarter" element={<DiagnosticStarter />} />
+
 
 
 

@@ -48,6 +48,15 @@
   --bs-text-opacity: 1;
   color: rgb(255, 0, 0);;
 }
+.dropdown-item.active{
+  background-color:  #FBE400;
+  color: black;
+}
+.dropdown-item.click{
+  background-color:  #FBE400;
+  color: black;
+}
+
 @media(max-width:800px) {
   .content{
     padding: 0;
