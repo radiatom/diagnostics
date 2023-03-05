@@ -41,6 +41,7 @@
   /* display: block; */
 }
 .futerText{
+  text-align: justify;
   font-size: 75%;
 }
 .text-muted2 {

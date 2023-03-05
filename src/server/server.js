@@ -242,8 +242,8 @@ const serverData = {
                   problem: "Дайте відповідь на питання",
                   testText: 'Вісь у втулках має великий люфт?',
                   instruction:'На вигляд (на око), зношені втулки мають овальний отвір',
-                  linkNumberYes: 7.3,
-                  linkNumberNo: 7.3,
+                  linkNumberYes: 8.4,
+                  linkNumberNo: 8.4,
                   solutionYes:2.0,
                   solutionNo:1.0,
                   img: null,
@@ -381,6 +381,30 @@ const serverData = {
                   img: null,
                   video: null,
             },
+            8.4: {
+                  linkNumber: 8.4,
+                  problem: "Дайте відповідь на питання",
+                  testText: 'Вилка редуктора ціла?',
+                  instruction:'',
+                  linkNumberYes: 8.5,
+                  linkNumberNo: 8.5,
+                  solutionYes:1.0,
+                  solutionNo:2.6,
+                  img: null,
+                  video: null,
+            },
+            8.5: {
+                  linkNumber: 8.5,
+                  problem: "Дайте відповідь на питання",
+                  testText: 'Вилка переміщає бендикс по валу легко?',
+                  instruction:'',
+                  linkNumberYes: 7.3,
+                  linkNumberNo: 7.3,
+                  solutionYes:1.0,
+                  solutionNo:2.7,
+                  img: null,
+                  video: null,
+            },
       },
       resaultDiagnostic:{
             1.0:{
@@ -444,7 +468,15 @@ const serverData = {
                   solution: false,
             },
             2.5:{
-                  text:'Потрібно вичистити кожеш зуб редуктора, поки вал не буде крутитись легко без ривків. Якщо не вдається замінити редуктор.',
+                  text:'Потрібно вичистити кожеш зуб редуктора, поки вал не буде крутитись легко без ривків. Якщо не вдається замінити редуктор (замінити мастило).',
+                  solution: false,
+            },
+            2.6:{
+                  text:'Потрібно замінити вилку стартера',
+                  solution: false,
+            },
+            2.7:{
+                  text:'Потрібно вичистити від мастила вал стартера, середечник втягуючого, якщо бендикс всеодно погано ковзає по валу- перевірити шліци на валі по яким ходить бендикс. Зробити все щоб бендикс ковзав по валу без зусиль (мастило не використовувати).',
                   solution: false,
             },
       

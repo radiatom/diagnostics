@@ -40,7 +40,7 @@ const HederBootstrap = (props) => {
                                                 <NavLink className="nav-link" to="/Diagnostics"><h6>Діагностика <span className="badge bg-secondary">New</span></h6></NavLink>
                                           </li>
                                           <li className="nav-item">
-                                                <NavLink className="nav-link disabled" to="/Articles">Корисні статті</NavLink>
+                                                <NavLink className="nav-link" to="/Blogs">Корисні статті</NavLink>
                                           </li>
                                           <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Сontact">Контакти</NavLink>

@@ -22,7 +22,7 @@ const Banner = () => {
         <img className="d-block w-100 " src={banner4} alt="First slide" />
       <Carousel.Caption>
           <h3>Діагностика</h3>
-          <p>Ми розробили систему, за допомогою якої, Ви можете перевірити стартера, генератор, акумулятор.</p>
+          <p>Ми розробили систему, за допомогою якої, Ви зможете перевірити стартер, генератор, акумулятор.</p>
           <NavLink className="btn btn-danger rounded-pill m-2" to="/Diagnostics">Діагностувати</NavLink>
           <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
         </Carousel.Caption>

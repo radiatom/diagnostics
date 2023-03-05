@@ -20,8 +20,8 @@ const Blogs = () => {
                         </div>
                         <div className="blog-content">
                            <h5 className="blog-title"><a href="/">Будова стартера</a></h5>
-                           <p className="text">Ця стаття описує будову стартера.</p>
-                           <NavLink to="/"><button className="btn btn-warning" >Читати</button></NavLink>
+                           <p className="text">Ця стаття описує будову стартера, бендикса та принцип роботи.</p>
+                           <NavLink to="/Starter"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
                      </div>
                   </div>

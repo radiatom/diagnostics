@@ -6,6 +6,8 @@ import TestBobberyStarterContainer from './components/Test.js/TestBobberyStarter
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
+import Starter from './components/Blogs/Starter/Starter';
+import Blogs from './components/Blogs/Blogs';
 
 
 function App(props) {
@@ -23,6 +25,10 @@ function App(props) {
             <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
             <Route path="/Сontact" element={<Contact />} />
+            <Route path="/Starter" element={<Starter />} />
+            <Route path="/Blogs" element={<Blogs />} />
+
+
 
 
           </Routes>
