@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/diagnostics/static/css/main.90d11aa1.css",
-    "main.js": "/diagnostics/static/js/main.5eafe1ca.js",
+    "main.css": "/diagnostics/static/css/main.b55503e6.css",
+    "main.js": "/diagnostics/static/js/main.83bae497.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video20.mp4": "/diagnostics/static/media/video20.234fda151336b5c34071.mp4",
     "static/media/15.png": "/diagnostics/static/media/15.5f6d50b705acda910936.png",
@@ -9,7 +9,9 @@
     "static/media/bg3.jpg": "/diagnostics/static/media/bg3.65d750a1fc07f172403c.jpg",
     "static/media/19.png": "/diagnostics/static/media/19.c20b1fb278f30cd1a001.png",
     "static/media/78.png": "/diagnostics/static/media/78.8544bcbdf8f2aef1bedd.png",
+    "static/media/altenaorsBlog.png": "/diagnostics/static/media/altenaorsBlog.77844c45c795ed3da8c9.png",
     "static/media/bg5.jpg": "/diagnostics/static/media/bg5.e3416bd050b598983a7d.jpg",
+    "static/media/altBlog.png": "/diagnostics/static/media/altBlog.9e6b596901bf95ab3f26.png",
     "static/media/stater-structure.png": "/diagnostics/static/media/stater-structure.ea957df6fda56bd8e385.png",
     "static/media/video17.mp4": "/diagnostics/static/media/video17.a82a686fbd2a464bae0d.mp4",
     "static/media/fotoBlog1.jpg": "/diagnostics/static/media/fotoBlog1.01db58763a403fe8ab06.jpg",
@@ -22,15 +24,16 @@
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.7a14c3f0e79ec064706e.jpg",
     "static/media/batChan.jpg": "/diagnostics/static/media/batChan.3fb403c2d05ff869cfa9.jpg",
     "static/media/vv.png": "/diagnostics/static/media/vv.8c1f11195985d8ef2d4b.png",
+    "static/media/ina.jpg": "/diagnostics/static/media/ina.a5e18f425edb2d59a706.jpg",
     "static/media/alt4.jpg": "/diagnostics/static/media/alt4.334e3ef54dd0d69c865c.jpg",
     "static/media/st1.jpg": "/diagnostics/static/media/st1.57acdf0a5ee86f5cc59f.jpg",
     "index.html": "/diagnostics/index.html",
-    "main.90d11aa1.css.map": "/diagnostics/static/css/main.90d11aa1.css.map",
-    "main.5eafe1ca.js.map": "/diagnostics/static/js/main.5eafe1ca.js.map",
+    "main.b55503e6.css.map": "/diagnostics/static/css/main.b55503e6.css.map",
+    "main.83bae497.js.map": "/diagnostics/static/js/main.83bae497.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90d11aa1.css",
-    "static/js/main.5eafe1ca.js"
+    "static/css/main.b55503e6.css",
+    "static/js/main.83bae497.js"
   ]
 }
