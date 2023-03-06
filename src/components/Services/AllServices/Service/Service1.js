@@ -1,6 +1,7 @@
-import img1 from "./../../../img/eltctr.jpg"
-import { NavLink } from 'react-router-dom';
+import img1 from "./../../../../img/montage.jpg"
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 const Service1 = () => {
       return (
@@ -8,9 +9,9 @@ const Service1 = () => {
                   <div className="card mx-auto" >
                         <img src={img1} className="card-img-top w-100" alt="..." />
                         <div className="card-body">
-                              <h5 className="card-title">Автоелектрика</h5>
+                              <h5 className="card-title">Демонтаж та монтаж</h5>
                               <p className="card-text">
-                                    У випадку коли проблеми з стартером чи генераторм повязанні з електрикою, виконуєм ремонт електропроводки.
+                                    Виконуємо демонтаж та монтаж стартера чи генератора з умовою що агрегат буде діагностуватись у нас.
                               </p>
                               <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
                         </div>

@@ -16,10 +16,10 @@ const Blogs = () => {
                   <div className="col-lg-4 col-md-8 col-sm-10">
                      <div className="single-blog blog-style-one">
                         <div className="blog-image">
-                           <a href="/"><img src={stFoto} alt="Blog"/></a>
+                           <NavLink to="/Starter"><img src={stFoto} alt="Blog" /></NavLink>
                         </div>
                         <div className="blog-content">
-                           <h5 className="blog-title"><a href="/">Будова стартера</a></h5>
+                           <NavLink to="/Starter"><h5>Будова стартера</h5></NavLink>
                            <p className="text">Ця стаття описує будову стартера, бендикса та принцип роботи.</p>
                            <NavLink to="/Starter"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
@@ -28,24 +28,24 @@ const Blogs = () => {
                   <div className="col-lg-4 col-md-8 col-sm-10">
                      <div className="single-blog blog-style-one">
                         <div className="blog-image">
-                           <a href="/" ><img src={altFoto} alt="Blog"/></a>
+                           <NavLink to="/Alnenator"><img src={altFoto} alt="Blog" /></NavLink>
                         </div>
                         <div className="blog-content">
-                           <h5 className="blog-title"><a href="/">Будова генератора</a> </h5>
+                           <NavLink to="/Alnenator"><h5>Будова генератора</h5></NavLink>
                            <p className="text">Ця стаття описує будову генеартора.</p>
-                           <NavLink to="/"><button className="btn btn-warning" >Читати</button></NavLink>
+                           <NavLink to="/Alnenator"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
                      </div>
                   </div>
                   <div className="col-lg-4 col-md-8 col-sm-10">
                      <div className="single-blog blog-style-one">
                         <div className="blog-image">
-                           <a href="/"><img src={chFoto} alt="Blog"/></a>
+                           <NavLink to="/BatteryСharging"><img src={chFoto} alt="Blog" /></NavLink>
                         </div>
                         <div className="blog-content">
-                           <h5 className="blog-title"><a href="/">Як правильно зарядити акумулятор</a></h5>
-                           <p className="text">Ми розказали яким іструметом користуватись та які показники перевіряти.</p>
-                           <NavLink to="/"><button className="btn btn-warning" >Читати</button></NavLink>
+                           <NavLink to="/BatteryСharging"><h5>Як правильно зарядити автомобільний акумулятор</h5></NavLink>
+                           <p className="text">Hозглянемо кілька актуальних питань, які українські водії ставлять досить часто, і дамо на них відповіді.</p>
+                           <NavLink to="/BatteryСharging"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
                      </div>
                   </div>

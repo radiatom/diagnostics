@@ -1,0 +1,25 @@
+.Altenator{
+      text-align: center;
+      width: 100%;
+     padding: 10%;
+     padding-top: 2%;
+}
+.Altenator img{
+      width: 60%;
+}
+.Altenator p{
+      text-align:justify;
+
+}
+.Altenator ul{
+      text-align:left;
+}
+@media (max-width: 767px) {
+      .Altenator img{
+            width: 100%;
+      }
+      .Altenator{
+           padding: 2%;
+           padding-top: 2%;
+      }
+    }

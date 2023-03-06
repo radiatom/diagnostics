@@ -10,7 +10,9 @@ import Blogs from './components/Blogs/Blogs';
 import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
 import DiagnosticAltenator from './components/DiagnosticAltenator/DiagnosticAltenator';
 import DiagnosticABattery from './components/DiagnosticBattery/DiagnosticBattery';
-import AllServices from './components/AllServices/AllServices';
+import Services from './components/Services/Services';
+import Altenator from './components/Blogs/Altenator/Altenator';
+import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
 
 
 function App(props) {
@@ -24,7 +26,7 @@ function App(props) {
           <Routes>
             <Route className="home" path="/" element={<Home />} />
             <Route className="home" path="/Home" element={<Home />} />
-            <Route path="/Services" element={<AllServices />} />
+            <Route path="/Services" element={<Services/>} />
             <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
             <Route path="/Сontact" element={<Contact />} />
@@ -33,10 +35,8 @@ function App(props) {
             <Route path="/DiagnosticStarter" element={<DiagnosticStarter />} />
             <Route path="/DiagnosticAltetnator" element={<DiagnosticAltenator />} />
             <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />
-
-
-
-
+            <Route path="/Alnenator" element={<Altenator />} />
+            <Route path="/BatteryСharging" element={<BatteryCharging />} />
 
           </Routes>
         </div>
