@@ -27,7 +27,7 @@ const Features = () => {
           <div className="col-md-4 col-sm-8">
             <div className="single-about-items">
               <div className="items-content">
-                <h4 className="items-title">Ефективність та якість</h4>
+                <h4 className="items-title">Якість та ефективність</h4>
                 <p className="text">
                   Ми використовує тільки якісні компоненти брендів Koyo, ZM, ZEN, IKA, Mobiletron, оригінальні бренди BOSCH, DELCO, DENSO, INA, VALEO.
                 </p>

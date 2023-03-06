@@ -1,9 +1,9 @@
 import React from 'react';
+import AllServices from '../AllServices/AllServices';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact'
 import Features from '../Features/Features';
-import Services from '../Services/Services';
 import s from './Home.module.css'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
             <div className={s.home} >
                   <Banner/>
                   <Features/>
-                  <Services/>
+                  <AllServices/>
                   <Blogs/>
                   <Contact/>
                   

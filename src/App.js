@@ -5,11 +5,12 @@ import DiagnosticsContainer from './components/Diagnostics/Diagnostics.container
 import TestBobberyStarterContainer from './components/Test.js/TestBobberyStarterContainer';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
-import Services from './components/Services/Services';
 import Starter from './components/Blogs/Starter/Starter';
 import Blogs from './components/Blogs/Blogs';
 import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
 import DiagnosticAltenator from './components/DiagnosticAltenator/DiagnosticAltenator';
+import DiagnosticABattery from './components/DiagnosticBattery/DiagnosticBattery';
+import AllServices from './components/AllServices/AllServices';
 
 
 function App(props) {
@@ -23,7 +24,7 @@ function App(props) {
           <Routes>
             <Route className="home" path="/" element={<Home />} />
             <Route className="home" path="/Home" element={<Home />} />
-            <Route path="/Services" element={<Services />} />
+            <Route path="/Services" element={<AllServices />} />
             <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
             <Route path="/Сontact" element={<Contact />} />
@@ -31,6 +32,7 @@ function App(props) {
             <Route path="/Blogs" element={<Blogs />} />
             <Route path="/DiagnosticStarter" element={<DiagnosticStarter />} />
             <Route path="/DiagnosticAltetnator" element={<DiagnosticAltenator />} />
+            <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />
 
 
 
