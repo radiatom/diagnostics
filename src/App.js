@@ -6,13 +6,13 @@ import TestBobberyStarterContainer from './components/Test.js/TestBobberyStarter
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Starter from './components/Blogs/Starter/Starter';
-import Blogs from './components/Blogs/Blogs';
 import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
 import DiagnosticAltenator from './components/DiagnosticAltenator/DiagnosticAltenator';
 import DiagnosticABattery from './components/DiagnosticBattery/DiagnosticBattery';
 import Services from './components/Services/Services';
 import Altenator from './components/Blogs/Altenator/Altenator';
 import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
+import BlogsPage from './components/Blogs/BlogsPage';
 
 
 function App(props) {
@@ -31,7 +31,7 @@ function App(props) {
             <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
             <Route path="/Сontact" element={<Contact />} />
             <Route path="/Starter" element={<Starter />} />
-            <Route path="/Blogs" element={<Blogs />} />
+            <Route path="/Blogs" element={<BlogsPage />} />
             <Route path="/DiagnosticStarter" element={<DiagnosticStarter />} />
             <Route path="/DiagnosticAltetnator" element={<DiagnosticAltenator />} />
             <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />

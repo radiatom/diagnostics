@@ -1,4 +1,3 @@
-/*===== BLOG STYLE ONE =====*/
 .heading{
   font-family: 'Prata', serif;
 }
@@ -110,7 +109,7 @@
   .blog-style-one .blog-content .more:hover {
     color: white;
     background-color: var(--primary);
+  }  
+  .blogsPage{
+    margin-bottom: 20%;
   }
-  
-  /*# sourceMappingURL=blog-01.css.map */
-  

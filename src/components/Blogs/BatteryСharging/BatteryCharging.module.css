@@ -1,25 +1,30 @@
-.BatteryCharging{
+.BatteryCharging {
+      margin-bottom: 20%;
       text-align: center;
       width: 100%;
-     padding: 10%;
-     padding-top: 2%;
+      padding: 2%;
+      padding-top: 2%;
 }
-.BatteryCharging img{
+
+.BatteryCharging img {
       width: 60%;
 }
-.BatteryCharging p{
-      text-align:justify;
+
+.BatteryCharging p {
+      text-align: justify;
 
 }
-.BatteryCharging ul{
-      text-align:left;
+
+.BatteryCharging ul {
+      text-align: left;
 }
+
 @media (max-width: 767px) {
-      .BatteryCharging img{
+      .BatteryCharging img {
             width: 100%;
       }
-      .BatteryCharging{
-           padding: 2%;
-           padding-top: 2%;
+      .BatteryCharging {
+            padding: 2%;
+            padding-top: 10%;
       }
-    }
+}
