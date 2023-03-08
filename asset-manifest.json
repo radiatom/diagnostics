@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/diagnostics/static/css/main.29b26391.css",
-    "main.js": "/diagnostics/static/js/main.2885305d.js",
+    "main.css": "/diagnostics/static/css/main.eae86ae5.css",
+    "main.js": "/diagnostics/static/js/main.1a45b7fd.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video20.mp4": "/diagnostics/static/media/video20.234fda151336b5c34071.mp4",
     "static/media/15.png": "/diagnostics/static/media/15.5f6d50b705acda910936.png",
     "static/media/bg2.jpg": "/diagnostics/static/media/bg2.4019a1597b8924d2eb51.jpg",
     "static/media/bg3.jpg": "/diagnostics/static/media/bg3.65d750a1fc07f172403c.jpg",
+    "static/media/galery7.jpg": "/diagnostics/static/media/galery7.7123b7bd183115be08c9.jpg",
+    "static/media/galery6.jpg": "/diagnostics/static/media/galery6.fc0c0e9f9390f11a419c.jpg",
+    "static/media/galery5.jpg": "/diagnostics/static/media/galery5.b866ee8691fb369492d7.jpg",
     "static/media/19.png": "/diagnostics/static/media/19.c20b1fb278f30cd1a001.png",
     "static/media/78.png": "/diagnostics/static/media/78.8544bcbdf8f2aef1bedd.png",
     "static/media/altenaorsBlog.png": "/diagnostics/static/media/altenaorsBlog.77844c45c795ed3da8c9.png",
@@ -14,9 +17,12 @@
     "static/media/altBlog.png": "/diagnostics/static/media/altBlog.9e6b596901bf95ab3f26.png",
     "static/media/stater-structure.png": "/diagnostics/static/media/stater-structure.ea957df6fda56bd8e385.png",
     "static/media/video17.mp4": "/diagnostics/static/media/video17.a82a686fbd2a464bae0d.mp4",
+    "static/media/map3.png": "/diagnostics/static/media/map3.075c33c36298146beba7.png",
     "static/media/fotoBlog1.jpg": "/diagnostics/static/media/fotoBlog1.01db58763a403fe8ab06.jpg",
     "static/media/77.png": "/diagnostics/static/media/77.cd2cb26750947f1134ca.png",
     "static/media/altDiagServ.jpg": "/diagnostics/static/media/altDiagServ.38c4fd50e85643f3b488.jpg",
+    "static/media/map1.png": "/diagnostics/static/media/map1.7f7a8e7ad86d77f54571.png",
+    "static/media/map2.png": "/diagnostics/static/media/map2.3be31da0ec4b2dde8b7a.png",
     "static/media/startersBlog.jpg": "/diagnostics/static/media/startersBlog.64630328050ced1adfbd.jpg",
     "static/media/montage.jpg": "/diagnostics/static/media/montage.d495e9d0cdb4a83b294a.jpg",
     "static/media/eltctr.jpg": "/diagnostics/static/media/eltctr.2b37e931f5a1d52c51b3.jpg",
@@ -28,12 +34,12 @@
     "static/media/alt4.jpg": "/diagnostics/static/media/alt4.334e3ef54dd0d69c865c.jpg",
     "static/media/st1.jpg": "/diagnostics/static/media/st1.57acdf0a5ee86f5cc59f.jpg",
     "index.html": "/diagnostics/index.html",
-    "main.29b26391.css.map": "/diagnostics/static/css/main.29b26391.css.map",
-    "main.2885305d.js.map": "/diagnostics/static/js/main.2885305d.js.map",
+    "main.eae86ae5.css.map": "/diagnostics/static/css/main.eae86ae5.css.map",
+    "main.1a45b7fd.js.map": "/diagnostics/static/js/main.1a45b7fd.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29b26391.css",
-    "static/js/main.2885305d.js"
+    "static/css/main.eae86ae5.css",
+    "static/js/main.1a45b7fd.js"
   ]
 }
