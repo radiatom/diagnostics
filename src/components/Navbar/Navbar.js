@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Navbar.module.css'
-import logo from "./../../img/vv.png"
+import logo from "./../../img/Viniko1.png"
 import { NavLink } from 'react-router-dom';
 
 
@@ -10,11 +10,11 @@ const HederBootstrap = (props) => {
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
                         <div className=" container">
                               <div className=" container-xxl navbar-brand p-0 ">
-                                    <span><NavLink to="/Home"><img src={logo} alt="logo" width="40" /></NavLink></span>
+                                    <span><NavLink to="/Home"><img src={logo} alt="logo" width="200"  /></NavLink></span>
                                     <span className={` row row-cols-1 row-cols-md-3 row-cols-lg-3 ${s.navContact}`}>
                                           <div className="col">Автосервіс</div>
-                                          <div className="col">м.Луцьк вул.Найкраща#</div>
-                                          <div className="col">тел. +38 055 55 55 555</div>
+                                          <div className="col">Луцьк</div>
+                                          <div className="col">тел. +38 (097) 93 43 392</div>
                                     </span>
                               </div>
                         </div>

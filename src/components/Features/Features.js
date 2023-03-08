@@ -19,7 +19,7 @@ const Features = () => {
               <div className="items-content">
                 <h4 className="items-title">Великий досвід</h4>
                 <p className="text">
-                  Наша фірма працює з 2006 року.
+                  Фірма ВІНІКО працює з 2006 року.
                 </p>
               </div>
             </div>

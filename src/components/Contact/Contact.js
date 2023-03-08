@@ -34,7 +34,7 @@ const Contact = () => {
                            </div>
                            <div className="info-content">
                               <p className="text">
-                                 Територіально м.Луцьк, біля заводу ModernExpo, точна адреса: с. Струмівка вул. Рівненська 8.
+                                 Територіально м.Луцьк, біля заводу ModernExpo, точна адреса: <a href="https://www.google.com/maps/place/Viniko,+Sto,+Remont+Startera+I+Heneratora,+Perevirka+Akumulyatora,+Elektryka+Prychepa+I+Avto/@50.7438413,25.3926916,169m/data=!3m1!1e3!4m6!3m5!1s0x47259b394f792cd9:0x636c590930856bef!8m2!3d50.7437386!4d25.393043!16s%2Fg%2F11c6rxnyx0?hl=en"> с. Струмівка вул. Рівненська 8.</a>
                               </p>
                            </div>
                         </div>
