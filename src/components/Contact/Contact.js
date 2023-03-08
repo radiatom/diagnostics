@@ -1,66 +1,62 @@
 import React from 'react';
-// import Cta from '../Home/Cta/Cta';
 import './Contact.css';
+import s from "./Contact.module.css"
+import img1 from "./../../img/map2.png"
+import RoadFoto from './RoadFoto/RoadFoto';
+
 
 const Contact = () => {
+
    return (
       <div id='contact'>
-
          <section className="contact-area" >
-            <h1 className='text-center p-4 heading'>Контактна інформація</h1>
+            <h2 className='text-center p-4 '>Контактна інформація</h2>
             <div className="container">
-               <div className="row">
-                  <div className="col-xl-4 col-lg-4 col-md-6 col-sm-8 offset-xl-1">
-                     <div className="contact-info">
-                        <ul className="info">
-                           <li>
-                              <div className="single-info">
-                                 <div className="info-icon">
-                                    <i className="lni lni-map-marker"></i>
-                                 </div>
-                                 <div className="info-content">
-                                    <p className="text">
-                                       Madison Street, NewYork, USA
-                                    </p>
-                                 </div>
-                              </div>
+               <div className='container text-center'>
+                  <img className={s.img} src={img1} alt="viniko" />
+               </div>
+               <div className="contact-info">
+                  <ul className="info">
+                     <li>
+                        <div className="single-info">
+                           <div className="info-icon">
+                              <i className="lni lni-phone-set"></i>
+                           </div>
+                           <div className="info-content">
+                              <p className="text">+38 (097) 93 43 392</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div className="single-info">
+                           <div className="info-icon">
+                              <i className="lni lni-map-marker"></i>
+                           </div>
+                           <div className="info-content">
+                              <p className="text">
+                                 Територіально м.Луцьк, біля заводу ModernExpo, точна адреса: с. Струмівка вул. Рівненська 8.
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div className="single-info">
+                           <div className="info-icon">
+                              <i className="lni lni-phone"></i>
+                           </div>
+                           <div className="info-content">
+                              <p className="text"><a href="https://www.google.com/maps/place/Viniko,+Sto,+Remont+Startera+I+Heneratora,+Perevirka+Akumulyatora,+Elektryka+Prychepa+I+Avto/@50.7438413,25.3926916,169m/data=!3m1!1e3!4m6!3m5!1s0x47259b394f792cd9:0x636c590930856bef!8m2!3d50.7437386!4d25.393043!16s%2Fg%2F11c6rxnyx0?hl=en">GoogleMaps</a></p>
+                           </div>
+                        </div>
 
-                           </li>
-                           <li>
-                              <div className="single-info">
-                                 <div className="info-icon">
-                                    <i className="lni lni-phone"></i>
-                                 </div>
-                                 <div className="info-content">
-                                    <p className="text">+61 (8) 8234 3555</p>
-                                 </div>
-                              </div>
+                     </li>
 
-                           </li>
-                           <li>
-                              <div className="single-info">
-                                 <div className="info-icon">
-                                    <i className="lni lni-phone-set"></i>
-                                 </div>
-                                 <div className="info-content">
-                                    <p className="text">+61 (8) 8234 3555</p>
-                                 </div>
-                              </div>
-
-                           </li>
-                           <li>
-                              <div className="single-info">
-                                 <div className="info-icon">
-                                    <i className="lni lni-envelope"></i>
-                                 </div>
-                                 <div className="info-content">
-                                    <p className="text">Support: telegram @Radiatom</p>
-                                 </div>
-                              </div>
-
-                           </li>
-                        </ul>
-                        {/* <ul className="social mt-5">
+                     <div className="info-content">
+                        <p className="text">Support email: viniko@meta.ua</p>
+                        <p className="text">Support telegram:  @Radiatom</p>
+                     </div>
+                  </ul>
+                  {/* <ul className="social mt-5">
                            <li>
                               <a href="javascript:void(0)">
                                  <i className="lni lni-facebook-filled"></i>
@@ -82,12 +78,9 @@ const Contact = () => {
                               </a>
                            </li>
                         </ul> */}
-                     </div>
-
-                  </div>
                </div>
-
             </div>
+               <RoadFoto/>
          </section>
       </div>
    );
