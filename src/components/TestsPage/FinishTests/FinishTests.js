@@ -1,6 +1,7 @@
 import React from 'react';
 import ResaultDiagnosticContainer from './ResaultDiagnostic/ResaultDiagnosticContainer'
-import Recomendation from './Recomendation/Recomendation'
+import s from "./FinishTests.module.css"
+import { NavLink } from 'react-router-dom';
 
 const FinishTests = () => {
       return (
@@ -11,7 +12,7 @@ const FinishTests = () => {
                                           Ось що вдалось вияснити:
                                           <ResaultDiagnosticContainer />
                                           <Recomendation />
-                                          <NavLink to="/Diagnostics"><button className="btn btn-warning">Почати нову діагностику</button></NavLink>
+                                          
                                     </div>
                                     :
                                     <div>
@@ -23,8 +24,12 @@ const FinishTests = () => {
                         спосіб без збереження результатів, працює добре але після оновлення сторінки результати пропадають, можна вертатись та змінювати відповіді і результати будуть підлаштовуватись */}
 
                   <div >
-                        <ResaultDiagnosticContainer />
-                        <Recomendation />
+                        <h3 className='text-center m-4'>Ось що вдалось вияснити:</h3>
+                        <div className='m-4'>
+                              <ResaultDiagnosticContainer />
+                              <p>Усувайте проблеми по одній або комплексно, щоб вияснити, що було причиною. Рекомендовано усунути всі проблеми відразу. Після оновлення сторінки результати діагностики зникнуть(збережіть цю інформацію).</p>
+                              <NavLink to="/Diagnostics"><button className="btn btn-warning">Почати нову діагностику</button></NavLink>
+                        </div>
                   </div>
                   {/* спосіб з збереженням результатів після оновлення сторінки, але коли з результатів вертитьсь та переправляти відповіді кінцеві результати змінються повністю так що вони стають не повноцінні і не  паравильні */}
 

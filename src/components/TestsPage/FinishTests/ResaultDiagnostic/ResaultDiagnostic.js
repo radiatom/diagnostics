@@ -3,7 +3,7 @@ import s from "./ResaultDiagnostics.module.css"
 
 const ResaultDiagnostic = (props) => {
       return (
-            <div className={s.resaultDiagnostic}>
+            <div >
                   <p>{props.el}</p>
             </div>
       );
