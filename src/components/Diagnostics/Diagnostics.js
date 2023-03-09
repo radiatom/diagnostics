@@ -1,12 +1,10 @@
 import React from 'react';
-import AllDiagnosticStarter from "./../DiagnosticStarter/AllDiagnosticStarter/AllDiagnosticStarter"
-import AllDiagnosticAltenator from "./../DiagnosticAltenator/AllDiagnosticAltenator/AllDiagnosticAltenator"
-import AllDiagnosticBattery from "./../DiagnosticBattery/AllDiagnosticBattery/AllDiagnosticBattery"
-
-
+import AllDiagnosticStarter from "./DiagnosticStarter/AllDiagnosticStarter/AllDiagnosticStarter"
+import AllDiagnosticAltenator from "./DiagnosticAltenator/AllDiagnosticAltenator/AllDiagnosticAltenator"
+import AllDiagnosticBattery from "./DiagnosticBattery/AllDiagnosticBattery/AllDiagnosticBattery"
 import s from "./Diagnostics.module.css"
 
-const Diagnostics = (props) => {
+const Diagnostics = () => {
       return (
             <div className={s.Diagnostics}>
                   <div className={s.header} >

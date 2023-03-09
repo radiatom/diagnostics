@@ -66,7 +66,7 @@ const onClickNo=()=>{
                                     {props.testData.linkNumberYes === props.testData.linkNumberNo && props.testData.solutionYes === props.testData.solutionNo ?
                                           props.testData.linkNumberYes === props.testData.solutionYes ?
                                                 <div>
-                                                      <NavLink to="/Diagnostics/Starter/Bobbery/1.1">
+                                                      <NavLink to="/Diagnostics">
                                                             <button className={`btn btn-warning ${s.button}`}>Почати спочатку</button>
                                                       </NavLink>
                                                       <NavLink to="/Home">
@@ -74,16 +74,16 @@ const onClickNo=()=>{
                                                       </NavLink>
                                                 </div>
                                                 :
-                                                <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberYes}`}>
+                                                <NavLink to={`/Diagnostics/Test/${props.testData.linkNumberYes}`}>
                                                       <button className={`btn btn-warning ${s.button}`}>Ok</button>
                                                 </NavLink>
 
                                           :
                                           <div>
-                                                <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberYes}`}>
+                                                <NavLink to={`/Diagnostics/Test/${props.testData.linkNumberYes}`}>
                                                       <button onClick={onClickYes} className={`btn btn-warning ${s.button}`}>Так</button>
                                                 </NavLink>
-                                                <NavLink to={`/Diagnostics/Starter/Bobbery/${props.testData.linkNumberNo}`}>
+                                                <NavLink to={`/Diagnostics/Test/${props.testData.linkNumberNo}`}>
                                                       <button onClick={onClickNo} className={`btn btn-warning ${s.button}`}>Ні</button>
                                                 </NavLink>
                                           </div>

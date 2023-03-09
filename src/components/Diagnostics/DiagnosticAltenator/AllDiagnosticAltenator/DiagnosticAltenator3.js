@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import s from "./DiagnosticAltenator.module.css"
 
-const DiagnosticAltenator1 = (props) => {
+const DiagnosticAltenator3 = (props) => {
       return (
             <div className={`card m-1 ${s.card}`} >
                   <div className="card-body">
                         <h5 className="card-title">Діагностика генератора</h5>
-                        <h6 className="card-subtitle mb-2 text-muted2">Світиться помилка (значок акумулятора)</h6>
+                        <h6 className="card-subtitle mb-2 text-muted2">Малий заряд на акумуляторі (якщо він більший 15в причини дві - несправний регулятор генератора, або нема всіх сигналів на штеке рі генератора)</h6>
                         <p className="card-text">Діагностика в розробці</p>
                         <p className="card-text"></p>
                         <p className="card-text"></p>
@@ -20,4 +20,4 @@ const DiagnosticAltenator1 = (props) => {
       );
 }
 
-export default DiagnosticAltenator1;
+export default DiagnosticAltenator3;

@@ -19,7 +19,7 @@ const Features = () => {
               <div className="items-content">
                 <h4 className="items-title">Великий досвід</h4>
                 <p className="text">
-                  Фірма ВІНІКО працює з 2006 року.
+                  Фірма ВІНІКО працює з 2009 року.
                 </p>
               </div>
             </div>
@@ -29,7 +29,7 @@ const Features = () => {
               <div className="items-content">
                 <h4 className="items-title">Якість та ефективність</h4>
                 <p className="text">
-                  Ми використовує тільки якісні компоненти брендів Koyo, ZM, ZEN, IKA, Mobiletron, оригінальні бренди BOSCH, DELCO, DENSO, INA, VALEO.
+                  Ми використовуєм тільки якісні компоненти брендів Koyo, ZM, ZEN, IKA, Mobiletron, оригінальні бренди BOSCH, DELCO, DENSO, INA, VALEO.
                 </p>
               </div>
             </div>

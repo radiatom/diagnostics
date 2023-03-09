@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import s from "./DiagnosticStarter.module.css"
+// import { NavLink } from 'react-router-dom';
+import s from "./DiagnosticAltenator.module.css"
 
-const DiagnosticStarter4 = (props) => {
+const DiagnosticAltenator1 = (props) => {
       return (
             <div className={`card m-1 ${s.card}`} >
                   <div className="card-body">
-                        <h5 className="card-title">Діагностика статера</h5>
-                        <h6 className="card-subtitle mb-2 text-muted2">Стартер повільно обертає двигун</h6>
+                        <h5 className="card-title">Діагностика генератора</h5>
+                        <h6 className="card-subtitle mb-2 text-muted2">Світиться помилка (значок акумулятора)</h6>
                         <p className="card-text">Діагностика в розробці</p>
                         <p className="card-text"></p>
                         <p className="card-text"></p>
@@ -20,5 +20,4 @@ const DiagnosticStarter4 = (props) => {
       );
 }
 
-export default DiagnosticStarter4;
-
+export default DiagnosticAltenator1;

@@ -1,18 +1,18 @@
 import './App.css';
 import { Routes, Route, } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar'
-import DiagnosticsContainer from './components/Diagnostics/Diagnostics.container';
-import TestBobberyStarterContainer from './components/Test.js/TestBobberyStarterContainer';
+import Diagnostics from './components/Diagnostics/Diagnostics';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Starter from './components/Blogs/Starter/Starter';
-import DiagnosticStarter from './components/DiagnosticStarter/DiagnosticStarter';
-import DiagnosticAltenator from './components/DiagnosticAltenator/DiagnosticAltenator';
-import DiagnosticABattery from './components/DiagnosticBattery/DiagnosticBattery';
+import DiagnosticStarter from './components/Diagnostics/DiagnosticStarter/DiagnosticStarter';
+import DiagnosticAltenator from './components/Diagnostics/DiagnosticAltenator/DiagnosticAltenator';
+import DiagnosticABattery from './components/Diagnostics/DiagnosticBattery/DiagnosticBattery';
 import Services from './components/Services/Services';
 import Altenator from './components/Blogs/Altenator/Altenator';
 import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
 import BlogsPage from './components/Blogs/BlogsPage';
+import TestPageContainer from './components/TestsPage/TestPageContainer';
 
 
 function App(props) {
@@ -26,9 +26,9 @@ function App(props) {
           <Routes>
             <Route className="home" path="/" element={<Home />} />
             <Route className="home" path="/Home" element={<Home />} />
-            <Route path="/Services" element={<Services/>} />
-            <Route path="/Diagnostics/*" element={<DiagnosticsContainer />} />
-            <Route path="/Diagnostics/Starter/Bobbery/:linkNumber" element={<TestBobberyStarterContainer />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/Diagnostics/*" element={<Diagnostics />} />
+            <Route path="/Diagnostics/Test/:linkNumber" element={<TestPageContainer />} />
             <Route path="/Сontact" element={<Contact />} />
             <Route path="/Starter" element={<Starter />} />
             <Route path="/Blogs" element={<BlogsPage />} />
@@ -37,7 +37,6 @@ function App(props) {
             <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />
             <Route path="/Alnenator" element={<Altenator />} />
             <Route path="/BatteryСharging" element={<BatteryCharging />} />
-
           </Routes>
         </div>
       </header>

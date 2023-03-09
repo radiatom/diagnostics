@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import s from "./DiagnosticStarter.module.css"
 
-const DiagnosticStarter3 = (props) => {
+const DiagnosticStarter5 = (props) => {
       return (
             <div className={`card m-1 ${s.card}`} >
                   <div className="card-body">
                         <h5 className="card-title">Діагностика статера</h5>
-                        <h6 className="card-subtitle mb-2 text-muted2">Стартер клацає</h6>
+                        <h6 className="card-subtitle mb-2 text-muted2">Час від часу стартер заклинює</h6>
                         <p className="card-text">Діагностика в розробці</p>
                         <p className="card-text"></p>
                         <p className="card-text"></p>
@@ -20,4 +20,5 @@ const DiagnosticStarter3 = (props) => {
       );
 }
 
-export default DiagnosticStarter3;
+export default DiagnosticStarter5;
+
