@@ -10,7 +10,7 @@ const Service1 = () => {
                         <div className="card-body">
                               <h5 className="card-title">Автоелектрика</h5>
                               <p className="card-text">
-                                    У випадку коли проблеми з стартером чи генераторм повязанні з електрикою, виконуєм ремонт електропроводки.
+                                    У випадку коли проблеми з стартером чи генераторм пов`язані з електрикою, виконуєм ремонт електропроводки.
                               </p>
                               <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
                         </div>
