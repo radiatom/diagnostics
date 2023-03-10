@@ -13,6 +13,7 @@ import Altenator from './components/Blogs/Altenator/Altenator';
 import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
 import BlogsPage from './components/Blogs/BlogsPage';
 import TestPageContainer from './components/TestsPage/TestPageContainer';
+// import Gallery from './components/Gallery/Gallery';
 
 
 function App(props) {
@@ -37,6 +38,9 @@ function App(props) {
             <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />
             <Route path="/Alnenator" element={<Altenator />} />
             <Route path="/BatteryСharging" element={<BatteryCharging />} />
+            {/* <Route path="/Gallery" element={<Gallery/>} /> */}
+
+            
           </Routes>
         </div>
       </header>

@@ -11,9 +11,7 @@ const ResaultDiagnosticContainer = (props) => {
       }, []);
       return (
             <div>
-                  <div>
-                        {props.resault.map(el => <ResaultDiagnostic kеy={el} el={el} {...props} />)}
-                  </div>
+                  {props.resault.map(el => <ResaultDiagnostic kеy={el} el={el} {...props} />)}
             </div>
       );
 }
