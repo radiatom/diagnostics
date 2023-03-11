@@ -44,7 +44,7 @@ const Blogs = () => {
                         </div>
                         <div className="blog-content">
                            <NavLink to="/BatteryСharging"><h5>Як правильно зарядити автомобільний акумулятор</h5></NavLink>
-                           <p className="text">Hозглянемо кілька актуальних питань, які українські водії ставлять досить часто, і дамо на них відповіді.</p>
+                           <p className="text">Розглянемо кілька актуальних питань які українські водії ставлять досить часто, і дамо на них відповіді.</p>
                            <NavLink to="/BatteryСharging"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
                      </div>

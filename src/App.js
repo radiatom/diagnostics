@@ -23,7 +23,7 @@ function App(props) {
         <div className="header">
           <Navbar />
         </div>
-        <div >
+        <div className='contentApp'>
           <Routes>
             <Route className="home" path="/" element={<Home />} />
             <Route className="home" path="/Home" element={<Home />} />

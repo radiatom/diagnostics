@@ -7,7 +7,7 @@ const DiagnosticAltenator1 = (props) => {
             <div className={`card m-1 ${s.card}`} >
                   <div className="card-body">
                         <h5 className="card-title">Діагностика генератора</h5>
-                        <h6 className="card-subtitle mb-2 text-muted2">Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 12.6 вольт.</h6>
+                        <h6 className="card-subtitle mb-2 text-muted2">Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 13.1 вольт.</h6>
                         <p className="card-text">Перевірка проводки та генератора.</p>
                         <p className="card-text"></p>
                         <p className="card-text"></p>
