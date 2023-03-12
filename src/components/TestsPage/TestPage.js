@@ -1,12 +1,12 @@
 import React from 'react';
 import TestContainer from './Test/TestContainer';
-import FinishTests from './FinishTests/FinishTests';
+import FinishTestsContainer from './FinishTests/FinishTestsContainer';
 
 
 const TestPage = (props) => {
       return (
             <div>
-                  {props.linkNumber === "7" ? <FinishTests /> : <TestContainer />}
+                  {props.linkNumber === "7" ? <FinishTestsContainer /> : <TestContainer />}
             </div>
       );
 }

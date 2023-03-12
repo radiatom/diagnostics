@@ -13,7 +13,7 @@ const DiagnosticAltenator1 = (props) => {
                         <p className="card-text"></p>
                         <nav>
                               <button onClick={() => props.getTestData(1.1)} className="btn btn-secondary">Почати діагностику</button>
-                              {/* <NavLink to="/Diagnostics/Starter/Bobbery/"><button onClick={() => props.getTestData(1.1)} className="btn btn-warning">Почати діагностику</button></NavLink> */}
+                              {/* <NavLink to="/Diagnostics/Starter/Bobbery/"><button className={`btn btn-warning ${s.button}`}>Почати діагностику</button></NavLink> */}
                         </nav>
                   </div>
             </div>
