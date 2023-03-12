@@ -11,7 +11,7 @@ const Service1 = () => {
                         <div className="card-body">
                               <h5 className="card-title">Демонтаж та монтаж</h5>
                               <p className="card-text">
-                                    Виконуємо демонтаж та монтаж стартера чи генератора з умовою що агрегат буде діагностуватись у нас.
+                                    Виконуємо демонтаж та монтаж стартера чи генератора з умовою що агрегат буде діагностуватись і ремотуватись у нас.
                               </p>
                               <NavLink className="btn btn-warning rounded-pill" to="/Сontact">Наше розташування</NavLink>
                         </div>

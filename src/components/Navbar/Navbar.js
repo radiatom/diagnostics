@@ -33,9 +33,9 @@ const HederBootstrap = (props) => {
                                           <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Services">Наші послуги</NavLink>
                                           </li>
-                                          <li className="nav-item">
+                                          {/* <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Gallery">Галерея</NavLink>
-                                          </li>
+                                          </li> */}
                                           <li className="nav-item dropdown">
                                                 <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
                                                 <ul className="dropdown-menu">

@@ -34,11 +34,11 @@ const Test = (props) => {
                                     {props.testData.linkNumberYes === props.testData.linkNumberNo && props.testData.solutionYes === props.testData.solutionNo ?
                                           props.testData.linkNumberYes === props.testData.solutionYes ?
                                                 <div>
-                                                      <NavLink to="/Diagnostics">
-                                                            <button className={`btn btn-warning ${s.button}`}>Почати спочатку</button>
+                                                      <NavLink to="/Сontact">
+                                                            <button className={`btn btn-warning ${s.button}`}>Наші контакти</button>
                                                       </NavLink>
-                                                      <NavLink to="/Home">
-                                                            <button className={`btn btn-warning ${s.button}`}>На головну</button>
+                                                      <NavLink to="/Diagnostics">
+                                                            <button className={`btn btn-warning ${s.button}`}>Інші діагностики</button>
                                                       </NavLink>
                                                 </div>
                                                 :
