@@ -7,7 +7,7 @@ const FinishTests = (props) => {
       return (
             <div>
                   <div>
-                        {props.resault[0] === '' ?
+                        {props.resault[1] === undefined ?
                               <h5 className='text-center m-4'>Під час діагностики ніяких проблем не було знайдено.</h5>
                               :
                               <div>

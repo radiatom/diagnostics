@@ -1,27 +1,29 @@
 .explanation {
-      margin: 5%;
-    }
-    
-    .header {
-      text-align: center;
-      margin: 10px;
-      margin-top: 5%;
-      font-size: 150%;
-    
-    }
-    
-    .button {
-      box-shadow: 5px 5px 10px 1px #000;
-    }
-    
-    @media(max-width:800px) {
-      .header {
-        margin: 16px;
-      }
-      .explanation {
-        margin: 30px;
-      }
-      .card {
-        width: 100%
-      }
-    }
+  margin: 5%;
+}
+
+.header {
+  text-align: center;
+  margin: 10px;
+  margin-top: 5%;
+  font-size: 150%;
+
+}
+
+.button {
+  box-shadow: 5px 5px 10px 1px #000;
+}
+
+@media(max-width:800px) {
+  .header {
+    margin: 16px;
+  }
+
+  .explanation {
+    margin-bottom: 15%;
+  }
+
+  .card {
+    width: 100%
+  }
+}
