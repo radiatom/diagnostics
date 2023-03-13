@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ResaultDiagnosticContainer from './ResaultDiagnostic/ResaultDiagnosticContainer'
 import s from "./FinishTests.module.css"
 import { NavLink } from 'react-router-dom';
 
 const FinishTests = (props) => {
-      useEffect(() => {
-            props.setSaveResault()
-      }, []);
+      
       return (
             <div>
                   <div>

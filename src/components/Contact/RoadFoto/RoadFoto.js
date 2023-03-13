@@ -14,36 +14,36 @@ const RoadFoto = (props) => {
                   <div className='container text-center'>
                         <h2 className=' p-4 '>Як до нас доїхати?</h2>
                         <div className={s.RoadFoto}>
-                              <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
-                                    <div class="carousel-inner ">
-                                          <div class="carousel-item active ">
-                                                <img src={img1} class="d-block w-100" alt="viniko" />
+                              <div id="carouselExampleAutoplaying" className="carousel slide " data-bs-ride="carousel">
+                                    <div className="carousel-inner ">
+                                          <div className="carousel-item active ">
+                                                <img src={img1} className="d-block w-100" alt="viniko" />
                                           </div>
-                                          <div class="carousel-item">
-                                                <img src={img2} class="d-block w-100" alt="viniko" />
+                                          <div className="carousel-item">
+                                                <img src={img2} className="d-block w-100" alt="viniko" />
                                           </div>
-                                          <div class="carousel-item">
-                                                <img src={img3} class="d-block w-100" alt="viniko" />
+                                          <div className="carousel-item">
+                                                <img src={img3} className="d-block w-100" alt="viniko" />
                                           </div>
-                                          <div class="carousel-item">
-                                                <img src={img4} class="d-block w-100" alt="viniko" />
+                                          <div className="carousel-item">
+                                                <img src={img4} className="d-block w-100" alt="viniko" />
                                           </div>
-                                          <div class="carousel-item">
-                                                <img src={img5} class="d-block w-100" alt="viniko" />
+                                          <div className="carousel-item">
+                                                <img src={img5} className="d-block w-100" alt="viniko" />
                                           </div>
-                                          <div class="carousel-item">
-                                                <img src={img6} class="d-block w-100" alt="viniko" />
+                                          <div className="carousel-item">
+                                                <img src={img6} className="d-block w-100" alt="viniko" />
                                           </div>
                                           {/* в окремий компонент не винести бо треба щоб тут був class="carousel-item active", 
                         тому скоротити можн абуде 1 строчку замість одної строчки, тому це не логічно */}
                                     </div>
-                                    <button class={`carousel-control-prev ${s.carouselControlPrev}`} type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Previous</span>
+                                    <button className={`carousel-control-prev ${s.carouselControlPrev}`} type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button class={`carousel-control-next ${s.carouselControlNext}`} type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Next</span>
+                                    <button className={`carousel-control-next ${s.carouselControlNext}`} type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span className="visually-hidden">Next</span>
                                     </button>
                               </div>
                         </div>
