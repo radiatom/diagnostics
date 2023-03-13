@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route, } from "react-router-dom";
-import Navbar from './components/Navbar/Navbar'
 import Diagnostics from './components/Diagnostics/Diagnostics';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
@@ -13,6 +12,7 @@ import Altenator from './components/Blogs/Altenator/Altenator';
 import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
 import BlogsPage from './components/Blogs/BlogsPage';
 import TestPageContainer from './components/TestsPage/TestPageContainer';
+import NavbarContainer from './components/Navbar/NavbarContainer';
 // import Gallery from './components/Gallery/Gallery';
 
 
@@ -21,7 +21,7 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <div className="header">
-          <Navbar />
+          <NavbarContainer/>
         </div>
         <div className='contentApp'>
           <Routes>

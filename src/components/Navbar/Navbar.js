@@ -4,7 +4,7 @@ import logo from "./../../img/Viniko1.png"
 import { NavLink } from 'react-router-dom';
 
 
-const HederBootstrap = (props) => {
+const Navbar = (props) => {
       return (
             <div>
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
@@ -36,14 +36,14 @@ const HederBootstrap = (props) => {
                                           {/* <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Gallery">Галерея</NavLink>
                                           </li> */}
-                                          <li className="nav-item dropdown">
-                                                <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
-                                                <ul className="dropdown-menu">
-                                                      <NavLink className="dropdown-item" to="/DiagnosticStarter">Стартер</NavLink>
+                                          <li  className="nav-item dropdown">
+                                                <div  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
+                                                <ul onClick={()=>props.updateRes()} className="dropdown-menu">
+                                                      <NavLink  className="dropdown-item" to="/DiagnosticStarter" > Стартер</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticAltetnator">Генератор</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticABattery">Акумулятор</NavLink>
                                                       <li><hr className="dropdown-divider" /></li>
-                                                      <NavLink className="dropdown-item" to="/Diagnostics">Всі види діагностики</NavLink>
+                                                      <NavLink className="dropdown-item" to="/Diagnostics" >Всі види діагностики </NavLink>
                                                 </ul>
                                           </li>
                                           <li className="nav-item">
@@ -61,4 +61,4 @@ const HederBootstrap = (props) => {
       );
 }
 
-export default HederBootstrap;
+export default Navbar;

@@ -71,15 +71,17 @@ export const getResaultDiagnosticData = () => (dispatch) => {
 }
 
 export const updateRes = () => (dispatch) => {
-      for (let a = 1; a <= serverData.resaultDiagnostic.length; a++) {
-            serverData.resaultDiagnostic[a].solution = false
-      }
-      dispatch(getResaultDiagnosticData())
+      serverData.resaultDiagnostic.map(el => {
+            if (el.solution === true) {
+                  return el.solution = false
+            }
+            return serverData.resaultDiagnostic
+      })
+      dispatch(getResaultDiagnosticData(serverData.resaultDiagnostic))
       //фунція скидання  результатів попередніх відповідей
 }
 
 export const setSaveResault = () => (dispatch) => {
-      debugger
       const res = JSON.parse(sessionStorage.getItem('res'))
       dispatch(setResaultDiagnosticData(res))
       //функція яка вертає результат діагностики який був збережений в sessionStorage.
@@ -91,6 +93,7 @@ export const putSolutionTestTrue = (linkSolution) => (dispatch) => {
             if (el.id === linkSolution) {
                   return el.solution = true
             }
+            return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
 }
@@ -99,6 +102,7 @@ export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
             if (el.id === linkSolution) {
                   return el.solution = false
             }
+            return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
 }
