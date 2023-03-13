@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ResaultDiagnostic from './ResaultDiagnostic';
-import { setSaveResault } from '../../../../reactRedux/testReducer';
 
 
 
 const ResaultDiagnosticContainer = (props) => {
-      useEffect(() => {
-            props.setSaveResault()
-      }, []);
       return (
             <div>
                   {props.resault.map(el => <ResaultDiagnostic kеy={el} el={el} {...props} />)}
@@ -21,4 +17,4 @@ const mapStateToProps = (state) => {
             resault: state.testPage.resault
       }
 }
-export default connect(mapStateToProps, { setSaveResault })(ResaultDiagnosticContainer);
+export default connect(mapStateToProps, {})(ResaultDiagnosticContainer);
