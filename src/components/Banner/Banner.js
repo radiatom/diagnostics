@@ -20,7 +20,7 @@ const Banner = () => {
     <Carousel fade activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item className="carousel-itemm">
         <img className="d-block w-100 " src={banner4} alt="First slide" />
-      <Carousel.Caption>
+        <Carousel.Caption>
           <h3>Діагностика</h3>
           <p>Ми розробили систему, за допомогою якої, Ви зможете перевірити стартер, генератор, акумулятор.</p>
           <NavLink className="btn btn-danger rounded-pill m-2" to="/Diagnostics">Діагностувати</NavLink>
@@ -48,7 +48,7 @@ const Banner = () => {
         </Carousel.Caption>
       </Carousel.Item>
 
-      
+
     </Carousel>
   );
 };

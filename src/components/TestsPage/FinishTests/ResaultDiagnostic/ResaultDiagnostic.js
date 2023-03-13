@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./ResaultDiagnostics.module.css"
+// import s from "./ResaultDiagnostics.module.css"
 
 const ResaultDiagnostic = (props) => {
       return (
