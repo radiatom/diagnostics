@@ -57,10 +57,13 @@ export const getTestData = (linkNumber) => (dispatch) => {
 
 
 export const getResaultDiagnosticData = () => (dispatch) => {
-      const arr = Object.entries(serverData.resaultDiagnostic).map(([key, value]) => {
-            return value.solution ? value.text : undefined
-      });
-      const finishResaultDiagnostic = arr.filter(el => el !== undefined)
+      const finishResaultDiagnostic = []
+      serverData.resaultDiagnostic.map(el => {
+            if (el.solution === true) {
+                  finishResaultDiagnostic.push(el.text)
+            }
+            return finishResaultDiagnostic
+      })
       dispatch(setResaultDiagnosticData(finishResaultDiagnostic))
 
       sessionStorage.setItem('res', JSON.stringify(finishResaultDiagnostic));
@@ -68,7 +71,7 @@ export const getResaultDiagnosticData = () => (dispatch) => {
 }
 
 export const updateRes = () => (dispatch) => {
-      for (let a = 1; a <= 63; a++) {
+      for (let a = 1; a <= serverData.resaultDiagnostic.length; a++) {
             serverData.resaultDiagnostic[a].solution = false
       }
       dispatch(getResaultDiagnosticData())
@@ -84,11 +87,19 @@ export const setSaveResault = () => (dispatch) => {
 
 
 export const putSolutionTestTrue = (linkSolution) => (dispatch) => {
-      serverData.resaultDiagnostic[linkSolution].solution = true
+      serverData.resaultDiagnostic.map(el => {
+            if (el.id === linkSolution) {
+                  return el.solution = true
+            }
+      })
       dispatch(getResaultDiagnosticData())
 }
 export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
-      serverData.resaultDiagnostic[linkSolution].solution = false
+      serverData.resaultDiagnostic.map(el => {
+            if (el.id === linkSolution) {
+                  return el.solution = false
+            }
+      })
       dispatch(getResaultDiagnosticData())
 }
 export default testReducer
