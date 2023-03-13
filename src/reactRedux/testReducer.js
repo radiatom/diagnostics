@@ -60,7 +60,7 @@ export const getResaultDiagnosticData = () => (dispatch) => {
       const finishResaultDiagnostic = []
       serverData.resaultDiagnostic.map(el => {
             if (el.solution === true) {
-                  finishResaultDiagnostic.push(el.text)
+                  finishResaultDiagnostic.push(el)
             }
             return finishResaultDiagnostic
       })

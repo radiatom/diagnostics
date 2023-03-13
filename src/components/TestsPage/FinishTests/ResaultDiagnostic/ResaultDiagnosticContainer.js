@@ -7,7 +7,7 @@ import ResaultDiagnostic from './ResaultDiagnostic';
 const ResaultDiagnosticContainer = (props) => {
       return (
             <div>
-                  {props.resault.map(el => <ResaultDiagnostic kеy={el} el={el} {...props} />)}
+                  {props.resault.map(el =><ResaultDiagnostic key={el.id} el={el.text} {...props} />)}
             </div>
       );
 }
