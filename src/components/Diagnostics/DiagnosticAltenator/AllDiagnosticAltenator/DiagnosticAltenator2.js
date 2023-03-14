@@ -8,7 +8,7 @@ const DiagnosticAltenator2 = (props) => {
                   <div className="card-body">
                         <h5 className="card-title">Діагностика генератора</h5>
                         <h6 className="card-subtitle mb-2 text-muted2">Шум генератора</h6>
-                        <p className="card-text">Перевірка підшипників та шківа генератора.</p>
+                        <p className="card-text">Перевірка підшипників та шківа генератора, обводних роликів приводного ремня.</p>
                         <p className="card-text"></p>
                         <p className="card-text"></p>
                         <nav>

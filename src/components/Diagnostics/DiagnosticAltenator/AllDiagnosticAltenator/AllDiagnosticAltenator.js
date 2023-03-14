@@ -3,6 +3,7 @@ import s from "./DiagnosticAltenator.module.css"
 import DiagnosticAltenator1 from './DiagnosticAltenator1';
 import DiagnosticAltenator2 from './DiagnosticAltenator2';
 import DiagnosticAltenator3 from './DiagnosticAltenator3';
+import DiagnosticAltenator4 from './DiagnosticAltenator4';
 
 
 const DiagnosticStarter = () => {
@@ -13,6 +14,7 @@ const DiagnosticStarter = () => {
                               <DiagnosticAltenator3 />
                               <DiagnosticAltenator1 />
                               <DiagnosticAltenator2 />
+                              <DiagnosticAltenator4/>
                         </div>
                   </div>
             </div>
