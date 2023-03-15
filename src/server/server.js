@@ -575,7 +575,7 @@ const serverData = {
             },
             99: {
                   linkNumber: 99,
-                  problem: "Всі тести проводяться на запущеному двигуні за допомогою мультиметра.",
+                  problem: "Всі тести проводяться на запущеному двигуні с.",
                   testText: '',
                   instruction: '',
                   linkNumberYes: 100,
@@ -1188,7 +1188,7 @@ const serverData = {
             143: {
                   linkNumber: 143,
                   problem: "Дайте відповідь на питання:",
-                  testText: 'Катушка статора ціла?',
+                  testText: 'Катушка якоря ціла?',
                   instruction: 'Два кільця на колекторі мають продзвонюватись між собою.',
                   linkNumberYes: 7,
                   linkNumberNo: 7,
