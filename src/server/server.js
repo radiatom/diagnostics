@@ -1437,6 +1437,42 @@ const serverData = {
                   img: null,
                   video: null,
             },
+            163: {
+                  linkNumber: 163,
+                  problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
+                  testText: '',
+                  instruction: '',
+                  linkNumberYes: 164,
+                  linkNumberNo: 164,
+                  solutionYes: 1,
+                  solutionNo: 1,
+                  img: null,
+                  video: null,
+            },
+            164: {
+                  linkNumber: 164,
+                  problem: "Дайте відповідь на питання",
+                  testText: 'Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?',
+                  instruction: '',
+                  linkNumberYes: 159,
+                  linkNumberNo: 165,
+                  solutionYes: 1,
+                  solutionNo: 1,
+                  img: null,
+                  video: null,
+            },
+            165: {
+                  linkNumber: 165,
+                  problem: "Дайте відповідь на питання",
+                  testText: 'Напруга під час спроби пуску між залізною частиною двигуна і плюсовою клемою акумулятора опускалась меньше 11 вольт?',
+                  instruction: '',
+                  linkNumberYes: 7,
+                  linkNumberNo: 7,
+                  solutionYes: 11,
+                  solutionNo: 69,
+                  img: null,
+                  video: null,
+            },
       },
       resaultDiagnostic: [
             {
@@ -1779,7 +1815,16 @@ const serverData = {
                   id: 68,
                   text:  "Якщо глибина зносу колектора 0.6мм - це залишилось 30% ресурсу. 1мм -це весь ресурс використано, генератор вже перестав давати зарядку або скоро перестане.",
                   solution: false,
-                 
+            },
+            {
+                  id: 69,
+                  text:  "У Вас проблеми з стартером, можливо кінчаються щітки або погана маса на корпусі. Якщо у Вас стартера фірми Mitsubishi однозначно знімайте та робіть профілактику, ці стартера мають заводські дефекти маси.",
+                  solution: false, 
+            },
+            {
+                  id: 70,
+                  text:  "",
+                  solution: false, 
             }
       ]
 
