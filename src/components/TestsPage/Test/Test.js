@@ -43,7 +43,7 @@ const Test = (props) => {
                                                 </div>
                                                 :
                                                 <NavLink to={`/Diagnostics/Test/${props.testData.linkNumberYes}`}>
-                                                      <button className={`btn btn-warning ${s.button}`}>Ok</button>
+                                                      <button onClick={()=>props.putSolutionTestTrue(2)} className={`btn btn-warning ${s.button}`}>Ok</button>
                                                 </NavLink>
 
                                           :

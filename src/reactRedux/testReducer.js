@@ -96,6 +96,7 @@ export const putSolutionTestTrue = (linkSolution) => (dispatch) => {
             return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
+      console.log(serverData.resaultDiagnostic)
 }
 export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
       serverData.resaultDiagnostic.map(el => {
@@ -105,5 +106,7 @@ export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
             return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
+      console.log(serverData.resaultDiagnostic)
+
 }
 export default testReducer
