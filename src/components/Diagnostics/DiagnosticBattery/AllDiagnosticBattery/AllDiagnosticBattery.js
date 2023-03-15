@@ -5,7 +5,7 @@ import s from "./AllDiagnosticBattery.module.css"
 const AllDiagnosticBattery = (props) => {
       return (
             <div className='container'>
-                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 text-center  ">
+                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center  ">
                         <div className={`card  m-1 ${s.card}`} >
                               <div className="card-body">
                                     <h5 className="card-title">Діагностика акумулятора</h5>

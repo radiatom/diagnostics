@@ -1,8 +1,15 @@
 import React from 'react';
-import AllDiagnosticStarter from "./DiagnosticStarter/AllDiagnosticStarter/AllDiagnosticStarter"
-import AllDiagnosticAltenator from "./DiagnosticAltenator/AllDiagnosticAltenator/AllDiagnosticAltenator"
-import AllDiagnosticBattery from "./DiagnosticBattery/AllDiagnosticBattery/AllDiagnosticBattery"
 import s from "./Diagnostics.module.css"
+import DiagnosticStarter1 from './DiagnosticStarter/AllDiagnosticStarter/DiagnosticStarter1';
+import DiagnosticStarter2 from './DiagnosticStarter/AllDiagnosticStarter/DiagnosticStarter2';
+import DiagnosticStarter3 from './DiagnosticStarter/AllDiagnosticStarter/DiagnosticStarter3';
+import DiagnosticStarter4 from './DiagnosticStarter/AllDiagnosticStarter/DiagnosticStarter4';
+import DiagnosticStarter5 from './DiagnosticStarter/AllDiagnosticStarter/DiagnosticStarter5';
+import DiagnosticAltenator1 from './DiagnosticAltenator/AllDiagnosticAltenator/DiagnosticAltenator1';
+import DiagnosticAltenator2 from './DiagnosticAltenator/AllDiagnosticAltenator/DiagnosticAltenator2';
+import DiagnosticAltenator3 from './DiagnosticAltenator/AllDiagnosticAltenator/DiagnosticAltenator3';
+import DiagnosticAltenator4 from './DiagnosticAltenator/AllDiagnosticAltenator/DiagnosticAltenator4';
+import AllDiagnosticBattery from "./DiagnosticBattery/AllDiagnosticBattery/AllDiagnosticBattery"
 
 const Diagnostics = () => {
       return (
@@ -18,9 +25,23 @@ const Diagnostics = () => {
                         <h5>Діагностика проводиться коли агрегат встановлений на автомобілі, і проблема постійна, або зробити все щоб вона виявила себе та лише тоді починати тест.</h5>
                         <p>Виберіть діагностику відштовхуючись від того <span className='text-muted2'>як проблема себе проявляє</span>.</p>
                   </div>
-                  <AllDiagnosticStarter />
-                  <AllDiagnosticAltenator />
-                  <AllDiagnosticBattery />
+
+                  <div >
+                        <div className="container my-5">
+                              <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 text-center">
+                                    <DiagnosticStarter1 />
+                                    <DiagnosticStarter2 />
+                                    <DiagnosticStarter3 />
+                                    <DiagnosticStarter4 />
+                                    <DiagnosticStarter5 />
+                                    <DiagnosticAltenator1 />
+                                    <DiagnosticAltenator2 />
+                                    <DiagnosticAltenator3 />
+                                    <DiagnosticAltenator4 />
+                                    <AllDiagnosticBattery />
+                              </div>
+                        </div>
+                  </div>
             </div>
 
 

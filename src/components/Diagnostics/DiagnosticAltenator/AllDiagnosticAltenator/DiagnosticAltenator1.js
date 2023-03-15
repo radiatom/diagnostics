@@ -1,5 +1,5 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import s from "./DiagnosticAltenator.module.css"
 
 const DiagnosticAltenator1 = (props) => {
@@ -12,8 +12,7 @@ const DiagnosticAltenator1 = (props) => {
                         <p className="card-text"></p>
                         <p className="card-text"></p>
                         <nav>
-                              <button onClick={() => props.getTestData(1.1)} className="btn btn-secondary">Почати діагностику</button>
-                              {/* <NavLink to="/Diagnostics/Starter/Bobbery/"><button className={`btn btn-warning ${s.button}`}>Почати діагностику</button></NavLink> */}
+                              <NavLink to="/Diagnostics/Test/144"><button className={`btn btn-warning ${s.button}`}>Почати діагностику</button></NavLink>
                         </nav>
                   </div>
             </div>
