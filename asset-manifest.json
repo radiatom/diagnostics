@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/diagnostics/static/css/main.75059648.css",
-    "main.js": "/diagnostics/static/js/main.7dc65389.js",
+    "main.js": "/diagnostics/static/js/main.7c8af23d.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video20.mp4": "/diagnostics/static/media/video20.234fda151336b5c34071.mp4",
+    "static/media/blogCharr1.png": "/diagnostics/static/media/blogCharr1.eafccac0a1037a5fcc3b.png",
+    "static/media/img99.png": "/diagnostics/static/media/img99.a37bd3f02c726bb72935.png",
     "static/media/15.png": "/diagnostics/static/media/15.7404195636a14353fe08.png",
     "static/media/bg3.jpg": "/diagnostics/static/media/bg3.d3ae0caeca89265a2ecb.jpg",
     "static/media/bg2.jpg": "/diagnostics/static/media/bg2.a091ac11e79f21955588.jpg",
@@ -20,6 +22,7 @@
     "static/media/altBlog.png": "/diagnostics/static/media/altBlog.4418bbf7dda38d7dae5c.png",
     "static/media/stater-structure.png": "/diagnostics/static/media/stater-structure.d2e99b0e3bffbed76103.png",
     "static/media/altDiagServ.jpg": "/diagnostics/static/media/altDiagServ.545d80401c576dc06763.jpg",
+    "static/media/helper.jpg": "/diagnostics/static/media/helper.a48660067b583c8364d6.jpg",
     "static/media/77.png": "/diagnostics/static/media/77.08472bc2abc40c2cf32f.png",
     "static/media/map1.png": "/diagnostics/static/media/map1.4812e62d498d3cee0f67.png",
     "static/media/montage.jpg": "/diagnostics/static/media/montage.d495e9d0cdb4a83b294a.jpg",
@@ -31,14 +34,15 @@
     "static/media/ina.jpg": "/diagnostics/static/media/ina.add1a336ee42e4dfc529.jpg",
     "static/media/alt4.jpg": "/diagnostics/static/media/alt4.3809e12509a3a72db0eb.jpg",
     "static/media/st1.jpg": "/diagnostics/static/media/st1.a54ace0e6c9bb4190973.jpg",
+    "static/media/areometr.jpg": "/diagnostics/static/media/areometr.6dc7be1ca7b6100204dd.jpg",
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.3688d7c20b4caa20dba5.jpg",
     "index.html": "/diagnostics/index.html",
     "main.75059648.css.map": "/diagnostics/static/css/main.75059648.css.map",
-    "main.7dc65389.js.map": "/diagnostics/static/js/main.7dc65389.js.map",
+    "main.7c8af23d.js.map": "/diagnostics/static/js/main.7c8af23d.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75059648.css",
-    "static/js/main.7dc65389.js"
+    "static/js/main.7c8af23d.js"
   ]
 }
