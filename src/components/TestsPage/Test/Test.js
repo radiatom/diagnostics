@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import InstructionImgTest from './InstructionImgTest/InstructionImgTest';
 import InstructionVideoTest from './InstructionVideoTest/InstructionVideoTest';
 import s from "./Test.module.css"
+import logo from "./../../../img/Viniko1.png"
+
 
 
 
@@ -34,6 +36,9 @@ const Test = (props) => {
                                     {props.testData.linkNumberYes === props.testData.linkNumberNo && props.testData.solutionYes === props.testData.solutionNo ?
                                           props.testData.linkNumberYes === props.testData.solutionYes ?
                                                 <div>
+                                                      <div>
+                                                            <NavLink to="/Home"><img src={logo} alt="logo" width="200" /></NavLink>
+                                                      </div>
                                                       <NavLink to="/Сontact">
                                                             <button className={`btn btn-warning ${s.button}`}>Наші контакти</button>
                                                       </NavLink>
@@ -43,7 +48,7 @@ const Test = (props) => {
                                                 </div>
                                                 :
                                                 <NavLink to={`/Diagnostics/Test/${props.testData.linkNumberYes}`}>
-                                                      <button onClick={()=>props.putSolutionTestTrue(2)} className={`btn btn-warning ${s.button}`}>Ok</button>
+                                                      <button onClick={() => props.putSolutionTestTrue(2)} className={`btn btn-warning ${s.button}`}>Ok</button>
                                                 </NavLink>
 
                                           :

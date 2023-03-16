@@ -10,7 +10,7 @@ const Navbar = (props) => {
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
                         <div className=" container">
                               <div className=" container-xxl navbar-brand p-0 ">
-                                    <span><NavLink to="/Home"><img src={logo} alt="logo" width="200"  /></NavLink></span>
+                                    <span><NavLink to="/Home"><img src={logo} alt="logo viniko вініко" width="200"  /></NavLink></span>
                                     <span className={` row row-cols-1 row-cols-md-3 row-cols-lg-3 ${s.navContact}`}>
                                           <div className="col">Автосервіс</div>
                                           <div className="col">Луцьк</div>

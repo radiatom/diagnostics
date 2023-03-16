@@ -13,7 +13,7 @@ const Contact = () => {
             <h2 className='text-center p-4 '>Контактна інформація</h2>
             <div className="container">
                <div className='container text-center'>
-                  <img className={s.img} src={img1} alt="viniko" />
+                  <img className={s.img} src={img1} alt="viniko вініко" />
                </div>
                <div className="contact-info">
                   <ul className="info">

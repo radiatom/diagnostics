@@ -17,22 +17,22 @@ const RoadFoto = (props) => {
                               <div id="carouselExampleAutoplaying" className="carousel slide " data-bs-ride="carousel">
                                     <div className="carousel-inner ">
                                           <div className="carousel-item active ">
-                                                <img src={img1} className="d-block w-100" alt="viniko" />
+                                                <img src={img1} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           <div className="carousel-item">
-                                                <img src={img2} className="d-block w-100" alt="viniko" />
+                                                <img src={img2} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           <div className="carousel-item">
-                                                <img src={img3} className="d-block w-100" alt="viniko" />
+                                                <img src={img3} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           <div className="carousel-item">
-                                                <img src={img4} className="d-block w-100" alt="viniko" />
+                                                <img src={img4} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           <div className="carousel-item">
-                                                <img src={img5} className="d-block w-100" alt="viniko" />
+                                                <img src={img5} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           <div className="carousel-item">
-                                                <img src={img6} className="d-block w-100" alt="viniko" />
+                                                <img src={img6} className="d-block w-100" alt="viniko вініко" />
                                           </div>
                                           {/* в окремий компонент не винести бо треба щоб тут був class="carousel-item active", 
                         тому скоротити можн абуде 1 строчку замість одної строчки, тому це не логічно */}
