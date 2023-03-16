@@ -2,6 +2,9 @@ import img19 from "./../img/19.png"
 import img15 from "./../img/15.png"
 import img78 from "./../img/78.png"
 import img77 from "./../img/77.png"
+import img99 from "./../img/img99.png"
+import img89 from "./../img/areometr.jpg"
+
 
 
 import video17 from "./../video/video17.mp4"
@@ -374,8 +377,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 86,
-                  linkNumberNo: 86,
+                  linkNumberYes: 178,
+                  linkNumberNo: 178,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -450,7 +453,7 @@ const serverData = {
                   linkNumberNo: 90,
                   solutionYes: 1,
                   solutionNo: 63,
-                  img: null,
+                  img: img89,
                   video: null,
             },
             90: {
@@ -575,14 +578,14 @@ const serverData = {
             },
             99: {
                   linkNumber: 99,
-                  problem: "Всі тести проводяться на запущеному двигуні с.",
+                  problem: "Всі тести проводяться на запущеному двигуні за допомогою мультиметра.",
                   testText: '',
                   instruction: '',
                   linkNumberYes: 100,
                   linkNumberNo: 100,
                   solutionYes: 1,
                   solutionNo: 1,
-                  img: null,
+                  img: img99,
                   video: null,
             },
             100: {
@@ -686,8 +689,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 109,
-                  linkNumberNo: 109,
+                  linkNumberYes: 179,
+                  linkNumberNo: 179,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -1212,13 +1215,13 @@ const serverData = {
             145: {
                   linkNumber: 145,
                   problem: "Всі тести проводяться на запущеному двигуні за допомогою мультиметра.",
-                  testText: '',
+                  testText: 'У Вас є мультиметр?',
                   instruction: '',
                   linkNumberYes: 146,
-                  linkNumberNo: 146,
+                  linkNumberNo: 7,
                   solutionYes: 1,
-                  solutionNo: 1,
-                  img: null,
+                  solutionNo: 78,
+                  img: img99,
                   video: null,
             },
             146: {
@@ -1358,8 +1361,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 158,
-                  linkNumberNo: 158,
+                  linkNumberYes: 180,
+                  linkNumberNo: 180,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -1442,8 +1445,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 164,
-                  linkNumberNo: 164,
+                  linkNumberYes: 181,
+                  linkNumberNo: 181,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -1526,8 +1529,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може призвезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 171,
-                  linkNumberNo: 171,
+                  linkNumberYes: 177,
+                  linkNumberNo: 177,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -1616,13 +1619,75 @@ const serverData = {
                   solutionNo: 1,
                   img: null,
                   video: null,
-            } 
+            },
+            177: {
+                  linkNumber: 177,
+                  problem: "Тести проводяться за допомогою мультиметра.",
+                  testText: 'У Вас є мультиметр?',
+                  instruction: '',
+                  linkNumberYes:171,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 78,
+                  img: img99,
+                  video: null,
+            },
+            178: {
+                  linkNumber: 178,
+                  problem: "Тести проводяться за допомогою мультиметра.",
+                  testText: 'У Вас є мультиметр?',
+                  instruction: '',
+                  linkNumberYes:8.6,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 78,
+                  img: img99,
+                  video: null,
+            },
+            179: {
+                  linkNumber: 179,
+                  problem: "Тести проводяться за допомогою мультиметра.",
+                  testText: 'У Вас є мультиметр?',
+                  instruction: '',
+                  linkNumberYes:109,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 78,
+                  img: img99,
+                  video: null,
+            },
+            180: {
+                  linkNumber: 180,
+                  problem: "Тести проводяться за допомогою мультиметра.",
+                  testText: 'У Вас є мультиметр?',
+                  instruction: '',
+                  linkNumberYes:158,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 78,
+                  img: img99,
+                  video: null,
+            },
+            181: {
+                  linkNumber: 181,
+                  problem: "Тести проводяться за допомогою мультиметра.",
+                  testText: 'У Вас є мультиметр?',
+                  instruction: '',
+                  linkNumberYes:164,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 78,
+                  img: img99,
+                  video: null,
+            },
+                  
       },
       resaultDiagnostic: [
             {
                   id: 1,
                   text: '',
                   solution: false,
+                  //заглушка
             },
             {
                   id: 2,
@@ -2003,6 +2068,11 @@ const serverData = {
             {
                   id: 77,
                   text:  "Дивно що все працює добре. Якщо ваш стартер дійсно клацає коли повертати замок запалення тоді наші здогадки наступні. Стартер може працювати якщо подати + на малу клему втягуючого, це може означати: втягуюче зношене, реле стартера погане, поганий провід від замка запалення, поганий замок запалення. Можете поставити розвантажувальне реле на сигнальний провід від замка яке вмикатиме силовий плюс на малу клему стартера, але якщо втягуюче погане це допоможе на малий проміжок часу. ",
+                  solution: false, 
+            },
+            {
+                  id: 78,
+                  text:  "Без мультиметра ви нічого не виясните. Знайдіть десь його та почніть діагностику.",
                   solution: false, 
             }
       ]
