@@ -32,7 +32,7 @@ const Blogs = () => {
                         </div>
                         <div className="blog-content">
                            <NavLink to="/Alnenator"><h5>Будова генератора</h5></NavLink>
-                           <p className="text">Ця стаття описує будову генеартора.</p>
+                           <p className="text">Ця стаття описує будову генератора. Перевірка генератора. Несправності генератора.</p>
                            <NavLink to="/Alnenator"><button className="btn btn-warning" >Читати</button></NavLink>
                         </div>
                      </div>

@@ -12,7 +12,7 @@ const RoadFoto = (props) => {
       return (
             <div className="container">
                   <div className='container text-center'>
-                        <h2 className=' p-4 '>Як до нас доїхати?</h2>
+                        <h2 className=' p-4 '>Як до нас доїхати (слайди)?</h2>
                         <div className={s.RoadFoto}>
                               <div id="carouselExampleAutoplaying" className="carousel slide " data-bs-ride="carousel">
                                     <div className="carousel-inner ">
