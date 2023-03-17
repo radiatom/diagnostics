@@ -8,7 +8,17 @@
 }
 
 @media(max-width:450px) {
+    .GlleryTest{
+        border-radius: 10px;
+        padding: 5px;
+        background-color: rgba(8, 8, 8, 0.212);
+    }
     .width{
         width: 90%;
     }
+}
+.GlleryTest{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(8, 8, 8, 0.212);
 }

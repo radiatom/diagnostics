@@ -4,7 +4,7 @@ import s from './Gallery.module.css'
 
 const GlleryTest = (props) => {
       return (
-            <div className='m-4 mb-5'>
+            <div className={`m-4 mb-5 ${s.GlleryTest}`}>
                   <h5>№ тесту: {props.elTest.linkNumber}</h5>
                   <p>Текст заголовоку: {props.elTest.problem}</p>
                   {props.elTest.testText === '' ?
