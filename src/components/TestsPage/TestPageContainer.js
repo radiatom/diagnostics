@@ -6,9 +6,10 @@ import { getTestData, setSaveResault } from './../../reactRedux/testReducer';
 
 const TestPageContainer = (props) => {
       const { linkNumber } = useParams()
+      const num = Number(linkNumber)
       return (
             <div>
-                  <TestPage linkNumber={linkNumber} getTestData={props.getTestData} setSaveResault={props.setSaveResault}/>
+                  <TestPage linkNumber={num} getTestData={props.getTestData} setSaveResault={props.setSaveResault} />
             </div>
       );
 }

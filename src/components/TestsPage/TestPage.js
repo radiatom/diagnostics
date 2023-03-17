@@ -11,7 +11,7 @@ const TestPage = (props) => {
       }, [props]);
       return (
             <div>
-                  {props.linkNumber === "7" ? <FinishTestsContainer /> : <TestContainer />}
+                  {props.linkNumber === 7 ? <FinishTestsContainer /> : <TestContainer />}
             </div>
       );
 }

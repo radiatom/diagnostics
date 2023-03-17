@@ -51,7 +51,14 @@ const testReducer = (state = standartStateTest, action) => {
       }
 }
 export const getTestData = (linkNumber) => (dispatch) => {
-      const testData = serverData.testCard[linkNumber]
+      let testData={} 
+       serverData.testCard.map(el=>{
+            if(el.linkNumber===linkNumber){
+                  console.log(el)
+                  return testData=el
+            }
+            return testData
+       })
       dispatch(setTestData(testData))
 }
 
