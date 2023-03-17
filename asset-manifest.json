@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/diagnostics/static/css/main.75059648.css",
-    "main.js": "/diagnostics/static/js/main.15a81d8f.js",
+    "main.css": "/diagnostics/static/css/main.a13eb467.css",
+    "main.js": "/diagnostics/static/js/main.2229408b.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video20.mp4": "/diagnostics/static/media/video20.234fda151336b5c34071.mp4",
     "static/media/blogCharr1.png": "/diagnostics/static/media/blogCharr1.eafccac0a1037a5fcc3b.png",
@@ -13,14 +13,14 @@
     "static/media/video17.mp4": "/diagnostics/static/media/video17.a82a686fbd2a464bae0d.mp4",
     "static/media/galery6.jpg": "/diagnostics/static/media/galery6.b96f8a906834876baf96.jpg",
     "static/media/galery5.jpg": "/diagnostics/static/media/galery5.4f4b93d563e161565258.jpg",
+    "static/media/stater-structure.png": "/diagnostics/static/media/stater-structure.8cbf7ef614b3714c320f.png",
     "static/media/19.png": "/diagnostics/static/media/19.c086add4640c4221c62a.png",
+    "static/media/altBlog.png": "/diagnostics/static/media/altBlog.66ca2d8d4af72ae12576.png",
     "static/media/bg5.jpg": "/diagnostics/static/media/bg5.38e92744e99791b6adc7.jpg",
     "static/media/altenaorsBlog.png": "/diagnostics/static/media/altenaorsBlog.e37c4769fcffe73089a0.png",
     "static/media/fotoBlog1.jpg": "/diagnostics/static/media/fotoBlog1.8198bac9d28c404cbbf9.jpg",
     "static/media/map3.png": "/diagnostics/static/media/map3.5f7431e373d7fb6918e4.png",
     "static/media/78.png": "/diagnostics/static/media/78.c2731c05c1124795a79e.png",
-    "static/media/altBlog.png": "/diagnostics/static/media/altBlog.4418bbf7dda38d7dae5c.png",
-    "static/media/stater-structure.png": "/diagnostics/static/media/stater-structure.d2e99b0e3bffbed76103.png",
     "static/media/altDiagServ.jpg": "/diagnostics/static/media/altDiagServ.545d80401c576dc06763.jpg",
     "static/media/helper.jpg": "/diagnostics/static/media/helper.a48660067b583c8364d6.jpg",
     "static/media/77.png": "/diagnostics/static/media/77.08472bc2abc40c2cf32f.png",
@@ -37,12 +37,12 @@
     "static/media/areometr.jpg": "/diagnostics/static/media/areometr.6dc7be1ca7b6100204dd.jpg",
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.3688d7c20b4caa20dba5.jpg",
     "index.html": "/diagnostics/index.html",
-    "main.75059648.css.map": "/diagnostics/static/css/main.75059648.css.map",
-    "main.15a81d8f.js.map": "/diagnostics/static/js/main.15a81d8f.js.map",
+    "main.a13eb467.css.map": "/diagnostics/static/css/main.a13eb467.css.map",
+    "main.2229408b.js.map": "/diagnostics/static/js/main.2229408b.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75059648.css",
-    "static/js/main.15a81d8f.js"
+    "static/css/main.a13eb467.css",
+    "static/js/main.2229408b.js"
   ]
 }
