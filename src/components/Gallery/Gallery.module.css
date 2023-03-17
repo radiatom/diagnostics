@@ -1,0 +1,14 @@
+.width{
+    width: 50%;
+}
+@media(max-width:800px) {
+    .width{
+        width: 75%;
+    }
+}
+
+@media(max-width:450px) {
+    .width{
+        width: 90%;
+    }
+}

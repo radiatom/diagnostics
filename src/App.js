@@ -13,7 +13,7 @@ import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging
 import BlogsPage from './components/Blogs/BlogsPage';
 import TestPageContainer from './components/TestsPage/TestPageContainer';
 import NavbarContainer from './components/Navbar/NavbarContainer';
-// import Gallery from './components/Gallery/Gallery';
+import GalleryContainer from './components/Gallery/GalleryContainer';
 
 
 function App(props) {
@@ -38,7 +38,7 @@ function App(props) {
             <Route path="/DiagnosticABattery" element={<DiagnosticABattery />} />
             <Route path="/Alnenator" element={<Altenator />} />
             <Route path="/BatteryСharging" element={<BatteryCharging />} />
-            {/* <Route path="/Gallery" element={<Gallery/>} /> */}
+            <Route path="/Gallery" element={<GalleryContainer />} />
 
             
           </Routes>

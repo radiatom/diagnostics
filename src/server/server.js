@@ -217,16 +217,16 @@ const serverData = {
                   video: null,
             },
             {
-                  thet: "компонетнт з результатом"
-                  // linkNumber: 7.0,
-                  // problem: "Ось що ви вияснили:",
-                  // testText: '',
-                  // linkNumberYes: 7.0,
-                  // linkNumberNo: 7.0,
-                  // solutionYes:null,
-                  // solutionNo:null,
-                  // img: null,
-                  // video: null,
+                  // this: "компонетнт з результатом"
+                  linkNumber: 7.0,
+                  problem: "",
+                  testText: '',
+                  linkNumberYes: null,
+                  linkNumberNo: null,
+                  solutionYes:null,
+                  solutionNo:null,
+                  img: null,
+                  video: null,
             },
             {
                   linkNumber: 7.1,
