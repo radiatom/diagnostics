@@ -6,7 +6,8 @@ import img99 from "./../img/img99.png"
 import img89 from "./../img/areometr.jpg"
 
 
-
+import video11 from "./../video/11.mp4"
+import video12131 from "./../video/12131.mov"
 import video17 from "./../video/video17.mp4"
 import video20 from "./../video/video20.mp4"
 
@@ -27,19 +28,19 @@ const serverData = {
             {
                   linkNumber: 1.1,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Коли працює стартер, двигун провертається без зупинок? Так-означає, що стартер завжди провертає двигун без зупинок. Ні-означає, що коли стартер працює, двигун ніколи не обертається або інколи не обертається.',
-                  instruction: null,
+                  testText: 'Коли працює стартер, двигун (колінчастий вал)  обертається без зупинок? Так-означає, що стартер завжди обертає двигун (колінчастий вал) без зупинок. Ні-означає, що коли стартер працює, двигун ніколи не обертається або інколи не обертається.',
+                  instruction: "На відео стартера завжди обертає двигун (колінчастий вал) без зупинок.",
                   linkNumberYes: 6.5,
                   linkNumberNo: 1.2,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video11,
             },
             {
                   linkNumber: 1.2,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Стартер провертає двигун на декілька обертів ,а потім починає крутитись в холосту, перестаючи проверти двигун?',
+                  testText: 'Стартер обертає двигун (колінчастий вал) на декілька обертів ,а потім починає крутитись в холосту, перестаючи оберерти двигун (колінчастий вал)?',
                   instruction: '',
                   linkNumberYes: 1.2131,
                   linkNumberNo: 1.2130,
@@ -51,26 +52,26 @@ const serverData = {
             {
                   linkNumber: 1.2131,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Чути як стартер працює,але мотор не крутиться?',
-                  instruction: '',
+                  testText: 'Чути як стартер працює, але мотор (колінчастий вал) не обертається?',
+                  instruction: 'На відео чути як стартер працює, але мотор (колінчастий вал) не обертається',
                   linkNumberYes: 1.4,
                   linkNumberNo: 1.2,
                   solutionYes: 18,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video12131,
             },
             {
                   linkNumber: 1.2130,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Чути як стартер працює,але мотор не крутиться?',
-                  instruction: '',
+                  testText: 'Чути як стартер працює, але мотор (колінчастий вал) не обертається?',
+                  instruction: 'На відео чути як стартер працює, але мотор (колінчастий вал) не обертається',
                   linkNumberYes: 1.4,
                   linkNumberNo: 8,
                   solutionYes: 18,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video12131,
             },
             {
                   linkNumber: 1.3661,
@@ -187,7 +188,7 @@ const serverData = {
                   instruction: '',
                   linkNumberYes: 6.8,
                   linkNumberNo: 7.6,
-                  solutionYes: 1,
+                  solutionYes: 79,
                   solutionNo: 1,
                   img: null,
                   video: null,
@@ -2073,6 +2074,11 @@ const serverData = {
             {
                   id: 78,
                   text: "Без мультиметра ви нічого не виясните. Знайдіть десь його та почніть діагностику.",
+                  solution: false,
+            },
+            {
+                  id: 79,
+                  text: "Перед монтажем стартера  наждачною бумагою почистіть на двигуні місце де він встановлюється і клеми проводів. Радимо замінити гайки на нові, або зачистити старі. Блистить - значить чисто. ",
                   solution: false,
             }
       ]

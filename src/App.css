@@ -27,6 +27,7 @@
   margin: 2px;
 }
 .navbar-toggler{
+  background-color: black;
   margin-bottom: 5px;
 }
 .content a{

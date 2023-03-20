@@ -7,7 +7,7 @@ const GalleryResContainer = (props) => {
         <span>
             {serverData.resaultDiagnostic.map(el => {
                 if (el.id === props.id) {
-                    return <GalleryRes kay={el.id} el={el} />
+                    return <GalleryRes key={el.id} el={el} />
                 }
                 return null
             })}
