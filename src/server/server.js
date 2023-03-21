@@ -38,6 +38,9 @@ import video161 from "./../video/video161.mp4"
 import video162 from "./../video/video162.mp4"
 import video174 from "./../video/video174.mp4"
 import video182 from "./../video/video182.mp4"
+import video185 from "./../video/video185.mp4"
+import video186 from "./../video/video186.mp4"
+import video187 from "./../video/video187.mp4"
 
 const serverData = {
       testCard: [
@@ -922,10 +925,10 @@ const serverData = {
                   problem: "Дайте відповідь на питання:",
                   testText: 'У вас на двигуні стоїть механзм, який натягує привідний ремінь автомвтично? Відповідь "ні" означатиме, що у вас стоїть механізм, за допомогою якого, потрібно підтягувати ремінь вручну.',
                   instruction: '',
-                  linkNumberYes: 7.0,
-                  linkNumberNo: 7.0,
-                  solutionYes: 1,
-                  solutionNo: 62,
+                  linkNumberYes: 7,
+                  linkNumberNo: 187,
+                  solutionYes: 83,
+                  solutionNo: 1,
                   img: img118,
                   video: null,
             },
@@ -1018,8 +1021,8 @@ const serverData = {
                   problem: "Дайте відповідь на питання:",
                   testText: 'Приводний ремінь пошкоджений?',
                   instruction: 'На фото пошкодженні ремні:',
-                  linkNumberYes: 118,
-                  linkNumberNo: 118,
+                  linkNumberYes: 186,
+                  linkNumberNo: 186,
                   solutionYes: 61,
                   solutionNo: 1,
                   img: img126,
@@ -1558,8 +1561,8 @@ const serverData = {
                   problem: "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
                   testText: '',
                   instruction: '',
-                  linkNumberYes: 177,
-                  linkNumberNo: 177,
+                  linkNumberYes: 185,
+                  linkNumberNo: 185,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
@@ -1744,6 +1747,42 @@ const serverData = {
                   solutionNo: 1,
                   img: img184,
                   video: null,
+            },
+            {
+                  linkNumber: 185,
+                  problem: "Дайте відповідь на питання:",
+                  testText: 'Стартер один раз кляцнув і все погасло?',
+                  instruction: '',
+                  linkNumberYes: 7,
+                  linkNumberNo: 177,
+                  solutionYes: 82,
+                  solutionNo: 1,
+                  img: null,
+                  video: video185,
+            },
+            {
+                  linkNumber: 186,
+                  problem: "Дайте відповідь на питання:",
+                  testText: 'Генератор пищить?',
+                  instruction: ' На відео чути писк',
+                  linkNumberYes: 118,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 1,
+                  img: null,
+                  video: video186,
+            },
+            {
+                  linkNumber: 187,
+                  problem: "Спробуйте підтягнути ремінь генератора",
+                  testText: '',
+                  instruction: ' На відео під час натяжки ременя писк пропав.',
+                  linkNumberYes: 7,
+                  linkNumberNo: 7,
+                  solutionYes: 1,
+                  solutionNo: 1,
+                  img: null,
+                  video: video187,
             },
 
       ],
@@ -2153,6 +2192,16 @@ const serverData = {
             {
                   id: 81,
                   text: "Сліди тертя на обмотці потрібно зафарбувати, щоб уникнути гниття. Але перед тим усуньте причини тертя якоря об статор.",
+                  solution: false,
+            },
+            {
+                  id: 82,
+                  text: "Почистіть і зафіксуйте клеми на акумуляторі і спробуйте запустити двигун.",
+                  solution: false,
+            },
+            {
+                  id: 83,
+                  text: "Перевірте натяжний механізм, є підозра що він не натягує ремінь належним чином.",
                   solution: false,
             }
       ]
