@@ -243,7 +243,7 @@ const serverData = {
                   instruction: '',
                   linkNumberYes: 7.2,
                   linkNumberNo: 7.6,
-                  solutionYes: 1,
+                  solutionYes: 84,
                   solutionNo: 1,
                   img: null,
                   video: null,
@@ -1047,7 +1047,7 @@ const serverData = {
                   instruction: '',
                   linkNumberYes: 127,
                   linkNumberNo: 127,
-                  solutionYes: 1,
+                  solutionYes: 84,
                   solutionNo: 1,
                   img: null,
                   video: null,
@@ -1515,7 +1515,7 @@ const serverData = {
                   instruction: '',
                   linkNumberYes: 1.5,
                   linkNumberNo: 1.5,
-                  solutionYes: 1,
+                  solutionYes: 84,
                   solutionNo: 1,
                   img: null,
                   video: null,
@@ -1776,7 +1776,7 @@ const serverData = {
                   linkNumber: 187,
                   problem: "Спробуйте підтягнути ремінь генератора",
                   testText: '',
-                  instruction: ' На відео під час натяжки ременя писк пропав.',
+                  instruction: ' На відео після натяжки ременя писк пропав.',
                   linkNumberYes: 7,
                   linkNumberNo: 7,
                   solutionYes: 1,
@@ -2136,7 +2136,7 @@ const serverData = {
             },
             {
                   id: 70,
-                  text: "Щітки кінчились, їх потрібно замінити (приварити нові).",
+                  text: "Щітки кінчились, їх потрібно замінити (приварити нові). Якщо щітки заміняються то потрібно проточити якір та розчистити ламелі.",
                   solution: false,
             },
             {
@@ -2202,6 +2202,11 @@ const serverData = {
             {
                   id: 83,
                   text: "Перевірте натяжний механізм, є підозра що він не натягує ремінь належним чином.",
+                  solution: false,
+            },
+            {
+                  id: 84,
+                  text: "Перед збиранням агрегата!!! Всі залізні площини у місці зєднання між деталями мусять бути зачищеннні до блиску, щоб добре проходила маса через весь корпус агрегата. Всі болти, клеми, контакти мусять бути чистими. Перевірити агрегат на справність. Не повинно бути шуму під час роботи.",
                   solution: false,
             }
       ]

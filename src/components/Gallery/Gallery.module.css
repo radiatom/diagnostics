@@ -1,9 +1,9 @@
 .width{
-    width: 50%;
+    width: 30%;
 }
 @media(max-width:800px) {
     .width{
-        width: 75%;
+        width: 50%;
     }
 }
 
