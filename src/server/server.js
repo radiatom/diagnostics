@@ -10,6 +10,8 @@ import img99 from "./../img/img99.png"
 import img117 from "./../img/117.png"
 import img118 from "./../img/118.png"
 import img126 from "./../img/126.png"
+import img131 from "./../img/131.png"
+import img132 from "./../img/132.png"
 import img155 from "./../img/155.png"
 import img161 from "./../img/161.png"
 import img168 from "./../img/168.png"
@@ -1085,7 +1087,7 @@ const serverData = {
                   linkNumberNo: 132,
                   solutionYes: 68,
                   solutionNo: 1,
-                  img: null,
+                  img: img131,
                   video: null,
             },
             {
@@ -1097,7 +1099,7 @@ const serverData = {
                   linkNumberNo: 134,
                   solutionYes: 1,
                   solutionNo: 3,
-                  img: null,
+                  img: img132,
                   video: null,
             },
             {
