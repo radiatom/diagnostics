@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/diagnostics/static/css/main.9c76f58f.css",
-    "main.js": "/diagnostics/static/js/main.acd7438f.js",
+    "main.js": "/diagnostics/static/js/main.7d69bade.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video182.mp4": "/diagnostics/static/media/video182.61cbed2a06553c4f7d21.mp4",
     "static/media/video119.mp4": "/diagnostics/static/media/video119.c76ae4023260c95c3cb8.mp4",
@@ -42,6 +42,7 @@
     "static/media/video106.mp4": "/diagnostics/static/media/video106.990db40c39c3136c2f4b.mp4",
     "static/media/video103.mp4": "/diagnostics/static/media/video103.74114e5a5a36f7758243.mp4",
     "static/media/galery7.jpg": "/diagnostics/static/media/galery7.f3b0f8d607729cee8577.jpg",
+    "static/media/132.png": "/diagnostics/static/media/132.e9426f3457c09ac012f3.png",
     "static/media/video17.mp4": "/diagnostics/static/media/video17.a82a686fbd2a464bae0d.mp4",
     "static/media/galery6.jpg": "/diagnostics/static/media/galery6.b96f8a906834876baf96.jpg",
     "static/media/galery5.jpg": "/diagnostics/static/media/galery5.4f4b93d563e161565258.jpg",
@@ -49,6 +50,7 @@
     "static/media/126.png": "/diagnostics/static/media/126.63f2b29149caa321dc73.png",
     "static/media/19.png": "/diagnostics/static/media/19.c086add4640c4221c62a.png",
     "static/media/altBlog.png": "/diagnostics/static/media/altBlog.66ca2d8d4af72ae12576.png",
+    "static/media/131.png": "/diagnostics/static/media/131.00ddb47f69590da9149d.png",
     "static/media/bg5.jpg": "/diagnostics/static/media/bg5.38e92744e99791b6adc7.jpg",
     "static/media/altenaorsBlog.png": "/diagnostics/static/media/altenaorsBlog.e37c4769fcffe73089a0.png",
     "static/media/fotoBlog1.jpg": "/diagnostics/static/media/fotoBlog1.8198bac9d28c404cbbf9.jpg",
@@ -72,11 +74,11 @@
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.3688d7c20b4caa20dba5.jpg",
     "index.html": "/diagnostics/index.html",
     "main.9c76f58f.css.map": "/diagnostics/static/css/main.9c76f58f.css.map",
-    "main.acd7438f.js.map": "/diagnostics/static/js/main.acd7438f.js.map",
+    "main.7d69bade.js.map": "/diagnostics/static/js/main.7d69bade.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c76f58f.css",
-    "static/js/main.acd7438f.js"
+    "static/js/main.7d69bade.js"
   ]
 }
