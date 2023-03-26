@@ -1,6 +1,7 @@
 import img19 from "./../img/19.png"
 import img15 from "./../img/15.png"
 import img71 from "./../img/71.png"
+import img72 from "./../img/72.png"
 import img77 from "./../img/77.png"
 import img78 from "./../img/78.png"
 import img86 from "./../img/86.png"
@@ -12,8 +13,11 @@ import img118 from "./../img/118.png"
 import img126 from "./../img/126.png"
 import img131 from "./../img/131.png"
 import img132 from "./../img/132.png"
+import img141 from "./../img/141.png"
+import img142 from "./../img/142.png"
 import img155 from "./../img/155.png"
 import img161 from "./../img/161.png"
+import img167 from "./../img/167.png"
 import img168 from "./../img/168.png"
 import img184 from "./../img/184.png"
 import img189 from "./../img/189.png"
@@ -23,8 +27,12 @@ import video11 from "./../video/11.mp4"
 import video12131 from "./../video/12131.mov"
 import video17 from "./../video/video17.mp4"
 import video20 from "./../video/video20.mp4"
+import video21 from "./../video/video21.mp4"
+import video79 from "./../video/video79.mp4"
 import video81 from "./../video/video81.mp4"
+import video85 from "./../video/video85.mp4"
 import video87 from "./../video/video87.mp4"
+import video91 from "./../video/video91.mp4"
 import video97 from "./../video/video97.mp4"
 import video100 from "./../video/video100.mp4"
 import video102 from "./../video/video102.mp4"
@@ -32,9 +40,12 @@ import video103 from "./../video/video103.mp4"
 import video105 from "./../video/video105.mp4"
 import video106 from "./../video/video106.mp4"
 import video107 from "./../video/video107.mp4"
+import video120 from "./../video/video120.mp4"
+import video116 from "./../video/video116.mp4"
 import video119 from "./../video/video119.mp4"
 import video121 from "./../video/video121.mp4"
 import video123 from "./../video/video123.mp4"
+import video143 from "./../video/video143.mp4"
 import video154 from "./../video/video154.mp4"
 import video160 from "./../video/video160.mp4"
 import video161 from "./../video/video161.mp4"
@@ -189,7 +200,7 @@ const serverData = {
                   solutionYes: 19,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video21,
             },
             {
                   linkNumber: 65,
@@ -284,7 +295,7 @@ const serverData = {
                   linkNumberNo: 84,
                   solutionYes: 20,
                   solutionNo: 1,
-                  img: null,
+                  img: img72,
                   video: null,
             },
             {
@@ -369,7 +380,7 @@ const serverData = {
                   solutionYes: 13,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video79,
             },
             {
                   linkNumber: 8,
@@ -435,13 +446,13 @@ const serverData = {
                   linkNumber: 85,
                   problem: "Дайте відповідь на питання",
                   testText: 'Вилка переміщає бендикс по валу легко?',
-                  instruction: '',
+                  instruction: 'На відео бендикс переміщається під своєю вагою, це означає що він переміщається легко',
                   linkNumberYes: 73,
                   linkNumberNo: 73,
                   solutionYes: 1,
                   solutionNo: 27,
                   img: null,
-                  video: null,
+                  video: video85,
             },
             {
                   linkNumber: 86,
@@ -506,26 +517,26 @@ const serverData = {
             {
                   linkNumber: 91,
                   problem: "Потрібно збовтати електроліт так, щоб підняти осад з дна",
-                  testText: '',
+                  testText: 'Збовтати так як це зроблено на відео',
                   instruction: '',
                   linkNumberYes: 92,
                   linkNumberNo: 92,
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video91,
             },
             {
                   linkNumber: 92,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Відкачайте електроліт так щоб було видно чи він прозорий, як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?',
+                  testText: 'Відкачайте електроліт так щоб було видно чи він прозорий (так як на відео), як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?',
                   instruction: 'Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).',
                   linkNumberYes: 93,
                   linkNumberNo: 939088,
                   solutionYes: 1,
                   solutionNo: 31,
                   img: null,
-                  video: null,
+                  video: video91,
             },
             {
                   linkNumber: 93,
@@ -554,14 +565,14 @@ const serverData = {
             {
                   linkNumber: 94,
                   problem: "Дайте відповідь на питання",
-                  testText: 'Відкачайте електроліт так щоб було видно чи він прозорий, як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?',
+                  testText: 'Відкачайте електроліт так щоб було видно чи він прозорий (так як на відео), як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?',
                   instruction: 'Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).',
                   linkNumberYes: 95,
                   linkNumberNo: 95,
                   solutionYes: 1,
                   solutionNo: 32,
                   img: null,
-                  video: null,
+                  video: video91,
             },
             {
                   linkNumber: 95,
@@ -897,7 +908,7 @@ const serverData = {
                   solutionYes: 1,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video116,
             },
             {
                   linkNumber: 117,
@@ -951,13 +962,13 @@ const serverData = {
                   linkNumber: 120,
                   problem: "Дайте відповідь на питання:",
                   testText: 'Шків заблокований в обидві сторони?',
-                  instruction: '',
+                  instruction: 'Шків заблокований в обидві сторони. На відео це показано',
                   linkNumberYes: 123,
                   linkNumberNo: 121,
                   solutionYes: 55,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video120,
             },
             {
                   linkNumber: 121,
@@ -1167,13 +1178,13 @@ const serverData = {
                   linkNumber: 138,
                   problem: "Дайте відповідь на питання:",
                   testText: 'Шків заблокований в обидві сторони?',
-                  instruction: '',
+                  instruction: 'Шків заблокований в обидві сторони. На відео це показано',
                   linkNumberYes: 141,
                   linkNumberNo: 139,
                   solutionYes: 55,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video120,
             },
             {
                   linkNumber: 139,
@@ -1203,24 +1214,24 @@ const serverData = {
                   linkNumber: 141,
                   problem: "Дайте відповідь на питання:",
                   testText: 'Статор генератора пошкоджений?',
-                  instruction: '',
+                  instruction: 'На фото видно білі сліди на обмотці. Так виглядає перегрів статора. Обмотка пошкодженна.',
                   linkNumberYes: 184,
                   linkNumberNo: 184,
                   solutionYes: 5,
                   solutionNo: 1,
-                  img: null,
+                  img: img141,
                   video: null,
             },
             {
                   linkNumber: 142,
                   problem: "Дайте відповідь на питання:",
                   testText: 'Є сліди що діодний міст згорів?',
-                  instruction: '',
+                  instruction: 'На фото зображені явні сліди що діодний міст згорів. Але таких слідів може не бути, тому ідеально перевірити чи він працює так як потрібно.',
                   linkNumberYes: 133,
                   linkNumberNo: 133,
                   solutionYes: 6,
                   solutionNo: 1,
-                  img: null,
+                  img: img142,
                   video: null,
             },
             {
@@ -1233,7 +1244,7 @@ const serverData = {
                   solutionYes: 6,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video143,
             },
             {
                   linkNumber: 144,
@@ -1532,7 +1543,7 @@ const serverData = {
                   linkNumberNo: 168,
                   solutionYes: 1,
                   solutionNo: 70,
-                  img: null,
+                  img: img167,
                   video: null,
             },
             {
