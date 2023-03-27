@@ -1,24 +1,50 @@
 import serverData from "../server/server"
-
+export type solutionType = {
+      id: number
+      solution: boolean
+      text: string
+}
+export type resaultType = Array<solutionType>
+export type testDataType = {
+      linkNumber: number | ''
+      problem: string
+      testText: string
+      instruction: string
+      linkNumberYes: string
+      linkNumberNo: number | ''
+      solutionYes: number | ''
+      solutionNo: number | ''
+      img: string | null
+      video: string | null
+}
+export type standartStateTestType = {
+      testData: testDataType
+      resault: resaultType
+}
+export type setTestDataType = {
+      type: typeof SET_TEST_DATA
+      testData: testDataType | {}
+}
+export type setResaultDiagnosticDataType = {
+      type: typeof SET_RESAULT_DIAGNOSTIC_DATA
+      resault: resaultType
+}
 
 const SET_TEST_DATA = 'testReducer/SET_TEST_DATA'
-export const setTestData = (testData) => {
+export const setTestData = (testData: testDataType | {}): setTestDataType => {
       return {
             type: SET_TEST_DATA,
             testData: testData
       }
 }
-
 const SET_RESAULT_DIAGNOSTIC_DATA = 'testReducer/SET_RESAULT_DIAGNOSTIC_DATA'
-export const setResaultDiagnosticData = (resault) => {
+export const setResaultDiagnosticData = (resault: resaultType): setResaultDiagnosticDataType => {
       return {
             type: SET_RESAULT_DIAGNOSTIC_DATA,
             resault: resault
       }
 }
-
-
-const standartStateTest = {
+const standartStateTest: standartStateTestType = {
       testData: {
             linkNumber: '',
             problem: '',
@@ -34,7 +60,7 @@ const standartStateTest = {
       resault: []
 
 }
-const testReducer = (state = standartStateTest, action) => {
+const testReducer = (state: standartStateTestType = standartStateTest, action: any): standartStateTestType => {
       switch (action.type) {
             case SET_TEST_DATA:
                   return {
@@ -50,21 +76,20 @@ const testReducer = (state = standartStateTest, action) => {
                   return state
       }
 }
-export const getTestData = (linkNumber) => (dispatch) => {
-      let testData={} 
-       serverData.testCard.map(el=>{
-            if(el.linkNumber===linkNumber){
-                  console.log(el)
-                  return testData=el
+export const getTestData = (linkNumber: number) => (dispatch: any) => {
+      let testData = {}
+      serverData.testCard.map(el => {
+            if (el.linkNumber === linkNumber) {
+                  return testData = el
             }
             return testData
-       })
+      })
       dispatch(setTestData(testData))
 }
 
 
-export const getResaultDiagnosticData = () => (dispatch) => {
-      const finishResaultDiagnostic = []
+export const getResaultDiagnosticData = () => (dispatch: any) => {
+      const finishResaultDiagnostic: resaultType = []
       serverData.resaultDiagnostic.map(el => {
             if (el.solution === true) {
                   finishResaultDiagnostic.push(el)
@@ -72,48 +97,44 @@ export const getResaultDiagnosticData = () => (dispatch) => {
             return finishResaultDiagnostic
       })
       dispatch(setResaultDiagnosticData(finishResaultDiagnostic))
-
-      sessionStorage.setItem('res', JSON.stringify(finishResaultDiagnostic));
+      const r: string = JSON.stringify(finishResaultDiagnostic)
+      sessionStorage.setItem('res', r);
       //Об'єкт sessionStorage доступний в середовищі браузера і використовується для зберігання даних на протязі однієї сесії браузера, тобто поки відкрита відповідна вкладка або вікно браузера. Після закриття сесії або вкладки, дані в sessionStorage видаляються.
 }
+export const setSaveResault = () => (dispatch: any) => {
+      debugger
+      const res = JSON.parse(sessionStorage.getItem('res') || '{"error":"no res"}')
+      dispatch(setResaultDiagnosticData(res))
+      //функція яка вертає результат діагностики який був збережений в sessionStorage.
+      //|| '{"error":"no res"}' перевірка щоб TS не сварився
+}
 
-export const updateRes = () => (dispatch) => {
-      serverData.resaultDiagnostic.map(el => {
+export const updateRes = () => (dispatch: any) => {
+      serverData.resaultDiagnostic.forEach(el => {
             if (el.solution === true) {
                   return el.solution = false
             }
-            return serverData.resaultDiagnostic
       })
-      dispatch(getResaultDiagnosticData(serverData.resaultDiagnostic))
+      dispatch(getResaultDiagnosticData())
       //фунція скидання  результатів попередніх відповідей
 }
 
-export const setSaveResault = () => (dispatch) => {
-      const res = JSON.parse(sessionStorage.getItem('res'))
-      dispatch(setResaultDiagnosticData(res))
-      //функція яка вертає результат діагностики який був збережений в sessionStorage.
-}
 
 
-export const putSolutionTestTrue = (linkSolution) => (dispatch) => {
-      serverData.resaultDiagnostic.map(el => {
+export const putSolutionTestTrue = (linkSolution: number) => (dispatch: any) => {
+      serverData.resaultDiagnostic.forEach(el => {
             if (el.id === linkSolution) {
                   return el.solution = true
             }
-            return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
-      console.log(serverData.resaultDiagnostic)
 }
-export const putSolutionTestFalse = (linkSolution) => (dispatch) => {
-      serverData.resaultDiagnostic.map(el => {
+export const putSolutionTestFalse = (linkSolution: number) => (dispatch: any) => {
+      serverData.resaultDiagnostic.forEach(el => {
             if (el.id === linkSolution) {
                   return el.solution = false
             }
-            return serverData.resaultDiagnostic
       })
       dispatch(getResaultDiagnosticData())
-      console.log(serverData.resaultDiagnostic)
-
 }
 export default testReducer

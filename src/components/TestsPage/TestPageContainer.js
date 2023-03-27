@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import TestPage from './TestPage';
 import { useParams } from 'react-router-dom';
-import { getTestData, setSaveResault } from './../../reactRedux/testReducer';
+import { getTestData, setSaveResault } from './../../reactRedux/testReducer.ts';
 
 const TestPageContainer = (props) => {
       const { linkNumber } = useParams()

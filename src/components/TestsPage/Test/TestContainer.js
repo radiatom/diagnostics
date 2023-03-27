@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTestData, putSolutionTestTrue, putSolutionTestFalse } from './../../../reactRedux/testReducer';
+import { getTestData, putSolutionTestTrue, putSolutionTestFalse } from './../../../reactRedux/testReducer.ts';
 import Test from './Test';
 import { connect } from 'react-redux';
 

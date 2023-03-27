@@ -14,7 +14,7 @@ const AllDiagnosticBattery = (props) => {
                                     <p className="card-text"></p>
                                     <p className="card-text"></p>
                                     <nav>
-                                          <NavLink to="/Diagnostics/Test/8.3"><button className={`btn btn-warning ${s.button}`}>Почати діагностику</button></NavLink>
+                                          <NavLink to="/Diagnostics/Test/83"><button className={`btn btn-warning ${s.button}`}>Почати діагностику</button></NavLink>
                                     </nav>
                               </div>
                         </div>

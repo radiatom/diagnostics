@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {updateRes} from './../../reactRedux/testReducer'
+import {updateRes} from './../../reactRedux/testReducer.ts'
 import Navbar from "./Navbar"
 
 const NavbarContainer = (props) => {

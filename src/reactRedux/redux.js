@@ -1,5 +1,5 @@
 import { applyMiddleware, combineReducers, compose, legacy_createStore } from "redux";
-import testReducer from "./testReducer";
+import testReducer from "./testReducer.ts";
 import thunkMiddleware from "redux-thunk";
 // import {reducer as formReducer} from 'redux-form'
 
