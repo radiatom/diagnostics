@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/diagnostics/static/css/main.9c76f58f.css",
-    "main.js": "/diagnostics/static/js/main.10e267c8.js",
+    "main.js": "/diagnostics/static/js/main.6e1ba35d.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/video182.mp4": "/diagnostics/static/media/video182.61cbed2a06553c4f7d21.mp4",
     "static/media/video119.mp4": "/diagnostics/static/media/video119.c76ae4023260c95c3cb8.mp4",
@@ -35,6 +35,7 @@
     "static/media/video105.mp4": "/diagnostics/static/media/video105.9d0833b71d1aa8fe799a.mp4",
     "static/media/video85.mp4": "/diagnostics/static/media/video85.a3e617bd8b17a0f0fdbe.mp4",
     "static/media/bg3.jpg": "/diagnostics/static/media/bg3.269cb3e11ff18aea6564.jpg",
+    "static/media/92.png": "/diagnostics/static/media/92.53bf6fbde3324a942157.png",
     "static/media/video8.mp4": "/diagnostics/static/media/video8.b821b428fb03969b5282.mp4",
     "static/media/117.png": "/diagnostics/static/media/117.b3a230b1a10a8314d936.png",
     "static/media/142.png": "/diagnostics/static/media/142.788d71cca3a178cb6c72.png",
@@ -86,11 +87,11 @@
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.3688d7c20b4caa20dba5.jpg",
     "index.html": "/diagnostics/index.html",
     "main.9c76f58f.css.map": "/diagnostics/static/css/main.9c76f58f.css.map",
-    "main.10e267c8.js.map": "/diagnostics/static/js/main.10e267c8.js.map",
+    "main.6e1ba35d.js.map": "/diagnostics/static/js/main.6e1ba35d.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c76f58f.css",
-    "static/js/main.10e267c8.js"
+    "static/js/main.6e1ba35d.js"
   ]
 }
