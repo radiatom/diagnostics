@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
+import Banner from '../Banner/Banner.tsx';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact'
 import Features from '../Features/Features';

@@ -6,8 +6,7 @@ import banner3 from './../../img/bg3.jpg'
 import banner4 from './../../img/bg5.jpg'
 import { NavLink } from "react-router-dom";
 
-// import banner1 from "../../../images/banner/banner1.jpg";
-// import banner2 from "../../../images/banner/banner2.jpg";
+
 
 const Banner = () => {
   const [index, setIndex] = useState(0);

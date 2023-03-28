@@ -7,6 +7,7 @@ import img78 from "./../img/78.png"
 import img86 from "./../img/86.png"
 import img88 from "./../img/88.png"
 import img89 from "./../img/areometr.jpg"
+import img92 from "./../img/92.png"
 import img99 from "./../img/img99.png"
 import img117 from "./../img/117.png"
 import img118 from "./../img/118.png"
@@ -535,7 +536,7 @@ const serverData = {
                   linkNumberNo: 939088,
                   solutionYes: 1,
                   solutionNo: 31,
-                  img: null,
+                  img: img92,
                   video: video91,
             },
             {
