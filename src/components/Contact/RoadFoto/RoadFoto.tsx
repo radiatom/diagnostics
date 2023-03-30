@@ -1,14 +1,21 @@
 import React from 'react';
 import s from "./RoadFoto.module.css"
-import img1 from './../../../img/map1.png'
-import img2 from './../../../img/map2.png'
-import img3 from './../../../img/map3.png'
-import img4 from './../../../img/galery5.jpg'
-import img5 from './../../../img/galery6.jpg'
-import img6 from './../../../img/galery7.jpg'
+// import img1 from './../../../img/map1.png'
+// import img2 from './../../../img/map2.png'
+// import img3 from './../../../img/map3.png'
+// import img4 from './../../../img/galery5.jpg'
+// import img5 from './../../../img/galery6.jpg'
+// import img6 from './../../../img/galery7.jpg'
+const img1 = `${process.env.PUBLIC_URL}/img/map1.png`
+const img2 = `${process.env.PUBLIC_URL}/img/map2.png`
+const img3 = `${process.env.PUBLIC_URL}/img/map3.png`
+const img4 = `${process.env.PUBLIC_URL}/img/galery5.jpg`
+const img5 = `${process.env.PUBLIC_URL}/img/galery6.jpg`
+const img6 = `${process.env.PUBLIC_URL}/img/galery7.jpg`
 
 
-const RoadFoto = (props) => {
+
+const RoadFoto = () => {
       return (
             <div className="container">
                   <div className='container text-center'>

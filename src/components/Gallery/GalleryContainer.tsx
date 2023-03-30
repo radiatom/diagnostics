@@ -1,8 +1,8 @@
 import React from 'react';
-import serverData from '../../server/server.ts';
+import serverData from '../../server/server';
 import GalleryTest from './GalleryTest';
 
-const GalleryContainer = (props) => {
+const GalleryContainer = () => {
     return (
             <div>
                 {serverData.testCard.map(el => {

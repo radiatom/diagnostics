@@ -1,8 +1,9 @@
 import React from 'react';
 import './Contact.css';
 import s from "./Contact.module.css"
-import img1 from "./../../img/map2.png"
+// import img1 from "./../../img/map2.png"
 import RoadFoto from './RoadFoto/RoadFoto';
+const img1 = `${process.env.PUBLIC_URL}/img/map2.png`
 
 
 const Contact = () => {

@@ -116,7 +116,7 @@ const img168 = `${process.env.PUBLIC_URL}/img/168.png`
 const img184 = `${process.env.PUBLIC_URL}/img/184.png`
 const img189 = `${process.env.PUBLIC_URL}/img/189.png`
 
-type cardType = {
+export type cardType = {
       linkNumber: number
       problem: string
       testText: string
@@ -128,14 +128,14 @@ type cardType = {
       img: null | string
       video: null | string
 }
-type testCardType = Array<cardType>
-type solutionType = {
+export type testCardType = Array<cardType>
+export type solutionType = {
       id: number
       text: string
       solution: boolean
 }
-type resaultDiagnosticType = Array<solutionType>
-type serverDataType = {
+export type resaultDiagnosticType = Array<solutionType>
+export type serverDataType = {
       testCard: testCardType
       resaultDiagnostic: resaultDiagnosticType
 }

@@ -2,41 +2,41 @@ import React from 'react';
 import GalleryResContainer from './GalleryResContainer';
 import s from './Gallery.module.css'
 
-const GlleryTest = (props) => {
+const GlleryTest = ({elTest}) => {
       return (
             <div className={`m-4 mb-5 ${s.GlleryTest}`}>
-                  <h5>№ тесту: {props.elTest.linkNumber}</h5>
-                  <p>Текст заголовоку: {props.elTest.problem}</p>
-                  {props.elTest.testText === '' ?
+                  <h5>№ тесту: {elTest.linkNumber}</h5>
+                  <p>Текст заголовоку: {elTest.problem}</p>
+                  {elTest.testText === '' ?
                         ''
                         :
-                        <p>Текст: {props.elTest.testText}</p>
+                        <p>Текст: {elTest.testText}</p>
                   }
-                  {props.elTest.instruction === '' ?
+                  {elTest.instruction === '' ?
                         ''
                         :
-                        <p>Інструкція: {props.elTest.instruction}</p>
+                        <p>Інструкція: {elTest.instruction}</p>
                   }
-                  {props.elTest.img === null ?
+                  {elTest.img === null ?
                         ''
                         :
                         <div>
-                              <p>Фото інструкції:</p> <img src={props.elTest.img} alt="" className={s.width} />
+                              <p>Фото інструкції:</p> <img src={elTest.img} alt="" className={s.width} />
                         </div>
                   }
-                  {props.elTest.video === null ?
+                  {elTest.video === null ?
                         ''
                         :
                         <div>
                               <p>Відео інструкції:</p>
                               <video className={s.width} controls>
-                                    <source src={props.elTest.video} type="video/mp4" />
+                                    <source src={elTest.video} type="video/mp4" />
                                     Your browser does not support the video tag.
                               </video>
                         </div>
                   }
-                  <p>На відповідь так: <GalleryResContainer id={props.elTest.solutionYes} /> </p>
-                  <p>На відповідь ні: <GalleryResContainer id={props.elTest.solutionNo} /></p>
+                  <p>На відповідь так: <GalleryResContainer id={elTest.solutionYes} /> </p>
+                  <p>На відповідь ні: <GalleryResContainer id={elTest.solutionNo} /></p>
             </div>
       );
 }

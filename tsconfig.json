@@ -11,5 +11,5 @@
   "include": [
     "src/**/*.ts",
     "src/server/server.ts"
-  ]
+, "src/App.jsx", "src/index.js"  ]
 }

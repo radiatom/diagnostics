@@ -16,7 +16,7 @@ import NavbarContainer from './components/Navbar/NavbarContainer';
 import GalleryContainer from './components/Gallery/GalleryContainer';
 
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <header className="App-header">

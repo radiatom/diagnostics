@@ -102,7 +102,6 @@ export const getResaultDiagnosticData = () => (dispatch: any) => {
       //Об'єкт sessionStorage доступний в середовищі браузера і використовується для зберігання даних на протязі однієї сесії браузера, тобто поки відкрита відповідна вкладка або вікно браузера. Після закриття сесії або вкладки, дані в sessionStorage видаляються.
 }
 export const setSaveResault = () => (dispatch: any) => {
-      debugger
       const res = JSON.parse(sessionStorage.getItem('res') || '{"error":"no res"}')
       dispatch(setResaultDiagnosticData(res))
       //функція яка вертає результат діагностики який був збережений в sessionStorage.
