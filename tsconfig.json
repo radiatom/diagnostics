@@ -1,13 +1,15 @@
 {
-    "compilerOptions": {
-      "esModuleInterop": false,
-      "target": "es6",
-      "module": "commonjs",
-      "strict": true,
-      "sourceMap": true,
-      "outDir": "./dist"
-    },
-    "include": [
-      "src/**/*.ts"
-    ]
-  }
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/server/server.ts"
+  ]
+}

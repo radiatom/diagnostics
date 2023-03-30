@@ -1,63 +1,146 @@
-import img19 from "./../img/19.png"
-import img15 from "./../img/15.png"
-import img71 from "./../img/71.png"
-import img72 from "./../img/72.png"
-import img77 from "./../img/77.png"
-import img78 from "./../img/78.png"
-import img86 from "./../img/86.png"
-import img88 from "./../img/88.png"
-import img89 from "./../img/areometr.jpg"
-import img92 from "./../img/92.png"
-import img99 from "./../img/img99.png"
-import img117 from "./../img/117.png"
-import img118 from "./../img/118.png"
-import img126 from "./../img/126.png"
-import img131 from "./../img/131.png"
-import img132 from "./../img/132.png"
-import img141 from "./../img/141.png"
-import img142 from "./../img/142.png"
-import img155 from "./../img/155.png"
-import img161 from "./../img/161.png"
-import img167 from "./../img/167.png"
-import img168 from "./../img/168.png"
-import img184 from "./../img/184.png"
-import img189 from "./../img/189.png"
+// import img15 from "./../../public/img/15.png"
+// import img19 from "./../img/19.png"
+// import img71 from "./../img/71.png"
+// import img72 from "./../img/72.png"
+// import img77 from "./../img/77.png"
+// import img78 from "./../img/78.png"
+// import img86 from "./../img/86.png"
+// import img88 from "./../img/88.png"
+// import img89 from "./../img/areometr.jpg"
+// import img92 from "./../img/92.png"
+// import img99 from "./../img/img99.png"
+// import img117 from "./../img/117.png"
+// import img118 from "./../img/118.png"
+// import img126 from "./../img/126.png"
+// import img131 from "./../img/131.png"
+// import img132 from "./../img/132.png"
+// import img141 from "./../img/141.png"
+// import img142 from "./../img/142.png"
+// import img155 from "./../img/155.png"
+// import img161 from "./../img/161.png"
+// import img167 from "./../img/167.png"
+// import img168 from "./../img/168.png"
+// import img184 from "./../img/184.png"
+// import img189 from "./../img/189.png"
 
-import video8 from "./../video/video8.mp4"
-import video11 from "./../video/11.mp4"
-import video12131 from "./../video/12131.mov"
-import video17 from "./../video/video17.mp4"
-import video20 from "./../video/video20.mp4"
-import video21 from "./../video/video21.mp4"
-import video79 from "./../video/video79.mp4"
-import video81 from "./../video/video81.mp4"
-import video85 from "./../video/video85.mp4"
-import video87 from "./../video/video87.mp4"
-import video91 from "./../video/video91.mp4"
-import video97 from "./../video/video97.mp4"
-import video100 from "./../video/video100.mp4"
-import video102 from "./../video/video102.mp4"
-import video103 from "./../video/video103.mp4"
-import video105 from "./../video/video105.mp4"
-import video106 from "./../video/video106.mp4"
-import video107 from "./../video/video107.mp4"
-import video120 from "./../video/video120.mp4"
-import video116 from "./../video/video116.mp4"
-import video119 from "./../video/video119.mp4"
-import video121 from "./../video/video121.mp4"
-import video123 from "./../video/video123.mp4"
-import video143 from "./../video/video143.mp4"
-import video154 from "./../video/video154.mp4"
-import video160 from "./../video/video160.mp4"
-import video161 from "./../video/video161.mp4"
-import video162 from "./../video/video162.mp4"
-import video174 from "./../video/video174.mp4"
-import video182 from "./../video/video182.mp4"
-import video185 from "./../video/video185.mp4"
-import video186 from "./../video/video186.mp4"
-import video187 from "./../video/video187.mp4"
+// import video8 from "./../video/video8.mp4"
+// import video11 from "./../video/11.mp4"
+// import video12131 from "./../video/12131.mov"
+// import video17 from "./../video/video17.mp4"
+// import video20 from "./../video/video20.mp4"
+// import video21 from "./../video/video21.mp4"
+// import video79 from "./../video/video79.mp4"
+// import video81 from "./../video/video81.mp4"
+// import video85 from "./../video/video85.mp4"
+// import video87 from "./../video/video87.mp4"
+// import video91 from "./../video/video91.mp4"
+// import video97 from "./../video/video97.mp4"
+// import video100 from "./../video/video100.mp4"
+// import video102 from "./../video/video102.mp4"
+// import video103 from "./../video/video103.mp4"
+// import video105 from "./../video/video105.mp4"
+// import video106 from "./../video/video106.mp4"
+// import video107 from "./../video/video107.mp4"
+// import video120 from "./../video/video120.mp4"
+// import video116 from "./../video/video116.mp4"
+// import video119 from "./../video/video119.mp4"
+// import video121 from "./../video/video121.mp4"
+// import video123 from "./../video/video123.mp4"
+// import video143 from "./../video/video143.mp4"
+// import video154 from "./../video/video154.mp4"
+// import video160 from "./../video/video160.mp4"
+// import video161 from "./../video/video161.mp4"
+// import video162 from "./../video/video162.mp4"
+// import video174 from "./../video/video174.mp4"
+// import video182 from "./../video/video182.mp4"
+// import video185 from "./../video/video185.mp4"
+// import video186 from "./../video/video186.mp4"
+// import video187 from "./../video/video187.mp4"
 
-const serverData = {
+const video8 = `${process.env.PUBLIC_URL}/video/video8.mp4`
+const video11 = `${process.env.PUBLIC_URL}/video/11.mp4`
+const video12131 = `${process.env.PUBLIC_URL}/video/12131.mov`
+const video17 = `${process.env.PUBLIC_URL}/video/video17.mp4`
+const video20 = `${process.env.PUBLIC_URL}/video/video20.mp4`
+const video21 = `${process.env.PUBLIC_URL}/video/video21.mp4`
+const video79 = `${process.env.PUBLIC_URL}/video/video79.mp4`
+const video81 = `${process.env.PUBLIC_URL}/video/video81.mp4`
+const video85 = `${process.env.PUBLIC_URL}/video/video8.mp4`
+const video87 = `${process.env.PUBLIC_URL}/video/video87.mp4`
+const video91 = `${process.env.PUBLIC_URL}/video/video91.mp4`
+const video97 = `${process.env.PUBLIC_URL}/video/video97.mp4`
+const video100 = `${process.env.PUBLIC_URL}/video/video100.mp4`
+const video102 = `${process.env.PUBLIC_URL}/video/video102.mp4`
+const video103 = `${process.env.PUBLIC_URL}/video/video103.mp4`
+const video105 = `${process.env.PUBLIC_URL}/video/video105.mp4`
+const video106 = `${process.env.PUBLIC_URL}/video/video106.mp4`
+const video107 = `${process.env.PUBLIC_URL}/video/video107.mp4`
+const video120 = `${process.env.PUBLIC_URL}/video/video120.mp4`
+const video116 = `${process.env.PUBLIC_URL}/video/video116.mp4`
+const video119 = `${process.env.PUBLIC_URL}/video/video119.mp4`
+const video121 = `${process.env.PUBLIC_URL}/video/video121.mp4`
+const video123 = `${process.env.PUBLIC_URL}/video/video123.mp4`
+const video143 = `${process.env.PUBLIC_URL}/video/video143.mp4`
+const video154 = `${process.env.PUBLIC_URL}/video/video154.mp4`
+const video160 = `${process.env.PUBLIC_URL}/video/video160.mp4`
+const video161 = `${process.env.PUBLIC_URL}/video/video161.mp4`
+const video162 = `${process.env.PUBLIC_URL}/video/video162.mp4`
+const video174 = `${process.env.PUBLIC_URL}/video/video174.mp4`
+const video182 = `${process.env.PUBLIC_URL}/video/video182.mp4`
+const video185 = `${process.env.PUBLIC_URL}/video/video185.mp4`
+const video186 = `${process.env.PUBLIC_URL}/video/video186.mp4`
+const video187 = `${process.env.PUBLIC_URL}/video/video187.mp4`
+
+const img15 = `${process.env.PUBLIC_URL}/img/15.png`
+const img19 = `${process.env.PUBLIC_URL}/img/19.png`
+const img71 = `${process.env.PUBLIC_URL}/img/71.png`
+const img72 = `${process.env.PUBLIC_URL}/img/72.png`
+const img77 = `${process.env.PUBLIC_URL}/img/77.png`
+const img78 = `${process.env.PUBLIC_URL}/img/78.png`
+const img86 = `${process.env.PUBLIC_URL}/img/86.png`
+const img88 = `${process.env.PUBLIC_URL}/img/88.png`
+const img89 = `${process.env.PUBLIC_URL}/img/areometr.jpg`
+const img92 = `${process.env.PUBLIC_URL}/img/92.png`
+const img99 = `${process.env.PUBLIC_URL}/img/img99.png`
+const img117 = `${process.env.PUBLIC_URL}/img/117.png`
+const img118 = `${process.env.PUBLIC_URL}/img/118.png`
+const img126 = `${process.env.PUBLIC_URL}/img/126.png`
+const img131 = `${process.env.PUBLIC_URL}/img/131.png`
+const img132 = `${process.env.PUBLIC_URL}/img/132.png`
+const img141 = `${process.env.PUBLIC_URL}/img/141.png`
+const img142 = `${process.env.PUBLIC_URL}/img/142.png`
+const img155 = `${process.env.PUBLIC_URL}/img/155.png`
+const img161 = `${process.env.PUBLIC_URL}/img/161.png`
+const img167 = `${process.env.PUBLIC_URL}/img/167.png`
+const img168 = `${process.env.PUBLIC_URL}/img/168.png`
+const img184 = `${process.env.PUBLIC_URL}/img/184.png`
+const img189 = `${process.env.PUBLIC_URL}/img/189.png`
+
+type cardType = {
+      linkNumber: number
+      problem: string
+      testText: string
+      instruction: null | string
+      linkNumberYes: null | number
+      linkNumberNo: null | number
+      solutionYes: null | number
+      solutionNo: null | number
+      img: null | string
+      video: null | string
+}
+type testCardType = Array<cardType>
+type solutionType = {
+      id: number
+      text: string
+      solution: boolean
+}
+type resaultDiagnosticType = Array<solutionType>
+type serverDataType = {
+      testCard: testCardType
+      resaultDiagnostic: resaultDiagnosticType
+}
+
+const serverData: serverDataType = {
       testCard: [
             {
                   linkNumber: 1,
@@ -264,10 +347,10 @@ const serverData = {
                   video: null,
             },
             {
-                  // this: "компонетнт з результатом"
                   linkNumber: 7,
                   problem: "",
                   testText: '',
+                  instruction: '',
                   linkNumberYes: null,
                   linkNumberNo: null,
                   solutionYes: null,

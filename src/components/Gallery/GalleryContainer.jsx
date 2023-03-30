@@ -1,5 +1,5 @@
 import React from 'react';
-import serverData from '../../server/server';
+import serverData from '../../server/server.ts';
 import GalleryTest from './GalleryTest';
 
 const GalleryContainer = (props) => {
