@@ -4,11 +4,20 @@ import GalleryTest from './GalleryTest';
 
 const GalleryContainer = () => {
     return (
-            <div>
-                {serverData.testCard.map(el => {
-                    return <GalleryTest key={el.linkNumber} elTest={el}/>
-                })}
-            </div>
+        <div>
+            {serverData.testCard.map(el => {
+                return <GalleryTest
+                    key={el.linkNumber}
+                    problem={el.problem}
+                    testText={el.testText}
+                    instruction={el.instruction}
+                    img={el.img}
+                    video={el.video}
+                    solutionYes={el.solutionYes}
+                    solutionNo={el.solutionNo}
+                />
+            })}
+        </div>
     );
 }
 

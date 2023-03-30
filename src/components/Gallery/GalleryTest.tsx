@@ -2,41 +2,51 @@ import React from 'react';
 import GalleryResContainer from './GalleryResContainer';
 import s from './Gallery.module.css'
 
-const GlleryTest = ({elTest}) => {
+type propsType = {
+      key: number
+      problem: string
+      testText: string
+      instruction: string | null
+      img: string | null
+      video: string | null
+      solutionYes: number | null
+      solutionNo: number | null
+}
+const GlleryTest:React.FC<propsType> = ({ key, problem, testText, instruction, img, video, solutionYes, solutionNo }) => {
       return (
             <div className={`m-4 mb-5 ${s.GlleryTest}`}>
-                  <h5>№ тесту: {elTest.linkNumber}</h5>
-                  <p>Текст заголовоку: {elTest.problem}</p>
-                  {elTest.testText === '' ?
+                  <h5>№ тесту: {key}</h5>
+                  <p>Текст заголовоку: {problem}</p>
+                  {testText === '' ?
                         ''
                         :
-                        <p>Текст: {elTest.testText}</p>
+                        <p>Текст: {testText}</p>
                   }
-                  {elTest.instruction === '' ?
+                  {instruction === '' ?
                         ''
                         :
-                        <p>Інструкція: {elTest.instruction}</p>
+                        <p>Інструкція: {instruction}</p>
                   }
-                  {elTest.img === null ?
+                  {img === null ?
                         ''
                         :
                         <div>
-                              <p>Фото інструкції:</p> <img src={elTest.img} alt="" className={s.width} />
+                              <p>Фото інструкції:</p> <img src={img} alt="" className={s.width} />
                         </div>
                   }
-                  {elTest.video === null ?
+                  {video === null ?
                         ''
                         :
                         <div>
                               <p>Відео інструкції:</p>
                               <video className={s.width} controls>
-                                    <source src={elTest.video} type="video/mp4" />
+                                    <source src={video} type="video/mp4" />
                                     Your browser does not support the video tag.
                               </video>
                         </div>
                   }
-                  <p>На відповідь так: <GalleryResContainer id={elTest.solutionYes} /> </p>
-                  <p>На відповідь ні: <GalleryResContainer id={elTest.solutionNo} /></p>
+                  <p>На відповідь так: <GalleryResContainer id={solutionYes} /> </p>
+                  <p>На відповідь ні: <GalleryResContainer id={solutionNo} /></p>
             </div>
       );
 }
