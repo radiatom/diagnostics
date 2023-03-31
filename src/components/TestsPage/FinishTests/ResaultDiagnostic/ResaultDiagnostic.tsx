@@ -1,10 +1,13 @@
 import React from 'react';
 // import s from "./ResaultDiagnostics.module.css"
 
-const ResaultDiagnostic = (props) => {
+type propsType = {
+      el: string
+}
+const ResaultDiagnostic: React.FC<propsType> = ({ el }) => {
       return (
             <div >
-                  <p>{props.el}</p>
+                  <p>{el}</p>
             </div>
       );
 }

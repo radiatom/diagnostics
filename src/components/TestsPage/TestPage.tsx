@@ -2,8 +2,12 @@ import React, { useEffect } from 'react';
 import TestContainer from './Test/TestContainer';
 import FinishTestsContainer from './FinishTests/FinishTestsContainer';
 
-
-const TestPage = (props) => {
+type propsType = {
+      getTestData: any
+      setSaveResault: any
+      linkNumber: number
+}
+const TestPage: React.FC<propsType> = (props) => {
       useEffect(() => {
             props.getTestData(props.linkNumber)
             props.setSaveResault()

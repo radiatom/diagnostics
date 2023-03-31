@@ -10,7 +10,7 @@ const NavbarContainer = ({ updateRes: any }) => {
         </div>
     );
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
     return {
     }
 }

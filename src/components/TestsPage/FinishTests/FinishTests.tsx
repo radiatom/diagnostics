@@ -2,13 +2,19 @@ import React from 'react';
 import ResaultDiagnosticContainer from './ResaultDiagnostic/ResaultDiagnosticContainer'
 import s from "./FinishTests.module.css"
 import { NavLink } from 'react-router-dom';
+import { solutionType } from "../../../server/server"
 
-const FinishTests = (props) => {
 
+type propsType = {
+      updateRes: any
+      resault: solutionType
+}
+
+const FinishTests: React.FC<propsType> = (props) => {
       return (
             <div>
                   <div>
-                        {props.resault[1] === undefined||props.resault[1].text === '' ?
+                        {props.resault[1] === undefined || props.resault[1].text === '' ?
                               <h5 className='text-center m-4'>Під час діагностики ніяких проблем не було знайдено.</h5>
                               :
                               <div>

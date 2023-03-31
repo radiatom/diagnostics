@@ -4,11 +4,17 @@ import InstructionImgTest from './InstructionImgTest/InstructionImgTest';
 import InstructionVideoTest from './InstructionVideoTest/InstructionVideoTest';
 import s from "./Test.module.css"
 import logo from "./../../../img/Viniko1.png"
+import { cardType } from "./../../../server/server"
 
 
+type propsType = {
+      getTestData: any
+      putSolutionTestFalse: any
+      putSolutionTestTrue: any
+      testData: cardType
+}
 
-
-const Test = (props) => {
+const Test: React.FC<propsType> = (props) => {
       const onClickYes = () => {
             props.putSolutionTestTrue(props.testData.solutionYes)
             props.putSolutionTestFalse(props.testData.solutionNo)
