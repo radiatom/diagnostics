@@ -3,6 +3,8 @@ import { getTestData, putSolutionTestTrue, putSolutionTestFalse } from './../../
 import Test from './Test';
 import { connect } from 'react-redux';
 import { cardType } from "./../../../server/server"
+import {appStateType} from './../../../reactRedux/redux'
+
 
 type propsType = {
       getTestData: any
@@ -22,7 +24,7 @@ const TestContainer: React.FC<propsType> = (props) => {
       );
 }
 
-const mapStateToProps = (state: any): mapStateToPropsType => {
+const mapStateToProps = (state: appStateType): mapStateToPropsType => {
       return {
             testData: state.testPage.testData,
       }

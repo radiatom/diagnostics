@@ -6,14 +6,14 @@ export type solutionType = {
 }
 export type resaultType = Array<solutionType>
 export type testDataType = {
-      linkNumber: number | ''
+      linkNumber: number | null
       problem: string
       testText: string
       instruction: string
-      linkNumberYes: string
-      linkNumberNo: number | ''
-      solutionYes: number | ''
-      solutionNo: number | ''
+      linkNumberYes: number | null
+      linkNumberNo: number | null
+      solutionYes: number | null
+      solutionNo: number | null
       img: string | null
       video: string | null
 }
@@ -46,14 +46,14 @@ export const setResaultDiagnosticData = (resault: resaultType): setResaultDiagno
 }
 const standartStateTest: standartStateTestType = {
       testData: {
-            linkNumber: '',
+            linkNumber: null,
             problem: '',
             testText: '',
             instruction: '',
-            linkNumberYes: '',
-            linkNumberNo: '',
-            solutionYes: '',
-            solutionNo: '',
+            linkNumberYes: null,
+            linkNumberNo: null,
+            solutionYes: null,
+            solutionNo: null,
             img: '',
             video: '',
       },

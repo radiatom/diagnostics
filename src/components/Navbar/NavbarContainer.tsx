@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateRes } from './../../reactRedux/testReducer'
 import Navbar from "./Navbar"
+import { appStateType } from './../../reactRedux/redux'
+
 
 const NavbarContainer = ({ updateRes: any }) => {
     return (
@@ -10,7 +12,7 @@ const NavbarContainer = ({ updateRes: any }) => {
         </div>
     );
 }
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: appStateType): {} => {
     return {
     }
 }

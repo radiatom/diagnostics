@@ -117,7 +117,7 @@ const img184 = `${process.env.PUBLIC_URL}/img/184.png`
 const img189 = `${process.env.PUBLIC_URL}/img/189.png`
 
 export type cardType = {
-      linkNumber: number
+      linkNumber: number| null
       problem: string
       testText: string
       instruction: null | string
