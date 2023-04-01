@@ -1,4 +1,7 @@
+import { Dispatch } from "react"
 import serverData from "../server/server"
+
+
 export type solutionType = {
       id: number
       solution: boolean
@@ -16,7 +19,7 @@ export type testDataType = {
       solutionNo: number | null
       img: string | null
       video: string | null
-}
+}|{}
 export type standartStateTestType = {
       testData: testDataType
       resault: resaultType
@@ -29,6 +32,8 @@ export type setResaultDiagnosticDataType = {
       type: typeof SET_RESAULT_DIAGNOSTIC_DATA
       resault: resaultType
 }
+export type actionsTypes = setTestDataType | setResaultDiagnosticDataType
+
 
 const SET_TEST_DATA = 'testReducer/SET_TEST_DATA'
 export const setTestData = (testData: testDataType | {}): setTestDataType => {
@@ -44,6 +49,8 @@ export const setResaultDiagnosticData = (resault: resaultType): setResaultDiagno
             resault: resault
       }
 }
+
+
 const standartStateTest: standartStateTestType = {
       testData: {
             linkNumber: null,
@@ -60,7 +67,9 @@ const standartStateTest: standartStateTestType = {
       resault: []
 
 }
-const testReducer = (state: standartStateTestType = standartStateTest, action: any): standartStateTestType => {
+
+
+const testReducer = (state: standartStateTestType = standartStateTest, action: actionsTypes): standartStateTestType => {
       switch (action.type) {
             case SET_TEST_DATA:
                   return {
@@ -76,7 +85,9 @@ const testReducer = (state: standartStateTestType = standartStateTest, action: a
                   return state
       }
 }
-export const getTestData = (linkNumber: number) => (dispatch: any) => {
+
+
+export const getTestData = (linkNumber: number) => (dispatch: Dispatch<actionsTypes>) => {
       let testData = {}
       serverData.testCard.map(el => {
             if (el.linkNumber === linkNumber) {
@@ -86,9 +97,7 @@ export const getTestData = (linkNumber: number) => (dispatch: any) => {
       })
       dispatch(setTestData(testData))
 }
-
-
-export const getResaultDiagnosticData = () => (dispatch: any) => {
+export const getResaultDiagnosticData = () => (dispatch: Dispatch<actionsTypes>) => {
       const finishResaultDiagnostic: resaultType = []
       serverData.resaultDiagnostic.map(el => {
             if (el.solution === true) {
@@ -101,39 +110,35 @@ export const getResaultDiagnosticData = () => (dispatch: any) => {
       sessionStorage.setItem('res', r);
       //Об'єкт sessionStorage доступний в середовищі браузера і використовується для зберігання даних на протязі однієї сесії браузера, тобто поки відкрита відповідна вкладка або вікно браузера. Після закриття сесії або вкладки, дані в sessionStorage видаляються.
 }
-export const setSaveResault = () => (dispatch: any) => {
+export const setSaveResault = () => (dispatch: Dispatch<actionsTypes>) => {
       const res = JSON.parse(sessionStorage.getItem('res') || '{"error":"no res"}')
       dispatch(setResaultDiagnosticData(res))
       //функція яка вертає результат діагностики який був збережений в sessionStorage.
       //|| '{"error":"no res"}' перевірка щоб TS не сварився
 }
-
-export const updateRes = () => (dispatch: any) => {
+export const updateRes = () => (dispatch: Dispatch<actionsTypes>) => {
       serverData.resaultDiagnostic.forEach(el => {
             if (el.solution === true) {
                   return el.solution = false
             }
       })
-      dispatch(getResaultDiagnosticData())
+      getResaultDiagnosticData()
       //фунція скидання  результатів попередніх відповідей
 }
-
-
-
-export const putSolutionTestTrue = (linkSolution: number) => (dispatch: any) => {
+export const putSolutionTestTrue = (linkSolution: number) => (dispatch: Dispatch<actionsTypes>) => {
       serverData.resaultDiagnostic.forEach(el => {
             if (el.id === linkSolution) {
                   return el.solution = true
             }
       })
-      dispatch(getResaultDiagnosticData())
+      getResaultDiagnosticData()
 }
-export const putSolutionTestFalse = (linkSolution: number) => (dispatch: any) => {
+export const putSolutionTestFalse = (linkSolution: number) => (dispatch: Dispatch<actionsTypes>) => {
       serverData.resaultDiagnostic.forEach(el => {
             if (el.id === linkSolution) {
                   return el.solution = false
             }
       })
-      dispatch(getResaultDiagnosticData())
+      getResaultDiagnosticData()
 }
 export default testReducer
