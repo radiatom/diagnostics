@@ -3,7 +3,7 @@ import GalleryResContainer from './GalleryResContainer';
 import s from './Gallery.module.css'
 
 type propsType = {
-      key: number
+      key: number|null
       problem: string
       testText: string
       instruction: string | null

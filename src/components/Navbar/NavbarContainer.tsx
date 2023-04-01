@@ -4,8 +4,10 @@ import { updateRes } from './../../reactRedux/testReducer'
 import Navbar from "./Navbar"
 import { appStateType } from './../../reactRedux/redux'
 
-
-const NavbarContainer = ({ updateRes: any }) => {
+type propsType = {
+    updateRes: () => void
+}
+const NavbarContainer: React.FC<propsType> = ({ updateRes }) => {
     return (
         <div>
             <Navbar updateRes={updateRes} />

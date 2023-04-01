@@ -3,14 +3,15 @@ import { NavLink } from 'react-router-dom';
 import InstructionImgTest from './InstructionImgTest/InstructionImgTest';
 import InstructionVideoTest from './InstructionVideoTest/InstructionVideoTest';
 import s from "./Test.module.css"
-import logo from "./../../../img/Viniko1.png"
 import { cardType } from "./../../../server/server"
+// import logo from "./../../../img/Viniko1.png"
+const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`
 
 
 type propsType = {
-      getTestData: any
-      putSolutionTestFalse: any
-      putSolutionTestTrue: any
+      getTestData: (linkNumber: number) => void
+      putSolutionTestFalse: (linkNumber: number | null) => void
+      putSolutionTestTrue: (linkNumber: number | null) => void
       testData: cardType
 }
 

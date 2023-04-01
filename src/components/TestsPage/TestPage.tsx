@@ -3,8 +3,8 @@ import TestContainer from './Test/TestContainer';
 import FinishTestsContainer from './FinishTests/FinishTestsContainer';
 
 type propsType = {
-      getTestData: any
-      setSaveResault: any
+      getTestData: (linkNumber: number) => void
+      setSaveResault: () => void
       linkNumber: number
 }
 const TestPage: React.FC<propsType> = (props) => {

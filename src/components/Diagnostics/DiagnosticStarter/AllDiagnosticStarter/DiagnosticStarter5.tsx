@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from "./DiagnosticStarter.module.css"
 
-const DiagnosticStarter5 = (props) => {
+const DiagnosticStarter5 = () => {
       return (
             <div className={`card m-1 ${s.card}`} >
                   <div className="card-body">

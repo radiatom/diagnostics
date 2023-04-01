@@ -3,14 +3,16 @@ import s from './Navbar.module.css'
 import logo from "./../../img/Viniko1.png"
 import { NavLink } from 'react-router-dom';
 
-
-const Navbar = (props) => {
+type propsType = {
+      updateRes: () => void
+}
+const Navbar: React.FC<propsType> = ({ updateRes }) => {
       return (
             <div>
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
                         <div className=" container">
                               <div className=" container-xxl navbar-brand p-0 ">
-                                    <span><NavLink to="/Home"><img src={logo} alt="logo viniko вініко" width="200"  /></NavLink></span>
+                                    <span><NavLink to="/Home"><img src={logo} alt="logo viniko вініко" width="200" /></NavLink></span>
                                     <span className={` row row-cols-1 row-cols-md-3 row-cols-lg-3 ${s.navContact}`}>
                                           <div className="col">Автосервіс</div>
                                           <div className="col">Луцьк</div>
@@ -36,10 +38,10 @@ const Navbar = (props) => {
                                           <li className="nav-item">
                                                 <NavLink className="nav-link" to="/Gallery">Галерея сервера</NavLink>
                                           </li>
-                                          <li  className="nav-item dropdown">
-                                                <div  className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
-                                                <ul onClick={()=>props.updateRes()} className="dropdown-menu">
-                                                      <NavLink  className="dropdown-item" to="/DiagnosticStarter" > Стартер</NavLink>
+                                          <li className="nav-item dropdown">
+                                                <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
+                                                <ul onClick={() => updateRes()} className="dropdown-menu">
+                                                      <NavLink className="dropdown-item" to="/DiagnosticStarter" > Стартер</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticAltetnator">Генератор</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticABattery">Акумулятор</NavLink>
                                                       <li><hr className="dropdown-divider" /></li>

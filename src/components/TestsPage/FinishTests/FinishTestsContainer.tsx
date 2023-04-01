@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import FinishTests from './FinishTests';
 import { updateRes } from "../../../reactRedux/testReducer"
-import { solutionType } from "../../../server/server"
+import { resaultDiagnosticType } from "./../../../server/server"
+import {appStateType}from './../../../reactRedux/redux'
+
 
 type propsType = {
-    updateRes: any
-    resault: solutionType
+    updateRes: () => void
+    resault: resaultDiagnosticType
 }
 type mapStateToPropsType = {
-    resault: solutionType
+    resault: resaultDiagnosticType
 }
 
 
@@ -21,7 +23,7 @@ const FinishTestsContainer: React.FC<propsType> = (props) => {
     );
 }
 
-const mapStateToProps = (state: any): mapStateToPropsType => {
+const mapStateToProps = (state: appStateType): mapStateToPropsType => {
     return {
         resault: state.testPage.resault
     }

@@ -2,12 +2,12 @@ import React from 'react';
 import ResaultDiagnosticContainer from './ResaultDiagnostic/ResaultDiagnosticContainer'
 import s from "./FinishTests.module.css"
 import { NavLink } from 'react-router-dom';
-import { solutionType } from "../../../server/server"
+import { resaultDiagnosticType } from "../../../server/server"
 
 
 type propsType = {
-      updateRes: any
-      resault: solutionType
+      updateRes: () => void
+      resault: resaultDiagnosticType
 }
 
 const FinishTests: React.FC<propsType> = (props) => {

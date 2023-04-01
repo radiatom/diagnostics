@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import TestPage from './TestPage';
 import { useParams } from 'react-router-dom';
 import { getTestData, setSaveResault } from './../../reactRedux/testReducer';
-import {appStateType}from './../../reactRedux/redux'
+import { appStateType } from './../../reactRedux/redux'
 
 type propsType = {
-      getTestData: any
-      setSaveResault: any
+      getTestData: (linkNumber: number) => void
+      setSaveResault: () => void
 }
 const TestPageContainer: React.FC<propsType> = ({ getTestData, setSaveResault }) => {
       const { linkNumber } = useParams()
@@ -18,7 +18,7 @@ const TestPageContainer: React.FC<propsType> = ({ getTestData, setSaveResault })
             </div>
       );
 }
-const mapStateToProps = (state: appStateType) => {
+const mapStateToProps = (state: appStateType): object => {
       return {
       }
 }

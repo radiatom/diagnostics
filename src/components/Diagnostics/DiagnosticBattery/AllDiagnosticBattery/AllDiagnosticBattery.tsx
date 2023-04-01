@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from "./AllDiagnosticBattery.module.css"
 
-const AllDiagnosticBattery = (props) => {
+const AllDiagnosticBattery = () => {
       return (
             <div className='container'>
                   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center  ">

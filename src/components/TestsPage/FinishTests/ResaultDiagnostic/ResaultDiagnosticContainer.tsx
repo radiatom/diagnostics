@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ResaultDiagnostic from './ResaultDiagnostic';
 import { resaultDiagnosticType } from "./../../../../server/server"
-
+import {appStateType}from './../../../../reactRedux/redux'
 
 
 type mapStateToPropsType = {
@@ -16,7 +16,7 @@ const ResaultDiagnosticContainer: React.FC<mapStateToPropsType> = (props) => {
       );
 }
 
-const mapStateToProps = (state: any): mapStateToPropsType => {
+const mapStateToProps = (state: appStateType): mapStateToPropsType => {
       return {
             resault: state.testPage.resault
       }

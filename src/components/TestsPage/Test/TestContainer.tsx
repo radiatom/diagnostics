@@ -7,9 +7,9 @@ import {appStateType} from './../../../reactRedux/redux'
 
 
 type propsType = {
-      getTestData: any
-      putSolutionTestFalse: any
-      putSolutionTestTrue: any
+      getTestData: (linkNumber: number) => void
+      putSolutionTestFalse: (linkNumber: number) => void
+      putSolutionTestTrue: (linkNumber: number) => void
       testData: cardType
 }
 type mapStateToPropsType = {
