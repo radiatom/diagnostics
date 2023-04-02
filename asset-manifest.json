@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/diagnostics/static/css/main.c7008fb6.css",
-    "main.js": "/diagnostics/static/js/main.afd847e8.js",
+    "main.js": "/diagnostics/static/js/main.9133c591.js",
     "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
     "static/media/altDiagServ.jpg": "/diagnostics/static/media/altDiagServ.545d80401c576dc06763.jpg",
     "static/media/montage.jpg": "/diagnostics/static/media/montage.d495e9d0cdb4a83b294a.jpg",
@@ -10,11 +10,11 @@
     "static/media/stDiaServ.jpg": "/diagnostics/static/media/stDiaServ.3688d7c20b4caa20dba5.jpg",
     "index.html": "/diagnostics/index.html",
     "main.c7008fb6.css.map": "/diagnostics/static/css/main.c7008fb6.css.map",
-    "main.afd847e8.js.map": "/diagnostics/static/js/main.afd847e8.js.map",
+    "main.9133c591.js.map": "/diagnostics/static/js/main.9133c591.js.map",
     "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7008fb6.css",
-    "static/js/main.afd847e8.js"
+    "static/js/main.9133c591.js"
   ]
 }
