@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import TestContainer from './Test/TestContainer';
 import FinishTestsContainer from './FinishTests/FinishTestsContainer';
+import Test from './Test/Test';
 
 type propsType = {
       getTestData: (linkNumber: number) => void
@@ -15,7 +15,7 @@ const TestPage: React.FC<propsType> = (props) => {
       }, [props]);
       return (
             <div>
-                  {props.linkNumber === 7 ? <FinishTestsContainer /> : <TestContainer />}
+                  {props.linkNumber === 7 ? <FinishTestsContainer /> : <Test />}
             </div>
       );
 }

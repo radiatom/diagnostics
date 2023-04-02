@@ -19,7 +19,7 @@ export type testDataType = {
       solutionNo: number | null
       img: string | null
       video: string | null
-}|{}
+} | {}
 export type standartStateTestType = {
       testData: testDataType
       resault: resaultType
@@ -32,7 +32,7 @@ export type setResaultDiagnosticDataType = {
       type: typeof SET_RESAULT_DIAGNOSTIC_DATA
       resault: resaultType
 }
-export type actionsTypes = setTestDataType | setResaultDiagnosticDataType
+export type actionsTypes = setTestDataType | setResaultDiagnosticDataType 
 
 
 const SET_TEST_DATA = 'testReducer/SET_TEST_DATA'
@@ -97,6 +97,7 @@ export const getTestData = (linkNumber: number) => (dispatch: Dispatch<actionsTy
       })
       dispatch(setTestData(testData))
 }
+
 export const getResaultDiagnosticData = () => (dispatch: Dispatch<actionsTypes>) => {
       const finishResaultDiagnostic: resaultType = []
       serverData.resaultDiagnostic.map(el => {
@@ -106,8 +107,7 @@ export const getResaultDiagnosticData = () => (dispatch: Dispatch<actionsTypes>)
             return finishResaultDiagnostic
       })
       dispatch(setResaultDiagnosticData(finishResaultDiagnostic))
-      const r: string = JSON.stringify(finishResaultDiagnostic)
-      sessionStorage.setItem('res', r);
+      sessionStorage.setItem('res', JSON.stringify(finishResaultDiagnostic));
       //Об'єкт sessionStorage доступний в середовищі браузера і використовується для зберігання даних на протязі однієї сесії браузера, тобто поки відкрита відповідна вкладка або вікно браузера. Після закриття сесії або вкладки, дані в sessionStorage видаляються.
 }
 export const setSaveResault = () => (dispatch: Dispatch<actionsTypes>) => {
@@ -122,7 +122,7 @@ export const updateRes = () => (dispatch: Dispatch<actionsTypes>) => {
                   return el.solution = false
             }
       })
-      getResaultDiagnosticData()
+      dispatch(getResaultDiagnosticData())
       //фунція скидання  результатів попередніх відповідей
 }
 export const putSolutionTestTrue = (linkSolution: number) => (dispatch: Dispatch<actionsTypes>) => {
@@ -131,7 +131,8 @@ export const putSolutionTestTrue = (linkSolution: number) => (dispatch: Dispatch
                   return el.solution = true
             }
       })
-      getResaultDiagnosticData()
+      dispatch(getResaultDiagnosticData())
+
 }
 export const putSolutionTestFalse = (linkSolution: number) => (dispatch: Dispatch<actionsTypes>) => {
       serverData.resaultDiagnostic.forEach(el => {
@@ -139,6 +140,7 @@ export const putSolutionTestFalse = (linkSolution: number) => (dispatch: Dispatc
                   return el.solution = false
             }
       })
-      getResaultDiagnosticData()
+      dispatch(getResaultDiagnosticData())
+
 }
 export default testReducer
