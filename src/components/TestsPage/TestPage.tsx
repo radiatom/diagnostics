@@ -1,21 +1,23 @@
 import React, { useEffect } from 'react';
-import FinishTestsContainer from './FinishTests/FinishTestsContainer';
+import FinishTests from './FinishTests/FinishTests';
 import Test from './Test/Test';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getTestData, setSaveResault } from '../../reactRedux/testReducer';
 
-type propsType = {
-      getTestData: (linkNumber: number) => void
-      setSaveResault: () => void
-      linkNumber: number
-}
-const TestPage: React.FC<propsType> = (props) => {
+
+const TestPage: React.FC<object> = () => {
+      const dispatch = useDispatch()
+      const { linkNumber } = useParams()
+      const num: number = Number(linkNumber)
       useEffect(() => {
-            props.getTestData(props.linkNumber)
-            props.setSaveResault()
+            dispatch(getTestData(num))
+            dispatch(setSaveResault())
 
-      }, [props]);
+      }, [num]);
       return (
             <div>
-                  {props.linkNumber === 7 ? <FinishTestsContainer /> : <Test />}
+                  {num === 7 ? <FinishTests /> : <Test />}
             </div>
       );
 }

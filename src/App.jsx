@@ -11,8 +11,8 @@ import Services from './components/Services/Services';
 import Altenator from './components/Blogs/Altenator/Altenator';
 import BatteryCharging from './components/Blogs/BatteryСharging/BatteryCharging';
 import BlogsPage from './components/Blogs/BlogsPage';
-import TestPageContainer from './components/TestsPage/TestPageContainer';
-import NavbarContainer from './components/Navbar/NavbarContainer';
+import TestPage from './components/TestsPage/TestPage';
+import Navbar from './components/Navbar/Navbar';
 import GalleryContainer from './components/Gallery/GalleryContainer';
 
 
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="header">
-          <NavbarContainer/>
+          <Navbar/>
         </div>
         <div className='contentApp'>
           <Routes>
@@ -29,7 +29,7 @@ function App() {
             <Route className="home" path="/Home" element={<Home />} />
             <Route path="/Services" element={<Services />} />
             <Route path="/Diagnostics/*" element={<Diagnostics />} />
-            <Route path="/Diagnostics/Test/:linkNumber" element={<TestPageContainer />} />
+            <Route path="/Diagnostics/Test/:linkNumber" element={<TestPage />} />
             <Route path="/Сontact" element={<Contact />} />
             <Route path="/Starter" element={<Starter />} />
             <Route path="/Blogs" element={<BlogsPage />} />

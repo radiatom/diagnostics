@@ -1,24 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import ResaultDiagnostic from './ResaultDiagnostic';
 import { resaultDiagnosticType } from "./../../../../server/server"
-import {appStateType}from './../../../../reactRedux/redux'
+import { resaultSelector } from './../../../../selectors/selectors'
 
 
-type mapStateToPropsType = {
-      resault: resaultDiagnosticType
-}
-const ResaultDiagnosticContainer: React.FC<mapStateToPropsType> = (props) => {
+const ResaultDiagnosticContainer: React.FC<object> = () => {
+      const resault: resaultDiagnosticType = useSelector(resaultSelector)
       return (
             <div>
-                  {props.resault.map(el => <ResaultDiagnostic key={el.id} el={el.text} />)}
+                  {resault.map(el => <ResaultDiagnostic key={el.id} el={el.text} />)}
             </div>
       );
 }
 
-const mapStateToProps = (state: appStateType): mapStateToPropsType => {
-      return {
-            resault: state.testPage.resault
-      }
-}
-export default connect(mapStateToProps, {})(ResaultDiagnosticContainer);
+export default ResaultDiagnosticContainer;

@@ -9,14 +9,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { putSolutionTestTrue, putSolutionTestFalse, actionsTypes } from './../../../reactRedux/testReducer';
 import { appStateType } from '../../../reactRedux/redux';
 // import logo from "./../../../img/Viniko1.png"
+import { testDataSelector } from './../../../selectors/selectors';
+
 const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`
 
 
 type propsType = {
 }
-const testDataSelector = (state: appStateType) => {
-      return state.testPage.testData
-}
+
 
 const Test: React.FC<propsType> = () => {
       const testData: cardType  = useSelector(testDataSelector)

@@ -1,12 +1,14 @@
 import React from 'react';
 import s from './Navbar.module.css'
-import logo from "./../../img/Viniko1.png"
+// import logo from "./../../img/Viniko1.png"
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { updateRes } from '../../reactRedux/testReducer';
+const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`
 
-type propsType = {
-      updateRes: () => void
-}
-const Navbar: React.FC<propsType> = ({ updateRes }) => {
+
+const Navbar = () => {
+      const dispatch= useDispatch()
       return (
             <div>
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
@@ -40,7 +42,7 @@ const Navbar: React.FC<propsType> = ({ updateRes }) => {
                                           </li>
                                           <li className="nav-item dropdown">
                                                 <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
-                                                <ul onClick={() => updateRes()} className="dropdown-menu">
+                                                <ul onClick={() => dispatch(updateRes())} className="dropdown-menu">
                                                       <NavLink className="dropdown-item" to="/DiagnosticStarter" > Стартер</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticAltetnator">Генератор</NavLink>
                                                       <NavLink className="dropdown-item" to="/DiagnosticABattery">Акумулятор</NavLink>
