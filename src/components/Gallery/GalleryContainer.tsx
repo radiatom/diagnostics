@@ -8,6 +8,7 @@ const GalleryContainer = () => {
             {serverData.testCard.map(el => {
                 return <GalleryTest
                     key={el.linkNumber}
+                    id={el.linkNumber}
                     problem={el.problem}
                     testText={el.testText}
                     instruction={el.instruction}

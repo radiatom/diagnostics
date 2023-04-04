@@ -59,6 +59,7 @@
 
 const video8 = `${process.env.PUBLIC_URL}/video/video8.mp4`
 const video11 = `${process.env.PUBLIC_URL}/video/11.mp4`
+const video12 = `${process.env.PUBLIC_URL}/video/video12.mp4`
 const video12131 = `${process.env.PUBLIC_URL}/video/12131.mov`
 const video17 = `${process.env.PUBLIC_URL}/video/video17.mp4`
 const video20 = `${process.env.PUBLIC_URL}/video/video20.mp4`
@@ -176,7 +177,7 @@ const serverData: serverDataType = {
                   solutionYes: 18,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video12,
             },
             {
                   linkNumber: 12131,

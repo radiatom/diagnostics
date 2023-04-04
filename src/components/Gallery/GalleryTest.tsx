@@ -3,7 +3,7 @@ import GalleryResContainer from './GalleryResContainer';
 import s from './Gallery.module.css'
 
 type propsType = {
-      key: number|null
+      id: number|null
       problem: string
       testText: string
       instruction: string | null
@@ -12,10 +12,10 @@ type propsType = {
       solutionYes: number | null
       solutionNo: number | null
 }
-const GlleryTest:React.FC<propsType> = ({ key, problem, testText, instruction, img, video, solutionYes, solutionNo }) => {
+const GlleryTest:React.FC<propsType> = ({ id, problem, testText, instruction, img, video, solutionYes, solutionNo }) => {
       return (
             <div className={`m-4 mb-5 ${s.GlleryTest}`}>
-                  <h5>№ тесту: {key}</h5>
+                  <h5>№ тесту: {id}</h5>
                   <p>Текст заголовоку: {problem}</p>
                   {testText === '' ?
                         ''

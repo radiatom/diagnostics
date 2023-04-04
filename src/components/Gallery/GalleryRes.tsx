@@ -8,7 +8,7 @@ type propsType = {
 const GalleryRes: React.FC<propsType> = ({ text, id }) => {
     return (
         <span>
-            № результату : {id}
+            № результату : {''+id}
             <p>Текст: {text} </p>
         </span>
     );
