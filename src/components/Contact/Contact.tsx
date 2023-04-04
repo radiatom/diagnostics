@@ -1,9 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import s from "./Contact.module.css"
-// import img1 from "./../../img/map2.png"
 import RoadFoto from './RoadFoto/RoadFoto';
-const img1 = `${process.env.PUBLIC_URL}/img/map2.png`
 
 
 const Contact = () => {
@@ -13,8 +11,8 @@ const Contact = () => {
          <section className="contact-area" >
             <h2 className='text-center p-4 '>Контактна інформація</h2>
             <div className="container">
-               <div className='container text-center'>
-                  <img className={s.img} src={img1} alt="viniko вініко" />
+               <div className={`container text-center ${s.img}`}>
+                  <iframe className={s.mapContainer} title='0' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6003.000204132295!2d25.390563008148185!3d50.7420016240818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47259b394f792cd9%3A0x636c590930856bef!2sViniko%2C%20Sto%2C%20Remont%20Startera%20I%20Heneratora%2C%20Perevirka%20Akumulyatora%2C%20Elektryka%20Prychepa%20I%20Avto!5e1!3m2!1sen!2sua!4v1680589393424!5m2!1sen!2sua" loading="lazy"></iframe>
                </div>
                <div className="contact-info">
                   <ul className="info">
@@ -51,11 +49,9 @@ const Contact = () => {
                         </div>
 
                      </li>
+                     <p className="text">Email: viniko@meta.ua</p>
 
-                     <div className="info-content">
-                        <p className="text">Support email: viniko@meta.ua</p>
-                        <p className="text">Support telegram:  @Radiatom</p>
-                     </div>
+
                   </ul>
                   {/* <ul className="social mt-5">
                            <li>
@@ -81,7 +77,13 @@ const Contact = () => {
                         </ul> */}
                </div>
             </div>
-               <RoadFoto/>
+            <RoadFoto />
+            <ul className="info text-center">
+               <div className="info-content">
+                  <p className="text">Support email: viniko@meta.ua</p>
+                  <p className="text">Support telegram:  @Radiatom</p>
+               </div>
+            </ul>
          </section>
       </div>
    );

@@ -1,8 +1,18 @@
-.img{
-      width: 70%;
+.mapContainer {
+      width: 600px;
+      height: 450px;
 }
+.map {
+      width: 70%;
+      height: 70%;
+}
+
 @media (max-width: 767px) {
-      .img{
+      .map {
             width: 100%;
+      }
+      .mapContainer{
+            width: 100%;
+            height: 100%;
       }
 }

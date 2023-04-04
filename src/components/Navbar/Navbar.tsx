@@ -4,11 +4,13 @@ import s from './Navbar.module.css'
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateRes } from '../../reactRedux/testReducer';
+import { useState } from 'react';
 const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`
 
 
 const Navbar = () => {
       const dispatch= useDispatch()
+      let [count, setCount] = useState(false);
       return (
             <div>
                   <nav className=" container-fluid navbar bg-dark bg-body-tertiary">
@@ -25,19 +27,19 @@ const Navbar = () => {
                   </nav>
                   <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                         <div className="container">
-                              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <button onClick={()=>setCount(count=!count)} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav"  aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
                               </button>
-                              <div className="collapse navbar-collapse" id="navbarNav">
-                                    <ul className="navbar-nav">
-                                          <li className="nav-item">
-                                                <NavLink className="nav-link" to="/Home">Про нас</NavLink>
+                              <div className={count?"collapse navbar-collapse show":"collapse navbar-collapse"} id="navbarNav" >
+                                    <ul className="navbar-nav" >
+                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
+                                                <NavLink  className="nav-link" to="/Home">Про нас</NavLink>
                                           </li>
-                                          <li className="nav-item">
+                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Services">Наші послуги</NavLink>
                                           </li>
-                                          <li className="nav-item">
+                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Gallery">Галерея сервера</NavLink>
                                           </li>
                                           <li className="nav-item dropdown">
@@ -50,10 +52,10 @@ const Navbar = () => {
                                                       <NavLink className="dropdown-item" to="/Diagnostics" >Всі види діагностики </NavLink>
                                                 </ul>
                                           </li>
-                                          <li className="nav-item">
+                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Blogs">Корисні статті</NavLink>
                                           </li>
-                                          <li className="nav-item">
+                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Сontact">Контакти</NavLink>
                                           </li>
                                     </ul>
