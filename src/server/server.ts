@@ -65,6 +65,8 @@ const video17 = `${process.env.PUBLIC_URL}/video/video17.mp4`
 const video20 = `${process.env.PUBLIC_URL}/video/video20.mp4`
 const video21 = `${process.env.PUBLIC_URL}/video/video21.mp4`
 const video79 = `${process.env.PUBLIC_URL}/video/video79.mp4`
+const video73 = `${process.env.PUBLIC_URL}/video/video73.mp4`
+const video75 = `${process.env.PUBLIC_URL}/video/video75.mp4`
 const video81 = `${process.env.PUBLIC_URL}/video/video81.mp4`
 const video85 = `${process.env.PUBLIC_URL}/video/video8.mp4`
 const video87 = `${process.env.PUBLIC_URL}/video/video87.mp4`
@@ -81,11 +83,13 @@ const video116 = `${process.env.PUBLIC_URL}/video/video116.mp4`
 const video119 = `${process.env.PUBLIC_URL}/video/video119.mp4`
 const video121 = `${process.env.PUBLIC_URL}/video/video121.mp4`
 const video123 = `${process.env.PUBLIC_URL}/video/video123.mp4`
+const video133 = `${process.env.PUBLIC_URL}/video/video133.mp4`
 const video143 = `${process.env.PUBLIC_URL}/video/video143.mp4`
 const video154 = `${process.env.PUBLIC_URL}/video/video154.mp4`
 const video160 = `${process.env.PUBLIC_URL}/video/video160.mp4`
 const video161 = `${process.env.PUBLIC_URL}/video/video161.mp4`
 const video162 = `${process.env.PUBLIC_URL}/video/video162.mp4`
+const video169 = `${process.env.PUBLIC_URL}/video/video169.mp4`
 const video174 = `${process.env.PUBLIC_URL}/video/video174.mp4`
 const video182 = `${process.env.PUBLIC_URL}/video/video182.mp4`
 const video185 = `${process.env.PUBLIC_URL}/video/video185.mp4`
@@ -96,8 +100,10 @@ const img15 = `${process.env.PUBLIC_URL}/img/15.png`
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`
 const img71 = `${process.env.PUBLIC_URL}/img/71.png`
 const img72 = `${process.env.PUBLIC_URL}/img/72.png`
+const img74 = `${process.env.PUBLIC_URL}/img/74.png`
 const img77 = `${process.env.PUBLIC_URL}/img/77.png`
 const img78 = `${process.env.PUBLIC_URL}/img/78.png`
+const img84 = `${process.env.PUBLIC_URL}/img/84.png`
 const img86 = `${process.env.PUBLIC_URL}/img/86.png`
 const img88 = `${process.env.PUBLIC_URL}/img/88.png`
 const img89 = `${process.env.PUBLIC_URL}/img/areometr.jpg`
@@ -105,6 +111,7 @@ const img92 = `${process.env.PUBLIC_URL}/img/92.png`
 const img99 = `${process.env.PUBLIC_URL}/img/img99.png`
 const img117 = `${process.env.PUBLIC_URL}/img/117.png`
 const img118 = `${process.env.PUBLIC_URL}/img/118.png`
+const img125 = `${process.env.PUBLIC_URL}/img/125.png`
 const img126 = `${process.env.PUBLIC_URL}/img/126.png`
 const img131 = `${process.env.PUBLIC_URL}/img/131.png`
 const img132 = `${process.env.PUBLIC_URL}/img/132.png`
@@ -375,7 +382,7 @@ const serverData: serverDataType = {
                   linkNumber: 72,
                   problem: "Дайте відповідь на питання",
                   testText: 'Вісь у втулках має великий люфт?',
-                  instruction: 'На вигляд (на око), зношені втулки мають овальний отвір',
+                  instruction: 'На вигляд (на око), зношені втулки мають овальний отвір (як на фото)',
                   linkNumberYes: 84,
                   linkNumberNo: 84,
                   solutionYes: 20,
@@ -387,37 +394,37 @@ const serverData: serverDataType = {
                   linkNumber: 73,
                   problem: "Дайте відповідь на питання",
                   testText: 'Підшипники зруйновані, обертаються ривками, шумлять?',
-                  instruction: '',
+                  instruction: 'На відео підшипник заклинив',
                   linkNumberYes: 77,
                   linkNumberNo: 77,
                   solutionYes: 21,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video73,
             },
             {
                   linkNumber: 74,
                   problem: "Дайте відповідь на питання",
                   testText: 'Вимийте редуктор від мастила. В ньому відсутні зуби, присутні тріщини, пошкодження?',
-                  instruction: '',
+                  instruction: 'На фото редуктор зовсім розвалений',
                   linkNumberYes: 7,
                   linkNumberNo: 75,
                   solutionYes: 24,
                   solutionNo: 1,
-                  img: null,
+                  img: img74,
                   video: null,
             },
             {
                   linkNumber: 75,
                   problem: "Дайте відповідь на питання",
                   testText: 'Вал в редукторі крутиться легко та без ривків?',
-                  instruction: '',
+                  instruction: 'На відео вал крутиться легко',
                   linkNumberYes: 7,
                   linkNumberNo: 7,
                   solutionYes: 1,
                   solutionNo: 25,
                   img: null,
-                  video: null,
+                  video: video75,
             },
             {
                   linkNumber: 76,
@@ -524,7 +531,7 @@ const serverData: serverDataType = {
                   linkNumberNo: 85,
                   solutionYes: 1,
                   solutionNo: 26,
-                  img: null,
+                  img: img84,
                   video: null,
             },
             {
@@ -1112,7 +1119,7 @@ const serverData: serverDataType = {
                   linkNumberNo: 126,
                   solutionYes: 60,
                   solutionNo: 1,
-                  img: null,
+                  img: img125,
                   video: null,
             },
             {
@@ -1203,13 +1210,13 @@ const serverData: serverDataType = {
                   linkNumber: 133,
                   problem: "Візьміть підшипник в руку, потрясіть ним біля вуха",
                   testText: 'В підшипнику щось брящить?',
-                  instruction: '',
+                  instruction: 'На відео чути як в підшипнику щось брящить',
                   linkNumberYes: 143,
                   linkNumberNo: 143,
                   solutionYes: 4,
                   solutionNo: 1,
                   img: null,
-                  video: null,
+                  video: video133,
             },
             {
                   linkNumber: 134,
@@ -1244,7 +1251,7 @@ const serverData: serverDataType = {
                   linkNumberNo: 141,
                   solutionYes: 60,
                   solutionNo: 1,
-                  img: null,
+                  img: img125,
                   video: null,
             },
             {
@@ -1647,13 +1654,13 @@ const serverData: serverDataType = {
                   linkNumber: 169,
                   problem: "Дайте відповідь на питання",
                   testText: 'Втягуюче має робочий хід?',
-                  instruction: '',
+                  instruction: 'На відео видно як вкінці ходу є маленький люфт (приблизно 1мм) це і є робочий хід (ресурс втягуючого). Чим він меньший тим меньший ресурс, якщо взагалі нема, це ознака того, що вгяюче вже потрібно замінити.',
                   linkNumberYes: 71,
                   linkNumberNo: 71,
                   solutionYes: 1,
                   solutionNo: 72,
                   img: null,
-                  video: null,
+                  video: video169,
             },
             {
                   linkNumber: 170,
