@@ -1,6 +1,7 @@
-import img1 from "./../../../../img/stDiaServ.jpg"
+// import img1 from "./../../../../img/stDiaServ.jpg"
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+const img1 = `${process.env.PUBLIC_URL}/img/stDiaServ.jpg`
 
 const Service2 = () => {
       return (

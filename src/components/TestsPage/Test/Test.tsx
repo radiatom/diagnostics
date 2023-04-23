@@ -7,7 +7,7 @@ import s from "./Test.module.css"
 import { cardType } from "./../../../server/server"
 import { useDispatch, useSelector } from 'react-redux';
 import { putSolutionTestTrue, putSolutionTestFalse, actionsTypes } from './../../../reactRedux/testReducer';
-import { appStateType } from '../../../reactRedux/redux';
+// import { appStateType } from '../../../reactRedux/redux';
 // import logo from "./../../../img/Viniko1.png"
 import { testDataSelector } from './../../../selectors/selectors';
 
@@ -18,7 +18,7 @@ type propsType = {
 }
 
 
-const Test: React.FC<propsType> = () => {
+const Test: React.FC<propsType> = (props) => {
       const testData: cardType  = useSelector(testDataSelector)
       const dispatch: Dispatch<actionsTypes> = useDispatch()
 

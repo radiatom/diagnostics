@@ -68,7 +68,7 @@ const video79 = `${process.env.PUBLIC_URL}/video/video79.mp4`
 const video73 = `${process.env.PUBLIC_URL}/video/video73.mp4`
 const video75 = `${process.env.PUBLIC_URL}/video/video75.mp4`
 const video81 = `${process.env.PUBLIC_URL}/video/video81.mp4`
-const video85 = `${process.env.PUBLIC_URL}/video/video8.mp4`
+const video85 = `${process.env.PUBLIC_URL}/video/video85.mp4`
 const video87 = `${process.env.PUBLIC_URL}/video/video87.mp4`
 const video91 = `${process.env.PUBLIC_URL}/video/video91.mp4`
 const video97 = `${process.env.PUBLIC_URL}/video/video97.mp4`
@@ -100,6 +100,7 @@ const img15 = `${process.env.PUBLIC_URL}/img/15.png`
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`
 const img71 = `${process.env.PUBLIC_URL}/img/71.png`
 const img72 = `${process.env.PUBLIC_URL}/img/72.png`
+const img73 = `${process.env.PUBLIC_URL}/img/73.png`
 const img74 = `${process.env.PUBLIC_URL}/img/74.png`
 const img77 = `${process.env.PUBLIC_URL}/img/77.png`
 const img78 = `${process.env.PUBLIC_URL}/img/78.png`
@@ -399,7 +400,7 @@ const serverData: serverDataType = {
                   linkNumberNo: 77,
                   solutionYes: 21,
                   solutionNo: 1,
-                  img: null,
+                  img: img73,
                   video: video73,
             },
             {

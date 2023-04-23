@@ -39,9 +39,9 @@ const Navbar = () => {
                                           <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Services">Наші послуги</NavLink>
                                           </li>
-                                          <li onClick={()=>setCount(count=!count)} className="nav-item">
+                                          {/* <li onClick={()=>setCount(count=!count)} className="nav-item">
                                                 <NavLink className="nav-link" to="/Gallery">Галерея сервера</NavLink>
-                                          </li>
+                                          </li> */}
                                           <li className="nav-item dropdown">
                                                 <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Діагностика <span className="badge bg-secondary">New</span></div>
                                                 <ul onClick={() => dispatch(updateRes())} className="dropdown-menu">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import s from "./InstructionVideoTest.module.css"
 
 type propsType = {
@@ -6,6 +6,14 @@ type propsType = {
     instruction: null | string
 }
 const InstructionVideoTest: React.FC<propsType> = ({ video, instruction }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.load();
+        }
+    }, [video]);
+
     return (
         <div className="accordion accordion-flush" id="accordionFlushExample">
             <div className="accordion-item">
@@ -17,7 +25,7 @@ const InstructionVideoTest: React.FC<propsType> = ({ video, instruction }) => {
                 <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div className="accordion-body">
                         <p className="card-text">{instruction}</p>
-                        <video className={`w-100 ${s.img}`} controls>
+                        <video ref={videoRef} className={`w-100 ${s.img}`} controls>
                             <source src={video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
