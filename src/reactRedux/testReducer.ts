@@ -122,6 +122,7 @@ export const updateRes = () => (dispatch: Dispatch<actionsTypes>) => {
                   return el.solution = false
             }
       })
+      //@ts-ignore
       dispatch(getResaultDiagnosticData())
       //фунція скидання  результатів попередніх відповідей
 }
@@ -131,6 +132,7 @@ export const putSolutionTestTrue = (linkSolution: number) => (dispatch: Dispatch
                   return el.solution = true
             }
       })
+      //@ts-ignore
       dispatch(getResaultDiagnosticData())
 
 }
@@ -140,6 +142,7 @@ export const putSolutionTestFalse = (linkSolution: number) => (dispatch: Dispatc
                   return el.solution = false
             }
       })
+      //@ts-ignore
       dispatch(getResaultDiagnosticData())
 
 }

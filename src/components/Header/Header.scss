@@ -1,0 +1,53 @@
+.header{
+    background-color: rgb(37, 37, 37);
+    overflow-y: 9;
+    &__head{
+        color: #FBE400;
+    }
+    &__logo{
+        display: block;
+        text-align: center;
+        img{
+            width: 200px;
+        }
+    }
+    &__location{
+        display: flex;
+        justify-content: space-around;
+        span{
+            width: 33.3333%;
+            text-align: center;
+            &:first-child{
+                text-transform: uppercase;
+            }
+            &:last-child{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+
+
+// .color {
+//       color: aqua;
+// }
+
+// .navbarSpan {
+//       font-size: 67%;
+// }
+
+// .navContact {
+//       font-size: 85%;
+//       color: #ffc107;
+// }
+
+// .nav-link:hover {
+//       background-color: rgb(69, 68, 67);
+// }
+
+// .container {
+//       display: block;
+// }
+
