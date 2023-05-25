@@ -1,0 +1,13 @@
+@import "./../../App.scss";
+.services {
+    width: 100%;
+    border-top: 1px solid black;
+    &__title {
+        margin: 50px 0;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

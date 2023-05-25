@@ -2,9 +2,11 @@ import { applyMiddleware, combineReducers, compose, legacy_createStore } from "r
 import testReducer from "./testReducer";
 import thunkMiddleware from "redux-thunk";
 // import {reducer as formReducer} from 'redux-form'
+import reducerServices from './reducerServices';
 
 const redusers = combineReducers({
     testPage: testReducer,
+    servicesPage: reducerServices 
 })
 
 type reducersType = typeof redusers

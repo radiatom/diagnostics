@@ -1,9 +1,10 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
+//@ts-ignore
+import Banner from '../Banner/Banner.tsx';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact'
 import Features from '../Features/Features';
-import AllServices from '../Services/AllServices/AllServices';
+import Services from '../Services/Services';
 import s from './Home.module.css'
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
             <div className={s.home} >
                   <Banner/>
                   <Features/>
-                  <AllServices/>
+                  <Services/>
                   <Contact/>
                   <Blogs/>
             </div >
@@ -19,3 +20,4 @@ const Home = () => {
 }
 
 export default Home;
+

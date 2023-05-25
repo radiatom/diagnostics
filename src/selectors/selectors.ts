@@ -6,3 +6,6 @@ export const testDataSelector = (state: appStateType) => {
 export const resaultSelector = (state: appStateType) => {
     return state.testPage.resault
 }
+export const servicesSelector=(state:appStateType)=>{
+    return state.servicesPage.services
+}
