@@ -1,0 +1,79 @@
+@mixin pBefore($url) {
+    content: "";
+    width: 40px;
+    height: 30px;
+    background: url($url) 0/100% no-repeat;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.contact {
+    border-top: 1px solid black;
+    margin: 0 -10px;
+    &__body {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+    &__title {
+        margin: 50px 0;
+    }
+    &__info {
+        padding: 0 10px;
+        width: 50%;
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+        p {
+            position: relative;
+            line-height: 30px;
+            padding-left: 45px;
+        }
+        p:nth-child(1):before {
+            content: "";
+            width: 20px;
+            height: 36px;
+            background: url("./../../img/icons/phone.webp") 0/100% no-repeat;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        p:nth-child(2):before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background: url("./../../img/icons/place.webp") 0/100% no-repeat;
+            top: 10px;
+            left: 0;
+            position: absolute;
+        }
+        p:nth-child(3):before {
+            @include pBefore("./../../img/icons/download.svg");
+        }
+        p:nth-child(4):before {
+            @include pBefore("./../../img/icons/download.svg");
+        }
+        p:nth-child(5):before {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background: url("./../../img/icons/teleg.webp") 0/100% no-repeat;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    &__map {
+        padding: 0 10px;
+        width: 50%;
+        height: 400px;
+        @media (max-width: 900px) {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}
