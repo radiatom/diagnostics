@@ -1,0 +1,35 @@
+.features {
+    width: 100%;
+    margin-bottom: 25px;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .Card {
+            padding: 5px;
+            width: 350px;
+            margin-bottom: 25px;
+            @media (max-width: 1073px) {
+                &:nth-child(2) {
+                    order: 3;
+                }
+            }
+            h3 {
+                text-align: center;
+                margin-bottom: 25px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            p {
+                text-align: justify;
+                span {
+                    color: rgb(196, 2, 2);
+                }
+            }
+        }
+    }
+}
