@@ -1,0 +1,14 @@
+.blogs {
+    width: 100%;
+    border-top: 1px solid black;
+    margin-bottom: 25px;
+    &__title {
+        margin: 50px 0;
+    }
+    &__body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

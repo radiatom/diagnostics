@@ -17,8 +17,8 @@ const Contact = () => {
                     <div className="contact__info">
                         <p className="text">+38 (097) 93 43 392</p>
                         <p className="text">
-                            Територіально м.Луцьк, біля заводу ModernExpo, точна
-                            адреса: с. Струмівка вул. Рівненська 8.
+                            Територіально м.Луцьк,<b> біля заводу ModernExpo</b>, точна
+                            адреса: <b>с. Струмівка вул. Рівненська 8.</b>
                         </p>
                         <p className="text">Email: viniko@meta.ua</p>
                         <p className="text">Support email: viniko@meta.ua</p>

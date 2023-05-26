@@ -17,3 +17,14 @@
   font-size: 30px;
   font-weight: 700;
 }
+.btnY{
+   background-color: #ffc107;
+   padding: 0 30px;
+   height: 40px;
+   border-radius: 10px;
+   color: black;
+   transition: all 0.7s;
+   &:hover{
+    background-color: #fcce03;
+   }
+}

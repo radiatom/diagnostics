@@ -4,7 +4,6 @@ import './Footer.scss'
 const Footer = () => {
     return (
         <footer className="footer">
-                <div className="container">
                     <p >
                         Автосервіс Вініко надає послуги діагностики,
                         професійного ремонту стартера, генератора у Луцьку.
@@ -21,7 +20,6 @@ const Footer = () => {
                         Mobiletron, оригінальні бренди BOSCH, DELCO, DENSO, INA,
                         VALEO.
                     </p>
-                </div>
             </footer>
     );
 }

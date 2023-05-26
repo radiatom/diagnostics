@@ -12,3 +12,6 @@ export const servicesSelector = (state: appStateType) => {
 export const roadFotosSelector = (state: appStateType) => {
     return state.roadFotosPage.roadFotos;
 };
+export const blogsSelector=(state: appStateType) =>{
+    return state.blogsPage.blogs
+}

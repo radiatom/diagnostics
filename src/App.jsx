@@ -10,7 +10,7 @@ import DiagnosticABattery from "./components/Diagnostics/DiagnosticBattery/Diagn
 import Services from "./components/Services/Services";
 import Altenator from "./components/Blogs/Altenator/Altenator";
 import BatteryCharging from "./components/Blogs/BatteryСharging/BatteryCharging";
-import BlogsPage from "./components/Blogs/BlogsPage";
+import Blogs from "./components/Blogs/Blogs";
 import TestPage from "./components/TestsPage/TestPage";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
 import Footer from "./components/Footer/Footer";
@@ -32,7 +32,7 @@ function App(props) {
                     />
                     <Route path="/Сontact" element={<Contact />} />
                     <Route path="/Starter" element={<Starter />} />
-                    <Route path="/Blogs" element={<BlogsPage />} />
+                    <Route path="/Blogs" element={<Blogs />} />
                     <Route
                         path="/DiagnosticStarter"
                         element={<DiagnosticStarter />}

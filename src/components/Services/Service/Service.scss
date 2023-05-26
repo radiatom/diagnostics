@@ -1,24 +1,29 @@
-.service{
-      width: 370px;
-      padding: 0 10px;
-      margin-bottom: 20px;
-      img{
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-            height: 230px;
-      }
-      &__body{
-            h5{
-                  font-size: 19px;
-                  font-weight: 600;
-                  text-align: center;
-            }
-            p{
-                  text-align: justify;
-            }
-            a{
-                  display: block;
-                  margin: 0 auto;
-            }
-      }
+.service {
+    width: 370px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 1s;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.507);
+        border-radius: 10px;
+    }
+    img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 230px;
+    }
+    &__body {
+        h5 {
+            font-size: 19px;
+            font-weight: 600;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        a {
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }

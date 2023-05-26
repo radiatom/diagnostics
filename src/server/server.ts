@@ -109,6 +109,10 @@ const roadFoto4 = `${process.env.PUBLIC_URL}/img/galery5.jpg`;
 const roadFoto5 = `${process.env.PUBLIC_URL}/img/galery6.jpg`;
 const roadFoto6 = `${process.env.PUBLIC_URL}/img/galery7.jpg`;
 
+const blogStFoto = `${process.env.PUBLIC_URL}/img/st1.jpg`;
+const blogAltFoto = `${process.env.PUBLIC_URL}/img/alt4.jpg`;
+const blogChFoto = `${process.env.PUBLIC_URL}/img/acu1.jpg`;
+
 const img15 = `${process.env.PUBLIC_URL}/img/15.png`;
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`;
 const img71 = `${process.env.PUBLIC_URL}/img/71.png`;
@@ -138,6 +142,14 @@ const img168 = `${process.env.PUBLIC_URL}/img/168.png`;
 const img184 = `${process.env.PUBLIC_URL}/img/184.png`;
 const img189 = `${process.env.PUBLIC_URL}/img/189.png`;
 
+export type blogType = {
+    id: number;
+    foto: string;
+    title: string;
+    text: string;
+    navLink:string
+};
+export type blogsType = Array<blogType>;
 export type roadFotoType = { id: number; link: string };
 export type roadFotosType = Array<roadFotoType>;
 export type serviceType = {
@@ -167,6 +179,7 @@ export type solutionType = {
 };
 export type resaultDiagnosticType = Array<solutionType>;
 export type serverDataType = {
+    blogs: blogsType;
     roadFotos: roadFotosType;
     services: servicesType;
     testCard: testCardType;
@@ -174,6 +187,29 @@ export type serverDataType = {
 };
 
 const serverData: serverDataType = {
+    blogs: [
+        {
+            id: 1,
+            foto: blogStFoto,
+            title: "Будова стартера",
+            text: "Ця стаття описує будову стартера, бендикса та принцип роботи.",
+            navLink:"/Starter",
+        },
+        {
+            id: 2,
+            foto: blogChFoto,
+            title: "Як правильно зарядити автомобільний акумулятор",
+            text: "Розглянемо кілька актуальних питань які українські водії ставлять досить часто, та дамо на них відповіді.",
+            navLink:"/BatteryСharging",
+        },
+        {
+            id: 3,
+            foto: blogAltFoto,
+            title: "Будова генератора",
+            text: "Ця стаття описує будову генератора. Перевірка генератора. Несправності генератора.",
+            navLink:"/Alnenator",
+        },
+    ],
     roadFotos: [
         { id: 1, link: roadFoto1 },
         { id: 2, link: roadFoto2 },
@@ -2605,6 +2641,9 @@ export const roadFotos = (): roadFotosType => {
 };
 export const services = (): servicesType => {
     return serverData.services;
+};
+export const blogs = (): blogsType => {
+    return serverData.blogs;
 };
 
 export default serverData;

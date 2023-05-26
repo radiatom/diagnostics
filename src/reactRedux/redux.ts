@@ -3,8 +3,10 @@ import testReducer from "./testReducer";
 import reducerRoadFotos from './reducerRoadFotos'
 import thunkMiddleware from "redux-thunk";
 import reducerServices from './reducerServices';
+import reducerBlogs from './reducerBlogs'
 
 const redusers = combineReducers({
+    blogsPage:reducerBlogs,
     testPage: testReducer,
     servicesPage: reducerServices ,
     roadFotosPage:reducerRoadFotos,

@@ -78,7 +78,9 @@ ul li {
 img {
   vertical-align: top;
 }
-
+P{
+  cursor: default;
+}
 h1,
 h2,
 h3,
@@ -87,4 +89,6 @@ h5,
 h6 {
   font-size: 14px;
   font-weight: 400;
+  cursor: default;
+  //вимкнення зміни вигляну мишки
 }
