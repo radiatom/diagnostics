@@ -1,16 +1,11 @@
-.roadFoto{
-      margin-bottom: 50px;
-      &__title{
-            margin: 50px 0;
-      }
+.roadFoto {
+    margin-bottom: 50px;
+    &__title {
+        margin: 50px 0;
+    }
+    .carousel {
+        max-width: 700px;
+        margin: 0 auto; 
+    }
 }
-// .carouselControlPrev{
-//       width: 10%;
-//       background: linear-gradient(90deg, #000 0%, #ffffff00 100%);
-// }
-// .carouselControlNext{
-//       width: 10%;
-//       background: linear-gradient(90deg, #ffffff00 0%, #000 100%);
-
-// }
-
+//

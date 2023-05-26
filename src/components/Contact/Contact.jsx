@@ -1,7 +1,6 @@
 import React from "react";
 import "./Contact.scss";
 import RoadFoto from "./RoadFoto/RoadFoto";
-const email = `${process.env.PUBLIC_URL}/img/icons/email.png`;
 
 const Contact = () => {
     return (

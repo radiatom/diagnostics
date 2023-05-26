@@ -1,11 +1,14 @@
-import { appStateType } from "../reactRedux/redux"
+import { appStateType } from "../reactRedux/redux";
 
 export const testDataSelector = (state: appStateType) => {
-    return state.testPage.testData
-}
+    return state.testPage.testData;
+};
 export const resaultSelector = (state: appStateType) => {
-    return state.testPage.resault
-}
-export const servicesSelector=(state:appStateType)=>{
-    return state.servicesPage.services
-}
+    return state.testPage.resault;
+};
+export const servicesSelector = (state: appStateType) => {
+    return state.servicesPage.services;
+};
+export const roadFotosSelector = (state: appStateType) => {
+    return state.roadFotosPage.roadFotos;
+};

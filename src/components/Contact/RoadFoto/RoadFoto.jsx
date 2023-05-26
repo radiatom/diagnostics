@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./RoadFoto.scss";
-import img1 from "./../../../img/map1.png";
-import img2 from "./../../../img/map2.png";
-import img3 from "./../../../img/map3.png";
-import img4 from "./../../../img/galery5.jpg";
-import img5 from "./../../../img/galery6.jpg";
-import img6 from "./../../../img/galery7.jpg";
-// const img1 = `${process.env.PUBLIC_URL}/img/map1.png`
-// const img2 = `${process.env.PUBLIC_URL}/img/map2.png`
-// const img3 = `${process.env.PUBLIC_URL}/img/map3.png`
-// const img4 = `${process.env.PUBLIC_URL}/img/galery5.jpg`
-// const img5 = `${process.env.PUBLIC_URL}/img/galery6.jpg`
-// const img6 = `${process.env.PUBLIC_URL}/img/galery7.jpg`
+import { useDispatch, useSelector } from "react-redux";
+import { roadFotosSelector } from "../../../selectors/selectors";
+import { setRoadFotos } from "../../../reactRedux/reducerRoadFotos";
+
 
 const RoadFoto = () => {
+    const roadFootos = useSelector(roadFotosSelector);
+    const objFirstFoto = roadFootos.find((el) => el.id === 1);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setRoadFotos());
+    }, [roadFootos]);
+// всі фото з сервера
     return (
         <div className="roadFoto">
-            <h2 className="roadFoto__title title">Як до нас доїхати? Слайди:</h2>
+            <h2 className="roadFoto__title title">
+                Як до нас доїхати? Слайди:
+            </h2>
             <div
                 id="carouselExampleAutoplaying"
                 className="carousel slide "
@@ -25,48 +26,27 @@ const RoadFoto = () => {
                 <div className="carousel-inner ">
                     <div className="carousel-item active ">
                         <img
-                            src={img1}
+                            src={objFirstFoto.link}
                             className="d-block w-100"
                             alt="viniko вініко"
                         />
                     </div>
-                    <div className="carousel-item">
-                        <img
-                            src={img2}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src={img3}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src={img4}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src={img5}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
-                    </div>
-                    <div className="carousel-item">
-                        <img
-                            src={img6}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
-                    </div>
+                    {/* перше фото має бути таке щоб акрсель починалося з цього фото */}
+                    {roadFootos.map((el) => {
+                        if (el.id > 1) {
+                            return (
+                                <div className="carousel-item">
+                                    <img
+                                        src={el.link}
+                                        className="d-block w-100"
+                                        alt="viniko вініко"
+                                    />
+                                </div>
+                            );
+                        }
+                    })}
                     {/* в окремий компонент не винести бо треба щоб тут був class="carousel-item active", 
-                        тому скоротити можн абуде 1 строчку замість одної строчки, тому це не логічно */}
+                        тому скоротити можн абуде 1 строчку замість одної строчки, тому це не логічно , фото добавляються всі окрім першого */}
                 </div>
                 <button
                     className="carousel-control-prev "
