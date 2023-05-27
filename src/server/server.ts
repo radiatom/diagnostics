@@ -113,6 +113,17 @@ const blogStFoto = `${process.env.PUBLIC_URL}/img/st1.jpg`;
 const blogAltFoto = `${process.env.PUBLIC_URL}/img/alt4.jpg`;
 const blogChFoto = `${process.env.PUBLIC_URL}/img/acu1.jpg`;
 
+const stFoto1 = `${process.env.PUBLIC_URL}/img/stater-structure.png`
+const stFoto2 = `${process.env.PUBLIC_URL}/img/fotoBlog1.jpg`
+const stFoto3 = `${process.env.PUBLIC_URL}/img/startersBlog.jpg`
+
+const altFoto1 = `${process.env.PUBLIC_URL}/img/altBlog.png`
+const altFoto2= `${process.env.PUBLIC_URL}/img/altenaorsBlog.png`
+const altFoto3 = `${process.env.PUBLIC_URL}/img/ina.jpg`
+
+const chFoto1 = `${process.env.PUBLIC_URL}/img/blogCharr1.png`
+const chFoto2 = `${process.env.PUBLIC_URL}/img/helper.jpg`
+
 const img15 = `${process.env.PUBLIC_URL}/img/15.png`;
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`;
 const img71 = `${process.env.PUBLIC_URL}/img/71.png`;
@@ -179,6 +190,9 @@ export type solutionType = {
 };
 export type resaultDiagnosticType = Array<solutionType>;
 export type serverDataType = {
+    chFotos:roadFotosType
+    altFotos:roadFotosType
+    stFotos:roadFotosType
     blogs: blogsType;
     roadFotos: roadFotosType;
     services: servicesType;
@@ -187,12 +201,26 @@ export type serverDataType = {
 };
 
 const serverData: serverDataType = {
+    chFotos:[
+        { id: 1, link: chFoto1 },
+        { id: 2, link: chFoto2 },
+    ],
+    altFotos:[
+        { id: 1, link: altFoto1 },
+        { id: 2, link: altFoto2 },
+        { id: 3, link: altFoto3 },
+    ],
+    stFotos:[
+        { id: 1, link: stFoto1 },
+        { id: 2, link: stFoto2 },
+        { id: 3, link: stFoto3 },
+    ],
     blogs: [
         {
             id: 1,
             foto: blogStFoto,
             title: "Будова стартера",
-            text: "Ця стаття описує будову стартера, бендикса та принцип роботи.",
+            text: "Ця стаття описує будову стартера, бендикса та його принцип роботи.",
             navLink:"/Starter",
         },
         {
@@ -206,7 +234,7 @@ const serverData: serverDataType = {
             id: 3,
             foto: blogAltFoto,
             title: "Будова генератора",
-            text: "Ця стаття описує будову генератора. Перевірка генератора. Несправності генератора.",
+            text: "Ця стаття описує будову генератора, як його первірити та основні несправності.",
             navLink:"/Alnenator",
         },
     ],
@@ -222,7 +250,7 @@ const serverData: serverDataType = {
         {
             id: 1,
             title: "Демонтаж та монтаж",
-            text: "Виконуємо демонтаж та монтаж стартера чи генератора з умовою що агрегат буде діагностуватись і ремотуватись у нас.",
+            text: "Виконуємо демонтаж та монтаж стартера чи генератора з умовою ,що агрегат буде діагностуватись і ремотуватись у нас.",
             img: servicesImg1,
         },
         {
@@ -2645,5 +2673,13 @@ export const services = (): servicesType => {
 export const blogs = (): blogsType => {
     return serverData.blogs;
 };
-
+export const stFotos = (): roadFotosType => {
+    return serverData.stFotos;
+};
+export const altFotos = (): roadFotosType => {
+    return serverData.altFotos;
+};
+export const chFotos = (): roadFotosType => {
+    return serverData.chFotos;
+};
 export default serverData;

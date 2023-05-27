@@ -12,7 +12,6 @@ const Blogs = () => {
    const dispatch =useDispatch()
    useEffect(()=>{
       dispatch(setBlogs())
-      console.log(blogsData)
    },[blogsData])
     return (
         <div className="container">

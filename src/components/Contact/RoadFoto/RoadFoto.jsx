@@ -3,7 +3,7 @@ import "./RoadFoto.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { roadFotosSelector } from "../../../selectors/selectors";
 import { setRoadFotos } from "../../../reactRedux/reducerRoadFotos";
-
+import Item from "./Item";
 
 const RoadFoto = () => {
     const roadFootos = useSelector(roadFotosSelector);
@@ -12,7 +12,7 @@ const RoadFoto = () => {
     useEffect(() => {
         dispatch(setRoadFotos());
     }, [roadFootos]);
-// всі фото з сервера
+    // всі фото з сервера
     return (
         <div className="roadFoto">
             <h2 className="roadFoto__title title">
@@ -31,22 +31,13 @@ const RoadFoto = () => {
                             alt="viniko вініко"
                         />
                     </div>
-                    {/* перше фото має бути таке щоб акрсель починалося з цього фото */}
+                    {/* перше фото має бути таке щоб kaрyсель починалося з цього фото */}
                     {roadFootos.map((el) => {
                         if (el.id > 1) {
-                            return (
-                                <div className="carousel-item">
-                                    <img
-                                        src={el.link}
-                                        className="d-block w-100"
-                                        alt="viniko вініко"
-                                    />
-                                </div>
-                            );
+                            return <Item key={el.id} link={el.link} />;
                         }
                     })}
-                    {/* в окремий компонент не винести бо треба щоб тут був class="carousel-item active", 
-                        тому скоротити можн абуде 1 строчку замість одної строчки, тому це не логічно , фото добавляються всі окрім першого */}
+                    {/* фото добавляються всі окрім першого */}
                 </div>
                 <button
                     className="carousel-control-prev "

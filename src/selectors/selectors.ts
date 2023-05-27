@@ -15,3 +15,6 @@ export const roadFotosSelector = (state: appStateType) => {
 export const blogsSelector=(state: appStateType) =>{
     return state.blogsPage.blogs
 }
+export const blogFotosSelector=(state: appStateType) =>{
+    return state.blogsPage.blogFtotos
+}

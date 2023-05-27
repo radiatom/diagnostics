@@ -1,0 +1,42 @@
+.starter {
+    margin-bottom: 50px;
+    &__title {
+        margin: 50px 0 25px 0;
+    }
+    img {
+        max-width: 700px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        display: block;
+        &:nth-child(6) {
+            max-width: 350px;
+        }
+        @media (max-width: 720px) {
+            & {
+                width: 100%;
+            }
+        }
+    }
+    p {
+        text-align: justify;
+        line-height: 25px;
+        &::first-letter {
+            padding-left: 25px;
+        }
+    }
+    ul {
+        h3 {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        li {
+            list-style: decimal;
+            margin-bottom: 15px;
+            line-height: 20px;
+            span{
+                  font-weight: 300;
+            }
+        }
+    }
+}
