@@ -1,53 +1,56 @@
-.header{
+.header {
     background-color: rgb(37, 37, 37);
     overflow-y: 9;
-    &__head{
-        color: #FBE400;
+    &__head {
+        color: #fbe400;
     }
-    &__logo{
+    &__nav{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+        >img {
+            display: none;
+            @media (max-width: 1000px) {
+                & {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    &__logo {
         display: block;
-        text-align: center;
-        img{
+        img {
             width: 200px;
         }
     }
-    &__location{
+    &__location {
         display: flex;
         justify-content: space-around;
-        span{
+        margin-bottom: 8px;
+        span {
             width: 33.3333%;
             text-align: center;
-            &:first-child{
+            @media (max-width: 1000px) {
+                &{
+                    width: 100%;
+                }
+            }
+            &:first-child {
                 text-transform: uppercase;
             }
-            &:last-child{
+            &:last-child {
                 text-transform: uppercase;
+            }
+            @media (max-width: 1000px) {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: none;
+                }
             }
         }
     }
 }
-
-
-
-
-// .color {
-//       color: aqua;
-// }
-
-// .navbarSpan {
-//       font-size: 67%;
-// }
-
-// .navContact {
-//       font-size: 85%;
-//       color: #ffc107;
-// }
-
-// .nav-link:hover {
-//       background-color: rgb(69, 68, 67);
-// }
-
-// .container {
-//       display: block;
-// }
-

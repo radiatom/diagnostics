@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateRes } from "./../../../reactRedux/testReducer";
 
-const Nav = () => {
+const Nav = ({active,click}) => {
     const dispatch = useDispatch();
     const [drop, setDrop] = useState(false);
     const dropNavList = () => {
@@ -12,18 +12,18 @@ const Nav = () => {
         dispatch(updateRes())
     };
     return (
-        <nav className="navbar">
+        <nav className={active?"navbar":" navbar active"}>
             <ul>
-                <li>
+                <li onClick={click}>
                     <NavLink to="/Home">Про нас</NavLink>
                 </li>
-                <li>
+                <li onClick={click}>
                     <NavLink to="/Services">Наші послуги</NavLink>
                 </li>
-                <li>
+                <li onClick={click}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
                 </li>
-                <li>
+                <li >
                     <button onClick={dropNavList}>
                         Діагностика <span>new</span>
                     </button>
@@ -31,7 +31,7 @@ const Nav = () => {
                         className={drop ? "nav-list-open" : "nav-list-closed"}
                         onMouseLeave={dropNavList}
                     >
-                        <li>
+                        <li onClick={click}>
                             <NavLink
                                 className="dropdown-item"
                                 to="/DiagnosticStarter"
@@ -39,7 +39,7 @@ const Nav = () => {
                                 Стартер
                             </NavLink>
                         </li>
-                        <li>
+                        <li onClick={click}>
                             <NavLink
                                 className="dropdown-item"
                                 to="/DiagnosticAltetnator"
@@ -47,7 +47,7 @@ const Nav = () => {
                                 Генератор
                             </NavLink>
                         </li>
-                        <li>
+                        <li onClick={click}>
                             <NavLink
                                 className="dropdown-item"
                                 to="/DiagnosticABattery"
@@ -55,7 +55,7 @@ const Nav = () => {
                                 Акумулятор
                             </NavLink>
                         </li>
-                        <li>
+                        <li onClick={click}>
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics"
@@ -65,10 +65,10 @@ const Nav = () => {
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li onClick={click}>
                     <NavLink to="/Blogs">Корисні статті</NavLink>
                 </li>
-                <li>
+                <li onClick={click}>
                     <NavLink to="/Сontact">Контакти</NavLink>
                 </li>
             </ul>
