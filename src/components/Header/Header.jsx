@@ -11,6 +11,9 @@ const Navbar = () => {
         setActive(!active);
         console.log(active);
     };
+    const clossed=()=>{
+        setActive(false);
+    }
     return (
         <header className="header">
             <div className="container">
@@ -27,7 +30,7 @@ const Navbar = () => {
                         <span>Луцьк</span>
                     </div>
                 </div>
-                <Nav active={active} click={click}/>
+                <Nav active={active} clossed={clossed}/>
             </div>
         </header>
     );
