@@ -4,12 +4,14 @@ import reducerRoadFotos from './reducerRoadFotos'
 import thunkMiddleware from "redux-thunk";
 import reducerServices from './reducerServices';
 import reducerBlogs from './reducerBlogs'
+import reducerDiagnistics from './reducerDiagnistics'
 
 const redusers = combineReducers({
     blogsPage:reducerBlogs,
     testPage: testReducer,
     servicesPage: reducerServices ,
     roadFotosPage:reducerRoadFotos,
+    diagnosticsPage: reducerDiagnistics,
 })
 
 type reducersType = typeof redusers

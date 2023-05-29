@@ -1,4 +1,4 @@
-import { altFotos, blogs, chFotos, roadFotos, services, stFotos } from "../server/server"
+import { altFotos, blogs, chFotos, diagnostics, roadFotos, services, stFotos } from "../server/server"
 
 export const getServicesData=()=>{
       return services()
@@ -17,4 +17,8 @@ export const getAltFotosData=()=>{
 }
 export const getChFotosData=()=>{
       return chFotos()
+}
+
+export const getDataDiagnostics=(page)=>{
+      return diagnostics(page)
 }

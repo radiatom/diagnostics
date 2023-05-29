@@ -113,16 +113,16 @@ const blogStFoto = `${process.env.PUBLIC_URL}/img/st1.jpg`;
 const blogAltFoto = `${process.env.PUBLIC_URL}/img/alt4.jpg`;
 const blogChFoto = `${process.env.PUBLIC_URL}/img/acu1.jpg`;
 
-const stFoto1 = `${process.env.PUBLIC_URL}/img/stater-structure.png`
-const stFoto2 = `${process.env.PUBLIC_URL}/img/fotoBlog1.jpg`
-const stFoto3 = `${process.env.PUBLIC_URL}/img/startersBlog.jpg`
+const stFoto1 = `${process.env.PUBLIC_URL}/img/stater-structure.png`;
+const stFoto2 = `${process.env.PUBLIC_URL}/img/fotoBlog1.jpg`;
+const stFoto3 = `${process.env.PUBLIC_URL}/img/startersBlog.jpg`;
 
-const altFoto1 = `${process.env.PUBLIC_URL}/img/altBlog.png`
-const altFoto2= `${process.env.PUBLIC_URL}/img/altenaorsBlog.png`
-const altFoto3 = `${process.env.PUBLIC_URL}/img/ina.jpg`
+const altFoto1 = `${process.env.PUBLIC_URL}/img/altBlog.png`;
+const altFoto2 = `${process.env.PUBLIC_URL}/img/altenaorsBlog.png`;
+const altFoto3 = `${process.env.PUBLIC_URL}/img/ina.jpg`;
 
-const chFoto1 = `${process.env.PUBLIC_URL}/img/blogCharr1.png`
-const chFoto2 = `${process.env.PUBLIC_URL}/img/helper.jpg`
+const chFoto1 = `${process.env.PUBLIC_URL}/img/blogCharr1.png`;
+const chFoto2 = `${process.env.PUBLIC_URL}/img/helper.jpg`;
 
 const img15 = `${process.env.PUBLIC_URL}/img/15.png`;
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`;
@@ -158,7 +158,7 @@ export type blogType = {
     foto: string;
     title: string;
     text: string;
-    navLink:string
+    navLink: string;
 };
 export type blogsType = Array<blogType>;
 export type roadFotoType = { id: number; link: string };
@@ -189,10 +189,34 @@ export type solutionType = {
     solution: boolean;
 };
 export type resaultDiagnosticType = Array<solutionType>;
+export type pType = { id: number; text: string };
+export type textType = Array<pType>;
+export type textsType = {
+    Starter: textType;
+    Altenator: textType;
+    Battery: textType;
+    All: textType;
+};
+export type dataType = {
+    id: number;
+    title: string;
+    problem: string;
+    text: string;
+    link: number;
+};
+export type CardType = Array<dataType>;
+export type cardsType = {
+    Starter: CardType;
+    Altenator: CardType;
+    Battery: CardType;
+};
+export type diagnosticsType = { texts: textsType; cards: cardsType };
+
 export type serverDataType = {
-    chFotos:roadFotosType
-    altFotos:roadFotosType
-    stFotos:roadFotosType
+    diagnostics: diagnosticsType;
+    chFotos: roadFotosType;
+    altFotos: roadFotosType;
+    stFotos: roadFotosType;
     blogs: blogsType;
     roadFotos: roadFotosType;
     services: servicesType;
@@ -201,16 +225,154 @@ export type serverDataType = {
 };
 
 const serverData: serverDataType = {
-    chFotos:[
+    diagnostics: {
+        texts: {
+            Starter: [
+                {
+                    id: 1,
+                    text: "Діагностика проводиться коли стартер встановлений на автомобілі, і проблема постійна, або зробіть все щоб вона виявила себе та лише тоді починати тест.",
+                },
+                {
+                    id: 2,
+                    text: "Діагностику можна починати навіть якщо стартер вже демонтований, але результат буде не обєктивним.",
+                },
+                {
+                    id: 3,
+                    text: "Виберіть діагностику відштовхуючись від того як проблема себе проявляє.",
+                },
+            ],
+            Altenator: [
+                {
+                    id: 1,
+                    text: "Діагностика проводиться коли генератор встановлений на автомобілі, і проблема постійна, або зробіть все щоб вона виявила себе та лише тоді починати тест.",
+                },
+                {
+                    id: 2,
+                    text: "Діагностику можна починати навіть якщо генаратор вже демонтований, але результат, без стенда для первірки, буде не обєктивним.",
+                },
+                {
+                    id: 3,
+                    text: "Дана діагностика буде обєктивною, якщо Ваш акумулятор свинцевий (Pb). Іншої будови акумулятори мають свою норму напруги для хорошої зарядки. Тому генератор буде видавати інші показини.",
+                },
+                {
+                    id: 4,
+                    text: "Виберіть діагностику відштовхуючись від того як проблема себе проявляє.",
+                },
+            ],
+            Battery: [
+                {
+                    id: 1,
+                    text: "Дана діагностика буде обєктивною, якщо Ваш акумулятор свинцевий (Pb). Цієї будови акумулятори мають електроліт який можна перевірити. Діагностику також можна проходити якщо у вас інший акумулятор.",
+                }
+            ],
+            All: [
+                {
+                    id: 1,
+                    text: "Діагностика проводиться коли агрегат встановлений на автомобілі, і проблема постійна, або зробіть все щоб вона виявила себе і лише тоді можна починати тест.",
+                },
+                {
+                    id: 2,
+                    text: "Діагностику можна починати навіть якщо агрегат вже демонтований, але результат буде не обєктивним.",
+                },
+                {
+                    id: 3,
+                    text: "Виберіть діагностику відштовхуючись від того як проблема себе проявляє.",
+                },
+            ],
+        },
+        cards: {
+            Starter: [
+                {
+                    id: 1,
+                    title: "Діагностика статера",
+                    problem:
+                        "Шум, жужання, скрегіт, буксування бендикса стартера",
+                    text: "Первірка бендикса, чи є підозра, що він не справний; чи пошкоджений вінець; в якому стані втулки, підшипники, редуктор, якір, статор стартера.",
+                    link: 1,
+                },
+                {
+                    id: 2,
+                    title: "Діагностика статера",
+                    problem: "Стартер не працює, мовчить.",
+                    text: "Первірка проводки, акмулятора та справності стартера.",
+                    link: 157,
+                },
+                {
+                    id: 3,
+                    title: "Діагностика статера",
+                    problem: "Стартер клацає",
+                    text: "Первірка проводки та справності втягуючого і стартера.",
+                    link: 170,
+                },
+                {
+                    id: 4,
+                    title: "Діагностика статера",
+                    problem: "Стартер повільно обертає двигун",
+                    text: "Первірка проводки та акумулятора.",
+                    link: 163,
+                },
+                {
+                    id: 5,
+                    title: "Діагностика статера",
+                    problem: "Розбирання та дефектування стартера.",
+                    text: "Перевірка стану щіток, якоря, втулок, підшипників, бендикса, статора, втягуючого.",
+                    link: 166,
+                },
+            ],
+            Altenator: [
+                {
+                    id: 6,
+                    title: "Діагностика генератора",
+                    problem:
+                        "Мала напруга на акумуляторі, меньше 13.9 вольт (якщо він більший 15в причини дві - несправний регулятор генератора, або нема всіх сигналів на штекері генератора)",
+                    text: "Перевірка проводки та генератора.",
+                    link: 98,
+                },
+                {
+                    id: 7,
+                    title: "Діагностика генератора",
+                    problem:
+                        "Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 13.1 вольт.",
+                    text: "Перевірка чи генератор заряджає акумулятор.",
+                    link: 144,
+                },
+                {
+                    id: 8,
+                    title: "Діагностика генератора",
+                    problem: "Шум генератора",
+                    text: "Перевірка підшипників та шківа генератора, обводних роликів приводного ремня.",
+                    link: 108,
+                },
+                {
+                    id: 9,
+                    title: "Діагностика генератора",
+                    problem: "Розбирання та дефекутвання",
+                    text: "Щоб зробити повноцінне дефектування потрібне спеціальне обладнання. Без нього можливо перевірити лише: підшипники, шків, колектор, щітки, обрив катушки якоря, явні сліди згорівшого діодного моста та пошкодження статора.",
+                    link: 128,
+                },
+            ],
+            Battery: [
+                {
+                    id: 10,
+                    title: "Діагностика акумулятора",
+                    problem:
+                        "Акумулятор швидко розряджається, повільно провертає двигун.",
+                    text: "Перевірка стану АКБ проводиться на автомобілі",
+                    link: 83,
+                },
+            ],
+        },
+    },
+    chFotos: [
         { id: 1, link: chFoto1 },
         { id: 2, link: chFoto2 },
     ],
-    altFotos:[
+    altFotos: [
         { id: 1, link: altFoto1 },
         { id: 2, link: altFoto2 },
         { id: 3, link: altFoto3 },
     ],
-    stFotos:[
+    stFotos: [
         { id: 1, link: stFoto1 },
         { id: 2, link: stFoto2 },
         { id: 3, link: stFoto3 },
@@ -221,21 +383,21 @@ const serverData: serverDataType = {
             foto: blogStFoto,
             title: "Будова стартера",
             text: "Ця стаття описує будову стартера, бендикса та його принцип роботи.",
-            navLink:"/Starter",
+            navLink: "/Starter",
         },
         {
             id: 2,
             foto: blogChFoto,
             title: "Як правильно зарядити автомобільний акумулятор",
             text: "Розглянемо кілька актуальних питань які українські водії ставлять досить часто, та дамо на них відповіді.",
-            navLink:"/BatteryСharging",
+            navLink: "/BatteryСharging",
         },
         {
             id: 3,
             foto: blogAltFoto,
             title: "Будова генератора",
             text: "Ця стаття описує будову генератора, як його первірити та основні несправності.",
-            navLink:"/Alnenator",
+            navLink: "/Alnenator",
         },
     ],
     roadFotos: [
@@ -2681,5 +2843,29 @@ export const altFotos = (): roadFotosType => {
 };
 export const chFotos = (): roadFotosType => {
     return serverData.chFotos;
+};
+
+type dataDia = {
+    texts: textType;
+    cards: CardType;
+};
+
+export const diagnostics = (page: string): dataDia => {
+    const Cards=()=>{
+        if(page==='All'){
+            return [...serverData.diagnostics.cards.Starter,...serverData.diagnostics.cards.Altenator,...serverData.diagnostics.cards.Battery]
+        }else{
+            //@ts-ignore
+            return serverData.diagnostics.cards[page]
+        }
+    }
+    // debugger
+    const data:dataDia = {
+        //@ts-ignore
+        texts:serverData.diagnostics.texts[page],
+        //@ts-ignore
+        cards:Cards()
+    };
+    return data;
 };
 export default serverData;
