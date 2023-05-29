@@ -1,0 +1,24 @@
+.test {
+      max-width: 600px;
+      border-radius: 6px;
+      box-shadow: 10px 10px 10px  rgb(245, 169, 4);
+      text-align: center;
+      padding: 0 20px 20px 20px;
+      background-color: rgb(119, 97, 1);
+      color: white;
+      h3{
+            padding: 20px 0 10px 0 ;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+      }
+      h4{
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 20px;
+      }
+      p{
+            margin-bottom: 20px;
+            line-height: 20px;
+      }
+}
+

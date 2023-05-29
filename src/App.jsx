@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import Diagnostics from './components/Diagnostics2/Diagnostics'
+import Diagnostics from './components/Diagnostics/Diagnostics'
 import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
 import Starter from "./components/Blogs/Starter/Starter";

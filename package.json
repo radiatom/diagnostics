@@ -1,7 +1,7 @@
 {
   "name": "diagnostics",
   "version": "0.1.0",
-  "homepage": "https://radiatom.github.io/diagnostics",
+  "homepage": "https://radiatom.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
