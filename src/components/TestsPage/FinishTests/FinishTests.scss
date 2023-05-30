@@ -1,0 +1,28 @@
+.FinishTests {
+    margin: 50px 0;
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    ul{
+        li{
+            list-style: decimal;
+        }
+    }
+    p {
+        line-height: 22px;
+        span {
+            color: red;
+            font-weight: 600;
+        }
+    }
+    .navlink {
+        text-align: center;
+        a {
+            background-color: aliceblue;
+            display: inline-block;
+        }
+    }
+}

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { updateRes } from "../../../reactRedux/testReducer";
 
 const Nav = ({ active, clossed }) => {
-    const dispatch = useDispatch();
     const [drop, setDrop] = useState(false);
     const dropNavList = () => {
         setDrop(!drop);
-        dispatch(updateRes());
     };
     const click = () => {
         clossed();

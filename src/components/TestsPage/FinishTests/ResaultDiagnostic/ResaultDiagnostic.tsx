@@ -6,9 +6,9 @@ type propsType = {
 }
 const ResaultDiagnostic: React.FC<propsType> = ({ el }) => {
       return (
-            <div >
+            <li>
                   <p>{el}</p>
-            </div>
+            </li>
       );
 }
 

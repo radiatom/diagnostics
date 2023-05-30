@@ -13,7 +13,6 @@ const Diagnostics = () => {
     const dispatch = useDispatch();
     const { Page } = useParams();
     useEffect(() => {
-        console.log(Page);
         dispatch(getDiagnostics(Page));
     }, [Page]);
     return (
