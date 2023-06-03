@@ -5,11 +5,18 @@
     &__head {
         color: #fbe400;
     }
-    &__nav{
+    &__nav {
         display: flex;
         justify-content: center;
+        @media (max-width: 1000px) {
+        //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
+            & {
+                justify-content: space-between;
+            }
+        }
+        align-items: center;
         margin-bottom: 8px;
-        >img {
+        > img {
             display: none;
             @media (max-width: 1000px) {
                 & {
@@ -23,7 +30,7 @@
     &__logo {
         display: block;
         img {
-            width: 200px;
+            width: 100px;
         }
     }
     &__location {
@@ -34,7 +41,7 @@
             width: 33.3333%;
             text-align: center;
             @media (max-width: 1000px) {
-                &{
+                & {
                     width: 100%;
                 }
             }

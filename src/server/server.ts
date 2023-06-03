@@ -91,6 +91,7 @@ const video161 = `${process.env.PUBLIC_URL}/video/video161.mp4`;
 const video162 = `${process.env.PUBLIC_URL}/video/video162.mp4`;
 const video169 = `${process.env.PUBLIC_URL}/video/video169.mp4`;
 const video174 = `${process.env.PUBLIC_URL}/video/video174.mp4`;
+const video175 = `${process.env.PUBLIC_URL}/video/video175.mp4`;
 const video182 = `${process.env.PUBLIC_URL}/video/video182.mp4`;
 const video185 = `${process.env.PUBLIC_URL}/video/video185.mp4`;
 const video186 = `${process.env.PUBLIC_URL}/video/video186.mp4`;
@@ -2167,7 +2168,7 @@ const serverData: serverDataType = {
             solutionYes: 75,
             solutionNo: 76,
             img: img161,
-            video: null,
+            video: video175,
         },
         {
             linkNumber: 175174,
@@ -2180,7 +2181,7 @@ const serverData: serverDataType = {
             solutionYes: 75,
             solutionNo: 76,
             img: img161,
-            video: null,
+            video: video175,
         },
         {
             linkNumber: 176,
