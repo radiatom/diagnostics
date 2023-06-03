@@ -31,14 +31,20 @@
         color: white;
         background-color: rgb(37, 37, 37);
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
         &:hover {
             color: rgb(172, 150, 26);
+            span{
+                color: rgb(172, 150, 26);
+            }
         }
         span {
             color: white;
             display: inline-block;
             background-color: grey;
             padding: 4px;
+            margin: 0 5px;
             border: 1px solid white;
             border-radius: 6px;
         }

@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { resaultSelector } from "../../../selectors/selectors";
 import { updateRes } from "../../../reactRedux/testReducer";
 import ResaultDiagnostic from "./ResaultDiagnostic/ResaultDiagnostic";
+import img from './../../../img/icons/che.png'
+
 
 const FinishTests = () => {
     const resault = useSelector(resaultSelector);
@@ -29,9 +31,17 @@ const FinishTests = () => {
                         </div>
                     </div>
                 ) : (
-                    <div>
-                        <h3>Ось що вдалось вияснити:</h3>
-                        <ul>
+                    <div className="FinishTests__list">
+                        <p>
+                            Усувайте проблеми по одній або комплексно, щоб
+                            вияснити, що було причиною. Рекомендовано усунути
+                            всі проблеми відразу.
+                        </p>
+                        <div className="FinishTests__icon">
+                            <div><img src={img}  alt="ok" /></div> <p>- проблема вирішена</p>
+                        </div>
+                        <h3>Список того що вдалось вияснити:</h3>
+                        <div>
                             {resault.map((el) => {
                                 if (el.text !== "") {
                                     return (
@@ -42,17 +52,7 @@ const FinishTests = () => {
                                     );
                                 }
                             })}
-                        </ul>
-                        <p>
-                            Усувайте проблеми по одній або комплексно, щоб
-                            вияснити, що було причиною. Рекомендовано усунути
-                            всі проблеми відразу.{" "}
-                            <span>
-                                Після оновлення сторінки результати діагностики
-                                зникнуть (збережіть цю інформацію)
-                            </span>
-                            .
-                        </p>
+                        </div>
                         <div className="navlink">
                             <NavLink to="/Diagnostics/All">
                                 <button className="btnY">

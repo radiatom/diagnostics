@@ -1,0 +1,37 @@
+.ResaultDiagnostic {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(133, 132, 132);
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.479);
+    &:hover {
+        div {
+            border: 2px solid rgb(255, 196, 0);
+            background: url("./../../../../img/icons/che.png") 0/100% no-repeat
+                white;
+        }
+    }
+    cursor: pointer;
+    div {
+        min-width: 44px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 5px;
+        border: 2px solid rgb(133, 132, 132);
+        background-color: aliceblue;
+        img {
+            width: 40px;
+            height: 38px;
+        }
+    }
+    p {
+        margin: 0 0 0 10px;
+        line-height: 20px;
+        cursor: pointer;
+    }
+}
+.activeRes {
+    background-color: rgba(0, 128, 0, 0.493);
+}

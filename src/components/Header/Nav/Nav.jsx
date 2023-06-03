@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
+import downIcon from './../../../img/icons/down.png'
 
 const Nav = ({ active, clossed }) => {
     const [drop, setDrop] = useState(false);
@@ -25,7 +26,7 @@ const Nav = ({ active, clossed }) => {
                 </li>
                 <li>
                     <button onClick={dropNavList}>
-                        Діагностика <span>new</span>
+                        Діагностика <span>new</span><img src={downIcon} alt="downIcon" />
                     </button>
                     <ul
                         className={drop ? "nav-list-open" : "nav-list-closed"}
@@ -61,6 +62,14 @@ const Nav = ({ active, clossed }) => {
                                 to="/Diagnostics/All"
                             >
                                 Всі види діагностики
+                            </NavLink>
+                        </li>
+                        <li onClick={click}>
+                            <NavLink
+                                className="dropdown-item"
+                                to="/Diagnostics/Test/7"
+                            >
+                                Результат діагностики
                             </NavLink>
                         </li>
                     </ul>

@@ -6,16 +6,11 @@
         text-align: center;
         margin-bottom: 25px;
     }
-    ul{
-        li{
-            list-style: decimal;
-        }
-    }
     p {
         line-height: 22px;
-        span {
-            color: red;
+        &:first-child{
             font-weight: 600;
+            text-align: center;
         }
     }
     .navlink {
@@ -24,5 +19,29 @@
             background-color: aliceblue;
             display: inline-block;
         }
+    }
+    &__list {
+        background-color: white;
+        padding: 25px 5px;
+        border: 1px solid rgb(133, 132, 132);
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px black;
+    }
+    &__icon{
+        display: flex;
+        align-items: center;
+            div{min-width: 44px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid rgb(133, 132, 132);
+            background-color: aliceblue;
+            img {
+                width: 40px;
+                height: 38px;
+            }}
+            p{
+                margin: 0 7px;
+            }
     }
 }
