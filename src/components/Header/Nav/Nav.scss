@@ -3,6 +3,7 @@
     text-transform: uppercase;
     padding: 0;
     margin-bottom: 8px;
+
     @media (max-width: 1000px) {
         display: none;
     }
@@ -78,30 +79,35 @@
     }
 }
 .active {
-    display: block;
-    ul {
-        display: flex;
-        flex-direction: column;
-        li {
-            width: 100%;
-            height: 50px;
-            a {
-                display: block;
-                height: 100%;
-                text-align: center;
-                line-height: 50px;
+    @media (max-width: 1000px) {
+        //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
+        & {
+            display: block;
+            ul {
+                display: flex;
+                flex-direction: column;
+                li {
+                    width: 100%;
+                    height: 50px;
+                    a {
+                        display: block;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 50px;
+                    }
+                    button {
+                        display: block;
+                        margin: 0 auto;
+                        height: 100%;
+                        text-align: center;
+                    }
+                }
             }
-            button {
-                display: block;
-                margin: 0 auto;
-                height: 100%;
-                text-align: center;
+            .nav-list-open {
+                width: 100%;
+                top: 50px;
+                left: 0px;
             }
         }
-    }
-    .nav-list-open {
-        width: 100%;
-        top: 50px;
-        left: 0px;
     }
 }

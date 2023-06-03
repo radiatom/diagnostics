@@ -7,10 +7,6 @@ const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`;
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
-    
-    // const clossed=()=>{
-    //     setActive(false);
-    // }
     return (
         <header className="header">
             <div className="container">
