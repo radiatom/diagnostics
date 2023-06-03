@@ -7,13 +7,10 @@ const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`;
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
-    const click = () => {
-        setActive(!active);
-        console.log(active);
-    };
-    const clossed=()=>{
-        setActive(false);
-    }
+    
+    // const clossed=()=>{
+    //     setActive(false);
+    // }
     return (
         <header className="header">
             <div className="container">
@@ -22,7 +19,7 @@ const Navbar = () => {
                         <NavLink className="header__logo" to="/Home">
                             <img src={logo} alt="logo viniko вініко" />
                         </NavLink>
-                        <img src={menu} alt="menu" onClick={click} />
+                        <img src={menu} alt="menu" onClick={()=>setActive(!active)} />
                     </nav>
                     <div className="header__location">
                         <span>Автосервіс</span>
@@ -30,7 +27,7 @@ const Navbar = () => {
                         <span>Луцьк</span>
                     </div>
                 </div>
-                <Nav active={active} clossed={clossed}/>
+                <Nav active={active} setActive={setActive}/>
             </div>
         </header>
     );

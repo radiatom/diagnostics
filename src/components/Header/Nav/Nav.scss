@@ -33,10 +33,12 @@
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        &:hover {
-            color: rgb(172, 150, 26);
-            span{
+        @media (min-width: 1000px) {
+            &:hover {
                 color: rgb(172, 150, 26);
+                span {
+                    color: rgb(172, 150, 26);
+                }
             }
         }
         span {
@@ -89,7 +91,7 @@
                 text-align: center;
                 line-height: 50px;
             }
-            button{
+            button {
                 display: block;
                 margin: 0 auto;
                 height: 100%;

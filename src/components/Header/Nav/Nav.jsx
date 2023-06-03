@@ -1,38 +1,37 @@
 import React, { useState } from "react";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
-import downIcon from './../../../img/icons/down.png'
+import downIcon from "./../../../img/icons/down.png";
 
-const Nav = ({ active, clossed }) => {
+const Nav = ({ active, setActive }) => {
     const [drop, setDrop] = useState(false);
-    const dropNavList = () => {
-        setDrop(!drop);
-    };
-    const click = () => {
-        clossed();
-        dropNavList();
-    };
     return (
         <nav className={active ? " navbar active" : "navbar"}>
             <ul>
-                <li onClick={clossed}>
+                <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Home">Про нас</NavLink>
                 </li>
-                <li onClick={clossed}>
+                <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Services">Наші послуги</NavLink>
                 </li>
-                <li onClick={clossed}>
+                <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
                 </li>
                 <li>
-                    <button onClick={dropNavList}>
-                        Діагностика <span>new</span><img src={downIcon} alt="downIcon" />
+                    <button onClick={()=>setDrop(!drop)}>
+                        Діагностика <span>new</span>
+                        <img src={downIcon} alt="downIcon" />
                     </button>
                     <ul
                         className={drop ? "nav-list-open" : "nav-list-closed"}
-                        onMouseLeave={dropNavList}
+                        onMouseLeave={()=>setDrop(!drop)}
                     >
-                        <li onClick={click}>
+                        <li
+                            onClick={() => {
+                                setDrop(!drop);
+                                setActive(!active)
+                            }}
+                        >
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics/Starter"
@@ -40,7 +39,12 @@ const Nav = ({ active, clossed }) => {
                                 Стартер
                             </NavLink>
                         </li>
-                        <li onClick={click}>
+                        <li
+                            onClick={() => {
+                                setDrop(!drop);
+                                setActive(!active)
+                            }}
+                        >
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics/Altenator"
@@ -48,7 +52,12 @@ const Nav = ({ active, clossed }) => {
                                 Генератор
                             </NavLink>
                         </li>
-                        <li onClick={click}>
+                        <li
+                            onClick={() => {
+                                setDrop(!drop);
+                                setActive(!active)
+                            }}
+                        >
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics/Battery"
@@ -56,7 +65,12 @@ const Nav = ({ active, clossed }) => {
                                 Акумулятор
                             </NavLink>
                         </li>
-                        <li onClick={click}>
+                        <li
+                            onClick={() => {
+                                setDrop(!drop);
+                                setActive(!active)
+                            }}
+                        >
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics/All"
@@ -64,7 +78,12 @@ const Nav = ({ active, clossed }) => {
                                 Всі види діагностики
                             </NavLink>
                         </li>
-                        <li onClick={click}>
+                        <li
+                            onClick={() => {
+                                setDrop(!drop);
+                                setActive(!active)
+                            }}
+                        >
                             <NavLink
                                 className="dropdown-item"
                                 to="/Diagnostics/Test/7"
@@ -74,10 +93,10 @@ const Nav = ({ active, clossed }) => {
                         </li>
                     </ul>
                 </li>
-                <li onClick={clossed}>
+                <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Blogs">Корисні статті</NavLink>
                 </li>
-                <li onClick={clossed}>
+                <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Сontact">Контакти</NavLink>
                 </li>
             </ul>
