@@ -1,5 +1,4 @@
 import React from 'react';
-//@ts-ignore
 import Banner from '../Banner/Banner.tsx';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact'
@@ -10,7 +9,7 @@ import s from './Home.module.css'
 const Home = () => {
       return (
             <div className={s.home} >
-                  <Banner/>
+                  {/* <Banner/> */}
                   <Features/>
                   <Services/>
                   <Contact/>

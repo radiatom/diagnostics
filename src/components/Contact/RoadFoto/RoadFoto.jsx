@@ -1,71 +1,32 @@
 import React, { useEffect } from "react";
 import "./RoadFoto.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import { roadFotosSelector } from "../../../selectors/selectors";
 import { setRoadFotos } from "../../../reactRedux/reducerRoadFotos";
-import Item from "./Item";
 
 const RoadFoto = () => {
     const roadFootos = useSelector(roadFotosSelector);
-    const objFirstFoto = roadFootos.find((el) => el.id === 1);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setRoadFotos());
     }, [roadFootos]);
-    // всі фото з сервера
     return (
         <div className="roadFoto">
             <h2 className="roadFoto__title title">
                 Як до нас доїхати? Слайди:
             </h2>
-            <div
-                id="carouselExampleAutoplaying"
-                className="carousel slide "
-                data-bs-ride="carousel"
-            >
-                <div className="carousel-inner ">
-                    <div className="carousel-item active ">
-                        <img
-                            src={objFirstFoto.link}
-                            className="d-block w-100"
-                            alt="viniko вініко"
-                        />
+            <Slide>
+                {roadFootos.map((el) => (
+                    <div key={el.id}>
+                        <div className="roadFoto__item">
+                            <img src={el.link} alt="foto" />
+                        </div>
                     </div>
-                    {/* перше фото має бути таке щоб kaрyсель починалося з цього фото */}
-                    {roadFootos.map((el) => {
-                        if (el.id > 1) {
-                            return <Item key={el.id} link={el.link} />;
-                        }
-                    })}
-                    {/* фото добавляються всі окрім першого */}
-                </div>
-                <button
-                    className="carousel-control-prev "
-                    type="button"
-                    data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev"
-                >
-                    <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                    className="carousel-control-next "
-                    type="button"
-                    data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next"
-                >
-                    <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
+                ))}
+            </Slide>
         </div>
     );
 };
-
 export default RoadFoto;
