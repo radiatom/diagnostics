@@ -1,3 +1,29 @@
-.instruction{
-      margin-bottom: 20px;
+.instruction {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(37, 37, 37);
+    &__btn {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid white;
+        button {
+            background-color: rgba(240, 248, 255, 0);
+            color: white;
+            margin-right: 10px;
+        }
+    }
+    &__body {
+        background-color: rgba(248, 204, 7, 0);
+        padding: 10px 0;
+        width: 100%;
+        img {
+            width: 75%;
+        }
+        video{
+            width: 50%;
+        }
+    }
 }

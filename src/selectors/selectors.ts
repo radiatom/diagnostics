@@ -18,6 +18,9 @@ export const blogsSelector=(state: appStateType) =>{
 export const blogFotosSelector=(state: appStateType) =>{
     return state.blogsPage.blogFtotos
 }
+export const blogLoadSelector=(state: appStateType) =>{
+    return state.blogsPage.load
+}
 export const dataDiagnosticsSelector=(state: appStateType) =>{
     return state.diagnosticsPage.dataDiagnostics
 }

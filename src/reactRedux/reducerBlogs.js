@@ -7,11 +7,8 @@ import {
 
 const initialState = {
     blogs: [],
-    blogFtotos: [
-      //   { id: 1, link: "" },
-      //   { id: 2, link: "" },
-      //   { id: 3, link: "" },
-    ],
+    blogFtotos: [],
+    load:false
 };
 const reducerBlogs = (state = initialState, action) => {
     switch (action.type) {
@@ -21,25 +18,30 @@ const reducerBlogs = (state = initialState, action) => {
         case "setFotos": {
             return { ...state, blogFtotos: action.data };
         }
+        case 'setLoad': {
+            return{...state, load:!state.load}
+        }
         default:
             return state;
     }
 };
 
-export const setBlogs = () => (dispatch) => {
-    const data = getBlogs();
+export const setBlogs = () => async (dispatch) => {
+    dispatch({type:'setLoad'})
+    const data = await getBlogs();
+    dispatch({type:'setLoad'})
     dispatch({ type: "setBlogs", data });
 };
-export const setStFotos = () => (dispatch) => {
-    const data = getStFotosData();
+export const setStFotos = () =>async (dispatch) => {
+    const data =await getStFotosData();
     dispatch({ type: "setFotos", data });
 };
-export const setAltFotos = () => (dispatch) => {
-    const data = getAltFotosData();
+export const setAltFotos = () =>async (dispatch) => {
+    const data =await getAltFotosData();
     dispatch({ type: "setFotos", data });
 };
-export const setChFotos = () => (dispatch) => {
-    const data = getChFotosData();
+export const setChFotos = () =>async (dispatch) => {
+    const data =await getChFotosData();
     dispatch({ type: "setFotos", data });
 };
 export default reducerBlogs;
