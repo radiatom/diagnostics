@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d89d07c.css",
-    "main.js": "/static/js/main.319102b0.js",
-    "static/js/787.6526f92a.chunk.js": "/static/js/787.6526f92a.chunk.js",
-    "static/media/fon2.webp": "/static/media/fon2.2d966bdba8780945c615.webp",
-    "static/media/menu.webp": "/static/media/menu.15c49b23e16643df8b49.webp",
-    "static/media/fea2.webp": "/static/media/fea2.d20e3394abdf417b0e65.webp",
-    "static/media/fea3.webp": "/static/media/fea3.831d695d1b40e8ceeae2.webp",
-    "static/media/fea1.webp": "/static/media/fea1.def9a7edd5bb450b9b57.webp",
-    "static/media/place.webp": "/static/media/place.6176d702c08d4df55cf2.webp",
-    "static/media/teleg.webp": "/static/media/teleg.a92718ef66ededf15c3c.webp",
-    "static/media/phone.webp": "/static/media/phone.d9143d937c6e6d1eb3d6.webp",
-    "static/media/download.svg": "/static/media/download.f11ccdb16c8ed95f8851.svg",
-    "static/media/che.webp": "/static/media/che.5a085537cfd0acc6b510.webp",
-    "index.html": "/index.html",
-    "static/media/down.webp": "/static/media/down.dd1011fd5f2f018c0bfd.webp",
-    "main.8d89d07c.css.map": "/static/css/main.8d89d07c.css.map",
-    "main.319102b0.js.map": "/static/js/main.319102b0.js.map",
-    "787.6526f92a.chunk.js.map": "/static/js/787.6526f92a.chunk.js.map"
+    "main.css": "/diagnostics/static/css/main.5ee6d8a5.css",
+    "main.js": "/diagnostics/static/js/main.22efe9bf.js",
+    "static/js/787.6526f92a.chunk.js": "/diagnostics/static/js/787.6526f92a.chunk.js",
+    "static/media/fon2.webp": "/diagnostics/static/media/fon2.2d966bdba8780945c615.webp",
+    "static/media/menu.webp": "/diagnostics/static/media/menu.15c49b23e16643df8b49.webp",
+    "static/media/fea2.webp": "/diagnostics/static/media/fea2.d20e3394abdf417b0e65.webp",
+    "static/media/fea3.webp": "/diagnostics/static/media/fea3.831d695d1b40e8ceeae2.webp",
+    "static/media/fea1.webp": "/diagnostics/static/media/fea1.def9a7edd5bb450b9b57.webp",
+    "static/media/place.webp": "/diagnostics/static/media/place.6176d702c08d4df55cf2.webp",
+    "static/media/teleg.webp": "/diagnostics/static/media/teleg.a92718ef66ededf15c3c.webp",
+    "static/media/phone.webp": "/diagnostics/static/media/phone.d9143d937c6e6d1eb3d6.webp",
+    "static/media/download.svg": "/diagnostics/static/media/download.f11ccdb16c8ed95f8851.svg",
+    "static/media/che.webp": "/diagnostics/static/media/che.5a085537cfd0acc6b510.webp",
+    "index.html": "/diagnostics/index.html",
+    "static/media/down.webp": "/diagnostics/static/media/down.dd1011fd5f2f018c0bfd.webp",
+    "main.5ee6d8a5.css.map": "/diagnostics/static/css/main.5ee6d8a5.css.map",
+    "main.22efe9bf.js.map": "/diagnostics/static/js/main.22efe9bf.js.map",
+    "787.6526f92a.chunk.js.map": "/diagnostics/static/js/787.6526f92a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d89d07c.css",
-    "static/js/main.319102b0.js"
+    "static/css/main.5ee6d8a5.css",
+    "static/js/main.22efe9bf.js"
   ]
 }
