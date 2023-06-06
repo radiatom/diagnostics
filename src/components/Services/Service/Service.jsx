@@ -12,9 +12,9 @@ const Service = ({ title, text, img }) => {
             <div className="service__body">
                 <h5>{title}</h5>
                 <p>{text}</p>
-                <div className="btnY service__btn">
-                    <NavLink to="/Сontact">Наше розташування</NavLink>
-                </div>
+                <NavLink className="btnY service__btn" to="/Сontact">
+                    Наше розташування
+                </NavLink>
             </div>
         </div>
     );

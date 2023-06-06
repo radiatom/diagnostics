@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import Nav from "./Nav/Nav";
