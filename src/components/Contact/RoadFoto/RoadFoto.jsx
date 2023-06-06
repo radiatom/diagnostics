@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./RoadFoto.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 import { roadFotosSelector } from "../../../selectors/selectors";
 import { setRoadFotos } from "../../../reactRedux/reducerRoadFotos";
 
@@ -21,7 +20,7 @@ const RoadFoto = () => {
                 {roadFootos.map((el) => (
                     <div key={el.id}>
                         <div className="roadFoto__item">
-                            <img src={el.link} alt="foto" />
+                            <a href={el.link} target="_blank" rel="noopener noreferrer"><img src={el.link} alt="foto" /></a>
                         </div>
                     </div>
                 ))}

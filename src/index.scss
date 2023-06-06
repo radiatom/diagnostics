@@ -2,7 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Unbounded:200,300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext);  
 
 body {
-  background: linear-gradient(90deg, #FBE400 0%, #FFFFFF 50%, #FBE400 100%);
+  // background: linear-gradient(90deg, #FBE400 0%, #FFFFFF 50%, #FBE400 100%);
+  background: url('./img/icons/fon2.png') 0 0/1600px 4100px no-repeat;
   font-family:Unbounded;
 }
 
@@ -38,9 +39,8 @@ html,
 body {
   min-height: 100%;
   width: 100%;
-  // font-size: 100%;
+  height: 100%;
   line-height: 16px;
-  // font-size: 16px;
   font-weight: 400;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

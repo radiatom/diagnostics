@@ -24,3 +24,6 @@ export const blogLoadSelector=(state: appStateType) =>{
 export const dataDiagnosticsSelector=(state: appStateType) =>{
     return state.diagnosticsPage.dataDiagnostics
 }
+export const dataBannerSelector=(state: appStateType) =>{
+    return state.bannerPage.banner
+}

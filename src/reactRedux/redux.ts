@@ -5,8 +5,11 @@ import thunkMiddleware from "redux-thunk";
 import reducerServices from './reducerServices';
 import reducerBlogs from './reducerBlogs'
 import reducerDiagnistics from './reducerDiagnistics'
+import reducerBanner from './reducerBanner'
+
 
 const redusers = combineReducers({
+    bannerPage:reducerBanner,
     blogsPage:reducerBlogs,
     testPage: testReducer,
     servicesPage: reducerServices ,

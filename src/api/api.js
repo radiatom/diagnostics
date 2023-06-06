@@ -1,5 +1,6 @@
 import {
     altFotos,
+    banner,
     blogs,
     chFotos,
     diagnostics,
@@ -16,9 +17,10 @@ export const getRoadFotosData = () => {
 };
 export const getBlogs = () => {
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(blogs()); // Резольвимо Promise із результатом
-        }, 3000);
+        // setTimeout(() => {
+        //     resolve(blogs()); // Резольвимо Promise із результатом
+        // }, 3000);
+        resolve(blogs())
     });
 };
 export const getStFotosData = () => {
@@ -30,7 +32,10 @@ export const getAltFotosData = () => {
 export const getChFotosData = () => {
     return chFotos();
 };
-
+export const getBannerData = () => {
+    return banner();
+};
 export const getDataDiagnostics = (page) => {
     return diagnostics(page);
 };
+

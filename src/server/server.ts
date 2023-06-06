@@ -125,6 +125,10 @@ const altFoto3 = `${process.env.PUBLIC_URL}/img/ina.jpg`;
 const chFoto1 = `${process.env.PUBLIC_URL}/img/blogCharr1.png`;
 const chFoto2 = `${process.env.PUBLIC_URL}/img/helper.jpg`;
 
+const bannerFoto1=`${process.env.PUBLIC_URL}/img/bg5.jpg`
+const bannerFoto2=`${process.env.PUBLIC_URL}/img/bg3.jpg`
+const bannerFoto3=`${process.env.PUBLIC_URL}/img/bg2.jpg`
+
 const img15 = `${process.env.PUBLIC_URL}/img/15.png`;
 const img19 = `${process.env.PUBLIC_URL}/img/19.png`;
 const img71 = `${process.env.PUBLIC_URL}/img/71.png`;
@@ -153,6 +157,14 @@ const img167 = `${process.env.PUBLIC_URL}/img/167.png`;
 const img168 = `${process.env.PUBLIC_URL}/img/168.png`;
 const img184 = `${process.env.PUBLIC_URL}/img/184.png`;
 const img189 = `${process.env.PUBLIC_URL}/img/189.png`;
+
+export type slaideType={
+    id:number
+    title:string
+    text:string
+    foto:string
+}
+export type slaidesType= Array<slaideType>
 
 export type blogType = {
     id: number;
@@ -214,6 +226,7 @@ export type cardsType = {
 export type diagnosticsType = { texts: textsType; cards: cardsType };
 
 export type serverDataType = {
+    banner:slaidesType
     diagnostics: diagnosticsType;
     chFotos: roadFotosType;
     altFotos: roadFotosType;
@@ -226,6 +239,26 @@ export type serverDataType = {
 };
 
 const serverData: serverDataType = {
+    banner:[
+        {   
+        id:1,
+        title:"Діагностика",
+        text:"Ми розробили систему, за допомогою якої, Ви зможете перевірити стартер, генератор, акумулятор.",
+        foto:bannerFoto1
+    },
+    {   
+        id:2,
+        title:"Досвід і якість",
+        text:"Сервіс професійних, надійних і ефективних послуг з ремонту автомобілів.",
+        foto:bannerFoto2
+    },
+    {   
+        id:3,
+        title:"Гарантія",
+        text:"Даємо гарантію на роботу та комплектуючі 6 місяців.",
+        foto:bannerFoto3
+    }
+    ],
     diagnostics: {
         texts: {
             Starter: [
@@ -2845,6 +2878,9 @@ export const altFotos = (): roadFotosType => {
 export const chFotos = (): roadFotosType => {
     return serverData.chFotos;
 };
+export const banner=() : slaidesType=>{
+    return serverData.banner;
+}
 
 type dataDia = {
     texts: textType;

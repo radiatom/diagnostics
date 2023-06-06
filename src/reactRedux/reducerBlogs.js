@@ -27,9 +27,9 @@ const reducerBlogs = (state = initialState, action) => {
 };
 
 export const setBlogs = () => async (dispatch) => {
-    dispatch({type:'setLoad'})
+    // dispatch({type:'setLoad'})
     const data = await getBlogs();
-    dispatch({type:'setLoad'})
+    // dispatch({type:'setLoad'})
     dispatch({ type: "setBlogs", data });
 };
 export const setStFotos = () =>async (dispatch) => {

@@ -14,9 +14,9 @@ const Nav = ({ active, setActive }) => {
                 <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Services">Наші послуги</NavLink>
                 </li>
-                <li onClick={()=>setActive(!active)}>
+                {/* <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
-                </li>
+                </li> */}
                 <li>
                     <button onClick={()=>setDrop(!drop)}>
                         Діагностика <span>new</span>

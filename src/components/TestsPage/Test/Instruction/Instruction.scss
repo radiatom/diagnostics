@@ -24,6 +24,9 @@
         }
         video{
             width: 50%;
+            @media(max-width: 600px){
+                width: 90%;
+            }
         }
     }
 }
