@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import  "./ResaultDiagnostic.scss"
-import img from './../../../../img/icons/che.png'
+import img from './../../../../img/icons/che.webp'
 
 
 const ResaultDiagnostic = ({ el }) => {

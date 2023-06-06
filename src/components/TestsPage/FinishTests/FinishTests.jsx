@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { resaultSelector } from "../../../selectors/selectors";
 import { updateRes } from "../../../reactRedux/testReducer";
 import ResaultDiagnostic from "./ResaultDiagnostic/ResaultDiagnostic";
-import img from './../../../img/icons/che.png'
+import img from './../../../img/icons/che.webp'
 
 
 const FinishTests = () => {

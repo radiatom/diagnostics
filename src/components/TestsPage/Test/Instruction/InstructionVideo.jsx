@@ -1,6 +1,6 @@
 import React, { useEffect, useRef,useState } from "react";
 import "./Instruction.scss";
-import icon from "./../../../../img/icons/down.png";
+import icon from "./../../../../img/icons/down.webp";
 
 const InstructionVideo = ({ video, instruction }) => {
     const videoRef = useRef(null);

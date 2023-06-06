@@ -1,8 +1,8 @@
 import React from "react";
 import "./Features.scss";
-import img1 from "./../../img/icons/fea1.png";
-import img2 from "./../../img/icons/fea2.png";
-import img3 from "./../../img/icons/fea3.png";
+import img1 from "./../../img/icons/fea1.webp";
+import img2 from "./../../img/icons/fea2.webp";
+import img3 from "./../../img/icons/fea3.webp";
 
 const Features = () => {
     return (

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import Nav from "./Nav/Nav";
-import menu from "./../../img/icons/menu.png";
-const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`;
+import menu from "./../../img/icons/menu.webp";
+const logo = `${process.env.PUBLIC_URL}/img/Viniko1.webp`;
 
 const Navbar = () => {
     const [active, setActive] = useState(false);

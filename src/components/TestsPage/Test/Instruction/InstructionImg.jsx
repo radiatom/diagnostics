@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Instruction.scss";
-import icon from "./../../../../img/icons/down.png";
+import icon from "./../../../../img/icons/down.webp";
 
 const InstructionImg = ({ img, instruction }) => {
     const [drop, setDrop] = useState(false);
