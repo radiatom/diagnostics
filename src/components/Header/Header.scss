@@ -9,7 +9,7 @@
         display: flex;
         justify-content: center;
         @media (max-width: 1000px) {
-        //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
+            //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
             & {
                 justify-content: space-between;
             }
@@ -40,6 +40,9 @@
         span {
             width: 33.3333%;
             text-align: center;
+            a {
+                color: #fbe400;
+            }
             @media (max-width: 1000px) {
                 & {
                     width: 100%;

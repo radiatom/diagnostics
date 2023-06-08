@@ -19,7 +19,7 @@ const Navbar = () => {
                     </nav>
                     <div className="header__location">
                         <span>Автосервіс</span>
-                        <span>тел. +38 (097) 93 43 392</span>
+                        <span><a href="tel:0979343392">+38 (097) 93 43 392</a></span>
                         <span>Луцьк</span>
                     </div>
                 </div>
