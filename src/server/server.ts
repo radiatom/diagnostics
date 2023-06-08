@@ -1274,7 +1274,7 @@ const serverData: serverDataType = {
             problem: "Дайте відповідь на питання:",
             testText: "Шум є тільки на холостих обертах?",
             instruction: "",
-            linkNumberYes: 52,
+            linkNumberYes: 115,
             linkNumberNo: 7,
             solutionYes: 1,
             solutionNo: 1,
