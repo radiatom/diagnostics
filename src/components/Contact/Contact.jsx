@@ -15,14 +15,14 @@ const Contact = () => {
                         loading="lazy"
                     ></iframe>
                     <div className="contact__info">
-                        <p className="text">+38 (097) 93 43 392</p>
+                        <p className="text"><a href="tel:0979343392">+38 (097) 93 43 392</a></p>
                         <p className="text">
                             Територіально м.Луцьк,<b> біля заводу ModernExpo</b>, точна
                             адреса: <b>с. Струмівка вул. Рівненська 8.</b>
                         </p>
-                        <p className="text">Email: viniko@meta.ua</p>
-                        <p className="text">Support email: viniko@meta.ua</p>
-                        <p className="text">Support telegram: @Radiatom</p>
+                        <p className="text">Email: <a href="mailto:viniko@meta.ua">viniko@meta.ua</a></p>
+                        <p className="text">Support: <a href="mailto:viniko@meta.ua">viniko@meta.ua</a></p>
+                        <p className="text">Support telegram: <a href="https://t.me/Radiatom">@Radiatom</a></p>
                     </div>
                 </div>
             </div>

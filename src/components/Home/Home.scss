@@ -1,3 +1,11 @@
-.home{
-      width: 100%;
+.home {
+    width: 100%;
+}
+
+.whitePhone {
+    @media (max-width: 800px) {
+        & {
+            color: white;
+        }
+    }
 }

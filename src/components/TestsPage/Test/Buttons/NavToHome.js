@@ -1,14 +1,14 @@
 import React from "react";
 import "./Buttons.scss";
 import { NavLink } from "react-router-dom";
-const logo = `${process.env.PUBLIC_URL}/img/Viniko1.png`;
+const logo = `${process.env.PUBLIC_URL}/img/Viniko1.webp`;
 
 const NavToHome = () => {
     return (
         <div>
             <div>
                 <NavLink to="/Home">
-                    <img src={logo} alt="logo" width="200" />
+                    <img className="logo_home" src={logo} alt="logo" width="200" />
                 </NavLink>
             </div>
             <NavLink to="/Сontact">

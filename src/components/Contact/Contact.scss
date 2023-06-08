@@ -32,6 +32,9 @@
             position: relative;
             line-height: 30px;
             padding-left: 45px;
+            a{
+                color: black;
+            }
         }
         p:nth-child(1):before {
             content: "";
