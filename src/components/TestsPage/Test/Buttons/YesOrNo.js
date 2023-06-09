@@ -2,24 +2,22 @@ import React from "react";
 import "./Buttons.scss";
 import { NavLink } from "react-router-dom";
 
-const YesOrNo = ({linkNumberYes,onClickYes,linkNumberNo ,onClickNo}) => {
+const YesOrNo = ({ linkNumberYes, onClickYes, linkNumberNo, onClickNo }) => {
     return (
-        <div>
-            <NavLink to={`/Diagnostics/Test/${linkNumberYes}`}>
-                <button
-                    onClick={onClickYes}
-                    className='btnY button'
-                >
-                    Так
-                </button>
+        <div className="YesOrNo">
+            <NavLink
+                onClick={onClickYes}
+                className="btnY"
+                to={`/Diagnostics/Test/${linkNumberYes}`}
+            >
+                Так
             </NavLink>
-            <NavLink to={`/Diagnostics/Test/${linkNumberNo}`}>
-                <button
-                    onClick={onClickNo}
-                    className='btnY button w93'
-                >
-                    Ні
-                </button>
+            <NavLink
+                onClick={onClickNo}
+                className="btnY"
+                to={`/Diagnostics/Test/${linkNumberNo}`}
+            >
+                Ні
             </NavLink>
         </div>
     );

@@ -1,9 +1,24 @@
-.button{
-      margin: 0 5px;
+.NavToHome {
+    &__logo {
+        margin-bottom: 25px;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        a{
+            width: 230px;
+        }
+    }
 }
-.w93{
-      width: 93px;
+.ok {
+    display: flex;
+    justify-content: center;
 }
-.logo_home{
-      margin-bottom: 25px;
+.YesOrNo {
+    display: flex;
+    justify-content: center;
+    a {
+        width: 93px;
+    }
 }

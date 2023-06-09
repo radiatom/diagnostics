@@ -13,12 +13,10 @@
             text-align: center;
         }
     }
-    .navlink {
-        text-align: center;
-        a {
-            background-color: aliceblue;
-            display: inline-block;
-        }
+    &__notProblem {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
     &__list {
         background-color: white;
@@ -43,5 +41,8 @@
             p{
                 margin: 0 7px;
             }
+    }
+    &__resault{
+        margin-bottom: 25px;
     }
 }

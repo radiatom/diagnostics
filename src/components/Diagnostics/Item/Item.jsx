@@ -5,17 +5,19 @@ import { useDispatch } from "react-redux";
 import { updateRes } from "../../../reactRedux/testReducer";
 
 const Item = ({ title, problem, text, link }) => {
-    const dispatch=useDispatch()
+    const dispatch = useDispatch();
     return (
         <div className="Item">
             <h5>{title}</h5>
             <h6>{problem}</h6>
             <p>{text}</p>
-            <nav>
-                <NavLink onClick={()=>dispatch(updateRes())} to={`/Diagnostics/Test/${link}`}>
-                    <button className="btnY">Почати діагностику</button>
-                </NavLink>
-            </nav>
+            <NavLink
+                className="btnY "
+                onClick={() => dispatch(updateRes())}
+                to={`/Diagnostics/Test/${link}`}
+            >
+                Почати діагностику
+            </NavLink>
         </div>
     );
 };

@@ -4,17 +4,18 @@ import { useDispatch } from "react-redux";
 import { putSolutionTestTrue } from "../../../../reactRedux/testReducer";
 import { NavLink } from "react-router-dom";
 
-const Ok = ({linkNumberYes}) => {
-      const dispatch= useDispatch()
+const Ok = ({ linkNumberYes }) => {
+    const dispatch = useDispatch();
     return (
-        <NavLink to={`/Diagnostics/Test/${linkNumberYes}`}>
-            <button
+        <div class="ok">
+            <NavLink
                 onClick={() => dispatch(putSolutionTestTrue(2))}
-                className='btnY button'
+                className="btnY"
+                to={`/Diagnostics/Test/${linkNumberYes}`}
             >
-                Ok
-            </button>
-        </NavLink>
+                OK
+            </NavLink>
+        </div>
     );
 };
 

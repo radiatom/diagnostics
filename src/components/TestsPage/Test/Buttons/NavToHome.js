@@ -5,22 +5,18 @@ const logo = `${process.env.PUBLIC_URL}/img/Viniko1.webp`;
 
 const NavToHome = () => {
     return (
-        <div>
-            <div>
+        <div className="NavToHome">
                 <NavLink to="/Home">
-                    <img className="logo_home" src={logo} alt="logo" width="200" />
+                    <img className="NavToHome__logo" src={logo} alt="logo" width="200" />
+                </NavLink>
+            <div className="NavToHome__btns">
+                <NavLink className='btnY' to="/Сontact">
+                        Наші контакти
+                </NavLink>
+                <NavLink className='btnY' to="/Diagnostics/All">
+                        Інші діагностики
                 </NavLink>
             </div>
-            <NavLink to="/Сontact">
-                <button className='btnY button'>
-                    Наші контакти
-                </button>
-            </NavLink>
-            <NavLink to="/Diagnostics">
-                <button className='btnY button'>
-                    Інші діагностики
-                </button>
-            </NavLink>
         </div>
     );
 };
