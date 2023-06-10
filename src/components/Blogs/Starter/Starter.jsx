@@ -20,9 +20,9 @@ const Starter = () => {
     return (
         <div className="container">
             <div className="starter">
-                <h2 className="starter__title title">Будова стартера</h2>
-                <img src={link(1)} alt="stater structure будова стартера" />
-                <h3 className="starter__title title">
+                <h2 className="starter__title title" tabIndex='0'>Будова стартера</h2>
+                <a href={link(1)} target="_blank" rel="noopener noreferrer"><img src={link(1)} alt="stater structure будова стартера" /></a>
+                <h3 className="starter__title title" tabIndex='0'>
                     Принцип роботи стартера
                 </h3>
                 <p>
@@ -46,10 +46,10 @@ const Starter = () => {
                     початкове положення. Також у початкове положення повернеться
                     і бендикс стартера.
                 </p>
-                <h3 className="starter__title title">
+                <h3 className="starter__title title" tabIndex='0'>
                     Бендикс (обгінна муфта)
                 </h3>
-                <img src={link(2)} alt="бендикс" />
+                <a href={link(2)} target="_blank" rel="noopener noreferrer"><img src={link(2)} alt="бендикс" /></a>
                 <p>
                     Обгінна муфта — це храповий механізм, завдяки якому тяга
                     передається при обертанні тільки в один бік. Це захист
@@ -61,11 +61,13 @@ const Starter = () => {
                     що призведе до його неминучого пошкодження. Обгінна муфта
                     попередить такі плачевні наслідки.
                 </p>
-                <h3 className="starter__title title">Профілактика поломок</h3>
-                <img
-                    src={link(3)}
-                    alt="starters стартери стартер види стартерів"
-                />
+                <h3 className="starter__title title" tabIndex='0'>Профілактика поломок</h3>
+                <a href={link(3)} target="_blank" rel="noopener noreferrer">
+                    <img
+                        src={link(3)}
+                        alt="starters стартери стартер види стартерів"
+                    />
+                </a>
                 <ul>
                     <h3>
                         Для запобігання поломки стартера потрібно дотримуватися

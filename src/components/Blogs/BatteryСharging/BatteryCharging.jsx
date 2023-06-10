@@ -21,7 +21,7 @@ const BatteryCharging = () => {
     return (
         <div className="container">
             <div className="batteryCharging">
-                <h2 className="batteryCharging__title title">
+                <h2 className="batteryCharging__title title" tabIndex='0'>
                     Корисні поради: як правильно заряджати автомобільний
                     акумулятор
                 </h2>
@@ -53,7 +53,7 @@ const BatteryCharging = () => {
                     кілька актуальних питань, які українські водії ставлять
                     досить часто, і дамо на них відповіді.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Потрібно заряджати автомобільний акумулятор чи ні?
                 </h3>
                 <p>
@@ -77,10 +77,10 @@ const BatteryCharging = () => {
                     батарею слід підзарядити. Якщо щільність вище норми, то
                     швидше за все таке джерело живлення потребує доливу води.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Як зараяджати акумулятор?
                 </h3>
-                <img src={link(1)} alt="Зарядка акумулятора Battery charging" />
+                <a href={link(1)} target="_blank" rel="noopener noreferrer"><img src={link(1)} alt="Зарядка акумулятора Battery charging" /></a>
                 <p>
                     Для оптимальної зарядки найкраще підходить температура в
                     межах від 0 до +25°C. Якщо у вас зарядний пристрій розумний
@@ -99,7 +99,7 @@ const BatteryCharging = () => {
                     акмулятора; виставте 3 ампера струму; вимкніть зарядку коли
                     напруга на клешнях підніметься до 14,8 вольт.{" "}
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Зарядний пристрій проти генератора, який варіант зарядки
                     оптимальніший?
                 </h3>
@@ -130,7 +130,7 @@ const BatteryCharging = () => {
                     достатньо, якщо ви допустили сильний розряд акумулятора, то
                     відновити його без зарядного пристрою може бути складно.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Чи можна заряджати АКБ в мороз?
                 </h3>
                 <p>
@@ -147,7 +147,7 @@ const BatteryCharging = () => {
                     повітря більше нуля. Потім треба дочекатися поки батарея
                     нагріється, тільки після цього можна приступати до зарядки.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Чи потрібно знімати АКБ з автомобіля перед зарядкою?
                 </h3>
                 <p>
@@ -158,7 +158,7 @@ const BatteryCharging = () => {
                     не курити поблизу АКБ, що заряджається, і стежити за тим,
                     щоб на клемах не було короткого замикання.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Як правильно заряджати батарею, якщо машина експлуатується
                     нечасто?
                 </h3>
@@ -182,7 +182,7 @@ const BatteryCharging = () => {
                     уникайте іскроутворень та відкритого вогню. Це може
                     призвезти до вибуху батареї.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Який рівень напруги говорить про хронічний недозаряд?
                 </h3>
                 <p>
@@ -208,13 +208,15 @@ const BatteryCharging = () => {
                     недозаряд, то відновлювати треба малими струмами.
                     Аналогічного попереднього розглянутому варіанту.
                 </p>
-                <h3 className="batteryCharging__title title">
+                <h3 className="batteryCharging__title title" tabIndex='0'>
                     Чи можна "прикурювати" акумулятор від іншого автомобіля?
                 </h3>
-                <img
-                    src={link(2)}
-                    alt="Прикурювання акумулятора Battery ignition"
-                />
+                <a href={link(2)} target="_blank" rel="noopener noreferrer">
+                    <img
+                        src={link(2)}
+                        alt="Прикурювання акумулятора Battery ignition"
+                    />
+                </a>
                 <p>
                     "Прикурювання" — дуже популярний метод пуску двигуна, якщо
                     сів акумулятор, яким дуже часто користуються наші

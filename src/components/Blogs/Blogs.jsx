@@ -20,7 +20,7 @@ const Blogs = () => {
                 <Pageloader />
             ) : (
                 <div className="blogs">
-                    <h1 className="blogs__title title">Наші статті</h1>
+                    <h1 className="blogs__title title" tabIndex='0'>Наші статті</h1>
                     <div className="blogs__body">
                         {blogsData.map((el) => {
                             return (

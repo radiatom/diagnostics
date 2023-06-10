@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <div className="container">
             <div className="contact">
-                <h2 className="contact__title title">Контактна інформація</h2>
+                <h2 className="contact__title title" tabIndex='0'>Контактна інформація</h2>
                 <div className="contact__body">
                     <iframe
                         title="0"

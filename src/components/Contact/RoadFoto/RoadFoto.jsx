@@ -13,7 +13,7 @@ const RoadFoto = () => {
     }, [roadFootos]);
     return (
         <div className="roadFoto">
-            <h2 className="roadFoto__title title">
+            <h2 className="roadFoto__title title" tabIndex='0'>
                 Як до нас доїхати? Слайди:
             </h2>
             <Slide>

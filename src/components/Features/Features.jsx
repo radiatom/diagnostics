@@ -8,18 +8,18 @@ const Features = () => {
     return (
         <div className="container">
             <div className="features">
-                <h2 className="features__title title">Чому обирають нас?</h2>
+                <h2 className="features__title title" tabIndex='0'>Чому обирають нас?</h2>
                 <div className="features__row">
                     <div className="Card">
                         <img src={img3} alt="" />
-                        <h3>Великий досвід</h3>
+                        <h3 tabIndex='0'>Великий досвід</h3>
                         <p>
                             Фірма <span>ВІНІКО працює</span> з 2009 року.
                         </p>
                     </div>
                     <div className="Card">
                         <img src={img2} alt="" />
-                        <h3>Якість та ефективність</h3>
+                        <h3 tabIndex='0'>Якість та ефективність</h3>
                         <p>
                             Ми використовуєм тільки{" "}
                             <span>якісні компоненти</span> брендів KOYO, ZM,
@@ -29,7 +29,7 @@ const Features = () => {
                     </div>
                     <div className="Card">
                         <img src={img1} alt="" />
-                        <h3>Гарантія</h3>
+                        <h3 tabIndex='0'>Гарантія</h3>
                         <p>
                             Даємо гарантію{" "}
                             <span>на роботу та комплектуючі</span> 6 місяців.

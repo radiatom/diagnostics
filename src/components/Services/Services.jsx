@@ -16,7 +16,7 @@ const Services = (props) => {
     return (
         <div className="container">
             <div className="services">
-                <h1 className="services__title title">Наші послуги</h1>
+                <h1 className="services__title title" tabIndex='0'>Наші послуги</h1>
                 <div className="services__row">
                     {servicesData.map((el) => {
                         return (
