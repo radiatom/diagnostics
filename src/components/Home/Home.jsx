@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
 import Contact from '../Contact/Contact'
@@ -7,6 +7,9 @@ import Services from '../Services/Services';
 import './Home.scss'
 
 const Home = () => {
+      useEffect(() => {
+            window.scrollTo(0, 0)
+          }, [])
       return (
             <div className='home' >
                   <Banner/>

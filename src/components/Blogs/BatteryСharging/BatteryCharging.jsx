@@ -10,6 +10,7 @@ const BatteryCharging = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setChFotos());
+        window.scrollTo(0, 0)
     }, [fotosData]);
     const link = (id) => {
         return fotosData.find((el) => el.id === id) === undefined

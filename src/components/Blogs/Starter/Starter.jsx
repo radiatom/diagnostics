@@ -9,6 +9,7 @@ const Starter = () => {
     const fotosData = useSelector(blogFotosSelector);
     useEffect(() => {
         dispatch(setStFotos());
+        window.scrollTo(0, 0)
     }, [fotosData]);
     const link = (id) => {
         return fotosData.find((el) => el.id === id) === undefined

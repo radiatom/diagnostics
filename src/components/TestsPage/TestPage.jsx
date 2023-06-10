@@ -12,6 +12,7 @@ const TestPage = () => {
     useEffect(() => {
         dispatch(getTestData(num));
         dispatch(setSaveResault());
+        window.scrollTo(0, 0)
     }, [num]);
     return <div>{num === 7 ? <FinishTests /> : <Test />}</div>;
 };

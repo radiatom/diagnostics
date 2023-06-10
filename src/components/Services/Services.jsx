@@ -10,8 +10,9 @@ const Services = (props) => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getServices());
+        window.scrollTo(0, 0)
     }, [props]);
-
+    
     return (
         <div className="container">
             <div className="services">

@@ -14,7 +14,9 @@ const Diagnostics = () => {
     const { Page } = useParams();
     useEffect(() => {
         dispatch(getDiagnostics(Page));
+        window.scrollTo(0, 0)
     }, [Page]);
+    
     return (
         <div className="container">
             <div className="Diagnostics">
