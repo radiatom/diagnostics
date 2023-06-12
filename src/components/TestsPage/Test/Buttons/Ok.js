@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Ok = ({ linkNumberYes }) => {
     const dispatch = useDispatch();
     return (
-        <div class="ok">
+        <div className="ok">
             <NavLink
                 onClick={() => dispatch(putSolutionTestTrue(2))}
                 className="btnY"

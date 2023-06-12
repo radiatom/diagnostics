@@ -1,6 +1,6 @@
 {
   "name": "diagnostics",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "homepage": "https://radiatom.github.io/diagnostics/",
   "private": true,
   "dependencies": {

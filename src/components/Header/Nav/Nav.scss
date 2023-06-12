@@ -18,7 +18,7 @@
             transition: all 0.5s;
             color: white;
             &:hover {
-                color: rgb(172, 150, 26);
+                color: rgb(255, 217, 0);
             }
         }
         li {
@@ -40,9 +40,9 @@
         }
         @media (min-width: 1000px) {
             &:hover {
-                color: rgb(172, 150, 26);
+                color: rgb(255, 217, 0);
                 span {
-                    color: rgb(172, 150, 26);
+                    color: rgb(255, 217, 0);
                 }
             }
         }

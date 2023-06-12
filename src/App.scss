@@ -42,16 +42,16 @@
     height: 40px;
     border-radius: 10px;
     color: black;
-    transition: all 0.7s;
-    box-shadow: 2.5px 2.5px 2.5px rgb(5, 5, 5);
+    transition: all 0.1s;
+    box-shadow: 0 0 2.5px 2.5px rgb(255, 166, 1);
     a{
         display: flex;
     }
     @media (min-width: 1000px) {
         //для екранів більше 1000
-        &:hover {
+        &:active {
             background-color: #fcce03;
-            box-shadow: 0px 0px 0px rgb(5, 5, 5);
+            box-shadow: 0px 0px 0px rgb(255, 166, 1);
             position: relative;
             top: 2.5px;
         }
