@@ -42,8 +42,10 @@
     height: 40px;
     border-radius: 10px;
     color: black;
-    transition: all 0.1s;
-    box-shadow: 0 0 2.5px 2.5px rgb(255, 166, 1);
+    transition: all 0.2s;
+    box-shadow: 0 0 5px  rgb(0, 0, 0);
+    position: relative;
+    top: 0px;
     a{
         display: flex;
     }
@@ -51,9 +53,9 @@
         //для екранів більше 1000
         &:active {
             background-color: #fcce03;
-            box-shadow: 0px 0px 0px rgb(255, 166, 1);
+            box-shadow: 0px 0px 0px rgb(7, 7, 7);
             position: relative;
-            top: 2.5px;
+            top: 4px;
         }
     }
 }

@@ -35,16 +35,9 @@
         font-size: 16px;
         display: flex;
         align-items: center;
-        img{
+        transition: all 0.5s;
+        img {
             margin: 10px 0;
-        }
-        @media (min-width: 1000px) {
-            &:hover {
-                color: rgb(255, 217, 0);
-                span {
-                    color: rgb(255, 217, 0);
-                }
-            }
         }
         span {
             color: white;
@@ -54,6 +47,15 @@
             margin: 0 5px;
             border: 1px solid white;
             border-radius: 6px;
+            transition: all 0.5s;
+        }
+        @media (min-width: 1000px) {
+            &:hover {
+                color: rgb(255, 217, 0);
+                span {
+                    color: rgb(255, 217, 0);
+                }
+            }
         }
     }
     .nav-list-open {

@@ -10,6 +10,10 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgb(245, 169, 4);
     text-align: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s;
     &:hover {
         box-shadow: 2.5px 2.5px 10px rgb(245, 169, 4);
         position: relative;
@@ -35,7 +39,4 @@
         align-items: center;
         margin-bottom: 15px;
     }
-    // &__btn{
-    //     align-self: center;
-    // }
 }

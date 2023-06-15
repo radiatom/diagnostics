@@ -10,7 +10,11 @@
         height: 100%;
     }
     button {
-        margin: 10px;   
+        margin: 10px;
+        position: relative;
+    }
+    .react-slideshow-container .nav {
+        z-index: 7;
     }
 }
 .itemBanner {
