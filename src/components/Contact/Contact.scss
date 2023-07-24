@@ -7,7 +7,9 @@
     left: 0;
     position: absolute;
 }
-
+@mixin timeTransition($time){
+    transition: all $time;
+}
 .contact {
     border-top: 1px solid black;
     width: 100%;
@@ -28,12 +30,31 @@
         @media (max-width: 900px) {
             width: 100%;
         }
-        p {
+        .text {
             position: relative;
+            left: -3000px;
             line-height: 30px;
             padding-left: 45px;
             a{
                 color: black;
+            }
+            &._active{
+                left: 0;
+            }
+            &_1{
+                @include timeTransition(1s)
+            }
+            &_2{
+                @include timeTransition(1.5s)
+            }
+            &_3{
+                @include timeTransition(2s)
+            }
+            &_4{
+                @include timeTransition(2.5s)
+            }
+            &_5{
+                @include timeTransition(3s)
             }
         }
         p:nth-child(1):before {

@@ -1,15 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import RoadFoto from "./RoadFoto/RoadFoto";
 
 const Contact = () => {
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        window.scrollTo(0, 0);
+    }, []);
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        document.addEventListener("scroll", scrollHandler);
+        return function cleanup() {
+            document.removeEventListener("scroll", scrollHandler);
+        };
+    }, []); //слідкувати за скролом
+    const scrollHandler = (e) => {
+        const size =2800 - window.innerHeight;
+        if (size < e.target.documentElement.scrollTop) {
+            setActive(true);
+        } else {
+            setActive(false);
+        }
+    }; //реакція на скрол
+
+    //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
+    //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
+    //window.innerHeight висота екрану на пристрої який відкрив цю сторніку
     return (
         <div className="container">
             <div className="contact">
-                <h2 className="contact__title title" tabIndex='0'>Контактна інформація</h2>
+                <h2 className="contact__title title" tabIndex="0">
+                    Контактна інформація
+                </h2>
                 <div className="contact__body">
                     <iframe
                         title="0"
@@ -18,23 +39,43 @@ const Contact = () => {
                         loading="lazy"
                     ></iframe>
                     <div className="contact__info">
-                        <p className="text">
+                        <p
+                            className={
+                                active ? "text _active text_1" : "text text_1"
+                            }
+                        >
                             <a href="tel:0979343392">+38 (097) 93 43 392</a>
                         </p>
-                        <p className="text">
+                        <p
+                            className={
+                                active ? "text _active text_2" : "text text_1"
+                            }
+                        >
                             Територіально м.Луцьк,<b> біля заводу ModernExpo</b>
                             , точна адреса:{" "}
                             <b>с. Струмівка вул. Рівненська 8.</b>
                         </p>
-                        <p className="text">
+                        <p
+                            className={
+                                active ? "text _active text_3" : "text text_1"
+                            }
+                        >
                             Email:{" "}
                             <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
                         </p>
-                        <p className="text">
+                        <p
+                            className={
+                                active ? "text _active text_4" : "text text_1"
+                            }
+                        >
                             Support:{" "}
                             <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
                         </p>
-                        <p className="text">
+                        <p
+                            className={
+                                active ? "text _active text_5" : "text text_1"
+                            }
+                        >
                             Support telegram:{" "}
                             <a href="https://t.me/Radiatom">@Radiatom</a>
                         </p>
