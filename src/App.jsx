@@ -15,7 +15,7 @@ import Header from "./components/Header/Header";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" id='app'>
             <Header />
             <div className="contentApp">
                 <Routes>
