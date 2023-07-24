@@ -1,8 +1,15 @@
+@mixin timeTransition($time) {
+    transition: all $time;
+}
 .service {
     width: 370px;
     padding: 10px;
     margin-bottom: 20px;
-    transition: all 1s;
+    opacity: 0;
+    position: relative;
+    top: -1000px;
+    right: -3000px;
+    transition: background-color 1s, border-radius 1s;
     &:hover {
         background-color: rgba(255, 255, 255, 0.123);
         border-radius: 10px;
@@ -35,4 +42,24 @@
             color: rgb(0, 0, 0);
         }
     }
+    &_1 {
+        @include timeTransition(0.5s);
+    }
+    &_2 {
+        @include timeTransition(1s);
+    }
+    &_3 {
+        @include timeTransition(1.5s);
+    }
+    &_4 {
+        @include timeTransition(2s);
+    }
+    &_5 {
+        @include timeTransition(2.5s);
+    }
+}
+.service._active {
+    opacity: 1;
+    top: 0px;
+    right: 0px;
 }
