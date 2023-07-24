@@ -5,7 +5,7 @@ import img2 from "./../../img/icons/fea2.webp";
 import img3 from "./../../img/icons/fea3.webp";
 
 const Features = () => {
-    const [active,setActive]=useState(false)
+    const [active, setActive] = useState(false);
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
         return function cleanup() {
@@ -16,7 +16,9 @@ const Features = () => {
         const size = 1200 - window.innerHeight;
         if (size < e.target.documentElement.scrollTop) {
             setActive(true);
-        }else{setActive(false)}
+        } else {
+            setActive(false);
+        }
     }; //реакція на скрол
 
     //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
@@ -29,14 +31,14 @@ const Features = () => {
                     Чому обирають нас?
                 </h2>
                 <div className="features__row">
-                    <div className={active?'Card _active':'Card'}>
+                    <div className={active ? "Card _active" : "Card"}>
                         <img className="img1" src={img3} alt="" />
                         <h3 tabIndex="0">Великий досвід</h3>
                         <p>
                             Фірма <span>ВІНІКО працює</span> з 2009 року.
                         </p>
                     </div>
-                    <div className={active?'Card _active':'Card'}>
+                    <div className={active ? "Card _active" : "Card"}>
                         <img className="img2" src={img2} alt="" />
                         <h3 tabIndex="0">Якість та ефективність</h3>
                         <p>
@@ -46,7 +48,7 @@ const Features = () => {
                             DELCO, DENSO, INA, VALEO.
                         </p>
                     </div>
-                    <div className={active?'Card _active':'Card'}>
+                    <div className={active ? "Card _active" : "Card"}>
                         <img className="img3" src={img1} alt="" />
                         <h3 tabIndex="0">Гарантія</h3>
                         <p>
