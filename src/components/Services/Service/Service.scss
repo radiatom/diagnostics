@@ -5,7 +5,7 @@
     width: 370px;
     padding: 10px;
     margin-bottom: 20px;
-    opacity: 0;
+    // opacity: 0;
     position: relative;
     top: -1000px;
     right: -3000px;
@@ -59,7 +59,7 @@
     }
 }
 .service._active {
-    opacity: 1;
+    // opacity: 1;
     top: 0px;
     right: 0px;
 }

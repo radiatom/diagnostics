@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Blog.scss";
 import { NavLink } from "react-router-dom";
 
 const Blog = ({ img, title, text, navLink }) => {
+    const [style,setStyle]=useState({})//сетаємо стиль
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }//створюємо рандомний колір
+        setStyle({'background-color':color,'transition': 'all 2s',}) ;
+      }
+      useEffect(() => {
+          setInterval(getRandomColor,2000)//міняємо стиль через деякий інтервал
+      }, []);
     return (
         <div className="blog">
             <div>
@@ -15,7 +27,7 @@ const Blog = ({ img, title, text, navLink }) => {
                   <p>{text}</p>
             </div>
             <NavLink to={navLink} >
-                <button className='btnY'>Читати</button>
+                <button className='blog__button btnY' style={style} >Читати</button>
             </NavLink>
         </div>
     );
