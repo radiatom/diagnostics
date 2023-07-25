@@ -1,4 +1,4 @@
-import { getDataDiagnostics } from "../api/api";
+import { getDataDiagnostics } from "../../api/api";
 
 const initialState = {
     dataDiagnostics: {

@@ -6,7 +6,7 @@ import Item from "./Item/Item";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { dataDiagnosticsSelector } from "../../selectors/selectors";
-import { getDiagnostics } from "../../reactRedux/reducerDiagnistics";
+import { getDiagnostics } from "./reducerDiagnistics";
 
 const Diagnostics = () => {
     const dataDiagnostics = useSelector(dataDiagnosticsSelector);

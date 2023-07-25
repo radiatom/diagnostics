@@ -3,7 +3,7 @@ import "./BatteryCharging.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { blogFotosSelector } from "../../../selectors/selectors";
 import { useEffect } from "react";
-import { setChFotos } from "../../../reactRedux/reducerBlogs";
+import { setChFotos } from "../reducerBlogs";
 
 const BatteryCharging = () => {
     const fotosData = useSelector(blogFotosSelector);

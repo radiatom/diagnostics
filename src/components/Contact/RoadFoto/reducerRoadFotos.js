@@ -1,4 +1,4 @@
-import { getRoadFotosData } from "./../api/api";
+import { getRoadFotosData } from "../../../api/api";
 
 const initialState = {
     roadFotos: [{id:1,link:''}],

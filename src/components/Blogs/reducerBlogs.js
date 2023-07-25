@@ -3,7 +3,7 @@ import {
     getBlogs,
     getChFotosData,
     getStFotosData,
-} from "./../api/api";
+} from "../../api/api";
 
 const initialState = {
     blogs: [],

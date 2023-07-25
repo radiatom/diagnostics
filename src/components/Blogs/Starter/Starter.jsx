@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Starter.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setStFotos } from "./../../../reactRedux/reducerBlogs";
+import { setStFotos } from "./../reducerBlogs";
 import { blogFotosSelector } from "./../../../selectors/selectors";
 
 const Starter = () => {

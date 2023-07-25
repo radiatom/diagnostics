@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     putSolutionTestTrue,
     putSolutionTestFalse,
-} from "../../../reactRedux/testReducer";
+} from "./testReducer";
 import { testDataSelector } from "../../../selectors/selectors";
 import Instruction from "./Instruction/Instruction";
 import NavToHome from "./Buttons/NavToHome";

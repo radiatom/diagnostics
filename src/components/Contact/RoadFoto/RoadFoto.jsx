@@ -3,7 +3,7 @@ import "./RoadFoto.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Slide } from "react-slideshow-image";
 import { roadFotosSelector } from "../../../selectors/selectors";
-import { setRoadFotos } from "../../../reactRedux/reducerRoadFotos";
+import { setRoadFotos } from "./reducerRoadFotos";
 
 const RoadFoto = () => {
     const roadFootos = useSelector(roadFotosSelector);

@@ -1,4 +1,4 @@
-import { getServicesData } from "../api/api";
+import { getServicesData } from "../../api/api";
 
 export const initialState = {
     services: [],

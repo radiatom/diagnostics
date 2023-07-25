@@ -2,7 +2,7 @@ import React from "react";
 import "./Item.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { updateRes } from "../../../reactRedux/testReducer";
+import { updateRes } from "../../TestsPage/Test/testReducer";
 
 const Item = ({ title, problem, text, link }) => {
     const dispatch = useDispatch();

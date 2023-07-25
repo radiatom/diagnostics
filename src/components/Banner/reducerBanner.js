@@ -1,4 +1,4 @@
-import { getBannerData } from "./../api/api";
+import { getBannerData } from "../../api/api";
 
 const initialState = {
     banner: [{   

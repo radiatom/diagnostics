@@ -1,11 +1,11 @@
 import { applyMiddleware, combineReducers, compose, legacy_createStore } from "redux";
-import testReducer from "./testReducer";
-import reducerRoadFotos from './reducerRoadFotos'
+import testReducer from "../components/TestsPage/Test/testReducer";
+import reducerRoadFotos from '../components/Contact/RoadFoto/reducerRoadFotos'
 import thunkMiddleware from "redux-thunk";
-import reducerServices from './reducerServices';
-import reducerBlogs from './reducerBlogs'
-import reducerDiagnistics from './reducerDiagnistics'
-import reducerBanner from './reducerBanner'
+import reducerServices from '../components/Services/reducerServices';
+import reducerBlogs from '../components/Blogs/reducerBlogs'
+import reducerDiagnistics from '../components/Diagnostics/reducerDiagnistics'
+import reducerBanner from '../components/Banner/reducerBanner'
 
 
 const redusers = combineReducers({

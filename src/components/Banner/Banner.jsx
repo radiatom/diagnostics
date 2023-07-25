@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { dataBannerSelector } from "../../selectors/selectors";
 import { useEffect } from "react";
-import { setBanner } from "../../reactRedux/reducerBanner";
+import { setBanner } from "./reducerBanner";
 
 const Banner1 = () => {
     const dataBanner = useSelector(dataBannerSelector);

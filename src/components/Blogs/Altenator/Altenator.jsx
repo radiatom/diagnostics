@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Altenator.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setAltFotos } from "../../../reactRedux/reducerBlogs";
+import { setAltFotos } from "../reducerBlogs";
 import { blogFotosSelector } from "../../../selectors/selectors";
 
 const Altenator = () => {

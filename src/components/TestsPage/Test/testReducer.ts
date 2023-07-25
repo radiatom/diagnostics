@@ -1,5 +1,5 @@
 import { Dispatch } from "react";
-import serverData from "../server/server";
+import serverData from "../../../server/server";
 
 export type solutionType = {
     id: number;
