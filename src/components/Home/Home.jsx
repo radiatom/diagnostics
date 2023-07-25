@@ -5,10 +5,14 @@ import Contact from "../Contact/Contact";
 import Features from "../Features/Features";
 import Services from "../Services/Services";
 import "./Home.scss";
+import { useDispatch } from "react-redux";
+import { setDevice } from "../../reactRedux/reducerAll";
 
 const Home = () => {
+    const dispatch = useDispatch()
     useEffect(() => {
         window.scrollTo(0, 0);
+        dispatch(setDevice())
     }, []);
     return (
         <div className="home">

@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import RoadFoto from "./RoadFoto/RoadFoto";
+import { useSelector } from "react-redux";
+import { isMobile } from "../../selectors/selectors";
 
 const Contact = () => {
+    const isMobileDevice = useSelector(isMobile); //сторінка відкрита на мобільному пристрої?
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     const [active, setActive] = useState(false);
+
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
         return function cleanup() {
@@ -15,8 +21,14 @@ const Contact = () => {
     }, []); //слідкувати за скролом
 
     const scrollHandler = (e) => {
-        const size = 2800 - window.innerHeight;
-        if (size < e.target.documentElement.scrollTop) {
+        const size = () => {
+            if (isMobileDevice) {
+                return 4500 - window.innerHeight;//якщо це мобільний пристрій
+            } else {
+                return 2800 - window.innerHeight;//якщо це пк
+            }
+        };
+        if (size() < e.target.documentElement.scrollTop) {
             setActive(true);
         } else {
             setActive(false);
