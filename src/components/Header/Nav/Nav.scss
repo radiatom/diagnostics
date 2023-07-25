@@ -17,6 +17,7 @@
         a {
             transition: all 0.5s;
             color: white;
+            cursor: pointer;
             &:hover {
                 color: rgb(255, 217, 0);
             }

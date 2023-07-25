@@ -21,11 +21,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
-                    <Route path="/Services" element={<Services />} />
                     <Route path="/Diagnostics/:Page" element={<Diagnostics />}/>
                     <Route path="/Diagnostics/Test/:linkNumber"  element={<TestPage />}/>
-                    <Route path="/Сontact" element={<Contact />} />
-                    <Route path="/Blogs" element={<Blogs />} />
                     <Route path="/Starter" element={<Starter />} />
                     <Route path="/Alnenator" element={<Altenator />} />
                     <Route path="/BatteryСharging" element={<BatteryCharging />}/>

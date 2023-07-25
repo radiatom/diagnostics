@@ -6,19 +6,19 @@ import { isMobile } from "../../selectors/selectors";
 
 const Contact = () => {
     const isMobileDevice = useSelector(isMobile); //сторінка відкрита на мобільному пристрої?
+    const [active, setActive] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const [active, setActive] = useState(false);
 
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
         return function cleanup() {
             document.removeEventListener("scroll", scrollHandler);
         };
-    }, []); //слідкувати за скролом
+    }, []); //слідкувати за скролом глобального вікна
 
     const scrollHandler = (e) => {
         const size = () => {
@@ -96,5 +96,4 @@ const Contact = () => {
         </div>
     );
 };
-
 export default Contact;
