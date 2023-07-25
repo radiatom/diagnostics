@@ -15,7 +15,7 @@
 }
 .container {
     max-width: 1220px;
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
         width: 100%;
     }
     margin: 0 auto;
@@ -26,7 +26,7 @@
     font-size: 30px;
     line-height: 30px;
     font-weight: 700;
-    @media(max-width: 1000px){
+    @media (max-width: 1000px) {
         font-size: 20px;
     }
 }
@@ -38,15 +38,15 @@
     text-align: center;
     background-color: #ffc107;
     padding: 0 30px;
-    margin:  5px;
+    margin: 5px;
     height: 40px;
     border-radius: 10px;
     color: black;
     transition: all 0.2s;
-    box-shadow: 0 0 5px  rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
     position: relative;
     top: 0px;
-    a{
+    a {
         display: flex;
     }
     @media (min-width: 1000px) {
@@ -59,6 +59,9 @@
         }
     }
 }
-.none{
+.none {
     display: none;
+}
+.react-slideshow-container {
+    z-index: 7;//щоб стрілки не були поверх меню в road-foto
 }
