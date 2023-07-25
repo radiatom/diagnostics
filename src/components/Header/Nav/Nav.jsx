@@ -5,18 +5,6 @@ import downIcon from "./../../../img/icons/down.webp";
 
 const Nav = ({ active, setActive }) => {
     const [drop, setDrop] = useState(false);
-    const ClickServices=()=>{
-        setActive(!active)
-        window.scrollTo(0, 1150);//скролл до секції Services
-    }
-    const clickOnContact =()=>{
-        setActive(!active)
-        window.scrollTo(0, 2200);//скролл до секції contact
-    }
-    const clickBlogs=()=>{
-        setActive(!active)
-        window.scrollTo(0, 4000);//скролл до секції Blogs
-    }
     return (
         <nav className={active ? " navbar active" : "navbar"}>
             <ul>
