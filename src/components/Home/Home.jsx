@@ -7,13 +7,44 @@ import Services from "../Services/Services";
 import "./Home.scss";
 import { useDispatch } from "react-redux";
 import { setDevice } from "../../reactRedux/reducerAll";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const { section } = useParams();
     useEffect(() => {
-        window.scrollTo(0, 0);
-        dispatch(setDevice())
+        switch (section) {
+            case "Services": {
+                return window.scrollTo({ top: 1150, behavior: "smooth" }); //скролл до секції Services
+            }
+            case "Contact": {
+                return window.scrollTo({ top: 2200, behavior: "smooth" }); //скролл до секції contact
+            }
+            case "Blogs": {
+                return window.scrollTo({ top: 4000, behavior: "smooth" }); //скролл до секції Blogs
+            }
+            default:
+                return window.scrollTo(0, 0);
+        }
+    }, [section]); //навігація по лендінгу home
+
+    useEffect(() => {
+        dispatch(setDevice()); //визначаємо пристрій
+        switch (section) {
+            case "Services": {
+                return window.scrollTo({ top: 1150, behavior: "smooth" }); //скролл до секції Services
+            }
+            case "Contact": {
+                return window.scrollTo({ top: 2200, behavior: "smooth" }); //скролл до секції contact
+            }
+            case "Blogs": {
+                return window.scrollTo({ top: 4000, behavior: "smooth" }); //скролл до секції Blogs
+            }
+            default:
+                return window.scrollTo(0, 0);
+        } //робимо так щоб при переході з сторінки діагностика на сторінку наприклад контакти щоб скролл перемотувався бо без такої функції він лише відкривав home
     }, []);
+
     return (
         <div className="home">
             <Banner />

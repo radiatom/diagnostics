@@ -23,8 +23,8 @@ const Nav = ({ active, setActive }) => {
                 <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Home">Про нас</NavLink>
                 </li>
-                <li onClick={()=>setActive(ClickServices)}>
-                    <a to="/Services">Наші послуги</a>
+                <li onClick={()=>setActive(!active)}>
+                    <NavLink to="/Home/Services">Наші послуги</NavLink>
                 </li>
                 {/* <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
@@ -105,11 +105,11 @@ const Nav = ({ active, setActive }) => {
                         </li>
                     </ul>
                 </li>
-                <li onClick={clickOnContact}>
-                    <a to="/Сontact">Контакти</a>
+                <li onClick={()=>setActive(!active)}>
+                    <NavLink to="/Home/Contact">Контакти</NavLink>
                 </li>
-                <li onClick={clickBlogs}>
-                    <a to="/Blogs">Корисні статті</a>
+                <li onClick={()=>setActive(!active)}>
+                    <NavLink to="/Home/Blogs">Корисні статті</NavLink>
                 </li>
             </ul>
         </nav>

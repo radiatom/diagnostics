@@ -10,7 +10,7 @@ const Blog = ({ img, title, text, navLink }) => {
         for (let i = 0; i < 6; i++) {
           color += letters[Math.floor(Math.random() * 16)];
         }//створюємо рандомний колір
-        setStyle({'background-color':color,'transition': 'all 2s',}) ;
+        setStyle({'backgroundColor':color,'transition': 'all 2s',}) ;
       }
       useEffect(() => {
           setInterval(getRandomColor,2000)//міняємо стиль через деякий інтервал
