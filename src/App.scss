@@ -14,6 +14,7 @@
     }
 }
 .container {
+    overflow: hidden;//для оптимізації бо анімації сильно тормозили компютер
     max-width: 1220px;
     @media(max-width: 1200px){
         width: 100%;
