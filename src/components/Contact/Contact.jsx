@@ -7,26 +7,21 @@ import { isMobile } from "../../selectors/selectors";
 const Contact = () => {
     const isMobileDevice = useSelector(isMobile); //сторінка відкрита на мобільному пристрої?
     const [active, setActive] = useState(false);
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
 
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
         return function cleanup() {
             document.removeEventListener("scroll", scrollHandler);
         };
-    }, []); //слідкувати за скролом глобального вікна
-
+    }, [isMobileDevice]); //слідкувати за скролом глобального вікна
     const scrollHandler = (e) => {
         const size = () => {
-            if (isMobileDevice) {
-                return 4500 - window.innerHeight;//якщо це мобільний пристрій
-            } else {
-                return 2800 - window.innerHeight;//якщо це пк
-            }
+            return isMobileDevice
+                ? 4500 - window.innerHeight //якщо це мобільний пристрій 4500
+                : 2800 - window.innerHeight; //якщо це пк
         };
         if (size() < e.target.documentElement.scrollTop) {
             setActive(true);
@@ -34,6 +29,7 @@ const Contact = () => {
             setActive(false);
         }
     }; //реакція на скрол
+
 
     //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
     //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
