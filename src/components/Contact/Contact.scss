@@ -7,7 +7,7 @@
     left: 0;
     position: absolute;
 }
-@mixin timeTransition($time){
+@mixin timeTransition($time) {
     transition: all $time;
 }
 .contact {
@@ -19,13 +19,14 @@
         align-items: center;
         @media (max-width: 900px) {
             flex-direction: column;
+            margin: 0 -20px;
         }
     }
     &__title {
         margin: 50px 0;
     }
     &__info {
-        padding: 0 10px;
+        padding: 0 20px;
         width: 50%;
         @media (max-width: 900px) {
             width: 100%;
@@ -35,26 +36,26 @@
             left: -3000px;
             line-height: 30px;
             padding-left: 45px;
-            a{
+            a {
                 color: black;
             }
-            &._active{
+            &._active {
                 left: 0;
             }
-            &_1{
-                @include timeTransition(1s)
+            &_1 {
+                @include timeTransition(1s);
             }
-            &_2{
-                @include timeTransition(1.5s)
+            &_2 {
+                @include timeTransition(1.5s);
             }
-            &_3{
-                @include timeTransition(2s)
+            &_3 {
+                @include timeTransition(2s);
             }
-            &_4{
-                @include timeTransition(2.5s)
+            &_4 {
+                @include timeTransition(2.5s);
             }
-            &_5{
-                @include timeTransition(3s)
+            &_5 {
+                @include timeTransition(3s);
             }
         }
         p:nth-child(1):before {
