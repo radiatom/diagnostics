@@ -3,8 +3,7 @@ import "./Nav.scss";
 import { NavLink } from "react-router-dom";
 import downIcon from "./../../../img/icons/down.webp";
 
-const Nav = ({ active, setActive }) => {
-    const [drop, setDrop] = useState(false);
+const Nav = ({ active, setActive, drop, setDrop }) => {
     return (
         <nav className={active ? "navbar navbar_active" : "navbar"}>
             <ul>

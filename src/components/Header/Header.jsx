@@ -7,6 +7,11 @@ const logo = `${process.env.PUBLIC_URL}/img/Viniko1.webp`;
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
+    const [drop, setDrop] = useState(false);
+    const click=()=>{
+        setActive(!active)
+        setDrop(false)
+    }
     return (
         <header className="header">
             <div className="container">
@@ -18,7 +23,7 @@ const Navbar = () => {
                         <img
                             src={menu}
                             alt="menu"
-                            onClick={() => setActive(!active)}
+                            onClick={click}
                         />
                     </nav>
                     <div className="header__head_location">
@@ -29,7 +34,7 @@ const Navbar = () => {
                         <span>Луцьк</span>
                     </div>
                 </div>
-                <Nav active={active} setActive={setActive} />
+                <Nav active={active} setActive={setActive} drop={drop} setDrop={setDrop}/>
             </div>
         </header>
     );
