@@ -18,8 +18,8 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                 </li> */}
                 <li>
                     <button className="navbar__dropButton" onClick={()=>setDrop(!drop)}>
-                        Діагностика <span>new</span>
-                        <img src={downIcon} alt="downIcon" />
+                        Діагностика <span className="border">new</span>
+                        <span className={drop?'navbar__dropButton_downIcon active':"navbar__dropButton_downIcon"}></span>
                     </button>
                     <ul
                         className={drop ? "navList_open" : "navList_closed"}

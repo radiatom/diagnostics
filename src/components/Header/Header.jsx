@@ -8,10 +8,10 @@ const logo = `${process.env.PUBLIC_URL}/img/Viniko1.webp`;
 const Navbar = () => {
     const [active, setActive] = useState(false);
     const [drop, setDrop] = useState(false);
-    const click=()=>{
-        setActive(!active)
-        setDrop(false)
-    }
+    const click = () => {
+        setActive(!active);
+        setDrop(false);
+    };
     return (
         <header className="header">
             <div className="container">
@@ -20,11 +20,10 @@ const Navbar = () => {
                         <NavLink className="logo" to="/Home">
                             <img src={logo} alt="logo viniko вініко" />
                         </NavLink>
-                        <img
-                            src={menu}
-                            alt="menu"
-                            onClick={click}
-                        />
+                        <div class={active?"header__icon active":"header__icon"} onClick={click}>
+                            <span></span>
+                        </div>
+                        {/* <img src={menu} alt="menu" onClick={click} /> */}
                     </nav>
                     <div className="header__head_location">
                         <span>Автосервіс</span>
@@ -34,7 +33,12 @@ const Navbar = () => {
                         <span>Луцьк</span>
                     </div>
                 </div>
-                <Nav active={active} setActive={setActive} drop={drop} setDrop={setDrop}/>
+                <Nav
+                    active={active}
+                    setActive={setActive}
+                    drop={drop}
+                    setDrop={setDrop}
+                />
             </div>
         </header>
     );

@@ -3,6 +3,59 @@
     top: 0px;
     z-index: 9;
     background-color: rgb(37, 37, 37);
+    &__icon {
+        display: none;
+        @media (max-width: 750px) {//поява іконки немю
+            display: block;
+            width: 30px;
+            height: 18px;
+            position: relative;
+            cursor: pointer;
+            span {
+                top: 50%;
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                transform: scale(1) translate(0px,-50%);
+                background-color: rgb(252, 252, 252);
+            }
+            &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                background-color: rgb(255, 255, 255);
+            }
+            &::after {
+                content: "";
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                background-color: rgb(255, 255, 255);
+            }
+            &.active{
+                span{
+                    transform: scale(0) translate(0px,-50%);
+                }
+                &::before{
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0px, -50%);
+                }
+                &::after{
+                    top: 50%;
+                    transform: rotate(45deg) translate(0px, 50%);
+                }
+            }
+        }
+    }
     &__head {
         padding: 10px;
         margin: 0 -10px;
@@ -12,7 +65,8 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 8px;
-            @media (max-width: 750px) {//робимо лого та іконку меню по кутках
+            @media (max-width: 750px) {
+                //робимо лого та іконку меню по кутках
                 //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
                 justify-content: space-between;
             }
@@ -22,14 +76,14 @@
                     width: 100px;
                 }
             }
-            >img {
-                display: none;
-                @media (max-width: 750px) {//поява іконки немю
-                    display: inline-block;
-                    width: 50px;
-                    height: 50px;
-                }
-            }
+            // >img {
+            //     display: none;
+            //     @media (max-width: 750px) {//поява іконки немю
+            //         display: inline-block;
+            //         width: 50px;
+            //         height: 50px;
+            //     }
+            // }
         }
         &_location {
             display: flex;
@@ -50,7 +104,8 @@
                 &:last-child {
                     text-transform: uppercase;
                 }
-                @media (max-width: 750px) {//приховуємо написи 'автосервіс' та 'луцьк'
+                @media (max-width: 750px) {
+                    //приховуємо написи 'автосервіс' та 'луцьк'
                     &:first-child {
                         display: none;
                     }
