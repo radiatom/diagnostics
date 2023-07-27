@@ -1,62 +1,62 @@
 .header {
-    background-color: rgb(37, 37, 37);
-    padding-top: 10px;
     position: sticky;
     top: 0px;
     z-index: 9;
+    background-color: rgb(37, 37, 37);
     &__head {
+        padding: 10px;
+        margin: 0 -10px;
         color: #fbe400;
-    }
-    &__nav {
-        display: flex;
-        justify-content: center;
-        @media (max-width: 1000px) {
-            //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
-            justify-content: space-between;
-        }
-
-        align-items: center;
-        margin-bottom: 8px;
-        > img {
-            display: none;
-            @media (max-width: 1000px) {
-                display: inline-block;
-                width: 50px;
-                height: 50px;
+        &_nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+            @media (max-width: 750px) {//робимо лого та іконку меню по кутках
+                //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
+                justify-content: space-between;
+            }
+            .logo {
+                display: block;
+                img {
+                    width: 100px;
+                }
+            }
+            >img {
+                display: none;
+                @media (max-width: 750px) {//поява іконки немю
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
-    }
-    &__logo {
-        display: block;
-        img {
-            width: 100px;
-        }
-    }
-    &__location {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 8px;
-        span {
-            width: 33.3333%;
-            text-align: center;
-            a {
-                color: #fbe400;
-            }
-            @media (max-width: 1000px) {
-                width: 100%;
-            }
-            &:first-child {
-                text-transform: uppercase;
-            }
-            &:last-child {
-                text-transform: uppercase;
-            }
-            @media (max-width: 1000px) {
+        &_location {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 8px;
+            span {
+                width: 33.3333%;
+                text-align: center;
+                a {
+                    color: #fbe400;
+                }
+                @media (max-width: 750px) {
+                    width: 100%;
+                }
                 &:first-child {
-                    display: none;
+                    text-transform: uppercase;
                 }
                 &:last-child {
-                    display: none;
+                    text-transform: uppercase;
+                }
+                @media (max-width: 750px) {//приховуємо написи 'автосервіс' та 'луцьк'
+                    &:first-child {
+                        display: none;
+                    }
+                    &:last-child {
+                        display: none;
+                    }
                 }
             }
         }

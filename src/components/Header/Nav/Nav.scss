@@ -1,19 +1,14 @@
 .navbar {
-    width: 100%;
+    //для pc
     text-transform: uppercase;
-    padding: 0;
-    margin-bottom: 8px;
-    position: relative;
-    @media (max-width: 1000px) {
-        display: none;
-    }
+    margin: 0 -10px;
+    background-color: rgb(37, 37, 37);
+    transition: left 0.3s ease;
+    padding: 10px;
     ul {
         display: flex;
-        flex: 1 1 auto;
         justify-content: space-between;
         align-items: center;
-        padding: 0;
-        margin: 0;
         a {
             transition: all 0.5s;
             color: white;
@@ -23,99 +18,104 @@
             }
         }
         li {
+            position: relative;
             .active {
                 color: rgb(255, 0, 0);
             }
-            position: relative;
-        }
-    }
-    li button {
-        color: white;
-        background-color: rgb(37, 37, 37);
-        text-transform: uppercase;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        transition: all 0.5s;
-        img {
-            margin: 10px 0;
-        }
-        span {
-            color: white;
-            display: inline-block;
-            background-color: grey;
-            padding: 4px;
-            margin: 0 5px;
-            border: 1px solid white;
-            border-radius: 6px;
-            transition: all 0.5s;
-        }
-        @media (min-width: 1000px) {
-            &:hover {
-                color: rgb(255, 217, 0);
+            .navbar__dropButton {
+                color: white;
+                background-color: rgba(37, 37, 37, 0);
+                text-transform: uppercase;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                transition: all 0.5s;
+                img {
+                    margin: 10px 0;
+                }
                 span {
-                    color: rgb(255, 217, 0);
+                    color: white;
+                    display: inline-block;
+                    background-color: grey;
+                    padding: 4px;
+                    margin: 0 5px;
+                    border: 1px solid white;
+                    border-radius: 6px;
+                    transition: all 0.5s;
+                }
+                @media (min-width: 750px) {
+                    &:hover {
+                        color: rgb(255, 217, 0);
+                        span {
+                            color: rgb(255, 217, 0);
+                        }
+                    }
                 }
             }
         }
-    }
-    .nav-list-open {
-        display: flex;
-        flex-direction: column;
-        overflow-y: 10;
-        background-color: rgb(37, 37, 37);
-        position: absolute;
-        top: 35px;
-        left: -60px;
-        width: 350px;
-        padding: 10px;
-        z-index: 10;
-        border-radius: 10px;
-        border: 1px solid grey;
-        li {
-            text-align: start;
-            margin: 10px 0;
-            &:last-child {
-                border-top: 1px solid black;
-                margin-top: 0;
-                padding: 10px;
+        .navList {
+            &_closed {
+                display: none;
             }
-        }
-    }
-    .nav-list-closed {
-        display: none;
-    }
-}
-.active {
-    @media (max-width: 1000px) {
-        //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
-        & {
-            display: block;
-            ul {
+            &_open {
                 display: flex;
                 flex-direction: column;
+                position: absolute;
+                top: 35px;
+                background-color: rgb(37, 37, 37);
+                left: -60px;
+                width: 350px;
+                padding: 10px;
+                z-index: 10;
+                border-radius: 10px;
+                border: 1px solid grey;
                 li {
-                    width: 100%;
-                    height: 50px;
-                    a {
-                        display: block;
-                        height: 100%;
-                        text-align: center;
-                        line-height: 50px;
-                    }
-                    button {
-                        display: block;
-                        margin: 0 auto;
-                        height: 100%;
-                        text-align: center;
+                    text-align: start;
+                    margin: 10px 0;
+                    &:last-child {
+                        border-top: 1px solid black;
+                        margin-top: 0;
+                        padding: 10px;
                     }
                 }
             }
-            .nav-list-open {
+        }
+    }
+    @media (max-width: 750px) {
+        //коли диспей стане меньший зробити прихованим (появисться іконка для відображення)
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        background-color: rgba(37, 37, 37, 0.877);
+        backdrop-filter: blur(9px);
+        ul {
+            flex-direction: column;
+            width: 100%;
+            li {
+                padding: 20px;
+                font-size: 20px;
                 width: 100%;
-                top: 50px;
-                left: 0px;
+                display: flex;
+                justify-content: center;
+                .navbar__dropButton {
+                    font-size: 20px;
+                }
+            }
+            .navList {
+                &_open {
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    padding: 10px;
+                    li {
+                        width: 100%;
+                    }
+                }
             }
         }
+    }
+    &_active {
+        //для mobile (коли нажметься іконка меню)
+        left: 10px;
     }
 }

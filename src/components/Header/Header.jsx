@@ -11,19 +11,25 @@ const Navbar = () => {
         <header className="header">
             <div className="container">
                 <div className="header__head">
-                    <nav className="header__nav">
-                        <NavLink className="header__logo" to="/Home">
+                    <nav className="header__head_nav">
+                        <NavLink className="logo" to="/Home">
                             <img src={logo} alt="logo viniko вініко" />
                         </NavLink>
-                        <img src={menu} alt="menu" onClick={()=>setActive(!active)} />
+                        <img
+                            src={menu}
+                            alt="menu"
+                            onClick={() => setActive(!active)}
+                        />
                     </nav>
-                    <div className="header__location">
+                    <div className="header__head_location">
                         <span>Автосервіс</span>
-                        <span><a href="tel:0979343392">+38 (097) 93 43 392</a></span>
+                        <span>
+                            <a href="tel:0979343392">+38 (097) 93 43 392</a>
+                        </span>
                         <span>Луцьк</span>
                     </div>
                 </div>
-                <Nav active={active} setActive={setActive}/>
+                <Nav active={active} setActive={setActive} />
             </div>
         </header>
     );

@@ -6,30 +6,30 @@ import downIcon from "./../../../img/icons/down.webp";
 const Nav = ({ active, setActive }) => {
     const [drop, setDrop] = useState(false);
     return (
-        <nav className={active ? " navbar active" : "navbar"}>
+        <nav className={active ? "navbar navbar_active" : "navbar"}>
             <ul>
-                <li onClick={()=>setActive(!active)}>
+                <li onClick={()=>setActive(false)}>
                     <NavLink to="/Home">Про нас</NavLink>
                 </li>
-                <li onClick={()=>setActive(!active)}>
+                <li onClick={()=>setActive(false)}>
                     <NavLink to="/Home/Services">Наші послуги</NavLink>
                 </li>
                 {/* <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
                 </li> */}
                 <li>
-                    <button onClick={()=>setDrop(!drop)}>
+                    <button className="navbar__dropButton" onClick={()=>setDrop(!drop)}>
                         Діагностика <span>new</span>
                         <img src={downIcon} alt="downIcon" />
                     </button>
                     <ul
-                        className={drop ? "nav-list-open" : "nav-list-closed"}
+                        className={drop ? "navList_open" : "navList_closed"}
                         onMouseLeave={()=>setDrop(!drop)}
                     >
                         <li
                             onClick={() => {
                                 setDrop(!drop);
-                                setActive(!active)
+                                setActive(false)
                             }}
                         >
                             <NavLink
@@ -42,7 +42,7 @@ const Nav = ({ active, setActive }) => {
                         <li
                             onClick={() => {
                                 setDrop(!drop);
-                                setActive(!active)
+                                setActive(false)
                             }}
                         >
                             <NavLink
@@ -55,7 +55,7 @@ const Nav = ({ active, setActive }) => {
                         <li
                             onClick={() => {
                                 setDrop(!drop);
-                                setActive(!active)
+                                setActive(false)
                             }}
                         >
                             <NavLink
@@ -68,7 +68,7 @@ const Nav = ({ active, setActive }) => {
                         <li
                             onClick={() => {
                                 setDrop(!drop);
-                                setActive(!active)
+                                setActive(false)
                             }}
                         >
                             <NavLink
@@ -81,7 +81,7 @@ const Nav = ({ active, setActive }) => {
                         <li
                             onClick={() => {
                                 setDrop(!drop);
-                                setActive(!active)
+                                setActive(false)
                             }}
                         >
                             <NavLink
@@ -93,10 +93,10 @@ const Nav = ({ active, setActive }) => {
                         </li>
                     </ul>
                 </li>
-                <li onClick={()=>setActive(!active)}>
+                <li onClick={()=>setActive(false)}>
                     <NavLink to="/Home/Contact">Контакти</NavLink>
                 </li>
-                <li onClick={()=>setActive(!active)}>
+                <li onClick={()=>setActive(false)}>
                     <NavLink to="/Home/Blogs">Корисні статті</NavLink>
                 </li>
             </ul>
