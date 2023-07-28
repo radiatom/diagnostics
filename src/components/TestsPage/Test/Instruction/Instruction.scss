@@ -2,7 +2,7 @@
     width: 100%;
     margin-bottom: 20px;
     background-color: rgb(37, 37, 37);
-    &__btn {
+    &__spoiler {
         padding: 10px;
         display: flex;
         align-items: center;
@@ -13,6 +13,18 @@
             background-color: rgba(240, 248, 255, 0);
             color: white;
             margin-right: 10px;
+        }
+        &_downIcon {
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid white;
+            transition: transform 0.3s;
+            &.active {
+                transform: rotate(180deg);
+            }
         }
     }
     &__body {

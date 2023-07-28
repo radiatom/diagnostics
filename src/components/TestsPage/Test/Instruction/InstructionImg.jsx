@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Instruction.scss";
-import icon from "./../../../../img/icons/down.webp";
 
 const InstructionImg = ({ img, instruction }) => {
     const [drop, setDrop] = useState(false);
     return (
         <div className="instruction">
-            <div className="instruction__btn" onClick={() => setDrop(!drop)}>
+            <div className="instruction__spoiler" onClick={() => setDrop(!drop)}>
                 <button>Фото інструкція</button>
-                <img src={icon} alt="down" />
+                <span className={drop?'instruction__spoiler_downIcon active':"instruction__spoiler_downIcon"}></span>
             </div>
             {drop ? (
                 <div className="instruction__body">

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef,useState } from "react";
 import "./Instruction.scss";
-import icon from "./../../../../img/icons/down.webp";
 
 const InstructionVideo = ({ video, instruction }) => {
     const videoRef = useRef(null);
@@ -12,9 +11,9 @@ const InstructionVideo = ({ video, instruction }) => {
     const [drop, setDrop] = useState(false);
     return (
         <div className="instruction">
-            <div className="instruction__btn" onClick={() => setDrop(!drop)}>
+            <div className="instruction__spoiler" onClick={() => setDrop(!drop)}>
                 <button>Відео інструкція</button>
-                <img src={icon} alt="down" />
+                <span className={drop?'instruction__spoiler_downIcon active':"instruction__spoiler_downIcon"}></span>
             </div>
             {drop ? (
                 <div className="instruction__body">

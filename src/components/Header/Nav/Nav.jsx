@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
-import downIcon from "./../../../img/icons/down.webp";
 
 const Nav = ({ active, setActive, drop, setDrop }) => {
     return (

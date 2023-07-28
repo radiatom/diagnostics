@@ -9,9 +9,9 @@ import Altenator from "./components/Blogs/Altenator/Altenator";
 import BatteryCharging from "./components/Blogs/BatteryСharging/BatteryCharging";
 import Blogs from "./components/Blogs/Blogs";
 import TestPage from "./components/TestsPage/TestPage";
-// import GalleryContainer from "./components/Gallery/GalleryContainer";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import GalleryContainer from "./components/Gallery/GalleryContainer";
 
 function App() {
     return (
@@ -27,7 +27,7 @@ function App() {
                     <Route path="/Starter" element={<Starter />} />
                     <Route path="/Alnenator" element={<Altenator />} />
                     <Route path="/BatteryСharging" element={<BatteryCharging />}/>
-                    {/* <Route path="/Gallery" element={<GalleryContainer />} /> */}
+                    <Route path="/Gallery" element={<GalleryContainer />} />
                 </Routes>
             </div>
             <Footer />
