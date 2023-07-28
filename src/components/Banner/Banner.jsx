@@ -27,7 +27,7 @@ const Banner1 = () => {
                                         <NavLink className='itemBanner_btnY' to="/Diagnostics/All">
                                             Діагностувати
                                         </NavLink>
-                                        <NavLink className='itemBanner_btnR' to="/Сontact">
+                                        <NavLink className='itemBanner_btnR' to="/Home/Contact">
                                             Наше розташування
                                         </NavLink>
                                     </div>
