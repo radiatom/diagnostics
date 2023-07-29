@@ -1,7 +1,6 @@
 @import "react-slideshow-image/dist/styles.css";
 .Slider {
     margin-bottom: 50px;
-    width: 100%;
     &__title {
         margin: 50px 0;
     }
@@ -18,9 +17,14 @@
         button {
             margin: 10px;
         }
-        @media (max-width: 820px) {
-            & {
-                width: 90%;
+    }
+    @media (max-width: 820px) {
+        & {
+            margin:0 -15px 50px -15px;
+            &__item {
+                img {
+                    border-radius: 0;
+                }
             }
         }
     }
