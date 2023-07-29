@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.scss";
-import RoadFoto from "./RoadFoto/RoadFoto";
+import Slider from "./Slider/Slider";
 import { useSelector } from "react-redux";
 import { isMobile } from "../../selectors/selectors";
 
@@ -88,7 +88,7 @@ const Contact = () => {
                     </p>
                 </div>
             </div>
-            <RoadFoto />
+            <Slider />
         </div>
     );
 };

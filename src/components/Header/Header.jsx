@@ -19,7 +19,7 @@ const Navbar = () => {
                         <NavLink className="logo" to="/Home">
                             <img src={logo} alt="logo viniko вініко" />
                         </NavLink>
-                        <div class={active?"header__icon active":"header__icon"} onClick={click}>
+                        <div className={active?"header__icon active":"header__icon"} onClick={click}>
                             <span></span>
                         </div>
                         {/* <img src={menu} alt="menu" onClick={click} /> */}

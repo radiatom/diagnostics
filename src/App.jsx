@@ -1,13 +1,10 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Diagnostics from "./components/Diagnostics/Diagnostics";
-import Contact from "./components/Contact/Contact";
 import Home from "./components/Home/Home";
 import Starter from "./components/Blogs/Starter/Starter";
-import Services from "./components/Services/Services";
 import Altenator from "./components/Blogs/Altenator/Altenator";
 import BatteryCharging from "./components/Blogs/BatteryСharging/BatteryCharging";
-import Blogs from "./components/Blogs/Blogs";
 import TestPage from "./components/TestsPage/TestPage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";

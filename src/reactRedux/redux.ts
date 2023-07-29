@@ -5,7 +5,7 @@ import {
     legacy_createStore,
 } from "redux";
 import testReducer from "../components/TestsPage/Test/testReducer";
-import reducerRoadFotos from "../components/Contact/RoadFoto/reducerRoadFotos";
+import reducerRoadFotos from "../components/Contact/Slider/reducerSlider";
 import thunkMiddleware from "redux-thunk";
 import reducerServices from "../components/Services/reducerServices";
 import reducerBlogs from "../components/Blogs/reducerBlogs";

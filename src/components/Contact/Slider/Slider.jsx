@@ -1,25 +1,25 @@
 import React, { useEffect } from "react";
-import "./RoadFoto.scss";
+import "./Slider.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Slide } from "react-slideshow-image";
 import { roadFotosSelector } from "../../../selectors/selectors";
-import { setRoadFotos } from "./reducerRoadFotos";
+import { setRoadFotos } from "./reducerSlider";
 
-const RoadFoto = () => {
+const Slider = () => {
     const roadFootos = useSelector(roadFotosSelector);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setRoadFotos());
     }, [roadFootos]);
     return (
-        <div className="roadFoto">
-            <h2 className="roadFoto__title title" tabIndex='0'>
+        <div className="Slider">
+            <h2 className="Slider__title title" tabIndex='0'>
                 Як до нас доїхати? Слайди:
             </h2>
             <Slide>
                 {roadFootos.map((el) => (
                     <div key={el.id}>
-                        <div className="roadFoto__item">
+                        <div className="Slider__item">
                             <a href={el.link} target="_blank" rel="noopener noreferrer"><img src={el.link} alt="foto" /></a>
                         </div>
                     </div>
@@ -28,4 +28,4 @@ const RoadFoto = () => {
         </div>
     );
 };
-export default RoadFoto;
+export default Slider;
