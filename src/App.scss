@@ -46,6 +46,7 @@
     box-shadow: 0 0 5px rgb(0, 0, 0);
     position: relative;
     top: 0px;
+    transition: all 0.3s;
     a {
         display: flex;
     }
@@ -57,6 +58,9 @@
             position: relative;
             top: 4px;
         }
+    }
+    &:hover{
+        background-color: #fccb39;
     }
 }
 .none {

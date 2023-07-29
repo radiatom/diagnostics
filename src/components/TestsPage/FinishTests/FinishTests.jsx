@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FinishTests.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,7 @@ import ResaultDiagnostic from "./ResaultDiagnostic/ResaultDiagnostic";
 import img from "./../../../img/icons/che.webp";
 
 const FinishTests = () => {
+    const [time, setTime]=useState(1000)
     const resault = useSelector(resaultSelector);
     const dispatch = useDispatch();
     return (
@@ -41,12 +42,13 @@ const FinishTests = () => {
                         </div>
                         <h3>Список того що вдалось вияснити:</h3>
                         <div className="FinishTests__resault">
-                            {resault.map((el) => {
-                                if (el.text !== "") {
+                            {resault.map((item,index) => {
+                                if (item.text !== "") {
                                     return (
                                         <ResaultDiagnostic
-                                            key={el.id}
-                                            el={el.text}
+                                            key={item.id}
+                                            el={item.text}
+                                            index={index}
                                         />
                                     );
                                 }

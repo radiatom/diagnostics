@@ -5,12 +5,15 @@
     border-radius: 5px;
     margin: 5px 0;
     padding: 5px;
-    background-color: rgba(255, 0, 0, 0.479);
+    background-color: rgb(241, 134, 134);
     cursor: pointer;
+    transition: all 0.3s;
+
     @media (min-width: 1000px) {
         //для екраїнів більше 1000
         &:hover {
             div {
+                transition: all 0.3s;
                 border: 2px solid rgb(255, 196, 0);
                 background: url("./../../../../img/icons/che.webp") 0/100%
                     no-repeat white;
@@ -38,4 +41,14 @@
 }
 .activeRes {
     background-color: rgba(0, 128, 0, 0.493);
+}
+.noShow{
+    position: relative;
+    left: -2000px;
+    transition: left 1s;
+}
+.show{
+    position: relative;
+    left :0;
+    transition: left 1s;
 }
