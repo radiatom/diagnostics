@@ -9,15 +9,13 @@ const InstructionImg = ({ img, instruction }) => {
                 <button>Фото інструкція</button>
                 <span className={drop?'instruction__spoiler_downIcon active':"instruction__spoiler_downIcon"}></span>
             </div>
-            {drop ? (
+            {drop && (
                 <div className="instruction__body">
-                    <p className={instruction===''?'none':''}>{instruction}</p>
+                    <p className={Boolean(instruction==='') && ('none')}>{instruction}</p>
                     <a href={img} target="_blank" rel="noopener noreferrer">
                         <img src={img} alt="img" />
                     </a>
                 </div>
-            ) : (
-                ""
             )}
         </div>
     );

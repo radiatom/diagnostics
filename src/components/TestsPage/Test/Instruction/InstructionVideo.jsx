@@ -15,9 +15,9 @@ const InstructionVideo = ({ video, instruction }) => {
                 <button>Відео інструкція</button>
                 <span className={drop?'instruction__spoiler_downIcon active':"instruction__spoiler_downIcon"}></span>
             </div>
-            {drop ? (
+            {drop && (
                 <div className="instruction__body">
-                    <p className={instruction === "" ? "none" : ""}>
+                    <p className={Boolean(instruction==='') && ('none')}>
                         {instruction}
                     </p>
                     <video ref={videoRef} controls>
@@ -25,8 +25,6 @@ const InstructionVideo = ({ video, instruction }) => {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-            ) : (
-                ""
             )}
         </div>
     );

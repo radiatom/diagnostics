@@ -6,15 +6,11 @@ import InstructionVideo from "./InstructionVideo";
 const Instruction = ({ img, video, instruction }) => {
     return (
         <div className="instruction">
-            {img !== null ? (
+            {Boolean(img !== null) && (
                 <InstructionImg instruction={instruction} img={img} />
-            ) : (
-                ""
             )}
-            {video !== null ? (
+            {Boolean(video !== null) && (
                 <InstructionVideo instruction={instruction} video={video} />
-            ) : (
-                ""
             )}
         </div>
     );

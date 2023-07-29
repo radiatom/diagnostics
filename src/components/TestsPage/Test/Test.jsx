@@ -1,10 +1,7 @@
 import React from "react";
 import "./Test.scss";
 import { useDispatch, useSelector } from "react-redux";
-import {
-    putSolutionTestTrue,
-    putSolutionTestFalse,
-} from "./testReducer";
+import { putSolutionTestTrue, putSolutionTestFalse } from "./testReducer";
 import { testDataSelector } from "../../../selectors/selectors";
 import Instruction from "./Instruction/Instruction";
 import NavToHome from "./Buttons/NavToHome";
