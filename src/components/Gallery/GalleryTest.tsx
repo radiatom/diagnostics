@@ -39,10 +39,12 @@ const GlleryTest:React.FC<propsType> = ({ id, problem, testText, instruction, im
                         :
                         <div>
                               <p>Відео інструкції:</p>
-                              <video className={s.width} controls>
+                              
+                              <a href={video} target='blank'>{video}</a>
+                              {/* <video className={s.width} controls>
                                     <source src={video} type="video/mp4" />
                                     Your browser does not support the video tag.
-                              </video>
+                              </video> */}
                         </div>
                   }
                   <p>На відповідь так: <GalleryResContainer id={solutionYes} /> </p>
