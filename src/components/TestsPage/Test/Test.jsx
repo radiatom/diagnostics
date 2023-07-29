@@ -1,28 +1,16 @@
-import React from "react";
 import "./Test.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { putSolutionTestTrue, putSolutionTestFalse } from "./testReducer";
+import {  useSelector } from "react-redux";
 import { testDataSelector } from "../../../selectors/selectors";
 import Instruction from "./Instruction/Instruction";
 import NavToHome from "./Buttons/NavToHome";
 import Ok from "./Buttons/Ok";
 import YesOrNo from "./Buttons/YesOrNo";
 
-const Test = () => {
+const Test = ({active, setActive}) => {
     const testData = useSelector(testDataSelector);
-    const dispatch = useDispatch();
-
-    const onClickYes = () => {
-        dispatch(putSolutionTestTrue(testData.solutionYes));
-        dispatch(putSolutionTestFalse(testData.solutionNo));
-    };
-    const onClickNo = () => {
-        dispatch(putSolutionTestTrue(testData.solutionNo));
-        dispatch(putSolutionTestFalse(testData.solutionYes));
-    };
     return (
         <div className="container">
-            <div className="test">
+            <div className={active ? "test active" : "test"}>
                 <h3>{testData.linkNumber}</h3>
                 <h4>{testData.problem}</h4>
                 <p>{testData.testText}</p>
@@ -36,15 +24,10 @@ const Test = () => {
                     testData.linkNumberYes === testData.solutionYes ? (
                         <NavToHome />
                     ) : (
-                        <Ok linkNumberYes={testData.linkNumberYes} />
+                        <Ok linkNumberYes={testData.linkNumberYes} setActive={setActive}/>
                     )
                 ) : (
-                    <YesOrNo
-                        linkNumberYes={testData.linkNumberYes}
-                        linkNumberNo={testData.linkNumberNo}
-                        onClickYes={onClickYes}
-                        onClickNo={onClickNo}
-                    />
+                    <YesOrNo setActive={setActive}/>
                 )}
             </div>
         </div>
