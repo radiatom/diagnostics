@@ -11,7 +11,7 @@ const InstructionImg = ({ img, instruction }) => {
             </div>
             {drop && (
                 <div className="instruction__body">
-                    <p className={Boolean(instruction==='') && ('none')}>{instruction}</p>
+                    <p className={ instruction===''?'none':''}>{instruction}</p>
                     <a href={img} target="_blank" rel="noopener noreferrer">
                         <img src={img} alt="img" />
                     </a>

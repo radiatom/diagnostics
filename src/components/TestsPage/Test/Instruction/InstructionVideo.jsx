@@ -17,7 +17,7 @@ const InstructionVideo = ({ video, instruction }) => {
             </div>
             {drop && (
                 <div className="instruction__body">
-                    <p className={Boolean(instruction==='') && ('none')}>
+                    <p className={instruction === "" ? "none" : ""}>
                         {instruction}
                     </p>
                     <video ref={videoRef} controls>
