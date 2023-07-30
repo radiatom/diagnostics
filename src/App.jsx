@@ -9,7 +9,6 @@ import TestPage from "./components/TestsPage/TestPage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
-
 function App() {
     return (
         <div className="App" id='app'>
