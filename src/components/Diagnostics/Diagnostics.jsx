@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Diagnostics.scss";
-import Title from "./Title/Title";
+import Description from "./Description/Description";
 import Text from "./Text/Text";
 import Item from "./Item/Item";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +20,8 @@ const Diagnostics = () => {
     return (
         <div className="container">
             <div className="Diagnostics">
-                <Title />
+                <Description />
+                <h4 >Умови для виконання:</h4>
                 {dataDiagnostics.texts.map((el) => {
                     return <Text key={el.id} text={el.text} />;
                 })}
