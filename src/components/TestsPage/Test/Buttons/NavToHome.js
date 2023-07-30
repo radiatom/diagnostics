@@ -10,7 +10,7 @@ const NavToHome = () => {
                     <img className="NavToHome__logo" src={logo} alt="logo" width="200" />
                 </NavLink>
             <div className="NavToHome__btns">
-                <NavLink className='btnY' to="/Home/Contact">
+                <NavLink className='btnY' to="/Home/сontact">
                         Наші контакти
                 </NavLink>
                 <NavLink className='btnY' to="/Diagnostics/All">

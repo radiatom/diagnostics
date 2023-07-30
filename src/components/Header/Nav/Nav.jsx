@@ -10,7 +10,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                     <NavLink to="/Home">Про нас</NavLink>
                 </li>
                 <li onClick={()=>setActive(false)}>
-                    <NavLink to="/Home/Services">Наші послуги</NavLink>
+                    <NavLink to="/Home/services">Наші послуги</NavLink>
                 </li>
                 {/* <li onClick={()=>setActive(!active)}>
                     <NavLink to="/Gallery">Галерея сервера</NavLink>
@@ -92,10 +92,10 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                     </ul>
                 </li>
                 <li onClick={()=>setActive(false)}>
-                    <NavLink to="/Home/Contact">Контакти</NavLink>
+                    <NavLink to="/Home/contact">Контакти</NavLink>
                 </li>
                 <li onClick={()=>setActive(false)}>
-                    <NavLink to="/Home/Blogs">Корисні статті</NavLink>
+                    <NavLink to="/Home/blogs">Корисні статті</NavLink>
                 </li>
             </ul>
         </nav>

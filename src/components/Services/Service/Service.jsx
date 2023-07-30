@@ -29,7 +29,7 @@ const Service = ({ title, text, img,id }) => {
             <div className="service__body">
                 <h5>{title}</h5>
                 <p>{text}</p>
-                <NavLink className="btnY service__btn" to="/Home/Contact">
+                <NavLink className="btnY service__btn" to="/Home/contact">
                     Наше розташування
                 </NavLink>
             </div>
