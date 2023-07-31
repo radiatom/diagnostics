@@ -3,12 +3,10 @@ import "./Text.scss";
 
 const Text = ({ text }) => {
     const [color, setColor] = useState("red");
-
     useEffect(() => {
         const interval = setInterval(() => {
             setColor((prevColor) => (prevColor === "red" ? "black" : "red"));
         }, 600);
-
         return () => {
             clearInterval(interval);
         };

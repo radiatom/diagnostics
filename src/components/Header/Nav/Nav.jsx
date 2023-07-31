@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
 
 const Nav = ({ active, setActive, drop, setDrop }) => {
+    const [color, setColor] = useState("red");
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setColor((prevColor) => (prevColor === "red" ? "white" : "red"));
+        }, 600);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
     return (
         <nav className={active ? "navbar navbar_active" : "navbar"}>
             <ul>
@@ -17,7 +26,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                 </li> */}
                 <li>
                     <button className="navbar__dropButton" onClick={()=>setDrop(!drop)}>
-                        Діагностика <span className="border">new</span>
+                        Діагностика <span className={`border ${color}`}>new</span>
                         <span className={drop?'navbar__dropButton_downIcon active':"navbar__dropButton_downIcon"}></span>
                     </button>
                     <ul

@@ -3,7 +3,7 @@
     line-height: 25px;
     margin-bottom: 25px;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
     &.red{
         color: red;
     }
