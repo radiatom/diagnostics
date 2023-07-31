@@ -20,9 +20,9 @@ const Description = () => {
                 поломки, адже ми вас проведемо по всіх етапах діагностики та
                 разом виясним причину неполадок.
             </h3 >
-            <div onClick={clickTitle1} className="description__question">
+            <div onClick={clickTitle1} className={openP1?'description__question open':"description__question"}>
                 <h4 > Для кого діагностика розроблена?</h4>
-                <span className={openP1?"description__question_downIcon open":"description__question_downIcon"}></span>
+                <span className="description__question_cross"></span>
             </div>
             <p className={openP1?"description__respon open":"description__respon"}>
                 Наша розробка для людей котрі не знають технічні аспекти та
@@ -34,9 +34,9 @@ const Description = () => {
                 валу і т.д. Якщо у Вас є помічник, скористайтесь його допомогою,
                 так буде набагато легше та веселіше.
             </p>
-            <div onClick={clickTitle2} className="description__question">
+            <div onClick={clickTitle2} className={openP2?'description__question open':"description__question"}>
                 <h4 >Як це виглядатиме?</h4>
-                <span className={openP2?"description__question_downIcon open":"description__question_downIcon"}></span>
+                <span className="description__question_cross"></span>
             </div>
             <p className={openP2?"description__respon open":"description__respon"}>
                 Діагностика має вигляд тестів. Для розуміня яку відповідь
