@@ -1,6 +1,4 @@
 .test {
-      // position: relative;
-      // left: -1000px;
       opacity: 0;
       max-width: 600px;
       flex: 1 1 600px;
@@ -10,7 +8,7 @@
       padding: 0 20px 20px 20px;
       background-color: rgb(119, 97, 1);
       color: white;
-      margin: 200px 0;
+      margin: 20px 0;
       transition: opacity 0.3s;
       h3{
             padding: 20px 0 10px 0 ;
@@ -29,7 +27,6 @@
       }
       &.active{
             opacity: 1;
-            // left: 0;
       }
 }
 
