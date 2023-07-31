@@ -20,6 +20,9 @@
             font-size: 20px;
             font-weight: 600;
             margin: 0;
+            @media(max-width:440px){
+                font-size: 16px;
+            }
         }
         &_cross {
             width: 30px;

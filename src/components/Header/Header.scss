@@ -7,8 +7,8 @@
         display: none;
         @media (max-width: 750px) {//поява іконки немю
             display: block;
-            width: 30px;
-            height: 18px;
+            width: 40px;
+            height: 28px;
             position: relative;
             cursor: pointer;
             span {
@@ -57,7 +57,7 @@
         }
     }
     &__head {
-        padding: 2px 10px 0 10px;
+        padding: 0;
         margin: 0 -10px 5px -10px;
         color: #fbe400;
         &_nav {
@@ -68,6 +68,7 @@
             @media (max-width: 750px) {
                 //робимо лого та іконку меню по кутках
                 //ТІЛЬКИ ДЛЯ ЕКРАНІВ МЕНЬШЕ 1000
+                padding: 10px;
                 justify-content: space-between;
             }
             .logo {
@@ -76,14 +77,6 @@
                     width: 100px;
                 }
             }
-            // >img {
-            //     display: none;
-            //     @media (max-width: 750px) {//поява іконки немю
-            //         display: inline-block;
-            //         width: 50px;
-            //         height: 50px;
-            //     }
-            // }
         }
         &_location {
             display: flex;
