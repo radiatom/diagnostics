@@ -11,12 +11,11 @@ const InstructionVideo = ({ video, instruction }) => {
     const [drop, setDrop] = useState(false);
     return (
         <div className="instruction">
-            <div className="instruction__spoiler" onClick={() => setDrop(!drop)}>
+            <div className={drop?'instruction__spoiler open':"instruction__spoiler"} onClick={() => setDrop(!drop)}>
                 <button>Відео інструкція</button>
-                <span className={drop?'instruction__spoiler_downIcon active':"instruction__spoiler_downIcon"}></span>
+                <span className="instruction__spoiler_downIcon"></span>
             </div>
-            {drop && (
-                <div className="instruction__body">
+                <div className={drop?'instruction__body open':"instruction__body"}>
                     <p className={instruction === "" ? "none" : ""}>
                         {instruction}
                     </p>
@@ -25,7 +24,6 @@ const InstructionVideo = ({ video, instruction }) => {
                         Your browser does not support the video tag.
                     </video>
                 </div>
-            )}
         </div>
     );
 };
