@@ -30,7 +30,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                         <span className={drop?'navbar__dropButton_downIcon active':"navbar__dropButton_downIcon"}></span>
                     </button>
                     <ul
-                        className={drop ? "navList_open" : "navList_closed"}
+                        className={drop ? "navList  open" : "navList"}
                         onMouseLeave={()=>setDrop(!drop)}
                     >
                         <li
