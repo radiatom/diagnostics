@@ -26,14 +26,15 @@ const Diagnostics = () => {
                     return <Text key={el.id} text={el.text} />;
                 })}
                 <div className="Diagnostics__row">
-                    {dataDiagnostics.cards.map((el) => {
+                    {dataDiagnostics.cards.map((item,index) => {
                         return (
                             <Item
-                                key={el.id}
-                                title={el.title}
-                                problem={el.problem}
-                                text={el.text}
-                                link={el.link}
+                                index={index}
+                                key={item.id}
+                                title={item.title}
+                                problem={item.problem}
+                                text={item.text}
+                                link={item.link}
                             />
                         );
                     })}

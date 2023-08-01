@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Item.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateRes } from "../../TestsPage/Test/testReducer";
 
-const Item = ({ title, problem, text, link }) => {
+const Item = ({ index, title, problem, text, link }) => {
     const dispatch = useDispatch();
+    const [active, setActive] = useState(false);
+    useEffect(() => {
+        setTimeout(() => setActive(true), index * 500);
+    }, []);
     return (
-        <div className="Item">
+        <div className={active ? "Item active" : "Item"}>
             <h5>{title}</h5>
             <h6>{problem}</h6>
             <p>{text}</p>
