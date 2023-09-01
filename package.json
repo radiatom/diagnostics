@@ -1,7 +1,7 @@
 {
   "name": "diagnostics",
   "version": "2.3.2",
-  "homepage": "https://radiatom.github.io/diagnostics/",
+  "homepage": "https://viniko.in.ua/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -28,7 +28,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

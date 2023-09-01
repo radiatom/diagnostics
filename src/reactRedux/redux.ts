@@ -4,13 +4,13 @@ import {
     compose,
     legacy_createStore,
 } from "redux";
-import testReducer from "../components/TestsPage/Test/testReducer";
-import reducerRoadFotos from "../components/Contact/Slider/reducerSlider";
+import testReducer from "../components/Diagnostics/TestsPage/Test/testReducer";
+import reducerRoadFotos from "../components/Home/Contact/Slider/reducerSlider";
 import thunkMiddleware from "redux-thunk";
-import reducerServices from "../components/Services/reducerServices";
-import reducerBlogs from "../components/Blogs/reducerBlogs";
+import reducerServices from "../components/Home/Services/reducerServices";
+import reducerBlogs from "../components/Home/Blogs/reducerBlogs";
 import reducerDiagnistics from "../components/Diagnostics/reducerDiagnistics";
-import reducerBanner from "../components/Banner/reducerBanner";
+import reducerBanner from "../components/Home/Banner/reducerBanner";
 import reducerAll from "./reducerAll";
 
 const redusers = combineReducers({

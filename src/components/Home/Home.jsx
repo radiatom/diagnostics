@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Banner from "../Banner/Banner";
-import Blogs from "../Blogs/Blogs";
-import Contact from "../Contact/Contact";
-import Features from "../Features/Features";
-import Services from "../Services/Services";
+import Banner from "./Banner/Banner";
+import Blogs from "./Blogs/Blogs";
+import Contact from "./Contact/Contact";
+import Features from "./Features/Features";
+import Services from "./Services/Services";
 import "./Home.scss";
 import { useDispatch } from "react-redux";
 import { setDevice } from "../../reactRedux/reducerAll";
@@ -27,11 +27,8 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(setDevice()); //визначаємо пристрій (пк чи мобіл)
+        scroll();//робимо так щоб при переході з сторінки діагностика на сторінку наприклад контакти щоб скролл перемотувався бо без такої функції він лише відкривав home
     }, []);
-
-    useEffect(() => {
-        scroll();
-    }, []); //робимо так щоб при переході з сторінки діагностика на сторінку наприклад контакти щоб скролл перемотувався бо без такої функції він лише відкривав home
 
     useEffect(() => {
         scroll();

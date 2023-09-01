@@ -18,7 +18,7 @@ const Footer = () => {
                         діодний міст генератора. У нашому асортименті стартера,
                         генератори, компоненти брендів Koyo, ZM, ZEN, IKA,
                         Mobiletron, оригінальні бренди BOSCH, DELCO, DENSO, INA,
-                        VALEO. <span>Version: 2.3.2</span>
+                        VALEO. <span>Version: 2.3.3</span>
                     </p>
             </footer>
     );
