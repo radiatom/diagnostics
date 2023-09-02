@@ -66,9 +66,9 @@ const altFoto3 = `${process.env.PUBLIC_URL}/img/ina.jpg`;
 const chFoto1 = `${process.env.PUBLIC_URL}/img/blogCharr1.jpg`;
 const chFoto2 = `${process.env.PUBLIC_URL}/img/helper.jpg`;
 
-const bannerFoto1=`${process.env.PUBLIC_URL}/img/bg5.jpg`
-const bannerFoto2=`${process.env.PUBLIC_URL}/img/bg3.jpg`
-const bannerFoto3=`${process.env.PUBLIC_URL}/img/bg2.jpg`
+const bannerFoto1 = `${process.env.PUBLIC_URL}/img/bg5.jpg`;
+const bannerFoto2 = `${process.env.PUBLIC_URL}/img/bg3.jpg`;
+const bannerFoto3 = `${process.env.PUBLIC_URL}/img/bg2.jpg`;
 
 const img15 = `${process.env.PUBLIC_URL}/img/15.jpg`;
 const img19 = `${process.env.PUBLIC_URL}/img/19.jpg`;
@@ -99,13 +99,13 @@ const img168 = `${process.env.PUBLIC_URL}/img/168.jpg`;
 const img184 = `${process.env.PUBLIC_URL}/img/184.jpg`;
 const img189 = `${process.env.PUBLIC_URL}/img/189.jpg`;
 
-export type slaideType={
-    id:number
-    title:string
-    text:string
-    foto:string
-}
-export type slaidesType= Array<slaideType>
+export type slaideType = {
+    id: number;
+    title: string;
+    text: string;
+    foto: string;
+};
+export type slaidesType = Array<slaideType>;
 
 export type blogType = {
     id: number;
@@ -135,6 +135,10 @@ export type cardType = {
     solutionNo: null | number;
     img: null | string;
     video: null | string;
+    progress: {
+        length: number;
+        position: number;
+    };
 };
 export type testCardType = Array<cardType>;
 export type solutionType = {
@@ -167,7 +171,7 @@ export type cardsType = {
 export type diagnosticsType = { texts: textsType; cards: cardsType };
 
 export type serverDataType = {
-    banner:slaidesType
+    banner: slaidesType;
     diagnostics: diagnosticsType;
     chFotos: roadFotosType;
     altFotos: roadFotosType;
@@ -180,25 +184,25 @@ export type serverDataType = {
 };
 
 const serverData: serverDataType = {
-    banner:[
-        {   
-        id:1,
-        title:"Діагностика",
-        text:"Ми розробили систему, за допомогою якої, Ви зможете перевірити стартер, генератор, акумулятор.",
-        foto:bannerFoto1
-    },
-    {   
-        id:2,
-        title:"Досвід і якість",
-        text:"Сервіс професійних, надійних і ефективних послуг з ремонту автомобілів.",
-        foto:bannerFoto2
-    },
-    {   
-        id:3,
-        title:"Гарантія",
-        text:"Даємо гарантію на роботу та комплектуючі 6 місяців.",
-        foto:bannerFoto3
-    }
+    banner: [
+        {
+            id: 1,
+            title: "Діагностика",
+            text: "Ми розробили систему, за допомогою якої, Ви зможете перевірити стартер, генератор, акумулятор.",
+            foto: bannerFoto1,
+        },
+        {
+            id: 2,
+            title: "Досвід і якість",
+            text: "Сервіс професійних, надійних і ефективних послуг з ремонту автомобілів.",
+            foto: bannerFoto2,
+        },
+        {
+            id: 3,
+            title: "Гарантія",
+            text: "Даємо гарантію на роботу та комплектуючі 6 місяців.",
+            foto: bannerFoto3,
+        },
     ],
     diagnostics: {
         texts: {
@@ -238,7 +242,7 @@ const serverData: serverDataType = {
                 {
                     id: 1,
                     text: "Дана діагностика буде обєктивною, якщо Ваш акумулятор свинцевий (Pb). Цієї будови акумулятори мають електроліт який можна перевірити. Діагностику також можна проходити якщо у вас інший акумулятор.",
-                }
+                },
             ],
             All: [
                 {
@@ -260,8 +264,7 @@ const serverData: serverDataType = {
                 {
                     id: 1,
                     title: "Діагностика статера",
-                    problem:
-                        "Шум, жужання, скрегіт, буксування бендикса стартера",
+                    problem: "Шум, жужання, скрегіт, буксування бендикса стартера",
                     text: "Первірка бендикса, чи є підозра, що він не справний; чи пошкоджений вінець; в якому стані втулки, підшипники, редуктор, якір, статор стартера.",
                     link: 1,
                 },
@@ -306,8 +309,7 @@ const serverData: serverDataType = {
                 {
                     id: 7,
                     title: "Діагностика генератора",
-                    problem:
-                        "Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 13.1 вольт.",
+                    problem: "Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 13.1 вольт.",
                     text: "Перевірка чи генератор заряджає акумулятор.",
                     link: 144,
                 },
@@ -321,7 +323,7 @@ const serverData: serverDataType = {
                 {
                     id: 9,
                     title: "Діагностика генератора",
-                    problem: "Розбирання та дефекутвання",
+                    problem: "Розбирання та дефекутвання генератора",
                     text: "Щоб зробити повноцінне дефектування потрібне спеціальне обладнання. Без нього можливо перевірити лише: підшипники, шків, колектор, щітки, обрив катушки якоря, явні сліди згорівшого діодного моста та пошкодження статора.",
                     link: 128,
                 },
@@ -330,8 +332,7 @@ const serverData: serverDataType = {
                 {
                     id: 10,
                     title: "Діагностика акумулятора",
-                    problem:
-                        "Акумулятор швидко розряджається, повільно провертає двигун.",
+                    problem: "Акумулятор швидко розряджається, повільно провертає двигун.",
                     text: "Перевірка стану АКБ проводиться на автомобілі",
                     link: 83,
                 },
@@ -420,7 +421,7 @@ const serverData: serverDataType = {
             linkNumber: 1,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Шум, жужання, скрегіт, буксування бендикса стартера",
             instruction: null,
             linkNumberYes: 11,
             linkNumberNo: 11,
@@ -428,20 +429,27 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 1,
+            },
         },
         {
             linkNumber: 11,
             problem: "Дайте відповідь на питання",
             testText:
                 "Коли працює стартер, двигун (колінчастий вал)  обертається без зупинок? Так-означає, що стартер завжди обертає двигун (колінчастий вал) без зупинок. Ні-означає, що коли стартер працює, двигун ніколи не обертається або інколи не обертається.",
-            instruction:
-                "На відео стартера завжди обертає двигун (колінчастий вал) без зупинок.",
+            instruction: "На відео стартера завжди обертає двигун (колінчастий вал) без зупинок.",
             linkNumberYes: 65,
             linkNumberNo: 12,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video11,
+            progress: {
+                length: 26,
+                position: 2,
+            },
         },
         {
             linkNumber: 12,
@@ -455,40 +463,47 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video12,
+            progress: {
+                length: 26,
+                position: 3,
+            },
         },
         {
             linkNumber: 12131,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Чути як стартер працює, але мотор (колінчастий вал) не обертається?",
-            instruction:
-                "На відео чути як стартер працює, але мотор (колінчастий вал) не обертається",
+            testText: "Чути як стартер працює, але мотор (колінчастий вал) не обертається?",
+            instruction: "На відео чути як стартер працює, але мотор (колінчастий вал) не обертається",
             linkNumberYes: 14,
             linkNumberNo: 12,
             solutionYes: 18,
             solutionNo: 1,
             img: null,
             video: video12131,
+            progress: {
+                length: 26,
+                position: 4,
+            },
         },
         {
             linkNumber: 12130,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Чути як стартер працює, але мотор (колінчастий вал) не обертається?",
-            instruction:
-                "На відео чути як стартер працює, але мотор (колінчастий вал) не обертається",
+            testText: "Чути як стартер працює, але мотор (колінчастий вал) не обертається?",
+            instruction: "На відео чути як стартер працює, але мотор (колінчастий вал) не обертається",
             linkNumberYes: 14,
             linkNumberNo: 8,
             solutionYes: 18,
             solutionNo: 1,
             img: null,
             video: video12131,
+            progress: {
+                length: 26,
+                position: 4,
+            },
         },
         {
             linkNumber: 13661,
             problem: "Щось не так",
-            testText:
-                "Ви дали дві різні відповіді на одне питання, можливо ви помились або вам ця діагностика не підходить.",
+            testText: "Ви дали дві різні відповіді на одне питання, можливо ви помились або вам ця діагностика не підходить.",
             instruction: "",
             linkNumberYes: 11,
             linkNumberNo: 11,
@@ -496,6 +511,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 1,
+            },
         },
         {
             linkNumber: 14,
@@ -508,6 +527,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 5,
+            },
         },
         {
             linkNumber: 15,
@@ -521,20 +544,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img15,
             video: null,
+            progress: {
+                length: 26,
+                position: 10,
+            },
         },
         {
             linkNumber: 17,
             problem: "Дайте відповідь на питання",
-            testText:
-                "У вас вінець рухається окремо від маховика ?(дивіться інструкцію)",
-            instruction:
-                "На відео видно, що вінець з зубами крутяться окремо від маховика.",
+            testText: "У вас вінець рухається окремо від маховика ?(дивіться інструкцію)",
+            instruction: "На відео видно, що вінець з зубами крутяться окремо від маховика.",
             linkNumberYes: 15,
             linkNumberNo: 15,
             solutionYes: 17,
             solutionNo: 1,
             img: null,
             video: video17,
+            progress: {
+                length: 26,
+                position: 9,
+            },
         },
         {
             linkNumber: 19,
@@ -549,6 +578,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img19,
             video: null,
+            progress: {
+                length: 26,
+                position: 8,
+            },
         },
         {
             linkNumber: 20,
@@ -562,12 +595,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video20,
+            progress: {
+                length: 26,
+                position: 11,
+            },
         },
         {
             linkNumber: 21,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Бендикс не працює як муфта, він заблокований в обидві строни, в жодну з сторін не провертається?",
+            testText: "Бендикс не працює як муфта, він заблокований в обидві строни, в жодну з сторін не провертається?",
             instruction: "",
             linkNumberYes: 69,
             linkNumberNo: 69,
@@ -575,12 +611,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video21,
+            progress: {
+                length: 26,
+                position: 12,
+            },
         },
         {
             linkNumber: 65,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час роботи стартера чути шум, жужання, скрегіт, буксування?",
+            testText: "Під час роботи стартера чути шум, жужання, скрегіт, буксування?",
             instruction: "",
             linkNumberYes: 67,
             linkNumberNo: 66,
@@ -588,12 +627,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 3,
+            },
         },
         {
             linkNumber: 66,
             problem: "Проблем не виявленно",
-            testText:
-                "Можливо у вас нема проблем в даний час, або ви просто не ту діагностику провели.",
+            testText: "Можливо у вас нема проблем в даний час, або ви просто не ту діагностику провели.",
             instruction: "",
             linkNumberYes: 11,
             linkNumberNo: 11,
@@ -601,12 +643,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 1,
+            },
         },
         {
             linkNumber: 67,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати стартер. Вам до снаги така задача?",
+            testText: "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати стартер. Вам до снаги така задача?",
             instruction: "",
             linkNumberYes: 68,
             linkNumberNo: 76,
@@ -614,11 +659,14 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 6,
+            },
         },
         {
             linkNumber: 68,
-            problem:
-                "Потрібно зловити момент коли стартер шумить або не провертає двигун, і тоді його демонтувати.",
+            problem: "Потрібно зловити момент коли стартер шумить або не провертає двигун, і тоді його демонтувати.",
             testText: "",
             instruction: "",
             linkNumberYes: 19,
@@ -627,6 +675,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 7,
+            },
         },
         {
             linkNumber: 69,
@@ -640,6 +692,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 13,
+            },
         },
         {
             linkNumber: 7,
@@ -652,6 +708,10 @@ const serverData: serverDataType = {
             solutionNo: null,
             img: null,
             video: null,
+            progress: {
+                length: 10,
+                position: 10,
+            },
         },
         {
             linkNumber: 71,
@@ -664,19 +724,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img71,
             video: null,
+            progress: {
+                length: 26,
+                position: 24,
+            },
         },
         {
             linkNumber: 72,
             problem: "Дайте відповідь на питання",
             testText: "Вісь у втулках має великий люфт?",
-            instruction:
-                "На вигляд (на око), зношені втулки мають овальний отвір (як на фото).",
+            instruction: "На вигляд (на око), зношені втулки мають овальний отвір (як на фото).",
             linkNumberYes: 84,
             linkNumberNo: 84,
             solutionYes: 20,
             solutionNo: 1,
             img: img72,
             video: null,
+            progress: {
+                length: 26,
+                position: 14,
+            },
         },
         {
             linkNumber: 73,
@@ -689,12 +756,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img73,
             video: video73,
+            progress: {
+                length: 26,
+                position: 17,
+            },
         },
         {
             linkNumber: 74,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Вимийте редуктор від мастила. В ньому відсутні зуби, присутні тріщини, пошкодження?",
+            testText: "Вимийте редуктор від мастила. В ньому відсутні зуби, присутні тріщини, пошкодження?",
             instruction: "На фото редуктор зовсім розвалений",
             linkNumberYes: 7,
             linkNumberNo: 75,
@@ -702,6 +772,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img74,
             video: null,
+            progress: {
+                length: 26,
+                position: 25,
+            },
         },
         {
             linkNumber: 75,
@@ -714,6 +788,10 @@ const serverData: serverDataType = {
             solutionNo: 25,
             img: null,
             video: video75,
+            progress: {
+                length: 26,
+                position: 26,
+            },
         },
         {
             linkNumber: 76,
@@ -726,6 +804,10 @@ const serverData: serverDataType = {
             solutionNo: null,
             img: null,
             video: null,
+            progress: {
+                length: 10,
+                position: 1,
+            },
         },
         {
             linkNumber: 77,
@@ -739,6 +821,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img77,
             video: null,
+            progress: {
+                length: 26,
+                position: 18,
+            },
         },
         {
             linkNumber: 78,
@@ -752,6 +838,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img78,
             video: null,
+            progress: {
+                length: 26,
+                position: 19,
+            },
         },
         {
             linkNumber: 79,
@@ -764,20 +854,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video79,
+            progress: {
+                length: 26,
+                position: 12,
+            },
         },
         {
             linkNumber: 8,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Коли замок повернутий положення стартера, чути як стастер часто клацає (дивіться інструкцію)?",
-            instruction:
-                "На відео чути як працює стартер, у вас так само? На відео лише одна спроба пуску двигуна.",
+            testText: "Коли замок повернутий положення стартера, чути як стастер часто клацає (дивіться інструкцію)?",
+            instruction: "На відео чути як працює стартер, у вас так само? На відео лише одна спроба пуску двигуна.",
             linkNumberYes: 82,
             linkNumberNo: 81,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video8,
+            progress: {
+                length: 26,
+                position: 5,
+            },
         },
         {
             linkNumber: 81,
@@ -792,6 +888,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video81,
+            progress: {
+                length: 26,
+                position: 6,
+            },
         },
         {
             linkNumber: 82,
@@ -804,12 +904,16 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 26,
+                position: 7,
+            },
         },
         {
             linkNumber: 83,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Діагностика акумулятора",
             instruction: "",
             linkNumberYes: 178,
             linkNumberNo: 178,
@@ -817,6 +921,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 14,
+                position: 1,
+            },
         },
         {
             linkNumber: 84,
@@ -829,19 +937,26 @@ const serverData: serverDataType = {
             solutionNo: 26,
             img: img84,
             video: null,
+            progress: {
+                length: 26,
+                position: 15,
+            },
         },
         {
             linkNumber: 85,
             problem: "Дайте відповідь на питання",
             testText: "Вилка переміщає бендикс по валу легко?",
-            instruction:
-                "На відео бендикс переміщається під своєю вагою, це означає що він переміщається легко",
+            instruction: "На відео бендикс переміщається під своєю вагою, це означає що він переміщається легко",
             linkNumberYes: 73,
             linkNumberNo: 73,
             solutionYes: 1,
             solutionNo: 27,
             img: null,
             video: video85,
+            progress: {
+                length: 26,
+                position: 16,
+            },
         },
         {
             linkNumber: 86,
@@ -854,20 +969,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img86,
             video: null,
+            progress: {
+                length: 14,
+                position: 3,
+            },
         },
         {
             linkNumber: 87,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: "Під час пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 88,
             linkNumberNo: 88,
             solutionYes: 29,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 14,
+                position: 4,
+            },
         },
         {
             linkNumber: 88,
@@ -880,6 +1001,10 @@ const serverData: serverDataType = {
             solutionNo: 30,
             img: img88,
             video: null,
+            progress: {
+                length: 14,
+                position: 5,
+            },
         },
         {
             linkNumber: 89,
@@ -892,6 +1017,10 @@ const serverData: serverDataType = {
             solutionNo: 63,
             img: img89,
             video: null,
+            progress: {
+                length: 14,
+                position: 6,
+            },
         },
         {
             linkNumber: 90,
@@ -904,6 +1033,10 @@ const serverData: serverDataType = {
             solutionNo: 63,
             img: null,
             video: null,
+            progress: {
+                length: 14,
+                position: 7,
+            },
         },
         {
             linkNumber: 91,
@@ -916,27 +1049,32 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video91,
+            progress: {
+                length: 14,
+                position: 8,
+            },
         },
         {
             linkNumber: 92,
             problem: "Дайте відповідь на питання",
             testText:
                 "Відкачайте електроліт так щоб було видно чи він прозорий (так як на відео), як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?",
-            instruction:
-                "Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).",
+            instruction: "Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).",
             linkNumberYes: 93,
             linkNumberNo: 939088,
             solutionYes: 1,
             solutionNo: 31,
             img: img92,
             video: video91,
+            progress: {
+                length: 14,
+                position: 9,
+            },
         },
         {
             linkNumber: 93,
-            problem:
-                "Зарядіть акумулятор і після цього продовжуйте діагностику",
-            testText:
-                "Я правильно зарядити акумулятор? У нас є стаття як це зробити.",
+            problem: "Зарядіть акумулятор і після цього продовжуйте діагностику",
+            testText: "Я правильно зарядити акумулятор? У нас є стаття як це зробити.",
             instruction: "",
             linkNumberYes: 94,
             linkNumberNo: 94,
@@ -944,13 +1082,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 14,
+                position: 10,
+            },
         },
         {
             linkNumber: 939088,
-            problem:
-                "Зарядіть акумулятор і після цього продовжуйте діагностику",
-            testText:
-                "Я правильно зарядити акумулятор? У нас є стаття як це зробити.",
+            problem: "Зарядіть акумулятор і після цього продовжуйте діагностику",
+            testText: "Я правильно зарядити акумулятор? У нас є стаття як це зробити.",
             instruction: "",
             linkNumberYes: 95,
             linkNumberNo: 95,
@@ -958,54 +1098,64 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 14,
+                position: 10,
+            },
         },
         {
             linkNumber: 94,
             problem: "Дайте відповідь на питання",
             testText:
                 "Відкачайте електроліт так щоб було видно чи він прозорий (так як на відео), як джерельна водичка (зробіть 10 відкачак/закачок). Електроліт Прозорий?",
-            instruction:
-                "Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).",
+            instruction: "Мутний електроліт має грязний, коричневий відтінок (бульбашки на прозорість не впливають).",
             linkNumberYes: 95,
             linkNumberNo: 95,
             solutionYes: 1,
             solutionNo: 32,
             img: null,
             video: video91,
+            progress: {
+                length: 14,
+                position: 11,
+            },
         },
         {
             linkNumber: 95,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: "Під час пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 96,
             linkNumberNo: 96,
             solutionYes: 34,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 14,
+                position: 12,
+            },
         },
         {
             linkNumber: 96,
             problem: "Зробіть 7 запусків двигуна.",
-            testText:
-                " Під час восьмого пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: " Під час восьмого пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 97,
             linkNumberNo: 97,
             solutionYes: 33,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 14,
+                position: 13,
+            },
         },
         {
             linkNumber: 97,
             problem: "Дайте відповідь на питяння",
-            testText:
-                "Напруга на акумуляторі була менше 13.9 вольт (дивіться інструкцію)?",
+            testText: "Напруга на акумуляторі була менше 13.9 вольт (дивіться інструкцію)?",
             instruction:
                 "Запустіть двигун, перевіряйте напругу на акумуляторі на таких режимах роботи: 1) всі споживачі виключені; 2) включене ближнє світло фар та вентиллятор пічки на максимум на холостих обертах; 3) включене ближнє світло фар та вентиллятор пічки на максимум на 2тис обертах. На відео напруга в межах норми.",
             linkNumberYes: 7,
@@ -1014,12 +1164,16 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video97,
+            progress: {
+                length: 14,
+                position: 14,
+            },
         },
         {
             linkNumber: 98,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Мала напруга на акумуляторі, меньше 13.9 вольт ",
             instruction: "",
             linkNumberYes: 99,
             linkNumberNo: 99,
@@ -1027,11 +1181,14 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 8,
+                position: 1,
+            },
         },
         {
             linkNumber: 99,
-            problem:
-                "Всі тести проводяться на запущеному двигуні за допомогою мультиметра. У вас є мультиметр?",
+            problem: "Всі тести проводяться на запущеному двигуні за допомогою мультиметра. У вас є мультиметр?",
             testText: "Фото мультиметра:",
             instruction: "",
             linkNumberYes: 100,
@@ -1040,42 +1197,48 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 8,
+                position: 2,
+            },
         },
         {
             linkNumber: 100,
             problem: "Дайте відповідь на питання:",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
-            instruction:
-                "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            instruction: "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 101,
             linkNumberNo: 103,
-            solutionYes: 1,
-            solutionNo: 39,
+            solutionYes: 8,
+            solutionNo: 3,
             img: null,
             video: video100,
+            progress: {
+                length: 1,
+                position: 10,
+            },
         },
         {
             linkNumber: 101,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
-            instruction:
-                "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            instruction: "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 102,
             solutionYes: 1,
             solutionNo: 40,
             img: null,
             video: video100,
+            progress: {
+                length: 8,
+                position: 4,
+            },
         },
         {
             linkNumber: 102,
             problem:
                 "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум. Підніміть оберти двигуна до 2тис.",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 104,
@@ -1083,13 +1246,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video102,
+            progress: {
+                length: 8,
+                position: 5,
+            },
         },
         {
             linkNumber: 103,
-            problem:
-                "Вимкніть навантаження і скиньте оберти двигуна до холостих.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            problem: "Вимкніть навантаження і скиньте оберти двигуна до холостих.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 104,
             linkNumberNo: 7,
@@ -1097,13 +1262,15 @@ const serverData: serverDataType = {
             solutionNo: 41,
             img: null,
             video: video103,
+            progress: {
+                length: 8,
+                position: 5,
+            },
         },
         {
             linkNumber: 104,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 106,
             linkNumberNo: 105,
@@ -1111,13 +1278,16 @@ const serverData: serverDataType = {
             solutionNo: 42,
             img: null,
             video: video103,
+            progress: {
+                length: 8,
+                position: 6,
+            },
         },
         {
             linkNumber: 105,
             problem:
                 "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум. Підніміть оберти двигуна до 2тис.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга стає в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 7,
@@ -1125,13 +1295,15 @@ const serverData: serverDataType = {
             solutionNo: 43,
             img: null,
             video: video105,
+            progress: {
+                length: 8,
+                position: 8,
+            },
         },
         {
             linkNumber: 106,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між плюсовим виводом генератора і мінусовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між плюсовим виводом генератора і мінусовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 107,
             linkNumberNo: 107,
@@ -1139,13 +1311,15 @@ const serverData: serverDataType = {
             solutionNo: 44,
             img: null,
             video: video106,
+            progress: {
+                length: 7,
+                position: 8,
+            },
         },
         {
             linkNumber: 107,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між корпусом генератора і плюсовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між корпусом генератора і плюсовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 7,
@@ -1153,12 +1327,16 @@ const serverData: serverDataType = {
             solutionNo: 45,
             img: null,
             video: video107,
+            progress: {
+                length: 8,
+                position: 8,
+            },
         },
         {
             linkNumber: 108,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Шум генератора",
             instruction: "",
             linkNumberYes: 179,
             linkNumberNo: 179,
@@ -1166,25 +1344,30 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 1,
+            },
         },
         {
             linkNumber: 109,
             problem: "Запустіть двигун",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
-            instruction:
-                "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            instruction: "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 117,
             linkNumberNo: 111,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video100,
+            progress: {
+                length: 15,
+                position: 3,
+            },
         },
         {
             linkNumber: 110,
-            problem:
-                "Запустіть двигун. Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            problem: "Запустіть двигун. Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
             testText: "Натяжний механізм приводного ремня підскакує?",
             instruction: "",
             linkNumberYes: 112,
@@ -1193,13 +1376,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 5,
+            },
         },
         {
             linkNumber: 111,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 117111,
@@ -1207,6 +1392,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video103,
+            progress: {
+                length: 15,
+                position: 4,
+            },
         },
         {
             linkNumber: 112,
@@ -1220,6 +1409,10 @@ const serverData: serverDataType = {
             solutionNo: 59,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 6,
+            },
         },
         {
             linkNumber: 113,
@@ -1232,6 +1425,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 7,
+            },
         },
         {
             linkNumber: 113117,
@@ -1244,6 +1441,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 5,
+            },
         },
         {
             linkNumber: 113117111,
@@ -1256,6 +1457,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 6,
+            },
         },
         {
             linkNumber: 114,
@@ -1268,6 +1473,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 8,
+            },
         },
         {
             linkNumber: 114113,
@@ -1280,6 +1489,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 8,
+            },
         },
         {
             linkNumber: 114117,
@@ -1292,6 +1505,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 10,
+            },
         },
         {
             linkNumber: 114117111,
@@ -1304,12 +1521,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 7,
+            },
         },
         {
             linkNumber: 115,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати приводний ремінь. Вам до снаги така задача?",
+            testText: "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати приводний ремінь. Вам до снаги така задача?",
             instruction: "",
             linkNumberYes: 116,
             linkNumberNo: 76,
@@ -1317,12 +1537,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 9,
+            },
         },
         {
             linkNumber: 115117,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати приводний ремінь. Вам до снаги така задача?",
+            testText: "Щоб вияснити що у вас вийшло з ладу потрібно демонтувати приводний ремінь. Вам до снаги така задача?",
             instruction: "",
             linkNumberYes: 123,
             linkNumberNo: 76,
@@ -1330,6 +1553,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 6,
+            },
         },
         {
             linkNumber: 116,
@@ -1344,12 +1571,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video116,
+            progress: {
+                length: 15,
+                position: 10,
+            },
         },
         {
             linkNumber: 117,
             problem: "Дайте відповідь на питання:",
-            testText:
-                'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
+            testText: 'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
             instruction: "",
             linkNumberYes: 110,
             linkNumberNo: 113117,
@@ -1357,12 +1587,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img117,
             video: null,
+            progress: {
+                length: 15,
+                position: 4,
+            },
         },
         {
             linkNumber: 117111,
             problem: "Дайте відповідь на питання:",
-            testText:
-                'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
+            testText: 'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
             instruction: "",
             linkNumberYes: 113117111,
             linkNumberNo: 7,
@@ -1370,6 +1603,10 @@ const serverData: serverDataType = {
             solutionNo: 50,
             img: img117,
             video: null,
+            progress: {
+                length: 15,
+                position: 5,
+            },
         },
         {
             linkNumber: 118,
@@ -1383,32 +1620,42 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img118,
             video: null,
+            progress: {
+                length: 15,
+                position: 14,
+            },
         },
         {
             linkNumber: 119,
             problem: "Дайте відповідь на питання:",
             testText: "Шків працює нормально?",
-            instruction:
-                "В одну сторону він мусить крутитись, а в іншу блокуватись. На відео це показано.",
+            instruction: "В одну сторону він мусить крутитись, а в іншу блокуватись. На відео це показано.",
             linkNumberYes: 123,
             linkNumberNo: 182,
             solutionYes: 54,
             solutionNo: 1,
             img: null,
             video: video119,
+            progress: {
+                length: 15,
+                position: 11,
+            },
         },
         {
             linkNumber: 120,
             problem: "Дайте відповідь на питання:",
             testText: "Шків заблокований в обидві сторони?",
-            instruction:
-                "Шків заблокований в обидві сторони. На відео це показано",
+            instruction: "Шків заблокований в обидві сторони. На відео це показано",
             linkNumberYes: 123,
             linkNumberNo: 121,
             solutionYes: 55,
             solutionNo: 1,
             img: null,
             video: video120,
+            progress: {
+                length: 15,
+                position: 13,
+            },
         },
         {
             linkNumber: 121,
@@ -1421,6 +1668,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video121,
+            progress: {
+                length: 15,
+                position: 14,
+            },
         },
         {
             linkNumber: 122,
@@ -1434,25 +1685,30 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 15,
+            },
         },
         {
             linkNumber: 123,
-            problem:
-                "Крутаніть генератор якомога швидше, і послухайтте як він крутиться.",
+            problem: "Крутаніть генератор якомога швидше, і послухайтте як він крутиться.",
             testText: "Генератор шумить?",
-            instruction:
-                "На відео генератор чучуть шумить, але не критично. Ідеально коли взагалі нічого не чути.",
+            instruction: "На відео генератор чучуть шумить, але не критично. Ідеально коли взагалі нічого не чути.",
             linkNumberYes: 124,
             linkNumberNo: 124,
             solutionYes: 57,
             solutionNo: 1,
             img: null,
             video: video123,
+            progress: {
+                length: 15,
+                position: 14,
+            },
         },
         {
             linkNumber: 124,
-            problem:
-                "Крутаніть ролики приводного ремня. Також вони не мусять мати люфт.",
+            problem: "Крутаніть ролики приводного ремня. Також вони не мусять мати люфт.",
             testText: "Вони шулять або мають люфт?",
             instruction: "",
             linkNumberYes: 7,
@@ -1461,6 +1717,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 15,
+                position: 15,
+            },
         },
         {
             linkNumber: 125,
@@ -1473,6 +1733,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img125,
             video: null,
+            progress: {
+                length: 15,
+                position: 11,
+            },
         },
         {
             linkNumber: 126,
@@ -1485,6 +1749,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img126,
             video: null,
+            progress: {
+                length: 15,
+                position: 12,
+            },
         },
         {
             linkNumber: 127,
@@ -1498,12 +1766,16 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 2,
+            },
         },
         {
             linkNumber: 128,
             problem:
                 "Для дефектовки гнератор демонтується з двигуна лише коли ви його перевірили і вияснили, що він не заряджає акумулятор, або для профілактики. Також після вияснення, що всі сигнали до штекера надходять.",
-            testText: "",
+            testText: "Розбирання та дефекутвання генератора",
             instruction: "",
             linkNumberYes: 127,
             linkNumberNo: 127,
@@ -1511,20 +1783,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 1,
+            },
         },
         {
             linkNumber: 129,
-            problem:
-                "Крутаніть генератор якомога швидше, і послухайтте як він крутиться.",
+            problem: "Крутаніть генератор якомога швидше, і послухайтте як він крутиться.",
             testText: "Генератор шумить?",
-            instruction:
-                "На відео генератор чучуть шумить, але не критично. Ідеально коли взагалі нічого не чути.",
+            instruction: "На відео генератор чучуть шумить, але не критично. Ідеально коли взагалі нічого не чути.",
             linkNumberYes: 130,
             linkNumberNo: 130,
             solutionYes: 57,
             solutionNo: 1,
             img: null,
             video: video123,
+            progress: {
+                length: 19,
+                position: 3,
+            },
         },
         {
             linkNumber: 130,
@@ -1537,6 +1815,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 4,
+            },
         },
         {
             linkNumber: 131,
@@ -1549,6 +1831,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img131,
             video: null,
+            progress: {
+                length: 19,
+                position: 5,
+            },
         },
         {
             linkNumber: 132,
@@ -1561,6 +1847,10 @@ const serverData: serverDataType = {
             solutionNo: 3,
             img: img132,
             video: null,
+            progress: {
+                length: 19,
+                position: 6,
+            },
         },
         {
             linkNumber: 133,
@@ -1573,12 +1863,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video133,
+            progress: {
+                length: 19,
+                position: 17,
+            },
         },
         {
             linkNumber: 134,
             problem: "Дайте відповідь на питання:",
-            testText:
-                'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
+            testText: 'У вас на генераторі стоїть обгонна муфта? Відповідь "ні" означатиме, що у вас стоїть звичайтий шків.',
             instruction: "",
             linkNumberYes: 135,
             linkNumberNo: 136,
@@ -1586,6 +1879,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img117,
             video: null,
+            progress: {
+                length: 19,
+                position: 7,
+            },
         },
         {
             linkNumber: 135,
@@ -1598,6 +1895,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 8,
+            },
         },
         {
             linkNumber: 136,
@@ -1610,32 +1911,42 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img125,
             video: null,
+            progress: {
+                length: 19,
+                position: 18,
+            },
         },
         {
             linkNumber: 137,
             problem: "Дайте відповідь на питання:",
             testText: "Шків працює нормально?",
-            instruction:
-                "В одну сторону він мусить крутитись, а в іншу блокуватись. На відео це показано.",
+            instruction: "В одну сторону він мусить крутитись, а в іншу блокуватись. На відео це показано.",
             linkNumberYes: 141,
             linkNumberNo: 138,
             solutionYes: 54,
             solutionNo: 1,
             img: null,
             video: video119,
+            progress: {
+                length: 19,
+                position: 10,
+            },
         },
         {
             linkNumber: 138,
             problem: "Дайте відповідь на питання:",
             testText: "Шків заблокований в обидві сторони?",
-            instruction:
-                "Шків заблокований в обидві сторони. На відео це показано",
+            instruction: "Шків заблокований в обидві сторони. На відео це показано",
             linkNumberYes: 141,
             linkNumberNo: 139,
             solutionYes: 55,
             solutionNo: 1,
             img: null,
             video: video120,
+            progress: {
+                length: 19,
+                position: 11,
+            },
         },
         {
             linkNumber: 139,
@@ -1648,6 +1959,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video121,
+            progress: {
+                length: 19,
+                position: 12,
+            },
         },
         {
             linkNumber: 140,
@@ -1661,19 +1976,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 13,
+            },
         },
         {
             linkNumber: 141,
             problem: "Дайте відповідь на питання:",
             testText: "Статор генератора пошкоджений?",
-            instruction:
-                "На фото видно білі сліди на обмотці. Так виглядає перегрів статора. Обмотка пошкодженна.",
+            instruction: "На фото видно білі сліди на обмотці. Так виглядає перегрів статора. Обмотка пошкодженна.",
             linkNumberYes: 184,
             linkNumberNo: 184,
             solutionYes: 5,
             solutionNo: 1,
             img: img141,
             video: null,
+            progress: {
+                length: 19,
+                position: 14,
+            },
         },
         {
             linkNumber: 142,
@@ -1687,25 +2009,32 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img142,
             video: null,
+            progress: {
+                length: 19,
+                position: 16,
+            },
         },
         {
             linkNumber: 143,
             problem: "Дайте відповідь на питання:",
             testText: "Катушка якоря ціла?",
-            instruction:
-                "Два кільця на колекторі мають продзвонюватись між собою.",
+            instruction: "Два кільця на колекторі мають продзвонюватись між собою.",
             linkNumberYes: 190143,
             linkNumberNo: 190,
             solutionYes: 1,
             solutionNo: 89,
             img: null,
             video: video143,
+            progress: {
+                length: 19,
+                position: 18,
+            },
         },
         {
             linkNumber: 144,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Світиться помилка (значок акумулятора), напруга на акумуляторі меньше 13.1 вольт.",
             instruction: "",
             linkNumberYes: 145,
             linkNumberNo: 145,
@@ -1713,11 +2042,14 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 8,
+                position: 1,
+            },
         },
         {
             linkNumber: 145,
-            problem:
-                "Всі тести проводяться на запущеному двигуні за допомогою мультиметра.",
+            problem: "Всі тести проводяться на запущеному двигуні за допомогою мультиметра.",
             testText: "У Вас є мультиметр?",
             instruction: "",
             linkNumberYes: 146,
@@ -1726,42 +2058,47 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 8,
+                position: 2,
+            },
         },
         {
             linkNumber: 146,
             problem: "Дайте відповідь на питання:",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
-            instruction:
-                "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            instruction: "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 147,
             linkNumberNo: 148,
             solutionYes: 1,
             solutionNo: 39,
             img: null,
             video: video100,
+            progress: {
+                length: 8,
+                position: 3,
+            },
         },
         {
             linkNumber: 147,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
-            instruction:
-                "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            instruction: "На відео напруга на контактах акумулятора не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 153,
             solutionYes: 1,
             solutionNo: 40,
             img: null,
             video: video100,
+            progress: {
+                length: 8,
+                position: 4,
+            },
         },
         {
             linkNumber: 148,
-            problem:
-                "Вимкніть навантаження і скиньте оберти двигуна до холостих.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            problem: "Вимкніть навантаження і скиньте оберти двигуна до холостих.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 149,
             linkNumberNo: 155,
@@ -1769,13 +2106,15 @@ const serverData: serverDataType = {
             solutionNo: 41,
             img: null,
             video: video103,
+            progress: {
+                length: 8,
+                position: 4,
+            },
         },
         {
             linkNumber: 149,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 151,
             linkNumberNo: 150,
@@ -1783,13 +2122,16 @@ const serverData: serverDataType = {
             solutionNo: 42,
             img: null,
             video: video103,
+            progress: {
+                length: 8,
+                position: 6,
+            },
         },
         {
             linkNumber: 150,
             problem:
                 "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум. Підніміть оберти двигуна до 2 тис.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга стає в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 7,
@@ -1797,13 +2139,15 @@ const serverData: serverDataType = {
             solutionNo: 43,
             img: null,
             video: video105,
+            progress: {
+                length: 8,
+                position: 8,
+            },
         },
         {
             linkNumber: 151,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між плюсовим виводом генератора і мінусовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між плюсовим виводом генератора і мінусовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 152,
             linkNumberNo: 152,
@@ -1811,13 +2155,15 @@ const serverData: serverDataType = {
             solutionNo: 44,
             img: null,
             video: video106,
+            progress: {
+                length: 8,
+                position: 7,
+            },
         },
         {
             linkNumber: 152,
-            problem:
-                "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
-            testText:
-                "Напруга між корпусом генератора і плюсовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
+            problem: "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум.",
+            testText: "Напруга між корпусом генератора і плюсовою клемою акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга не в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 7,
@@ -1825,13 +2171,16 @@ const serverData: serverDataType = {
             solutionNo: 45,
             img: null,
             video: video107,
+            progress: {
+                length: 8,
+                position: 8,
+            },
         },
         {
             linkNumber: 153,
             problem:
                 "Включіть навантаження: ближнє світло фар та вентилятор пічки на максимум. Підніміть оберти двигуна до 2 тис.",
-            testText:
-                "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
+            testText: "Напруга на контактах акумулятора в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 149,
@@ -1839,6 +2188,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video102,
+            progress: {
+                length: 8,
+                position: 5,
+            },
         },
         {
             linkNumber: 154,
@@ -1851,6 +2204,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video154,
+            progress: {
+                length: 8,
+                position: 6,
+            },
         },
         {
             linkNumber: 155,
@@ -1863,6 +2220,10 @@ const serverData: serverDataType = {
             solutionNo: 8,
             img: img155,
             video: null,
+            progress: {
+                length: 8,
+                position: 5,
+            },
         },
         {
             linkNumber: 156,
@@ -1876,12 +2237,16 @@ const serverData: serverDataType = {
             solutionNo: 10,
             img: null,
             video: null,
+            progress: {
+                length: 8,
+                position: 7,
+            },
         },
         {
             linkNumber: 157,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Стартер не працює, мовчить.",
             instruction: "",
             linkNumberYes: 180,
             linkNumberNo: 180,
@@ -1889,20 +2254,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 6,
+                position: 1,
+            },
         },
         {
             linkNumber: 158,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 159,
             linkNumberNo: 160,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 6,
+                position: 3,
+            },
         },
         {
             linkNumber: 159,
@@ -1915,6 +2286,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 9,
+                position: 1,
+            },
         },
         {
             linkNumber: 160,
@@ -1929,12 +2304,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video160,
+            progress: {
+                length: 6,
+                position: 4,
+            },
         },
         {
             linkNumber: 161,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Чи появляється сигнал (+) на штекері малої клеми стартера коли повернути замок в положення пуску двигуна?",
+            testText: "Чи появляється сигнал (+) на штекері малої клеми стартера коли повернути замок в положення пуску двигуна?",
             instruction:
                 'На відео використовується "контролька", замість неї можна використати мультиметр в режимі вольтметра. Один кінець на масу (корпус стартера), а другий в малий штекер. Якщо лампочка світиться значить напруга є. ',
             linkNumberYes: 162161,
@@ -1943,6 +2321,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img161,
             video: video161,
+            progress: {
+                length: 6,
+                position: 5,
+            },
         },
         {
             linkNumber: 162,
@@ -1957,6 +2339,10 @@ const serverData: serverDataType = {
             solutionNo: 65,
             img: img161,
             video: video162,
+            progress: {
+                length: 6,
+                position: 6,
+            },
         },
         {
             linkNumber: 162161,
@@ -1971,12 +2357,16 @@ const serverData: serverDataType = {
             solutionNo: 66,
             img: img161,
             video: video162,
+            progress: {
+                length: 6,
+                position: 6,
+            },
         },
         {
             linkNumber: 163,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Стартер повільно обертає двигун",
             instruction: "",
             linkNumberYes: 181,
             linkNumberNo: 181,
@@ -1984,20 +2374,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 4,
+                position: 1,
+            },
         },
         {
             linkNumber: 164,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 159,
             linkNumberNo: 165,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 4,
+                position: 3,
+            },
         },
         {
             linkNumber: 165,
@@ -2012,12 +2408,16 @@ const serverData: serverDataType = {
             solutionNo: 69,
             img: null,
             video: video160,
+            progress: {
+                length: 4,
+                position: 4,
+            },
         },
         {
             linkNumber: 166,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Розбирання та дефектування стартера.",
             instruction: "",
             linkNumberYes: 15,
             linkNumberNo: 15,
@@ -2025,6 +2425,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 25,
+                position: 9,
+            },
         },
         {
             linkNumber: 167,
@@ -2037,6 +2441,10 @@ const serverData: serverDataType = {
             solutionNo: 70,
             img: img167,
             video: null,
+            progress: {
+                length: 26,
+                position: 21,
+            },
         },
         {
             linkNumber: 168,
@@ -2049,6 +2457,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img168,
             video: null,
+            progress: {
+                length: 25,
+                position: 22,
+            },
         },
         {
             linkNumber: 169,
@@ -2062,12 +2474,16 @@ const serverData: serverDataType = {
             solutionNo: 72,
             img: null,
             video: video169,
+            progress: {
+                length: 26,
+                position: 23,
+            },
         },
         {
             linkNumber: 170,
             problem:
                 "Попередження!!! Під час проходження тесту не оновлюйте сторінку, це може привезти до неправильних результатів діагностики.",
-            testText: "",
+            testText: "Стартер клацає",
             instruction: "",
             linkNumberYes: 185,
             linkNumberNo: 185,
@@ -2075,20 +2491,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: null,
+            progress: {
+                length: 9,
+                position: 1,
+            },
         },
         {
             linkNumber: 171,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
-            instruction:
-                "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
+            testText: "Під час спроби пуску двигуна, напруга на акумуляторі опускалась меньше 11 вольт?",
+            instruction: "На відео напруга на акумуляторі опускалась меньше 11 вольт.",
             linkNumberYes: 159,
             linkNumberNo: 172,
             solutionYes: 1,
             solutionNo: 1,
             img: null,
             video: video87,
+            progress: {
+                length: 9,
+                position: 4,
+            },
         },
         {
             linkNumber: 172,
@@ -2103,6 +2525,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video160,
+            progress: {
+                length: 9,
+                position: 5,
+            },
         },
         {
             linkNumber: 173,
@@ -2116,12 +2542,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img161,
             video: null,
+            progress: {
+                length: 9,
+                position: 6,
+            },
         },
         {
             linkNumber: 174,
             problem: "Дайте відповідь на питання",
-            testText:
-                "Чи появляється напруга під час спроби пуску між залізною частиною двигуна і шиною стартера?",
+            testText: "Чи появляється напруга під час спроби пуску між залізною частиною двигуна і шиною стартера?",
             instruction:
                 'На відео використовується "контролька", замість неї можна використати мультиметр в режимі вольтметра. Один кінець на масу (корпус стартера), а другий на вивід шини стартера. Якщо лампочка світиться значить напруга є. ',
             linkNumberYes: 175,
@@ -2130,11 +2559,14 @@ const serverData: serverDataType = {
             solutionNo: 74,
             img: img161,
             video: video174,
+            progress: {
+                length: 9,
+                position: 7,
+            },
         },
         {
             linkNumber: 175,
-            problem:
-                "Вимкніть передачу!! Спробуйте якось меремкнути два товстих болта на стартері між собою ",
+            problem: "Вимкніть передачу!! Спробуйте якось меремкнути два товстих болта на стартері між собою ",
             testText: "Стартер запрацював?",
             instruction: "",
             linkNumberYes: 176,
@@ -2143,11 +2575,14 @@ const serverData: serverDataType = {
             solutionNo: 76,
             img: img161,
             video: video175,
+            progress: {
+                length: 9,
+                position: 8,
+            },
         },
         {
             linkNumber: 175174,
-            problem:
-                "Вимкніть передачу!! Спробуйте якось меремкнути два товстих болта на стартері між собою ",
+            problem: "Вимкніть передачу!! Спробуйте якось меремкнути два товстих болта на стартері між собою ",
             testText: "Стартер запрацював?",
             instruction: "",
             linkNumberYes: 7,
@@ -2156,6 +2591,10 @@ const serverData: serverDataType = {
             solutionNo: 76,
             img: img161,
             video: video175,
+            progress: {
+                length: 9,
+                position: 9,
+            },
         },
         {
             linkNumber: 176,
@@ -2170,6 +2609,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video162,
+            progress: {
+                length: 9,
+                position: 9,
+            },
         },
         {
             linkNumber: 177,
@@ -2182,6 +2625,10 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 3,
+                position: 9,
+            },
         },
         {
             linkNumber: 178,
@@ -2194,6 +2641,10 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 14,
+                position: 2,
+            },
         },
         {
             linkNumber: 179,
@@ -2206,6 +2657,10 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 15,
+                position: 2,
+            },
         },
         {
             linkNumber: 180,
@@ -2218,6 +2673,10 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 6,
+                position: 2,
+            },
         },
         {
             linkNumber: 181,
@@ -2230,6 +2689,10 @@ const serverData: serverDataType = {
             solutionNo: 78,
             img: img99,
             video: null,
+            progress: {
+                length: 4,
+                position: 2,
+            },
         },
         {
             linkNumber: 182,
@@ -2242,6 +2705,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video182,
+            progress: {
+                length: 15,
+                position: 12,
+            },
         },
         {
             linkNumber: 183,
@@ -2254,19 +2721,26 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video182,
+            progress: {
+                length: 19,
+                position: 9,
+            },
         },
         {
             linkNumber: 184,
             problem: "Дайте відповідь на питання:",
             testText: "Є сліди що об статор терся якір?",
-            instruction:
-                "На фото ці сліди позначенні стрілкою, вони відблискують на світлі.",
+            instruction: "На фото ці сліди позначенні стрілкою, вони відблискують на світлі.",
             linkNumberYes: 142,
             linkNumberNo: 142,
             solutionYes: 81,
             solutionNo: 1,
             img: img184,
             video: null,
+            progress: {
+                length: 19,
+                position: 15,
+            },
         },
         {
             linkNumber: 185,
@@ -2279,6 +2753,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video185,
+            progress: {
+                length: 9,
+                position: 2,
+            },
         },
         {
             linkNumber: 186,
@@ -2291,6 +2769,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video186,
+            progress: {
+                length: 15,
+                position: 13,
+            },
         },
         {
             linkNumber: 187,
@@ -2303,13 +2785,15 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video187,
+            progress: {
+                length: 15,
+                position: 15,
+            },
         },
         {
             linkNumber: 188,
-            problem:
-                "Вимкніть навантаження. Піднімайте плавно оберти двигуна і слідкуйте за напругою.",
-            testText:
-                "Напруга між плюсовим виводом генератора і корпусом генератора ставала в межах 13.9 - 14.9 вольт?",
+            problem: "Вимкніть навантаження. Піднімайте плавно оберти двигуна і слідкуйте за напругою.",
+            testText: "Напруга між плюсовим виводом генератора і корпусом генератора ставала в межах 13.9 - 14.9 вольт?",
             instruction: "На відео напруга стає в межах 13.9 - 14.9 вольт",
             linkNumberYes: 7,
             linkNumberNo: 7,
@@ -2317,6 +2801,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: null,
             video: video105,
+            progress: {
+                length: 8,
+                position: 8,
+            },
         },
         {
             linkNumber: 189,
@@ -2329,6 +2817,10 @@ const serverData: serverDataType = {
             solutionNo: 1,
             img: img189,
             video: null,
+            progress: {
+                length: 26,
+                position: 20,
+            },
         },
         {
             linkNumber: 190,
@@ -2341,6 +2833,10 @@ const serverData: serverDataType = {
             solutionNo: 87,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 19,
+            },
         },
         {
             linkNumber: 190143,
@@ -2353,6 +2849,10 @@ const serverData: serverDataType = {
             solutionNo: 88,
             img: null,
             video: null,
+            progress: {
+                length: 19,
+                position: 19,
+            },
         },
     ],
     resaultDiagnostic: [
@@ -2824,9 +3324,9 @@ export const altFotos = (): roadFotosType => {
 export const chFotos = (): roadFotosType => {
     return serverData.chFotos;
 };
-export const banner=() : slaidesType=>{
+export const banner = (): slaidesType => {
     return serverData.banner;
-}
+};
 
 type dataDia = {
     texts: textType;
@@ -2834,20 +3334,24 @@ type dataDia = {
 };
 
 export const diagnostics = (page: string): dataDia => {
-    const Cards=()=>{
-        if(page==='All'){
-            return [...serverData.diagnostics.cards.Starter,...serverData.diagnostics.cards.Altenator,...serverData.diagnostics.cards.Battery]
-        }else{
+    const Cards = () => {
+        if (page === "All") {
+            return [
+                ...serverData.diagnostics.cards.Starter,
+                ...serverData.diagnostics.cards.Altenator,
+                ...serverData.diagnostics.cards.Battery,
+            ];
+        } else {
             //@ts-ignore
-            return serverData.diagnostics.cards[page]
+            return serverData.diagnostics.cards[page];
         }
-    }
+    };
     // debugger
-    const data:dataDia = {
+    const data: dataDia = {
         //@ts-ignore
-        texts:serverData.diagnostics.texts[page],
+        texts: serverData.diagnostics.texts[page],
         //@ts-ignore
-        cards:Cards()
+        cards: Cards(),
     };
     return data;
 };

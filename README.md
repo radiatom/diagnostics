@@ -54,3 +54,9 @@ insturction: fixed style for spoiler
 test: added scroll top  0.0 for page
 
 refactored code
+
+# 2.4.0 - .09.2023
+item: fixed style
+
+test: added progress 
+

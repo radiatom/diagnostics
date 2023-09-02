@@ -19,7 +19,7 @@ const Test = ({ active, setActive }) => {
                 <h3>{testData.linkNumber}</h3>
                 {testData.progress ? (
                     <div className="test__progress">
-                        <Progress position={5} length={10} />
+                        <Progress position={testData.progress.position} length={testData.progress.length} />
                     </div>
                 ) : (
                     <div className="test__progress">
