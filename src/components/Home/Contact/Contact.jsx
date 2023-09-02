@@ -30,7 +30,6 @@ const Contact = () => {
         }
     }; //реакція на скрол
 
-
     //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
     //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
     //window.innerHeight висота екрану на пристрої який відкрив цю сторніку
@@ -47,44 +46,26 @@ const Contact = () => {
                     loading="lazy"
                 ></iframe>
                 <div className="contact__info">
-                    <p
-                        className={
-                            active ? "text _active text_1" : "text text_1"
-                        }
-                    >
+                    <ul className={active ? "textInfo textInfo_active textInfo_1" : "textInfo"}>
+                        <b>Графік роботи:</b>
+                        <li>пн-пт: 09:30-18:00</li>
+                        <li>сб-нд: вихідний</li>
+                        <li>обідня перерва: 13:00-14:00</li>
+                    </ul>
+                    <p className={active ? "textInfo textInfo_active textInfo_2" : "textInfo"}>
                         <a href="tel:0979343392">+38 (097) 93 43 392</a>
                     </p>
-                    <p
-                        className={
-                            active ? "text _active text_2" : "text text_1"
-                        }
-                    >
-                        Територіально м.Луцьк,<b> біля заводу ModernExpo</b>,
-                        точна адреса: <b>с. Струмівка вул. Рівненська 8.</b>
+                    <p className={active ? "textInfo textInfo_active textInfo_3" : "textInfo"}>
+                        Територіально м.Луцьк,<b> біля заводу ModernExpo</b>, точна адреса: <b>с. Струмівка вул. Рівненська 8.</b>
                     </p>
-                    <p
-                        className={
-                            active ? "text _active text_3" : "text text_1"
-                        }
-                    >
-                        Email:{" "}
-                        <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
+                    <p className={active ? "textInfo textInfo_active textInfo_4" : "textInfo"}>
+                        Email: <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
                     </p>
-                    <p
-                        className={
-                            active ? "text _active text_4" : "text text_1"
-                        }
-                    >
-                        Support:{" "}
-                        <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
+                    <p className={active ? "textInfo textInfo_active textInfo_5" : "textInfo"}>
+                        Support: <a href="mailto:viniko@meta.ua">viniko@meta.ua</a>
                     </p>
-                    <p
-                        className={
-                            active ? "text _active text_5" : "text text_1"
-                        }
-                    >
-                        Support telegram:{" "}
-                        <a href="https://t.me/Radiatom">@Radiatom</a>
+                    <p className={active ? "textInfo textInfo_active textInfo_6" : "textInfo"}>
+                        Support telegram: <a href="https://t.me/Radiatom">@Radiatom</a>
                     </p>
                 </div>
             </div>

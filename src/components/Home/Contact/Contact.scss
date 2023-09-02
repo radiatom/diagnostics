@@ -8,7 +8,7 @@
     position: absolute;
 }
 @mixin timeTransition($time) {
-    transition: all $time;
+    transition: left $time;
 }
 .contact {
     border-top: 1px solid black;
@@ -31,15 +31,19 @@
         @media (max-width: 900px) {
             width: 100%;
         }
-        .text {
+        .textInfo {
             position: relative;
             left: -3000px;
             line-height: 30px;
             padding-left: 45px;
+            margin-bottom: 15px;
             a {
                 color: black;
             }
-            &._active {
+            li{
+                font-weight: 300;
+            }
+            &_active {
                 left: 0;
             }
             &_1 {
@@ -57,8 +61,20 @@
             &_5 {
                 @include timeTransition(3s);
             }
+            &_6 {
+                @include timeTransition(3.5s);
+            }
         }
-        p:nth-child(1):before {
+        ul:nth-child(1):before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: url("./../../../img/icons/workSchedule.svg") 0/100% no-repeat;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        p:nth-child(2):before {
             content: "";
             width: 20px;
             height: 36px;
@@ -67,7 +83,7 @@
             left: 0;
             position: absolute;
         }
-        p:nth-child(2):before {
+        p:nth-child(3):before {
             content: "";
             width: 40px;
             height: 40px;
@@ -76,13 +92,13 @@
             left: 0;
             position: absolute;
         }
-        p:nth-child(3):before {
-            @include pBefore("./../../../img/icons/download.svg");
-        }
         p:nth-child(4):before {
             @include pBefore("./../../../img/icons/download.svg");
         }
         p:nth-child(5):before {
+            @include pBefore("./../../../img/icons/download.svg");
+        }
+        p:nth-child(6):before {
             content: "";
             width: 35px;
             height: 35px;
