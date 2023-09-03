@@ -17,7 +17,7 @@ imitation pushing request and getting  response
 новий дизайн сайту, добавили секцію 'чому обирають нас?'. Змінили слайдери. Змінили меню вікна.
 
 # 2.1.0 - 8.06.23
-contacts: добавленно інтерактив на крік по телефону та пошті
+contacts: добавленно інтерактив на клік по телефону та пошті
 
 text: випрвленні деякі помилки в тексті
 
@@ -63,4 +63,6 @@ test: added progress
 contact: added work schedule
 
 features: added 3 new features, new animation on scroll
+
+services: new animation on scroll
 

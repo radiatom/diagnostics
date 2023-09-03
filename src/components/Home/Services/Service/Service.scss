@@ -7,7 +7,6 @@
     margin-bottom: 20px;
     // opacity: 0;
     position: relative;
-    top: -1000px;
     right: -3000px;
     transition: background-color 1s, border-radius 1s;
     &:hover {
@@ -44,22 +43,36 @@
     }
     &_1 {
         @include timeTransition(0.5s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
     }
     &_2 {
         @include timeTransition(1s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
     }
     &_3 {
         @include timeTransition(1.5s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
     }
     &_4 {
         @include timeTransition(2s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
     }
     &_5 {
         @include timeTransition(2.5s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
     }
 }
 .service._active {
-    // opacity: 1;
-    top: 0px;
+    opacity: 1;
     right: 0px;
 }
