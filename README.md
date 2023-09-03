@@ -62,3 +62,5 @@ test: added progress
 
 contact: added work schedule
 
+features: added 3 new features, new animation on scroll
+

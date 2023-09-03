@@ -1,6 +1,4 @@
-@mixin timeTransition($time){
-    transition: all $time;
-}
+
 
 .features {
     width: 100%;
@@ -13,51 +11,5 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        .Card {
-            padding: 5px;
-            width: 350px;
-            margin-bottom: 25px;
-            text-align: center;
-            @media (max-width: 1073px) {
-                &:nth-child(2) {
-                    order: 3;
-                }
-            }
-            .img1,.img2,.img3 {
-                width: 100px;
-                margin-bottom: 25px;
-                position: relative;
-                top: 500px;
-                left: -3000px;
-            }
-            .img1{
-                @include timeTransition(1s)
-            }
-            .img2{
-                @include timeTransition(1.5s)
-            }
-            .img3{
-                @include timeTransition(2s)
-            }
-            h3 {
-                text-align: center;
-                margin-bottom: 25px;
-                font-weight: 500;
-                font-size: 20px;
-            }
-            p {
-                line-height: 18px;
-                span {
-                    color: rgb(196, 2, 2);
-                }
-            }
-        }
-        .Card._active {
-            img {
-                top: 0;
-                left: 0px;
-                transform: rotate(3600deg);
-            }
-        }
     }
 }

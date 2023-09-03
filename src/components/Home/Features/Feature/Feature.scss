@@ -1,0 +1,78 @@
+@mixin timeTransition($time) {
+    transition: top $time, left $time, transform $time;
+}
+.feature {
+    padding: 5px;
+    width: 350px;
+    margin-bottom: 25px;
+    text-align: center;
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6 {
+        width: 100px;
+        margin-bottom: 25px;
+        position: relative;
+        top: 500px;
+        left: -3000px;
+    }
+    .img1 {
+        @include timeTransition(1s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
+    }
+    .img2 {
+        @include timeTransition(1.5s);
+    }
+    .img3 {
+        @include timeTransition(2s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
+    }
+    .img4 {
+        @include timeTransition(2.5s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
+    }
+    .img5 {
+        @include timeTransition(3s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
+    }
+    .img6 {
+        @include timeTransition(3.5s);
+        @media (max-width: 1073px) {
+            @include timeTransition(1.5s);
+        }
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    p {
+        line-height: 18px;
+        span {
+            color: rgb(196, 2, 2);
+        }
+    }
+    &_active {
+        .img1,
+        .img2,
+        .img3,
+        .img4,
+        .img5,
+        .img6 {
+            top: 0px;
+            left: 0px;
+            transform: rotate(3600deg);
+        }
+    }
+}
