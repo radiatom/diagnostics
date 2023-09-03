@@ -11,7 +11,6 @@ import reducerServices from "../components/Home/Services/reducerServices";
 import reducerBlogs from "../components/Home/Blogs/reducerBlogs";
 import reducerDiagnistics from "../components/Diagnostics/reducerDiagnistics";
 import reducerBanner from "../components/Home/Banner/reducerBanner";
-import reducerAll from "./reducerAll";
 
 const redusers = combineReducers({
     bannerPage: reducerBanner,
@@ -20,7 +19,6 @@ const redusers = combineReducers({
     servicesPage: reducerServices,
     roadFotosPage: reducerRoadFotos,
     diagnosticsPage: reducerDiagnistics,
-    allPage: reducerAll,
 });
 
 type reducersType = typeof redusers;

@@ -1,4 +1,4 @@
-import { appStateType } from "../reactRedux/redux";
+import { appStateType } from "../redux/redux";
 
 export const testDataSelector = (state: appStateType) => {
     return state.testPage.testData;
@@ -27,6 +27,4 @@ export const dataDiagnosticsSelector=(state: appStateType) =>{
 export const dataBannerSelector=(state: appStateType) =>{
     return state.bannerPage.banner
 }
-export const isMobile=(state: appStateType) =>{
-    return state.allPage.isMobile
-}
+

@@ -64,5 +64,5 @@ contact: added work schedule
 
 features: added 3 new features, new animation on scroll
 
-services: new animation on scroll
+services, contacts: new animation on scroll
 

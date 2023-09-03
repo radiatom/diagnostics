@@ -1,35 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Contact.scss";
 import Slider from "./Slider/Slider";
-import { useSelector } from "react-redux";
-import { isMobile } from "../../../selectors/selectors";
 
 const Contact = () => {
-    const isMobileDevice = useSelector(isMobile); //сторінка відкрита на мобільному пристрої?
+    const contactRef = useRef(null);
     const [active, setActive] = useState(false);
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
         return function cleanup() {
             document.removeEventListener("scroll", scrollHandler);
         };
-    }, [isMobileDevice]); //слідкувати за скролом глобального вікна
+    }, []); //слідкувати за скролом
     const scrollHandler = (e) => {
-        const size = () => {
-            return isMobileDevice
-                ? 4500 - window.innerHeight //якщо це мобільний пристрій 4500
-                : 2800 - window.innerHeight; //якщо це пк
-        };
-        if (size() < e.target.documentElement.scrollTop) {
+        const size = contactRef.current.getBoundingClientRect().top - window.innerHeight;
+        if (size <= 0) {
             setActive(true);
         } else {
             setActive(false);
         }
     }; //реакція на скрол
-
+    //getBoundingClientRect().top відстань від елемента до верхньої частини екрана
     //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
     //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
     //window.innerHeight висота екрану на пристрої який відкрив цю сторніку
@@ -45,7 +35,7 @@ const Contact = () => {
                     className="contact__map"
                     loading="lazy"
                 ></iframe>
-                <div className="contact__info">
+                <div className="contact__info" ref={contactRef}>
                     <ul className={active ? "textInfo textInfo_active textInfo_1" : "textInfo"}>
                         <b>Графік роботи:</b>
                         <li>пн-пт: 09:30-18:00</li>

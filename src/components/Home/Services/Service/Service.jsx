@@ -22,6 +22,7 @@ const Service = ({ title, text, img,id }) => {
     //e.target.documentElement.scrollHeight Висота всього блоку в якому відслідковуємо скрол
     //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
     //window.innerHeight висота екрану на пристрої який відкрив цю сторніку
+    
     return (
         <div className={active?`service _active service_${id}  `:`service service_${id}`} id={"service"+id}>
             <img

@@ -5,13 +5,12 @@ import Service from "./Service/Service";
 import { useDispatch, useSelector } from "react-redux";
 import { servicesSelector } from "../../../selectors/selectors";
 
-const Services = (props) => {
+const Services = () => {
     const servicesData = useSelector(servicesSelector);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getServices());
-        window.scrollTo(0, 0);
-    }, [props]);
+    }, []);
 
     return (
         <div className="services">

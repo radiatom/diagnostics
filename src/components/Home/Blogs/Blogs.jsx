@@ -10,7 +10,6 @@ const Blogs = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setBlogs());
-        window.scrollTo(0, 0);
     }, [blogsData]);
     return (
         <div className="blogs">

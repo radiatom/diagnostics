@@ -8,7 +8,7 @@ import {
   // HashRouter,
   BrowserRouter
 } from 'react-router-dom';
-import store from './reactRedux/redux';
+import store from './redux/redux';
 import { Provider } from 'react-redux';
 
 
