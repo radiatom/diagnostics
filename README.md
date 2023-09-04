@@ -55,7 +55,7 @@ test: added scroll top  0.0 for page
 
 refactored code
 
-# 2.4.0 - .09.2023
+# 2.4.0 - 4.09.2023
 item: fixed style
 
 test: added progress 
@@ -67,4 +67,6 @@ features: added 3 new features, new animation on scroll
 services, contacts: new animation on scroll
 
 home: added scroll navigation
+
+created new style for scroll
 
