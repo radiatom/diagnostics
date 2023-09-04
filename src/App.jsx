@@ -22,7 +22,7 @@ function App() {
                     <Route path="/Diagnostics/Test/:linkNumber"  element={<TestPage />}/>
                     <Route path="/Starter" element={<Starter />} />
                     <Route path="/Alnenator" element={<Altenator />} />
-                    <Route path="/BatteryСharging" element={<BatteryCharging />}/>
+                    <Route path="/BatteryCharging" element={<BatteryCharging />}/>
                     <Route path="/Gallery" element={<GalleryContainer />} />
                 </Routes>
             </div>

@@ -24,7 +24,7 @@ const Contact = () => {
     //e.target.documentElement.scrollTop значення на якій висоті знаходиться скролл 0=в самому верху
     //window.innerHeight висота екрану на пристрої який відкрив цю сторніку
     return (
-        <div className="contact">
+        <div className="contact" >
             <h2 className="contact__title title" tabIndex="0">
                 Контактна інформація
             </h2>

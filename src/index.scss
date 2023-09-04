@@ -55,6 +55,19 @@ body {
     -webkit-text-size-adjust: 100%;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);//усунення ефекту синього бекграунда під час натискання на елемент на моб пристроях
+    scrollbar-width: none;//забрати стандартний стиль скролу
+    &::-webkit-scrollbar {
+        width: 8px; //висота повзунка
+    }
+    &::-webkit-scrollbar-thumb {
+        position: relative;
+        background-color: #1b1b1b; /* колір "ползунка" скрола */
+        border-radius: 4px; /* закруглені кути "ползунка" */
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgb(255, 166, 0); /* Задайте колір поля скролбара */
+    }
+    scroll-behavior: smooth; /* Додаємо плавність скроллу */
     .root {
         width: 100%;
         height: 100%;

@@ -1,45 +1,67 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Banner from "./Banner/Banner";
 import Blogs from "./Blogs/Blogs";
 import Contact from "./Contact/Contact";
 import Features from "./Features/Features";
 import Services from "./Services/Services";
 import "./Home.scss";
-import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 const Home = () => {
     const { section } = useParams(); //яку секцію показати?
+    const homeRef = useRef(null);
+    const servicesRef = useRef(null);
+    const contactRef = useRef(null);
+    const blogsRef = useRef(null);
 
-    const scroll = () => {
-        const gotoBlock = document.querySelector(`.${section}`); //шукаємо елемент по назві класу
-        if (gotoBlock === null) {
-            return window.scrollTo(0, 0);
-        } else {
-            let gotoBlockValue = gotoBlock.getBoundingClientRect().top-50; //визначаємо на якій висоті знаходиться елемент
-            return window.scrollTo({ top: gotoBlockValue, behavior: "smooth" });
+    const scrollToMyRef = (section) => {
+        const scroll = (ref) => {
+            ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+        switch (section) {
+            case "services": {
+                scroll(servicesRef);
+                break;
+            }
+            case "contact": {
+                scroll(contactRef);
+                break;
+            }
+            case "blogs": {
+                scroll(blogsRef);
+                break;
+            }
+            default: {
+                homeRef.current.style.scrollMargin = "100px"; //зменьшення прокрутки
+                scroll(homeRef);
+            }
         }
-    }; //навігація по лендінгу home
-
-
-    const dispatch = useDispatch();
+    };
 
     useEffect(() => {
-        scroll();//робимо так щоб при переході з сторінки діагностика на сторінку наприклад контакти щоб скролл перемотувався бо без такої функції він лише відкривав home
+        scrollToMyRef(section);
     }, []);
 
     useEffect(() => {
-        scroll();
+        scrollToMyRef(section);
     }, [section]); //реакція на зміну секції (зміни нанавігації 'navlink')
 
     return (
-        <div className="home">
+        <div className="home" ref={homeRef}>
             <Banner />
             <div className="container">
-                <Features />
-                <Services />
-                <Contact />
-                <Blogs />
+                <div>
+                    <Features />
+                </div>
+                <div ref={servicesRef}>
+                    <Services />
+                </div>
+                <div ref={contactRef}>
+                    <Contact />
+                </div>
+                <div ref={blogsRef}>
+                    <Blogs />
+                </div>
             </div>
         </div>
     );

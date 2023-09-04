@@ -366,7 +366,7 @@ const serverData: serverDataType = {
             foto: blogChFoto,
             title: "Як правильно зарядити автомобільний акумулятор",
             text: "Розглянемо кілька актуальних питань які українські водії ставлять досить часто, та дамо на них відповіді.",
-            navLink: "/BatteryСharging",
+            navLink: "/BatteryCharging",
         },
         {
             id: 3,
