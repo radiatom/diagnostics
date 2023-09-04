@@ -20,14 +20,17 @@ const Home = () => {
         };
         switch (section) {
             case "services": {
+                servicesRef.current.style.scrollMargin = "50px";
                 scroll(servicesRef);
                 break;
             }
             case "contact": {
+                contactRef.current.style.scrollMargin = "50px";
                 scroll(contactRef);
                 break;
             }
             case "blogs": {
+                blogsRef.current.style.scrollMargin = "50px";
                 scroll(blogsRef);
                 break;
             }
