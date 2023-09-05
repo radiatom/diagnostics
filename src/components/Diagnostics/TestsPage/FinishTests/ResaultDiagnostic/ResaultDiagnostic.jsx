@@ -13,10 +13,6 @@ const ResaultDiagnostic = ({ el, index, id, solution }) => {
             dispatch(deleteResult(id));
         }
     }, [yesOrNo]);
-    useEffect(() => {
-        console.log(alert);
-    }, [alert]);
-
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     useEffect(() => {
