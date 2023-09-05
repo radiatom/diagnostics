@@ -1,0 +1,22 @@
+.alertDelete {
+    padding: 2px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: aliceblue;
+    border-radius: 5px;
+    span{
+        padding: 0 10px 0 10px;
+    }
+    button {
+        padding: 15px;
+        &:nth-child(2){
+            color: rgb(1, 212, 1);
+        }
+        &:last-child {
+            color: red;
+        }
+    }
+}
