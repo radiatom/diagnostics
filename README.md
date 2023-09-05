@@ -74,3 +74,4 @@ created new style for scroll
 
 added local storage into site
 
+Resault: added button delete this problem and alert window 
