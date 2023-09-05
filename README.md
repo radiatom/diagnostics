@@ -72,3 +72,5 @@ created new style for scroll
 
 # 2.5.0 - .09.2023
 
+added local storage into site
+

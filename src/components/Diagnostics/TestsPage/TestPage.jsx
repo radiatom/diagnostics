@@ -3,7 +3,7 @@ import FinishTests from "./FinishTests/FinishTests";
 import Test from "./Test/Test";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getTestData, setSaveResault } from "./Test/testReducer";
+import { getTestData, setSaveResault } from "./testReducer";
 
 const TestPage = () => {
     const dispatch = useDispatch();
