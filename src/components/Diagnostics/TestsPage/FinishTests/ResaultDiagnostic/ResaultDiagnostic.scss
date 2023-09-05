@@ -1,6 +1,7 @@
-.ResaultDiagnostic {
+.resaultDiagnostic {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid rgb(133, 132, 132);
     border-radius: 5px;
     margin: 5px 0;
@@ -38,9 +39,9 @@
         line-height: 20px;
         cursor: pointer;
     }
-}
-.activeRes {
-    background-color: rgba(0, 128, 0, 0.493);
+    &_active {
+        background-color: rgba(0, 128, 0, 0.493);
+    }
 }
 .noShow{
     position: relative;

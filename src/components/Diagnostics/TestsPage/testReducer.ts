@@ -38,7 +38,11 @@ export type changeSolution = {
     type: typeof CHANGE_SOLUTION;
     id: number;
 };
-export type actionsTypes = setTestDataType | setResaultDiagnosticDataType|changeSolution;
+export type deleteResult = {
+    type: typeof DELETE_RESULT;
+    id: number;
+};
+export type actionsTypes = setTestDataType | setResaultDiagnosticDataType | changeSolution|deleteResult;
 
 const SET_TEST_DATA = "testReducer/SET_TEST_DATA";
 export const setTestData = (testData: testDataType | {}): setTestDataType => {
@@ -58,7 +62,14 @@ const CHANGE_SOLUTION = "testReducer/CHANGE_SOLUTION";
 export const changeSolution = (id: number): changeSolution => {
     return {
         type: CHANGE_SOLUTION,
-        id
+        id,
+    };
+};
+const DELETE_RESULT = "testReducer/DELETE_RESULT";
+export const deleteResult = (id: number): deleteResult => {
+    return {
+        type: DELETE_RESULT,
+        id,
     };
 };
 
@@ -91,16 +102,21 @@ const testReducer = (state: standartStateTestType = standartStateTest, action: a
                 resault: action.resault,
             };
         case CHANGE_SOLUTION:
-            
-            const newResault=state.resault.map((item) => {
+            const newResault = state.resault.map((item) => {
                 if (item.id === action.id) {
-                  return { ...item, solution: !item.solution }; 
+                    return { ...item, solution: !item.solution };
                 }
                 return item; // Повертаємо об'єкт без змін
-              });
+            });
             return {
                 ...state,
-                resault:newResault
+                resault: newResault,
+            };
+        case DELETE_RESULT:
+            const newResult = state.resault.filter((item) => item.id !== action.id);
+            return {
+                ...state,
+                resault:newResult
             };
         default:
             return state;
