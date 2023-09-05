@@ -70,3 +70,5 @@ home: added scroll navigation
 
 created new style for scroll
 
+# 2.5.0 - .09.2023
+
