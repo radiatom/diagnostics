@@ -1,7 +1,7 @@
 {
   "name": "diagnostics",
   "version": "2.3.2",
-  "homepage": "https://viniko.in.ua/",
+  "homepage": "https://viniko.in.ua/Home",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,9 +10,7 @@
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.10",
     "@types/react": "^18.0.29",
-    "@types/react-bootstrap": "^0.32.32",
     "@types/react-dom": "^18.0.11",
-    "gh-pages": "^5.0.0",
     "google-map-react": "^2.2.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
@@ -22,6 +20,7 @@
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.2.1",
     "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.2",
     "typescript": "^5.0.2",
     "web-vitals": "^2.1.4"
