@@ -1,7 +1,7 @@
 import React from "react";
 import "./Buttons.scss";
 import { useDispatch } from "react-redux";
-import { putSolutionTestTrue } from "../testReducer";
+import { putSolutionTestTrue } from "../../testReducer";
 import { NavLink } from "react-router-dom";
 
 const Ok = ({ linkNumberYes, setActive }) => {

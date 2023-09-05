@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import  "./ResaultDiagnostic.scss"
 import img from './../../../../../img/icons/che.webp'
+import { useDispatch } from 'react-redux';
+import { changeSolution } from '../../testReducer';
 
 
-const ResaultDiagnostic = ({ el,index }) => {
-      const [active,setActive]=useState(false)
+const ResaultDiagnostic = ({ el,index,id,solution }) => {
+      const dispatch=useDispatch()
       const [show,setShow]=useState(false)
       useEffect(() => {
             setTimeout(()=>{
@@ -13,8 +15,8 @@ const ResaultDiagnostic = ({ el,index }) => {
       }, []);//показати компонент через index*1000/2 мілісекунд
       return (
             <div className={show?'show':'noShow'}>
-                  <div onClick={()=>setActive(!active)} className={active?'ResaultDiagnostic activeRes':'ResaultDiagnostic'}>
-                        {active?<div><img src={img}  alt="ok" /></div>:<div></div>}
+                  <div onClick={()=>dispatch(changeSolution(id))} className={solution?'ResaultDiagnostic':'ResaultDiagnostic activeRes'}>
+                        {solution?<div></div>:<div><img src={img}  alt="ok" /></div>}
                         <p >{el}</p>
                   </div>
             </div>

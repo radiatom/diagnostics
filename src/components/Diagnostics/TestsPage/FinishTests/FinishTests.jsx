@@ -3,12 +3,11 @@ import "./FinishTests.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { resaultSelector } from "../../../../selectors/selectors";
-import { updateRes } from "../Test/testReducer";
+import { updateRes } from "../testReducer";
 import ResaultDiagnostic from "./ResaultDiagnostic/ResaultDiagnostic";
 import img from "./../../../../img/icons/che.webp";
 
 const FinishTests = () => {
-    const [time, setTime]=useState(1000)
     const resault = useSelector(resaultSelector);
     const dispatch = useDispatch();
     return (
@@ -49,6 +48,8 @@ const FinishTests = () => {
                                             key={item.id}
                                             el={item.text}
                                             index={index}
+                                            id={item.id}
+                                            solution={item.solution}
                                         />
                                     );
                                 }

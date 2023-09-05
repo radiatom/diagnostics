@@ -2,7 +2,7 @@ import React from "react";
 import "./Buttons.scss";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { putSolutionTestFalse, putSolutionTestTrue } from "../testReducer";
+import { putSolutionTestFalse, putSolutionTestTrue } from "../../testReducer";
 import { testDataSelector } from "../../../../../selectors/selectors";
 
 const YesOrNo = ({ setActive }) => {
