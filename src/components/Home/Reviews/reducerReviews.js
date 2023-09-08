@@ -13,7 +13,7 @@ const reducerBanner = (state = initialState, action) => {
     }
 };
 
-export const setBanner = () => (dispatch) => {
+export const setReviews = () => (dispatch) => {
     const data = getDataReviews();
     dispatch({ type: "addReviews", data });
 };

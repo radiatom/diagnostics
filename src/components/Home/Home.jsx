@@ -6,6 +6,7 @@ import Features from "./Features/Features";
 import Services from "./Services/Services";
 import "./Home.scss";
 import { useParams } from "react-router-dom";
+import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
     const { section } = useParams(); //яку секцію показати?
@@ -62,6 +63,7 @@ const Home = () => {
                 <div ref={contactRef}>
                     <Contact />
                 </div>
+                <Reviews/>
                 <div ref={blogsRef}>
                     <Blogs />
                 </div>
