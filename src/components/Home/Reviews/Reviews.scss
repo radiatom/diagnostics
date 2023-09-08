@@ -1,17 +1,28 @@
-.reviews{
+.reviews {
     width: 100%;
     border-top: 1px solid black;
     margin-bottom: 50px;
     padding-top: 50px;
-    &__specification{
+    &__specification {
+        color: grey;
         text-align: center;
     }
-    &__title{
+    &__title {
         margin-bottom: 50px;
     }
-    &__items{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .slick-prev {
+        left: -30px !important;
+    }
+    .slick-next:before,
+    .slick-prev:before {
+        content: "" !important;
+    }
+    .next-slick-arrow,
+    .prev-slick-arrow {
+        color: #ff0000;
+        font-size: 25px;
+    }
+    .slick-dots {
+        display: none !important;//!important це дає перевагу над всіма іншими класами
     }
 }
