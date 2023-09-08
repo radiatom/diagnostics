@@ -27,4 +27,7 @@ export const dataDiagnosticsSelector=(state: appStateType) =>{
 export const dataBannerSelector=(state: appStateType) =>{
     return state.bannerPage.banner
 }
+export const dataReviewsSelector=(state: appStateType) =>{
+    return state.reviewsPage.reviews
+}
 

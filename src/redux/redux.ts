@@ -11,6 +11,7 @@ import reducerServices from "../components/Home/Services/reducerServices";
 import reducerBlogs from "../components/Home/Blogs/reducerBlogs";
 import reducerDiagnistics from "../components/Diagnostics/reducerDiagnistics";
 import reducerBanner from "../components/Home/Banner/reducerBanner";
+import reducerReviews from "./../components/Home/Reviews/reducerReviews"
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 
@@ -26,6 +27,7 @@ const redusers = combineReducers({
     servicesPage: reducerServices,
     roadFotosPage: reducerRoadFotos,
     diagnosticsPage: reducerDiagnistics,
+    reviewsPage: reducerReviews,
 });
 
 const persistedReducer = persistReducer(persistConfig, redusers); //для local storage
