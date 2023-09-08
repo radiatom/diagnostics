@@ -4,6 +4,7 @@ import {
     blogs,
     chFotos,
     diagnostics,
+    reviews,
     roadFotos,
     services,
     stFotos,
@@ -17,9 +18,6 @@ export const getRoadFotosData = () => {
 };
 export const getBlogs = () => {
     return new Promise((resolve) => {
-        // setTimeout(() => {
-        //     resolve(blogs()); // Резольвимо Promise із результатом
-        // }, 3000);
         resolve(blogs())
     });
 };
@@ -37,5 +35,8 @@ export const getBannerData = () => {
 };
 export const getDataDiagnostics = (page) => {
     return diagnostics(page);
+};
+export const getDataReviews = () => {
+    return reviews();
 };
 

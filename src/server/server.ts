@@ -3391,7 +3391,7 @@ export const chFotos = (): roadFotosType => {
 export const banner = (): slaidesType => {
     return serverData.banner;
 };
-export const getReviews =():reviewsType=>{
+export const reviews =():reviewsType=>{
     return serverData.reviews
 }
 
