@@ -238,7 +238,7 @@ const BatteryCharging = () => {
                 </p>
                 <p>
                     Джерело статті:{" "}
-                    <a href="https://130.com.ua/uk/sovety-kak-pravilno-zarjazhat-avtomobilnyj-akkumuljator/">
+                    <a href="https://130.com.ua/uk/sovety-kak-pravilno-zarjazhat-avtomobilnyj-akkumuljator/" target='new-blank'>
                         130.com.ua
                     </a>
                 </p>

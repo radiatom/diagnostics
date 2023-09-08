@@ -18,7 +18,7 @@ const Reviews = () => {
                 <h3 className="reviews__title title">Подивіться, що про нас пишуть клієнти</h3>
                 <div className="reviews__items">
                     {data.map((item, index) => {
-                        return <Review key={index} avatar={item.avatar} fullName={item.fullName} text={item.text} />;
+                        return <Review key={index} avatar={item.avatar} fullName={item.fullName} text={item.text} link={item.link} />;
                     })}
                 </div>
             </div>
