@@ -5,7 +5,6 @@
     width: 370px;
     padding: 10px;
     margin-bottom: 20px;
-    // opacity: 0;
     position: relative;
     right: -3000px;
     transition: background-color 1s, border-radius 1s;
@@ -13,13 +12,26 @@
         background-color: rgba(255, 255, 255, 0.123);
         border-radius: 10px;
     }
-    img {
+    &__img1,&__img2,&__img3,&__img4,&__img5 {
         border-radius: 10px 10px 0 0;
         width: 100%;
         margin-bottom: 10px;
-        @media (min-width: 760px) {
-            height: 230px;
-        }
+        height: 230px;
+    }
+    &__img1{
+        background: url(./../../../../img/montage.jpg)50% 0/ auto 100% no-repeat ;
+    }
+    &__img2{
+        background: url(./../../../../img/stDiaServ.jpg)50% 0/ auto 100% no-repeat ;
+    }
+    &__img3{
+        background: url(./../../../../img/altDiagServ.webp)50% 0/ auto 100% no-repeat ;
+    }
+    &__img4{
+        background: url(./../../../../img/batChan.jpg)50% 0/ auto 100% no-repeat ;
+    }
+    &__img5{
+        background: url(./../../../../img/eltctr.jpg)50% 0/ auto 100% no-repeat ;
     }
     &__body {
         text-align: center;

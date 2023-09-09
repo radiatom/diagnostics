@@ -25,7 +25,6 @@ const Services = () => {
                             key={el.id}
                             title={el.title}
                             text={el.text}
-                            img={el.img}
                         />
                     );
                 })}
