@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ResaultDiagnostic.scss";
 import img from "./../../../../../img/icons/che.webp";
 import { useDispatch } from "react-redux";
@@ -10,7 +10,8 @@ const ResaultDiagnostic = ({ el, index, id, solution }) => {
     const [yesOrNo, setYesOrNo] = useState(false);
     useEffect(() => {
         if (yesOrNo) {
-            dispatch(deleteResult(id));
+            setStyle({"max-height":"0px"})
+            setTimeout(()=>dispatch(deleteResult(id)),1000)
         }
     }, [yesOrNo]);
     const dispatch = useDispatch();
@@ -20,8 +21,19 @@ const ResaultDiagnostic = ({ el, index, id, solution }) => {
             setShow(true);
         }, (index * 1000) / 2);
     }, []); //показати компонент через index*1000/2 мілісекунд
+
+    const [style,setStyle]=useState({})
+    // Створюємо об'єкт refs для збереження посилань на ref в залежності від id
+    const refs = useRef({});
+    // Створюємо ref для поточного компонента
+    const componentRef = useRef(null);
+
+    // Додаємо ref до об'єкта refs з ключем, який дорівнює id
+    useEffect(() => {
+        refs.current[id] = componentRef;
+    }, [id]);
     return (
-        <div className={show ? "show" : "noShow"}>
+        <div className={show ? "show" : "noShow"} ref={componentRef} style={style}>
             <div className={solution ? "resaultDiagnostic" : "resaultDiagnostic resaultDiagnostic_active"}>
                 {solution ? (
                     <div onClick={() => dispatch(changeSolution(id))}></div>
@@ -35,8 +47,8 @@ const ResaultDiagnostic = ({ el, index, id, solution }) => {
                     Видалити
                 </button>
             </div>
-            <div className={alert?"blur":''}></div>
-            {alert ? <AlertDelete setYesOrNo={setYesOrNo} setAlert={setAlert} /> : ""}
+            <div className={alert&&yesOrNo===false?"blur":''}></div>
+            {alert &&yesOrNo===false? <AlertDelete setYesOrNo={setYesOrNo} setAlert={setAlert} /> : ""}
         </div>
     );
 };
