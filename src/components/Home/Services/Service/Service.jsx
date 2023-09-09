@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Service.scss";
 import { NavLink } from "react-router-dom";
 
-const Service = ({ title, text, img,id }) => {
+const Service = ({ title, text, id }) => {
     const [active,setActive]=useState(false)
     useEffect(() => {
         document.addEventListener("scroll", scrollHandler);
@@ -25,10 +25,7 @@ const Service = ({ title, text, img,id }) => {
     
     return (
         <div className={active?`service _active service_${id}  `:`service service_${id}`} id={"service"+id}>
-            <img
-                src={img}
-                alt="viniko вініко автосервіс електрика стартера генератора"
-            />
+            <div className={"service__img"+id}></div>
             <div className="service__body">
                 <h5>{title}</h5>
                 <p>{text}</p>

@@ -38,12 +38,6 @@ const video185 = `${process.env.PUBLIC_URL}/video/video185.mp4`;
 const video186 = `${process.env.PUBLIC_URL}/video/video186.mp4`;
 const video187 = `${process.env.PUBLIC_URL}/video/video187.mp4`;
 
-const servicesImg1 = `${process.env.PUBLIC_URL}/img/montage.jpg`;
-const servicesImg2 = `${process.env.PUBLIC_URL}/img/stDiaServ.jpg`;
-const servicesImg3 = `${process.env.PUBLIC_URL}/img/altDiagServ.jpg`;
-const servicesImg4 = `${process.env.PUBLIC_URL}/img/batChan.jpg`;
-const servicesImg5 = `${process.env.PUBLIC_URL}/img/eltctr.jpg`;
-
 const roadFoto1 = `${process.env.PUBLIC_URL}/img/map1.jpg`;
 const roadFoto2 = `${process.env.PUBLIC_URL}/img/map2.jpg`;
 const roadFoto3 = `${process.env.PUBLIC_URL}/img/map3.jpg`;
@@ -121,7 +115,6 @@ export type serviceType = {
     id: number;
     title: string;
     text: string;
-    img: string;
 };
 export type servicesType = Array<serviceType>;
 export type cardType = {
@@ -398,31 +391,26 @@ const serverData: serverDataType = {
             id: 1,
             title: "Демонтаж та монтаж",
             text: "Виконуємо демонтаж та монтаж стартера чи генератора з умовою ,що агрегат буде діагностуватись і ремотуватись у нас.",
-            img: servicesImg1,
         },
         {
             id: 2,
             title: "Діагностика стартера",
             text: "Виконуєм діагностику стартера на стенді, а також комплексну діагностику з дефектовкою кожної деталі.",
-            img: servicesImg2,
         },
         {
             id: 3,
             title: "Діагностика генератора",
             text: "Виконуєм діагностику генератора на стенді, а також комплексну діагностику з дефектовкою кожної деталі.",
-            img: servicesImg3,
         },
         {
             id: 4,
             title: "Діагностика акумулятора",
             text: "Виконуєм зарядку акумуляторної батареї автомобіля, а також перевірку стану (у випадку коли акумулятор має можливість обслуговування).",
-            img: servicesImg4,
         },
         {
             id: 5,
             title: "Автоелектрика",
             text: "У випадку коли проблеми з стартером чи генераторм пов`язані з електрикою, виконуєм ремонт електропроводки.",
-            img: servicesImg5,
         },
     ],
     testCard: [
