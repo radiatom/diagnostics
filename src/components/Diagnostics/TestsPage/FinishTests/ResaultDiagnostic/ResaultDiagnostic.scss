@@ -53,7 +53,9 @@
 .show {
     position: relative;
     left: 0;
-    transition: left 1s;
+    max-height:1000px;
+    overflow: hidden;
+    transition: left 1s, max-height 1s;
 }
 .blur{
     position: absolute;
