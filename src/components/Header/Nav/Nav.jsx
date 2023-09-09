@@ -41,11 +41,11 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                     </button>
                     <ul
                         className={drop ? "navList  open" : "navList"}
-                        onMouseLeave={() => setDrop(!drop)}
+                        onMouseLeave={() => setDrop(false)}
                     >
                         <li
                             onClick={() => {
-                                setDrop(!drop);
+                                setDrop(false);
                                 setActive(false);
                             }}
                         >
@@ -53,7 +53,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                         </li>
                         <li
                             onClick={() => {
-                                setDrop(!drop);
+                                setDrop(false);
                                 setActive(false);
                             }}
                         >
@@ -63,7 +63,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                         </li>
                         <li
                             onClick={() => {
-                                setDrop(!drop);
+                                setDrop(false);
                                 setActive(false);
                             }}
                         >
@@ -73,7 +73,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                         </li>
                         <li
                             onClick={() => {
-                                setDrop(!drop);
+                                setDrop(false);
                                 setActive(false);
                             }}
                         >
@@ -83,7 +83,7 @@ const Nav = ({ active, setActive, drop, setDrop }) => {
                         </li>
                         <li
                             onClick={() => {
-                                setDrop(!drop);
+                                setDrop(false);
                                 setActive(false);
                             }}
                         >
