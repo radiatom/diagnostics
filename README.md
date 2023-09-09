@@ -79,3 +79,5 @@ Resault: added button delete this problem and alert window
 Added new section reviews
 
 Nav: correcded closing dignostics menu 
+
+Services: added new fotos
