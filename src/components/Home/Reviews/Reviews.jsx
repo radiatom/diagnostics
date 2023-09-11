@@ -21,16 +21,6 @@ const Reviews = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
-        nextArrow: (
-            <div>
-                <div className="next-slick-arrow"> ⫸ </div>
-            </div>
-        ),
-        prevArrow: (
-            <div>
-                <div className="prev-slick-arrow"> ⫷ </div>
-            </div>
-        ),
     };
     useEffect(() => {
         dispatch(setReviews());
