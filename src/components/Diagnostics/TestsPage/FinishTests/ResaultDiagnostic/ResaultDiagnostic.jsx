@@ -10,7 +10,7 @@ const ResaultDiagnostic = ({ el, index, id, solution }) => {
     const [yesOrNo, setYesOrNo] = useState(false);
     useEffect(() => {
         if (yesOrNo) {
-            setStyle({"max-height":"0px"})
+            setStyle({"maxHeight":"0px"})
             setTimeout(()=>dispatch(deleteResult(id)),1000)
         }
     }, [yesOrNo]);

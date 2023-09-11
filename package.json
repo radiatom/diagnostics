@@ -1,7 +1,7 @@
 {
   "name": "diagnostics",
   "version": "2.3.2",
-  "homepage": "https://viniko.in.ua/Home",
+  "homepage": "https://viniko.in.ua/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
