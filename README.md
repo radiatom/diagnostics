@@ -70,7 +70,7 @@ home: added scroll navigation
 
 created new style for scroll
 
-# 2.5.0 - .09.2023
+# 2.5.0 - 11.09.2023
 
 added local storage into site
 
@@ -80,4 +80,4 @@ Added new section reviews
 
 Nav: correcded closing dignostics menu 
 
-Services: added new fotos
+Services: added new fotos, changed text
