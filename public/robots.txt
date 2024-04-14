@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /cart/
+
+# Host
+Host: https://www.viniko.in.ua
+
+# Sitemaps
+Sitemap: https://www.viniko.in.ua/sitemap.xml
+
